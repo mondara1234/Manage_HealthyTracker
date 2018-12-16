@@ -34,37 +34,38 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu p-r-10"> ร้องขอสิทธ์ </span> <span class="label text-white label-megna  ">20</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="form-wizard.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
+                                <li class="sidebar-item"><a href="RequestPermission.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu"> อนุมัติการร้องขอสิทธ์ </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="form-wizard.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
+                                <li class="sidebar-item"><a href="AllowPermission.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu"> ปฏิเสธการร้องขอสิทธ์ </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="form-wizard.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
+                                <li class="sidebar-item"><a href="DeclinedPermission.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu"> การจัดการฐานข้อมูล </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="index2.html" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
-                                <li class="sidebar-item"><a href="pages-chat.html" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="pages-gallery.html" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="pages-calendar.html" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                                <li class="sidebar-item"><a href="pages-invoice.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
+                                <li class="sidebar-item"><a href="ManageMembers.php" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
+                                <li class="sidebar-item"><a href="ManageDiary.php" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="ManageFood.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
+                                <li class="sidebar-item"><a href="ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
+                                <li class="sidebar-item"><a href="ManageExercise.php" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="authentication-login.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
-                                <li class="sidebar-item"><a href="authentication-register.html" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
+                                <li class="sidebar-item"><a href="UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
+                                <li class="sidebar-item"><a href="UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="Error.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
+                                <li class="sidebar-item"><a href="Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
                                 <li class="sidebar-item"><a href="error-404.html" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 404 </span></a></li>
                                 <li class="sidebar-item"><a href="error-405.html" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 405 </span></a></li>
                                 <li class="sidebar-item"><a href="error-500.html" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 500 </span></a></li>
@@ -240,38 +241,38 @@
                         <div class="quick-actions_homepage  m-b-10">
                             <ul class="quick-actions">
                                 <li class="bg_lb">
-                                    <a href="index.html">
+                                    <a href="Homepage.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
                                         <div>My Dashboard</div>
                                     </a>
                                 </li>
                                 <li class="bg_ls">
-                                    <a href="grid.html">
+                                    <a href="RequestPermission.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
                                         <span class="label label-important">20</span>
                                         <div>การร้องขอสิทธ์</div>
                                     </a>
                                 </li>
                                 <li class="bg_lo">
-                                    <a href="form-common.html">
+                                    <a href="AllowPermission.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
                                         <div>อนุมัติการร้องขอสิทธ์</div>
                                     </a>
                                 </li>
                                 <li class="bg_ls">
-                                    <a href="buttons.html">
+                                    <a href="DeclinedPermission.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
                                         <div>ปฎิเสธการร้องขอสิทธ์</div>
                                     </a>
                                 </li>
                                 <li class="bg_lg">
-                                    <a href="calendar.html">
+                                    <a href="UserStatisticsApp.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
                                         <div>สถิติ</div>
                                     </a>
                                 </li>
                                 <li class="bg_lr">
-                                    <a href="error404.html">
+                                    <a href="Problems.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
                                         <span class="label label-success">3</span>
                                         <div>ปัญหาที่พบ</div>
