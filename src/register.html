@@ -1,0 +1,50 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+	<title> Form Insert </title>
+</head>
+<body>
+    <form name="add" method="post" action="save.php" enctype="multipart/form-data">
+        <table width="600" border="1">
+            <tr>
+                <th width="600"><div align="center"> สมัครสมาชิก </div></th>
+            </tr>
+        </table>
+        <table width="600" border="1">
+            <tr>
+                <th width="100"> Name </th>
+                <td width="100"><input type="text" name="txtName" /></td>
+            </tr>
+            <tr>
+                <th width="100"> Username </th>
+                <td width="100"><input type="text" name="txtUsername" /></td>
+            </tr>
+            <tr>
+                <th width="100"> Password </th>
+                <td width="100"><input type="text" name="txtPassword" /></td>
+                </td>
+            </tr>
+            <tr>
+                <th width="100"> Pic </th>
+                <td width="100">
+                    <input type="file" id="$txtPic" />
+                </td>
+            </tr>
+             <tr>
+                <th width="100"> Status </th>
+                <td width="100">
+                    <select id="txtStatus">
+                        <option value="1"> Admin </option>
+                        <option value="2"> user </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit" name="submit" />
+    </form>
+
+    <form name="Add" action="index.html" method="post">
+        <input type="submit" value="Homepage" />
+    </form>
+</body>
+</html>
