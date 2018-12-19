@@ -23,6 +23,18 @@
 </head>
 
 <body class="bg-container">
+    <?php
+    $Search = null;
+    if(isset($_POST["txtSearch"]))
+    {
+        $Search = $_POST["txtSearch"];
+    }
+
+    include('Database/connect.php');
+
+    $sql = "SELECT * FROM MemberManage WHERE UserID LIKE '%".$Search."%' ";
+    $query = mysqli_query($conn, $sql);
+    ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
     <!-- ============================================================== -->
@@ -91,8 +103,8 @@
                         </b>
                         <!-- Logo text -->
                         <span class="logo-text">
-                                         <img src="assets/images/logo-text.png" alt="homepage" class="light-logo" />
-                                </span>
+                            <div class="light-logo" style="font-size: 20px" > Healthy Tracker </div>
+                        </span>
                     </a>
 
                     <!-- ============================================================== -->
@@ -234,9 +246,60 @@
                 </div>
             </div>
             <!-- ============================================================== -->
-            <!-- ส่วนของปุ่มเมนู  -->
+            <!-- ส่วนของเนื้อหา  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
+                <form name="search" method="post">
+                    <table width="600" border="1" bgcolor="#FFCC00">
+                        <tr>
+                            <th> <div align="center"> UserName :
+                                <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
+                                <input type="submit" value="Search" />
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </form>
+                <table width="600" border="1" >
+                    <tr bgcolor="#FFCC00">
+                        <th width="100"><div align="center">UserID </div></th>
+                        <th width="100"><div align="center"> imgProfile </div></th>
+                        <th width="100"><div align="center"> Username </div></th>
+                        <th width="100"><div align="center"> Password </div></th>
+                        <th width="100"><div align="center"> Name </div></th>
+                        <th width="100"><div align="center"> Status </div></th>
+                        <th width="100"><div align="center"> edit </div></th>
+                        <th width="100"><div align="center"> delete </div></th>
+                    </tr>
+
+                    <?php
+                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                    {
+                        ?>
+                        <tr>
+                            <td align="center"><?php echo ($result["UserID"]) ?></td>
+                            <td align="center"><img src="<?php echo ($result["imgProfile"]) ?>" width="50" height="50" ></td>
+                            <td align="center"><?php echo ($result["Username"]) ?></td>
+                            <td align="center"><?php echo ($result["Password"]) ?></td>
+                            <td align="center"><?php echo ($result["Name"]) ?></td>
+                            <td align="center"><?php echo ($result["Status"]) ?></td>
+                            <td align="center">
+                                <a href="Database/edit.php?UserID=<?php echo ($result["UserID"]) ?>"> Edit </a>
+                            </td>
+                            <td align="center">
+                                <a href="JavaScript:if(confirm('Confirm Delete?')==true)
+                {window.location='Database/delete.php?UserID=<?php echo ($result["UserID"]) ?>';}"> Delete </a>
+                            </td>
+                        </tr>
+
+                        <?php
+                    }
+                    ?>
+                </table>
+
+                <?php
+                mysqli_close($conn);
+                ?>
 
             </div>
             <footer class="footer text-center">

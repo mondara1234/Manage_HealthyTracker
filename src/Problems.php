@@ -90,7 +90,7 @@
                             </b>
                             <!-- Logo text -->
                             <span class="logo-text">
-                                     <img src="assets/images/logo-text.png" alt="homepage" class="light-logo" />
+                                <div class="light-logo" style="font-size: 20px" > Healthy Tracker </div>
                             </span>
                         </a>
 
@@ -233,7 +233,7 @@
                     </div>
                 </div>
                 <!-- ============================================================== -->
-                <!-- ส่วนของปุ่มเมนู  -->
+                <!-- ส่วนของเนื้อหา  -->
                 <!-- ============================================================== -->
                 <div class="container-fluid">
 

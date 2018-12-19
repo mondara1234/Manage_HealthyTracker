@@ -91,8 +91,8 @@
                         </b>
                         <!-- Logo text -->
                         <span class="logo-text">
-                                         <img src="assets/images/logo-text.png" alt="homepage" class="light-logo" />
-                                </span>
+                            <div class="light-logo" style="font-size: 20px" > Healthy Tracker </div>
+                        </span>
                     </a>
 
                     <!-- ============================================================== -->
@@ -234,10 +234,155 @@
                 </div>
             </div>
             <!-- ============================================================== -->
-            <!-- ส่วนของปุ่มเมนู  -->
+            <!-- ส่วนของเนื้อหา-->
             <!-- ============================================================== -->
             <div class="container-fluid">
-
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardID m-r-20 m-t-10">
+                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
+                            <div class="containerID">
+                                <h4><b>John Doe</b></h4>
+                                <div class="row justify-content-between align-items-center">
+                                    <button>
+                                        <div class="font-12"> อนุญาติ </div>
+                                    </button>
+                                    <button>
+                                        <div class="font-12"> ปฎิเสธ </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <footer class="footer text-center">
