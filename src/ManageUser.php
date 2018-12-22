@@ -23,6 +23,18 @@
 </head>
 
 <body class="bg-container">
+    <?php
+    $Search = null;
+    if(isset($_POST["txtSearch"]))
+    {
+        $Search = $_POST["txtSearch"];
+    }
+
+    include('Database/connect.php');
+
+    $sql = "SELECT * FROM MemberManage WHERE UserID LIKE '%".$Search."%' ";
+    $query = mysqli_query($conn, $sql);
+    ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
     <!-- ============================================================== -->
@@ -32,46 +44,28 @@
             <nav class="sidebar-nav ">
                 <ul id="sidebarnav" class="p-t-30">
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu p-r-10"> ร้องขอสิทธ์ </span> <span class="label text-white label-megna  ">20</span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="RequestPermission.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu"> อนุมัติการร้องขอสิทธ์ </span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="AllowPermission.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu"> ปฏิเสธการร้องขอสิทธ์ </span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="DeclinedPermission.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> การร้องขอสิทธ์เป็น Admin </span></a></li>
-                        </ul>
-                    </li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="UserInformation.php" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu"> การจัดการฐานข้อมูล </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="ManageMembers.php" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
-                            <li class="sidebar-item"><a href="ManageDiary.php" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
-                            <li class="sidebar-item"><a href="ManageFood.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
+                            <li class="sidebar-item"><a href="ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
+                            <li class="sidebar-item"><a href="ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
+                            <li class="sidebar-item"><a href="ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
                             <li class="sidebar-item"><a href="ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
                             <li class="sidebar-item"><a href="ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                            <li class="sidebar-item"><a href="ManageExercise.php" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
+                            <li class="sidebar-item"><a href="ManageExercise.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
-                            <li class="sidebar-item"><a href="UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-all-inclusive"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
+                            <li class="sidebar-item"><a href="UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
+                            <li class="sidebar-item"><a href="UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
                         <ul aria-expanded="false" class="collapse  first-level">
                             <li class="sidebar-item"><a href="Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
-                            <li class="sidebar-item"><a href="error-404.html" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 404 </span></a></li>
-                            <li class="sidebar-item"><a href="error-405.html" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 405 </span></a></li>
-                            <li class="sidebar-item"><a href="error-500.html" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 500 </span></a></li>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
             </nav>
         </aside>
         <header class="topbar " data-navbarbg="skin5">
@@ -221,7 +215,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ปฏิเสธการร้องขอสิทธ์</h4>
+                        <h4 class="page-title">ข้อมูล admin</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -237,152 +231,11 @@
             <!-- ส่วนของเนื้อหา  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardID m-r-20 m-t-10">
-                            <img src="assets/images/users/img.jpg" alt="Avatar" style="width:100%">
-                            <div class="containerID">
-                                <h4><b>John Doe</b></h4>
-                                <div class="row justify-content-between align-items-center">
-                                    <button>
-                                        <div class="font-12"> อนุญาติ </div>
-                                    </button>
-                                    <button>
-                                        <div class="font-12"> ลบ </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="font-16"> ดูข้อมูลทั้งหมดของผู้ใช้ ไม่ว่าจะเป้น อาหารที่เพิ่มแต่ละวัน และเลือกคำนวณข้อมูล ต่ออาทิต ต่อเดือน ได้ เพื่อไว้เป้นข้อมูลในการ แจ้งบอกuser ควรทำอย่างไรต่อหรือคาดเดาตอ่ไปจะเป้นอย่างไร
+                    ดูข้อมูลการเข้าดู เคล้ดลับ หรือ กดถูกใจ เพื่อ หาขื้อมูล ออกกำลังกาย และอื่นให้สอดคล้องกับที่ userต้องการ
+                    มีปุ่ม แจ้งเตือน หรือแนะนำไปยัง จดหมายในแอฟ ของuser
                 </div>
+
             </div>
             <footer class="footer text-center">
                 <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>

@@ -8,13 +8,13 @@
 	include("connect.php");
 
 	$UserID = $_POST["UserID"];
-	$pUsername = $_POST["pUsername"];
+	$pEmail = $_POST["pEmail"];
 	$pPassword = $_POST["pPassword"];
-	$pName = $_POST["pName"];
+	$pUsername = $_POST["pUsername"];
     $pStatus = $_POST["pStatus"];
 	$pImgProfile = $_FILES["pImgProfile"]["name"];
 
-	if(empty($pUsername)|| empty($pPassword)){
+	if(empty($Email)|| empty($pPassword)){
 		echo("<a href='edit.php?UserID=$UserID'> กรอกข้อมูลไม่ครบ </a>");
 	}
 
@@ -22,9 +22,9 @@
 	$upload = move_uploaded_file($_FILES["pImgProfile"]["tmp_name"], $path);
 
 	$sql = "UPDATE MemberManage SET 
-			Username = '$pUsername',
+			Email = '$pEmail',
 			Password = '$pPassword',
-			Name = '$pName',
+			Username = '$pUsername',
 			imgProfile = '$pImgProfile',
 			Status = '$pStatus'
 			

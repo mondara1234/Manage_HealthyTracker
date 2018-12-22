@@ -20,8 +20,8 @@
 <form name="edit" action="updated.php" method="post" enctype="multipart/form-data">
 	<table width="600" border="1">
         <tr>
-        	<th width="100"> Username </th>
-            <td width="100"><input type="text" name="pUsername" value="<?php echo $result["Username"]; ?>" /></td>
+        	<th width="100"> E-mail </th>
+            <td width="100"><input type="text" name="pEmail" value="<?php echo $result["Email"]; ?>" /></td>
             <input type="hidden" name="UserID" value="<?php echo $result["UserID"]; ?>" />
         </tr>
         <tr>
@@ -29,8 +29,8 @@
             <td width="100"><input type="text" name="pPassword" value="<?php echo $result["Password"]; ?>" /></td>
         </tr>
         <tr>
-        	<th width="100"> Name </th>
-            <td width="100"><input type="text" name="pName" value="<?php echo $result["Name"]; ?>" /></td>
+        	<th width="100"> Username </th>
+            <td width="100"><input type="text" name="pUsername" value="<?php echo $result["Username"]; ?>" /></td>
         </tr>
         <tr>
         	<th width="100"> Status </th>
