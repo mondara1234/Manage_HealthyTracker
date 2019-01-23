@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-include('connect.php');
+include('../../Database/connect.php');
 $ID = null;
 if(isset($_GET["UserID"])){
     $ID = $_GET["UserID"];
@@ -17,7 +17,7 @@ if(mysqli_affected_rows($conn)){
     echo ("not");
 }
 ?>
-<form action="../ProfileUser/UserInformation.php" method="post">
+<form action="../ManageMembers.php" method="post">
     <input type="submit" value="ok" />
 </form>
 </body>

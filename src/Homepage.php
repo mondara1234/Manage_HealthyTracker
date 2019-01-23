@@ -56,26 +56,26 @@
                 <nav class="sidebar-nav ">
                     <ul id="sidebarnav" class="p-t-30">
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="UserInformation.php" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu"> การจัดการฐานข้อมูล </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
-                                <li class="sidebar-item"><a href="ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
-                                <li class="sidebar-item"><a href="ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                                <li class="sidebar-item"><a href="ManageExercise.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_User/ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_DiaryUser/ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_Food/ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_BMI/ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_Trick/ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_Exercise/ManageExercise.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
-                                <li class="sidebar-item"><a href="UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
+                                <li class="sidebar-item"><a href="Statistics_App/UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
+                                <li class="sidebar-item"><a href="Statistics_Web/UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
+                                <li class="sidebar-item"><a href="Problems/Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
                                 </li>
                             </ul>
                 </nav>
@@ -246,39 +246,33 @@
                     <div class="row">
                         <div class="quick-actions_homepage  m-b-10">
                             <ul class="quick-actions">
-                                <li class="bg_lb">
+                                <li class="bg_lb" style="width: 18%">
                                     <a href="Homepage.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
                                         <div>My Dashboard</div>
                                     </a>
                                 </li>
-                                <li class="bg_ls">
-                                    <a href="RequestPermission.php">
-                                        <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
+                                <li class="bg_ls" style="width: 18%">
+                                    <a href="ProfileUser/UserInformation.php">
+                                        <h1 class="font-light text-white"><i class="fa fa-user-secret"></i></h1>
                                         <span class="label label-important">20</span>
-                                        <div>การร้องขอสิทธ์</div>
+                                        <div>ข้อมูล User</div>
                                     </a>
                                 </li>
-                                <li class="bg_lo">
-                                    <a href="AllowPermission.php">
+                                <li class="bg_lo" style="width: 18%">
+                                    <a href="ProfileUser/ManageUser.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                                        <div>อนุมัติการร้องขอสิทธ์</div>
+                                        <div>การจัดการฐานข้อมูล</div>
                                     </a>
                                 </li>
-                                <li class="bg_ls">
-                                    <a href="DeclinedPermission.php">
-                                        <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                                        <div>ปฎิเสธการร้องขอสิทธ์</div>
-                                    </a>
-                                </li>
-                                <li class="bg_lg">
-                                    <a href="UserStatisticsApp.php">
+                                <li class="bg_lg" style="width: 18%">
+                                    <a href="Statistics_App/UserStatisticsApp.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
                                         <div>สถิติ</div>
                                     </a>
                                 </li>
-                                <li class="bg_lr">
-                                    <a href="Problems.php">
+                                <li class="bg_lr" style="width: 18%">
+                                    <a href="Problems/Problems.php">
                                         <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
                                         <span class="label label-success">3</span>
                                         <div>ปัญหาที่พบ</div>

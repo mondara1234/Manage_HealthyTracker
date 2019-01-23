@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-	include("connect.php");
+	include("../../Database/connect.php");
 	
 	$ID = null;
 	if(isset($_GET["UserID"])){
@@ -82,8 +82,8 @@
 	mysqli_close($conn);
 ?>
 
-<form name="Add" action="../Manage_User/ManageMembers.php" method="post">
-		<input type="submit" value="Homepage" />
+<form name="Add" action="../ManageMembers.php" method="post">
+		<input type="submit" value="กลับ" />
 	</form>
 
 </body>

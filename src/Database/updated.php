@@ -12,12 +12,15 @@
 	$pPassword = $_POST["pPassword"];
 	$pUsername = $_POST["pUsername"];
     $pStatus = $_POST["pStatus"];
+    $pLanguage = $_POST["pLanguage"];
+    $pPersonalSelect = $_POST["pPersonalSelect"];
+    $pPersonalCode = $_POST["pPersonalCode"];
+    $pSex = $_POST["pSex"];
+    $pAge = $_POST["pAge"];
+    $pWeight = $_POST["pWeight"];
+    $pHeight = $_POST["pHeight"];
+    $pBMRUser = $_POST["pBMRUser"];
 	$pImgProfile = $_FILES["pImgProfile"]["name"];
-
-	if(empty($Email)|| empty($pPassword)){
-		echo("<a href='edit.php?UserID=$UserID'> กรอกข้อมูลไม่ครบ </a>");
-	}
-
 	$path = basename($pImgProfile);
 	$upload = move_uploaded_file($_FILES["pImgProfile"]["tmp_name"], $path);
 
@@ -26,22 +29,30 @@
 			Password = '$pPassword',
 			Username = '$pUsername',
 			imgProfile = '$pImgProfile',
-			Status = '$pStatus'
+			Status = '$pStatus',
+			Language = '$pLanguage',
+			PersonalSelect = '$pPersonalSelect',
+			PersonalCode = '$pPersonalCode',
+			Sex = '$pSex',
+			Age = '$pAge',
+			Weight = '$pWeight',
+			Height = '$pHeight',
+			BMRUser = '$pBMRUser'
 			
 			WHERE UserID = $UserID ";
 
 	$query = mysqli_query($conn, $sql);
 
 	if($query){
-		echo("Update Success");
+		echo("อัปเดทสำเร็จ");
 	}else{
-		echo("Failed");
+		echo("ลองใหม่อีกครั้ง");
 	}
 
 	mysqli_close($conn);
 ?>
 
-<form name="Add" action="../ManageMembers.php" method="post">
+<form name="Add" action="../Manage_User/ManageMembers.php" method="post">
 	<input type="submit" value="Ok" />
 </form>
 </body>

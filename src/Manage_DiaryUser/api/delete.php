@@ -4,12 +4,12 @@
 </head>
 <body>
 <?php
-include('connect.php');
+include('../../Database/connect.php');
 $ID = null;
-if(isset($_GET["UserID"])){
-    $ID = $_GET["UserID"];
+if(isset($_GET["DiaryID"])){
+    $ID = $_GET["DiaryID"];
 }
-$sql = "DELETE FROM MemberManage WHERE UserID = $ID";
+$sql = "DELETE FROM fooddiary WHERE DiaryID = $ID";
 $query = mysqli_query($conn, $sql);
 if(mysqli_affected_rows($conn)){
     echo ("yes");
@@ -17,7 +17,7 @@ if(mysqli_affected_rows($conn)){
     echo ("not");
 }
 ?>
-<form action="../ProfileUser/UserInformation.php" method="post">
+<form action="../ManageDiary.php" method="post">
     <input type="submit" value="ok" />
 </form>
 </body>

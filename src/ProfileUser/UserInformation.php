@@ -9,16 +9,16 @@
         <meta name="description" content="">  <!--  บอกรายละเอียดของเว็บเพจแบบคร่าวๆ-->
         <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
         <!-- Favicon icon -->
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/LogoHT.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
         <title>Admin - Healthy Tracker</title>
 
         <!-- Custom CSS -->
-        <link href="assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
-        <link href="assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
-        <link href="assets/dist/css/matrix-style.css" rel="stylesheet">
-        <link href="assets/dist/css/style.min.css" rel="stylesheet">
-        <link href="assets/dist/css/styleCommon.css" rel="stylesheet">
+        <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet">
+        <link href="../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+        <link href="../assets/dist/css/matrix-style.css" rel="stylesheet">
+        <link href="../assets/dist/css/style.min.css" rel="stylesheet">
+        <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
     </head>
     <?php
@@ -28,9 +28,9 @@
         $Search = $_POST["txtSearch"];
     }
 
-    include('Database/connect.php');
+    include('../Database/connect.php');
 
-    $sql = "SELECT * FROM MemberManage WHERE Username LIKE '%".$Search."%' ";
+    $sql = "SELECT * FROM MemberManage WHERE UserName LIKE '%".$Search."%' ";
     $query = mysqli_query($conn, $sql);
     ?>
 
@@ -43,27 +43,27 @@
             <aside class="left-sidebar " data-sidebarbg="skin5">
                 <nav class="sidebar-nav ">
                     <ul id="sidebarnav" class="p-t-30">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Homepage.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="UserInformation.php" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu"> การจัดการฐานข้อมูล </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
-                                <li class="sidebar-item"><a href="ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
-                                <li class="sidebar-item"><a href="ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                                <li class="sidebar-item"><a href="ManageExercise.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
+                                <li class="sidebar-item"><a href="../Manage_User/ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
+                                <li class="sidebar-item"><a href="../Manage_DiaryUser/ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="../Manage_Food/ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="../Manage_BMI/ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
+                                <li class="sidebar-item"><a href="../Manage_Trick/ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
+                                <li class="sidebar-item"><a href="../Manage_Exercise/ManageExercise.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
-                                <li class="sidebar-item"><a href="UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
+                                <li class="sidebar-item"><a href="../Statistics_App/UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
+                                <li class="sidebar-item"><a href="../Statistics_Web/UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
+                                <li class="sidebar-item"><a href="../Problems/Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
                         </li>
                     </ul>
                 </nav>
@@ -78,10 +78,10 @@
                         <!-- ============================================================== -->
                         <!-- ส่วนหัวข้อแถบเมนู -->
                         <!-- ============================================================== -->
-                        <a class="navbar-brand" href="Homepage.php">
+                        <a class="navbar-brand" href="../Homepage.php">
                             <!-- Logo icon -->
                             <b class="logo-icon p-l-10">
-                                <img src="assets/images/LogoHT.png" alt="homepage" height="50" width="50" class="light-logo" />
+                                <img src="../assets/images/LogoHT.png" alt="homepage" height="50" width="50" class="light-logo" />
                             </b>
                             <!-- Logo text -->
                             <span class="logo-text">
@@ -190,7 +190,7 @@
                             <!-- ============================================================== -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"> Admin
+                                    <img src="../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"> Admin
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right user-dd animated">
@@ -219,7 +219,7 @@
                             <div class="ml-auto text-right">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="Homepage.php">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="../Homepage.php">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Library</li>
                                     </ol>
                                 </nav>
@@ -248,14 +248,14 @@
                                 <center>
                                     <img src="<?php echo ($result["imgProfile"]) ?>" width="80%" height="100px">
                                     <div class="containerID">
-                                        <h5><b><?php echo ($result["Username"]) ?></b></h5>
+                                        <h5><b><?php echo ($result["UserName"]) ?></b></h5>
                                         <div class="row justify-content-between align-items-center">
                                             <button>
-                                                <div class="font-12"> <a href="ManageUser.php"> ดูข้อมูล </a> </div>
+                                                <div class="font-12"> <a href="ManageUser.php?UserID=<?php echo ($result["UserID"]) ?>"> ดูข้อมูล </a> </div>
                                             </button>
                                             <button>
                                                 <div class="font-12"> <a href="JavaScript:if(confirm('คุณต้องการลบข้อมูลของ User ทั้งหมด ใช่ไหม ?')==true)
-                {window.location='Database/delete.php?UserID=<?php echo ($result["UserID"]) ?>';}"> ลบข้อมูล </a> </div>
+                {window.location='api/delete.php?UserID=<?php echo ($result["UserID"]) ?>';}"> ลบข้อมูล </a> </div>
                                             </button>
                                         </div>
                                     </div>
@@ -281,29 +281,29 @@
         <!-- Jquery ทั้งหมด  -->
         <!-- ============================================================== -->
         <!-- ต้องมี -->
-        <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+        <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- ไม่ได้ใช้ที  ส่วนกำหนดค่า JavaScript ของ Core Bootstrap -->
-        <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
 
         <!-- เมนูแถบด้านข้าง -->
-        <script src="assets/dist/js/sidebarmenu.js"></script>
+        <script src="../assets/dist/js/sidebarmenu.js"></script>
         <!-- เปิด-ปิด Menu sidebar -->
-        <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+        <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
         <!-- รูปกราฟ วงกลม ใช้ร่วมกับ จาวาสคลิป-->
-        <script src="assets/libs/Chart.js/dist/Chart.min.js"></script>
+        <script src="../assets/libs/Chart.js/dist/Chart.min.js"></script>
         <!-- รูปกราฟ แท่ง ใช้ร่วมกับ จาวาสคลิป-->
-        <script src="assets/libs/raphael/raphael.min.js"></script>
-        <script src="assets/libs/morris.js/morris.min.js"></script>
-        <script src="assets/libs/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-        <script src="assets/libs/DateJS/build/date.js"></script>
+        <script src="../assets/libs/raphael/raphael.min.js"></script>
+        <script src="../assets/libs/morris.js/morris.min.js"></script>
+        <script src="../assets/libs/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <script src="../assets/libs/DateJS/build/date.js"></script>
         <!-- รูปกราฟ %-->
-        <script src="assets/libs/chart/matrix.interface.js"></script>
-        <script src="assets/libs/chart/jquery.peity.min.js"></script>
-        <script src="assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-        <script src="assets/libs/chart/turning-series.js"></script>
+        <script src="../assets/libs/chart/matrix.interface.js"></script>
+        <script src="../assets/libs/chart/jquery.peity.min.js"></script>
+        <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+        <script src="../assets/libs/chart/turning-series.js"></script>
         <!-- กำหนดเอง Scripts -->
-        <script src="assets/dist/js/custom.min.js"></script>
+        <script src="../assets/dist/js/custom.min.js"></script>
 
     </body>
 </html>

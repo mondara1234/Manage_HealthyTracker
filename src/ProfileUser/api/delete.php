@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-include('connect.php');
+include('../../Database/connect.php');
 $ID = null;
 if(isset($_GET["UserID"])){
     $ID = $_GET["UserID"];
