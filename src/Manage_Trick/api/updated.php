@@ -28,7 +28,7 @@
 			DateAdded = '$pDateAdded',
 			sourceURL	 = '$psourceURL'
 			
-			WHERE TrickID = TrickID ";
+			WHERE TrickID = $TrickID ";
 
 	$query = mysqli_query($conn, $sql);
 

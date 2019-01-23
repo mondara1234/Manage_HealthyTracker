@@ -246,34 +246,34 @@
                 </center>
                 <table width="100%" border="1" >
                     <tr bgcolor="#FFCC00">
-                        <th width="100">
+                        <th>
                             <div align="center"> TrickID </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> TrickName </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> TrickIMG </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> TrickDetail </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> TrickLike </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> PeopleAdd </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> DateAdded </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> sourceURL </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> edit </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> delete </div>
                         </th>
                     </tr>

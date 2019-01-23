@@ -246,34 +246,34 @@
                 </center>
                 <table width="100%" border="1" >
                     <tr bgcolor="#FFCC00">
-                        <th width="100">
+                        <th>
                             <div align="center"> ExerciseID </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> UserName </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> ExerciseName </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> ExerciseIMG </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> ExerciseDetail </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> PeopleAdd </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> DateAdded </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> sourceURL </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> edit </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> delete </div>
                         </th>
                     </tr>

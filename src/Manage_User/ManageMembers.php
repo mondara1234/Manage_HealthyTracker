@@ -246,52 +246,52 @@
                 </center>
                 <table width="100%" border="1" >
                     <tr bgcolor="#FFCC00">
-                        <th width="100">
+                        <th>
                             <div align="center"> UserID </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> imgProfile </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> E-mail </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Password </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Username </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Status </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Language </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> PersonalSelect </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> PersonalCode </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Sex </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Age </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Weight </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> Height </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> BMRUser </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> edit </div>
                         </th>
-                        <th width="100"><div align="center"> delete </div></th>
+                        <th><div align="center"> delete </div></th>
                     </tr>
 
                     <?php

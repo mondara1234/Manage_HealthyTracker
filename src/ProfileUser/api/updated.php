@@ -52,7 +52,7 @@
 	mysqli_close($conn);
 ?>
 
-<form name="Add" action="../../Manage_User/ManageMembers.php" method="post">
+<form name="Add" action="../UserInformation.php" method="post">
 	<input type="submit" value="Ok" />
 </form>
 </body>

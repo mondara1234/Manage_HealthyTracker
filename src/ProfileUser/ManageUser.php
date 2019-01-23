@@ -20,18 +20,63 @@
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
-</head>
+    <link rel="stylesheet" media="all" type="text/css" href="../assets/libs/jquerydatepicker/jquery-ui.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.css" />
 
+    <script type="text/javascript">
+        $(function(){
+
+            let startDateTextBox = $('#dateStart');
+            let endDateTextBox = $('#dateEnd');
+            startDateTextBox.datepicker({
+                dateFormat: 'dd-M-yy',
+                onClose: function(dateText, inst) {
+                    if (endDateTextBox.val() != '') {
+                        let testStartDate = startDateTextBox.datetimepicker('getDate');
+                        let testEndDate = endDateTextBox.datetimepicker('getDate');
+                        if (testStartDate > testEndDate)
+                            endDateTextBox.datetimepicker('setDate', testStartDate);
+                    }
+                    else {
+                        endDateTextBox.val(dateText);
+                    }
+                },
+                onSelect: function (selectedDateTime){
+                    endDateTextBox.datetimepicker('option', 'minDate', startDateTextBox.datetimepicker('getDate') );
+                }
+            });
+            endDateTextBox.datepicker({
+                dateFormat: 'dd-M-yy',
+                onClose: function(dateText, inst) {
+                    if (startDateTextBox.val() != '') {
+                        let testStartDate = startDateTextBox.datetimepicker('getDate');
+                        let testEndDate = endDateTextBox.datetimepicker('getDate');
+                        if (testStartDate > testEndDate)
+                            startDateTextBox.datetimepicker('setDate', testEndDate);
+                    }
+                    else {
+                        startDateTextBox.val(dateText);
+                    }
+                },
+                onSelect: function (selectedDateTime){
+                    startDateTextBox.datetimepicker('option', 'maxDate', endDateTextBox.datetimepicker('getDate') );
+                }
+            });
+
+        });
+
+    </script>
+</head>
 <body class="bg-container">
     <?php
-    $ID = null;
-    if(isset($_GET["UserID"])){
-        $ID = $_GET["UserID"];
+    $UserName = null;
+    if(isset($_GET["UserName"])){
+        $UserName = $_GET["UserName"];
     }
 
     include('../Database/connect.php');
 
-    $sql = "SELECT * FROM MemberManage WHERE UserID = $ID ";
+    $sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName' ";
     $query = mysqli_query($conn, $sql);
     ?>
     <!-- ============================================================== -->
@@ -214,7 +259,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ข้อมูล admin</h4>
+                        <h4 class="page-title"><div>ข้อมูลอาหารของ : <?php echo ($UserName) ?></div></h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -230,11 +275,78 @@
             <!-- ส่วนของเนื้อหา  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-                <div class="font-16"> ดูข้อมูลทั้งหมดของผู้ใช้ ไม่ว่าจะเป้น อาหารที่เพิ่มแต่ละวัน และเลือกคำนวณข้อมูล ต่ออาทิต ต่อเดือน ได้ เพื่อไว้เป้นข้อมูลในการ แจ้งบอกuser ควรทำอย่างไรต่อหรือคาดเดาตอ่ไปจะเป้นอย่างไร
-                    ดูข้อมูลการเข้าดู เคล้ดลับ หรือ กดถูกใจ เพื่อ หาขื้อมูล ออกกำลังกาย และอื่นให้สอดคล้องกับที่ userต้องการ
-                    มีปุ่ม แจ้งเตือน หรือแนะนำไปยัง จดหมายในแอฟ ของuser
+                <div class="font-16">
+                    <center>
+                        Start Date : <input type="text" name="dateStart" id="dateStart" value="" />
+                        End Date : <input type="text" name="dateEnd" id="dateEnd" value="" />
+                    </center><br>
 
-                    ที่สำคัญมีการแนะนำuser ด้วย
+                    <form method="post" name="form1" OnSubmit="return chkConfirm();">
+                        <table width="100%" border="1" >
+                            <tr bgcolor="#FFCC00"  style="opacity:0.9;">
+                                <th>
+                                    <div align="center" class="text-dark"> DiaryID </div>
+                                </th>
+                                <th>
+                                    <div align="center" class="text-dark"> FoodName </div>
+                                </th>
+                                <th>
+                                    <div align="center" class="text-dark"> FoodNumber </div>
+                                </th>
+                                <th>
+                                    <div align="center" class="text-dark"> FoodUnit </div>
+                                </th>
+                                <th>
+                                    <div align="center" class="text-dark"> FoodCalorie </div>
+                                </th>
+                                <th>
+                                    <div align="center" class="text-dark"> DiaryDate </div>
+                                </th>
+
+                            </tr>
+
+                        <?php
+                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                        {
+                            ?>
+
+                            <tr>
+                                <td align="center"><?php echo ($result["DiaryID"]) ?></td>
+                                <td align="center"><?php echo ($result["FoodName"]) ?></td>
+                                <td align="center"><?php echo ($result["FoodNumber"]) ?></td>
+                                <td align="center"><?php echo ($result["FoodUnit"]) ?></td>
+                                <td align="center"><?php echo ($result["FoodCalorie"]) ?></td>
+                                <td align="center"><?php echo ($result["DiaryDate"]) ?></td>
+                            </tr>
+
+                            <?php
+                        }
+                        ?>
+                        </table>
+                        <table width="100%" border="1" style="border-top: 0px" >
+                            <tr>
+                                <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยการกินต่อวัน </div> </td>
+                                <td align="center"> <div align="center"> ผลลัพธ์ </div></td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยการกินต่อสัปดาห์ </div> </td>
+                                <td align="center"> <div align="center"> ผลลัพธ์ </div></td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยการกินต่อเดือน </div> </td>
+                                <td align="center"> <div align="center"> ผลลัพธ์ </div></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p>แจ้งการแนะนำ</p>
+                        <div style="width: 100%; display:inline-block; position:relative;">
+                            <textarea name="" id="txt" cols="20" rows="5" style="width: 100%; display:block;"></textarea>
+                            <button style="position:absolute; bottom:10px; right:10px;">แจ้งการแนะนำ</button>
+                        </div>
+                    </form>
+                    <?php
+                    mysqli_close($conn);
+                    ?>
                 </div>
 
             </div>
@@ -273,6 +385,12 @@
     <script src="../assets/libs/chart/turning-series.js"></script>
     <!-- กำหนดเอง Scripts -->
     <script src="../assets/dist/js/custom.min.js"></script>
+
+    <!-- date -->
+    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-ui-sliderAccess.js"></script>
 
 </body>
 </html>

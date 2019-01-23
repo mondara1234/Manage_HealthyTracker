@@ -251,7 +251,7 @@
                                         <h5><b><?php echo ($result["UserName"]) ?></b></h5>
                                         <div class="row justify-content-between align-items-center">
                                             <button>
-                                                <div class="font-12"> <a href="ManageUser.php?UserID=<?php echo ($result["UserID"]) ?>"> ดูข้อมูล </a> </div>
+                                                <div class="font-12"> <a href="ManageUser.php?UserName=<?php echo ($result["UserName"]) ?>"> ดูข้อมูล </a> </div>
                                             </button>
                                             <button>
                                                 <div class="font-12"> <a href="JavaScript:if(confirm('คุณต้องการลบข้อมูลของ User ทั้งหมด ใช่ไหม ?')==true)

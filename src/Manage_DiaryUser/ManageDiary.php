@@ -246,34 +246,34 @@
                 </center>
                 <table width="100%" border="1" >
                     <tr bgcolor="#FFCC00">
-                        <th width="100">
+                        <th>
                             <div align="center"> DiaryID </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> UserName </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodIMG </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodName </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodNumber </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodUnit </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodCalorie </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> DiaryDate </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> edit </div>
                         </th>
-                        <th width="100"><div align="center"> delete </div></th>
+                        <th><div align="center"> delete </div></th>
                     </tr>
 
                     <?php

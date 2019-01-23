@@ -17,7 +17,7 @@ if(mysqli_affected_rows($conn)){
     echo ("not");
 }
 ?>
-<form action="../ProfileUser/UserInformation.php" method="post">
+<form action="../UserInformation.php" method="post">
     <input type="submit" value="ok" />
 </form>
 </body>

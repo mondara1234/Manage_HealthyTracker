@@ -247,28 +247,28 @@
                 </center>
                 <table width="100%" border="1" >
                     <tr bgcolor="#FFCC00">
-                        <th width="100">
+                        <th >
                             <div align="center"> BMIID </div>
                         </th>
-                        <th width="100">
+                        <th >
                             <div align="center"> NameBMI </div>
                         </th>
-                        <th width="100">
+                        <th >
                             <div align="center"> DetailBMI </div>
                         </th>
-                        <th width="100">
+                        <th >
                             <div align="center"> SumBMI </div>
                         </th>
-                        <th width="100">
+                        <th >
                             <div align="center"> BMIUser </div>
                         </th>
-                        <th width="100">
+                        <th >
                             <div align="center"> UnitBMI </div>
                         </th>
-                        <th width="100">
+                        <th >
                             <div align="center"> edit </div>
                         </th>
-                        <th width="100">
+                        <th >
                             <div align="center"> delete </div>
                         </th>
                     </tr>

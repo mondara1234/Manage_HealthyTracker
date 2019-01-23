@@ -246,28 +246,28 @@
                 </center>
                 <table width="100%" border="1" >
                     <tr bgcolor="#FFCC00">
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodID </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodName </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodIMG </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodCalorie </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodType </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> FoodUnit </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> edit </div>
                         </th>
-                        <th width="100">
+                        <th>
                             <div align="center"> delete </div>
                         </th>
                     </tr>
