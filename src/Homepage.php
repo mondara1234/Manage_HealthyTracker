@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
@@ -19,6 +18,31 @@
         <link href="assets/dist/css/matrix-style.css" rel="stylesheet">
         <link href="assets/dist/css/style.min.css" rel="stylesheet">
         <link href="assets/dist/css/styleCommon.css" rel="stylesheet">
+
+        <!-- กราฟวงกลม -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load("current", {packages:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Task', 'Hours per Day'],
+                    ['Work',     11],
+                    ['Eat',      2],
+                    ['Commute',  2],
+                    ['Watch TV', 2],
+                    ['Sleep',    7]
+                ]);
+
+                var options = {
+                    title: 'My Daily Activities',
+                    is3D: true,
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+            }
+        </script>
 
     </head>
 
@@ -297,48 +321,8 @@
                                                         <div class="clearfix"></div>
                                                     </div>
                                                     <div class="x_content">
-                                                        <table style="max-width:100%;">
-                                                            <tr>
-                                                                <th style="width: 50%;">
-                                                                </th>
-                                                                <th style="width: 350px; height: 40px">
-                                                                    <div class="row justify-content-center">
-                                                                        <div class="col-xs-12 p-r-30">
-                                                                            <h4>Device</h4>
-                                                                        </div>
-                                                                        <div class="text-center p-l-10">
-                                                                            <h4>Progress</h4>
-                                                                        </div>
-                                                                    </div>
-                                                                </th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <canvas class="canvasDoughnut" height="150" width="150" style="margin: 15px 10px 10px 0"></canvas>
-                                                                </td>
-                                                                <td>
-                                                                    <table class="tile_info">
-                                                                        <tr>
-                                                                            <td class="p-t-15 ">
-                                                                                <p class="text-center p-r-15 font-16"><i class="fa fa-square blue"></i> ชาย </p>
-                                                                            </td>
-                                                                            <td class="text-center p-r-10 font-16">10%</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="p-t-15">
-                                                                                <p class="text-center p-r-15 font-16"><i class="fa fa-square red"></i> หญิง </p>
-                                                                            </td>
-                                                                            <td class="text-center p-r-10 font-16">30%</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class="p-t-15">
-                                                                                <p class="text-center p-r-10 font-16"><i class="fa fa-square dark"></i> ไม่ระบุ </p>
-                                                                            </td>
-                                                                            <td class="text-center p-r-10 font-16">5%</td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
+                                                        <table>
+                                                            <div id="piechart_3d" style="width: 100%; height: 200px;" />
                                                         </table>
                                                     </div>
                                                 </div>
@@ -375,21 +359,21 @@
                                             <div class="col-lg-2">
                                                 <div class="row align-items-center">
                                                     <div class="col-12">
-                                                        <div class="bg-dark p-10 text-white text-center">
+                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
                                                             <i class="fa fa-user m-b-5 font-16"></i>
                                                             <h5 class="m-b-0 m-t-5">2540</h5>
                                                             <small class="font-light">จำนวนผู้ใช้ทั้งหมด</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">
-                                                        <div class="bg-dark p-10 text-white text-center">
+                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
                                                             <i class="fa fa-plus m-b-5 font-16"></i>
                                                             <h5 class="m-b-0 m-t-5">120</h5>
                                                             <small class="font-light">ผู้ใช้ใหม่</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">
-                                                        <div class="bg-dark p-10 text-white text-center">
+                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
                                                             <i class="fa fa-cart-plus m-b-5 font-16"></i>
                                                             <h5 class="m-b-0 m-t-5">656</h5>
                                                             <small class="font-light">Total Shop</small>
