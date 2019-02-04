@@ -291,7 +291,7 @@
                                         </div>
                                         <div class="row">
                                             <!-- กราฟวงกลม-->
-                                            <div class="col-lg-5 col-sm-6 col-xs-12 widget_tally_box">
+                                            <div style="width: 31%">
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
                                                         <h5 class="title-charts align-items-center">ผู้ใช้งาน App</h5>
@@ -314,13 +314,13 @@
                                                     </div>
                                                     <div class="x_content">
                                                         <table>
-                                                            <div id="piechart_3d" style="width: 100%; height: 200px;" />
+                                                            <div id="piechart_3d" style="width: 100%; height:100%;" />
                                                         </table>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- กราฟแท่ง-->
-                                            <div class="col-lg-5 col-sm-6 col-xs-12 widget_tally_box">
+                                            <div style="width: 50%; margin-left: 2%">
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
                                                         <h5 class="title-charts align-items-center"> ความถี่การใช้งานเมนูต่าง ๆ</h5>
@@ -341,10 +341,8 @@
                                                         </ul>
                                                         <div class="clearfix"></div>
                                                     </div>
-                                                    <div class="x_content">
-
-                                                        <div id="graph_bar" style="width:100%; height:200px;"></div>
-                                                    </div>
+                                                    <iframe src="Component/Highcharts.php" height="80%" width="100%" frameborder="0" scrolling="auto" align="right">
+                                                    </iframe>
                                                 </div>
                                             </div>
                                             <!-- ปุ่มข้างๆ-->
