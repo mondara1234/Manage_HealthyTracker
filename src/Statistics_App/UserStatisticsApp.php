@@ -259,22 +259,6 @@
                         <div class="x_panel tile fixed_height_320 overflow_hidden">
                             <div class="x_title row">
                                 <h5 style="width: 70%;">ผู้ใช้งาน App</h5>
-                                <ul class="nav navbar-right justify-content-end panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up p-icon-r5"></i></a>
-                                    </li>
-                                    <li class="dropdown p-icon-r5">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                        <ul class="dropdown-menu " role="menu">
-                                            <li><a href="#">Settings 1</a>
-                                            </li>
-                                            <li><a href="#">Settings 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="close-link"><i class="fa fa-times p-icon-r5"></i></a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
                             </div>
                             <table>
                                 <div id="piechart_3d" style="width: 100%; height:100%; padding-bottom: 50px" />
@@ -284,7 +268,7 @@
                     <div style="width: 45%; height: 100%">
                         <center>
                             <div class="font-14">
-                                Start Date : <input type="date" name="bday" id="dateStart" value="2019-02-04">
+                                เลือกวันที่ : <input type="date" name="bday" id="dateStart" value="2019-02-04">
                             </div>
                         </center><br>
                         <div class="font-16" align="center">จำนวนผู้ใช้งาน วันที่  2019-02-04</div>
@@ -298,22 +282,6 @@
                     <div class="x_panel tile fixed_height_320 overflow_hidden">
                         <div class="x_title row">
                             <h5 style="width: 70%;">ผู้ใช้งานแจ้งปัญหา</h5>
-                            <ul class="nav navbar-right justify-content-end panel_toolbox">
-                                <li><a class="collapse-link"><i class="fa fa-chevron-up p-icon-r5"></i></a>
-                                </li>
-                                <li class="dropdown p-icon-r5">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                    <ul class="dropdown-menu " role="menu">
-                                        <li><a href="#">Settings 1</a>
-                                        </li>
-                                        <li><a href="#">Settings 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="close-link"><i class="fa fa-times p-icon-r5"></i></a>
-                                </li>
-                            </ul>
-                            <div class="clearfix"></div>
                         </div>
                         <table>
                             <div id="piechart_3ds" style="width: 100%; height:100%; padding-bottom: 50px" />
@@ -323,7 +291,7 @@
                 <div style="width: 45%; height: 100%">
                     <center>
                         <div class="font-14">
-                            Start Date : <input type="date" name="bday" id="dateProbled" value="2019-02-04">
+                            เลือกวันที่ : <input type="date" name="bday" id="dateProbled" value="2019-02-04">
                         </div>
                     </center><br>
                     <div class="font-16" align="center">จำนวนผู้แจ้งปัญหา วันที่  2019-02-04</div>
