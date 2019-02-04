@@ -521,10 +521,6 @@
         <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
         <!-- รูปกราฟ วงกลม ใช้ร่วมกับ จาวาสคลิป-->
         <script src="assets/libs/Chart.js/dist/Chart.min.js"></script>
-        <!-- รูปกราฟ แท่ง ใช้ร่วมกับ จาวาสคลิป-->
-        <script src="assets/libs/raphael/raphael.min.js"></script>
-        <script src="assets/libs/morris.js/morris.min.js"></script>
-        <script src="assets/libs/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- รูปกราฟ %-->
         <script src="assets/libs/chart/matrix.interface.js"></script>
         <script src="assets/libs/chart/jquery.peity.min.js"></script>
