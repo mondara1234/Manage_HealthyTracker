@@ -4,162 +4,7 @@
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/CONTRIBUTORS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/bootstrap-progressbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/bootstrap-progressbar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.3.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.0.4.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.1.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.1.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.1.1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.1.1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.2.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.2.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.2.1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.2.1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.2.2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.2.2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.3.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.3.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.3.1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.3.1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.3.2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-2.3.2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.0-rc1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.0-rc1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.0-rc2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.0-rc2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.0.3.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.1.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.1.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.1.1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.1.1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.2.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.2.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.0.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.1.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/less/bootstrap-progressbar-2.x.x.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/less/bootstrap-progressbar-3.0.0-3.1.x.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/less/bootstrap-progressbar-3.2.0.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/less/bootstrap-progressbar-3.3.0-3.x.x.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/scss/bootstrap-progressbar-2.x.x.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/scss/bootstrap-progressbar-3.0.0-3.1.x.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/scss/bootstrap-progressbar-3.2.0.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/bootstrap-progressbar/scss/bootstrap-progressbar-3.3.0-3.x.x.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/bower.travis.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/_template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/area-as-line.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/area.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/bar-colors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/bar-no-axes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/bar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/days.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/decimal-custom-hover.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/diagonal-xlabels-bar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/diagonal-xlabels.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/donut-colors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/donut-formatter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/donut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/dst.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/goals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/lib/example.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/lib/example.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/months-no-smooth.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/negative.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/no-grid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/non-continuous.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/non-date.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/quarters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/resize.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/stacked_bars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/timestamps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/updating.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/weeks.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/examples/years.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/less/morris.core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/lib/morris.area.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/lib/morris.bar.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/lib/morris.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/lib/morris.donut.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/lib/morris.grid.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/lib/morris.hover.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/lib/morris.line.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/morris.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/morris.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/morris.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/area/area_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/bar/bar_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/bar/colours.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/commas_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/donut/donut_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/grid/auto_grid_lines_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/grid/set_data_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/grid/y_label_format_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/hover_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/label_series_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/line/line_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/pad_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/lib/parse_time_spec.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/specs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/support/placeholder.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/examples.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/exemplary/area0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/exemplary/bar0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/exemplary/line0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/exemplary/stacked_bar0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/morris.js/spec/viz/visual_specs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/dev/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/dev/raphael.amd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/dev/raphael.core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/dev/raphael.svg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/dev/raphael.vml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/dev/test/svg/dom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/dev/test/vml/dom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/raphael.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/raphael.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/raphael.no-deps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/raphael.no-deps.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/libs/raphael/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/dist/css/styleCommon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/dist/css/styleCommon.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -184,24 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Highcharts.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Component/Highcharts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="58" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Homepage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Homepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="522" column="70" selection-start-line="522" selection-start-column="70" selection-end-line="522" selection-end-column="70" />
+            <state relative-caret-position="490">
+              <caret line="342" column="61" lean-forward="true" selection-start-line="342" selection-start-column="61" selection-end-line="342" selection-end-column="61" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#span#0;n#a#1;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,8 +54,8 @@
       <file leaf-file-name="styleCommon.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/dist/css/styleCommon.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="141" selection-start-line="141" selection-end-line="141" />
+            <state relative-caret-position="656">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
             </state>
           </provider>
         </entry>
@@ -272,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/Manage_Trick/api/delete.php" />
         <option value="$PROJECT_DIR$/src/Manage_Exercise/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" />
-        <option value="$PROJECT_DIR$/src/assets/dist/css/styleCommon.css" />
         <option value="$PROJECT_DIR$/src/ProfileUser/UserInformation.php" />
         <option value="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" />
         <option value="$PROJECT_DIR$/src/ProfileUser/api/delete.php" />
@@ -292,6 +135,7 @@
         <option value="$PROJECT_DIR$/src/login/login.html" />
         <option value="$PROJECT_DIR$/src/Database/Check_login.php" />
         <option value="$PROJECT_DIR$/src/Component/Highcharts.php" />
+        <option value="$PROJECT_DIR$/src/assets/dist/css/styleCommon.css" />
         <option value="$PROJECT_DIR$/src/Homepage.php" />
       </list>
     </option>
@@ -340,6 +184,47 @@
               <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="style.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
@@ -412,10 +297,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39088000" />
+    <option name="totallyTimeSpent" value="39595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -454,22 +340,22 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.260745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
       <window_info anchor="right" id="Database" order="3" side_tool="true" weight="0.3295129" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,22 +365,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ManageMembers.php" />
-    <entry file="file://$PROJECT_DIR$/src/UserInformation.php" />
-    <entry file="file://$PROJECT_DIR$/src/Database/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statistics_Web/UserStatisticsWebAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="246" column="45" lean-forward="true" selection-start-line="246" selection-start-column="45" selection-end-line="246" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../My_SQL/foodDiary/DeleteFoodName.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -587,13 +457,6 @@
     <entry file="file://$PROJECT_DIR$/src/assets/libs/jquerydatepicker/jquery-ui.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/dist/css/styleCommon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProfileUser/api/delete.php">
@@ -859,19 +722,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component/Highcharts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="58" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="58" />
+        <state relative-caret-position="605">
+          <caret line="81" column="17" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="81" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/dist/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/dist/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/dist/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/dist/js/custom.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/dist/css/styleCommon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="522" column="70" selection-start-line="522" selection-start-column="70" selection-end-line="522" selection-end-column="70" />
+        <state relative-caret-position="490">
+          <caret line="342" column="61" lean-forward="true" selection-start-line="342" selection-start-column="61" selection-end-line="342" selection-end-column="61" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#span#0;n#a#1;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

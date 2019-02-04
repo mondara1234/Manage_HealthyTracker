@@ -294,7 +294,7 @@
                                             <div style="width: 31%">
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
-                                                        <h5 class="title-charts align-items-center">ผู้ใช้งาน App</h5>
+                                                        <h5 style="width: 40%; margin-top: 3%">ผู้ใช้งาน App</h5>
                                                         <ul class="nav navbar-right justify-content-end panel_toolbox">
                                                             <li><a class="collapse-link"><i class="fa fa-chevron-up p-icon-r5"></i></a>
                                                             </li>
@@ -323,10 +323,8 @@
                                             <div style="width: 50%; margin-left: 2%">
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
-                                                        <h5 class="title-charts align-items-center"> ความถี่การใช้งานเมนูต่าง ๆ</h5>
+                                                        <h5 class="align-items-center" style="width: 69%; margin-top: 3%;"> ความถี่การใช้งานเมนูต่าง ๆ</h5>
                                                         <ul class="nav navbar-right justify-content-end panel_toolbox">
-                                                            <li><a class="collapse-link"><i class="fa fa-chevron-up p-icon-r5"></i></a>
-                                                            </li>
                                                             <li class="dropdown p-icon-r5">
                                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                                                                 <ul class="dropdown-menu" role="menu">
