@@ -101,14 +101,6 @@
 
                     <ul class="navbar-nav float-left mr-auto">
                         <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
-                        <!-- ============================================================== -->
-                        <!-- ค้นหา -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
-                            </form>
-                        </li>
                     </ul>
                     <!-- ============================================================== -->
                     <!-- กรอบทางขวา -->
@@ -235,63 +227,66 @@
                     <form name="search" method="post">
                         <table width="80%" border="1" bgcolor="#FFCC00">
                             <tr>
-                                <th> <div align="center"> UserName :
-                                    <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                    <input type="submit" value="Search" />
+                                <th>
+                                    <div align="center" class="font-16"> UserName :
+                                        <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
+                                        <input type="submit" value="Search" />
                                     </div>
                                 </th>
                             </tr>
                         </table>
                     </form>
                 </center>
-                <table width="100%" border="1" >
+                <table width="100%" border="1" style="margin-top: 20px;" class="font-14" >
                     <tr bgcolor="#FFCC00">
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> UserID </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> imgProfile </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> E-mail </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Password </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Username </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Status </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Language </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> PersonalSelect </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> PersonalCode </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Sex </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Age </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Weight </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Height </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> BMRUser </div>
                         </th>
-                        <th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> edit </div>
                         </th>
-                        <th><div align="center"> delete </div></th>
+                        <th style="padding-left: 5px; padding-right: 5px">
+                            <div align="center"> delete </div>
+                        </th>
                     </tr>
 
                     <?php
@@ -353,18 +348,6 @@
     <script src="../assets/dist/js/sidebarmenu.js"></script>
     <!-- เปิด-ปิด Menu sidebar -->
     <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <!-- รูปกราฟ วงกลม ใช้ร่วมกับ จาวาสคลิป-->
-    <script src="../assets/libs/Chart.js/dist/Chart.min.js"></script>
-    <!-- รูปกราฟ แท่ง ใช้ร่วมกับ จาวาสคลิป-->
-    <script src="../assets/libs/raphael/raphael.min.js"></script>
-    <script src="../assets/libs/morris.js/morris.min.js"></script>
-    <script src="../assets/libs/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <script src="../assets/libs/DateJS/build/date.js"></script>
-    <!-- รูปกราฟ %-->
-    <script src="../assets/libs/chart/matrix.interface.js"></script>
-    <script src="../assets/libs/chart/jquery.peity.min.js"></script>
-    <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="../assets/libs/chart/turning-series.js"></script>
     <!-- กำหนดเอง Scripts -->
     <script src="../assets/dist/js/custom.min.js"></script>
 

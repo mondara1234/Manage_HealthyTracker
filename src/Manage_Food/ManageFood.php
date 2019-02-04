@@ -67,7 +67,7 @@
                             </li>
                         </ul>
             </nav>
-        </aside
+        </aside>
         <header class="topbar " data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin5">
@@ -101,14 +101,6 @@
 
                     <ul class="navbar-nav float-left mr-auto">
                         <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
-                        <!-- ============================================================== -->
-                        <!-- ค้นหา -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
-                            </form>
-                        </li>
                     </ul>
                     <!-- ============================================================== -->
                     <!-- กรอบทางขวา -->
@@ -215,7 +207,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ฐานข้อมูล รายการอาหาร</h4>
+                        <h4 class="page-title">ฐานข้อมูล รายการอาาหาร</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -235,7 +227,7 @@
                     <form name="search" method="post">
                         <table width="80%" border="1" bgcolor="#FFCC00">
                             <tr>
-                                <th> <div align="center"> FoodName :
+                                <th> <div align="center" class="font-16"> FoodName :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="Search" />
                                     </div>
@@ -244,7 +236,7 @@
                         </table>
                     </form>
                 </center>
-                <table width="100%" border="1" >
+                <table width="100%" border="1" style="margin-top: 20px;" class="font-14">
                     <tr bgcolor="#FFCC00">
                         <th>
                             <div align="center"> FoodID </div>
@@ -322,18 +314,6 @@
     <script src="../assets/dist/js/sidebarmenu.js"></script>
     <!-- เปิด-ปิด Menu sidebar -->
     <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <!-- รูปกราฟ วงกลม ใช้ร่วมกับ จาวาสคลิป-->
-    <script src="../assets/libs/Chart.js/dist/Chart.min.js"></script>
-    <!-- รูปกราฟ แท่ง ใช้ร่วมกับ จาวาสคลิป-->
-    <script src="../assets/libs/raphael/raphael.min.js"></script>
-    <script src="../assets/libs/morris.js/morris.min.js"></script>
-    <script src="../assets/libs/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <script src="../assets/libs/DateJS/build/date.js"></script>
-    <!-- รูปกราฟ %-->
-    <script src="../assets/libs/chart/matrix.interface.js"></script>
-    <script src="../assets/libs/chart/jquery.peity.min.js"></script>
-    <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="../assets/libs/chart/turning-series.js"></script>
     <!-- กำหนดเอง Scripts -->
     <script src="../assets/dist/js/custom.min.js"></script>
 
