@@ -144,8 +144,8 @@
       <file leaf-file-name="ManageUser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ProfileUser/ManageUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="229" column="91" lean-forward="true" selection-start-line="229" selection-start-column="91" selection-end-line="229" selection-end-column="91" />
+            <state relative-caret-position="367">
+              <caret line="244" column="122" lean-forward="true" selection-start-line="244" selection-start-column="122" selection-end-line="244" selection-end-column="122" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -269,7 +269,7 @@
       <path value="$PROJECT_DIR$/src/assets/libs/flot/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="15" />
     <option name="y" value="44" />
     <option name="width" value="1381" />
@@ -375,12 +375,12 @@
       <workItem from="1548238298203" duration="25422000" />
       <workItem from="1549462656062" duration="15000" />
       <workItem from="1549537945990" duration="22031000" />
-      <workItem from="1549621759712" duration="9030000" />
+      <workItem from="1549621759712" duration="9190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76514000" />
+    <option name="totallyTimeSpent" value="76674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -890,8 +890,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProfileUser/ManageUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="229" column="91" lean-forward="true" selection-start-line="229" selection-start-column="91" selection-end-line="229" selection-end-column="91" />
+        <state relative-caret-position="367">
+          <caret line="244" column="122" lean-forward="true" selection-start-line="244" selection-start-column="122" selection-end-line="244" selection-end-column="122" />
           <folding>
             <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
