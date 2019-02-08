@@ -55,17 +55,10 @@
                             <li class="sidebar-item"><a href="ManageAdmin.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="../Statistics_App/UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
-                            <li class="sidebar-item"><a href="../Statistics_Web/UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="../Problems/Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
-                        </ul>
-                    </li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Statistics_App/UserStatisticsApp.php" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu p-r-10"> สถิติการใช้งาน App </span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Permission/Permission.php" aria-expanded="false"><i class="mdi mdi-key"></i><span class="hide-menu p-r-10"> การขออนุญาติ </span> <span class="label label-danger  ">3</span> </a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Problems/Problems.php" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a></li>
+                </ul>
             </nav>
         </aside>
         <header class="topbar " data-navbarbg="skin5">
@@ -155,81 +148,84 @@
                             </tr>
                         </table>
                     </form>
-                </center>
-                <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
-                    <tr bgcolor="#068e81" style="color: white; height: 40px">
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> ID </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> UserName </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Email </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> ImgProfile </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Password </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FirstName </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> LastName </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Address </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Telephone </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Status </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> DateRegis </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Edit </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Delete </div>
-                        </th>
-                    </tr>
-
-                    <?php
-                    while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
-                    {
-                        ?>
-                        <tr>
-                            <td align="center"><?php echo ($result["ID"]) ?>
-                            <td align="center"><?php echo ($result["UserName"]) ?></td>
-                            <td align="center"><img src="<?php echo ($result["ImgProfile"]) ?>" width="50" height="50"  ></td>
-                            <td align="center"><?php echo ($result["Email"]) ?></td>
-                            <td align="center"><?php echo ($result["Password"]) ?></td>
-                            <td align="center"><?php echo ($result["FirstName"]) ?></td>
-                            <td align="center"><?php echo ($result["LastName"]) ?></td>
-                            <td align="center"><textarea rows="4" cols="25" ><?php echo ($result["Address"]) ?></textarea></td>
-                            <td align="center"><?php echo ($result["Telephone"]) ?></td>
-                            <td align="center"><?php echo ($result["Status"]) ?></td>
-                            <td align="center"><?php echo ($result["DateRegis"]) ?></td>
-                            <td align="center">
-                                <a href="api/edit.php?AdminID=<?php echo ($result["ID"]) ?>"> Edit </a>
-                            </td>
-                            <td align="center">
-                                <a href="JavaScript:if(confirm('Confirm Delete?')==true)
-                {window.location='api/delete.php?AdminID=<?php echo ($result["ID"]) ?>';}"> Delete </a>
-                            </td>
+                    <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
+                        <tr bgcolor="#068e81" style="color: white; height: 40px">
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> ID </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> UserName </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Email </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> ImgProfile </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Password </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> FirstName </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> LastName </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Address </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Telephone </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Status </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> DateRegis </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Permission </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Edit </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> Delete </div>
+                            </th>
                         </tr>
 
-
                         <?php
-                    }
-                    ?>
-                </table>
+                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                        {
+                            ?>
+                            <tr>
+                                <td align="center"><?php echo ($result["ID"]) ?>
+                                <td align="center"><?php echo ($result["UserName"]) ?></td>
+                                <td align="center"><img src="<?php echo ($result["ImgProfile"]) ?>" width="50" height="50"  ></td>
+                                <td align="center"><?php echo ($result["Email"]) ?></td>
+                                <td align="center"><?php echo ($result["Password"]) ?></td>
+                                <td align="center"><?php echo ($result["FirstName"]) ?></td>
+                                <td align="center"><?php echo ($result["LastName"]) ?></td>
+                                <td align="center"><textarea rows="4" style="width: 100%" ><?php echo ($result["Address"]) ?></textarea></td>
+                                <td align="center"><?php echo ($result["Telephone"]) ?></td>
+                                <td align="center"><?php echo ($result["Status"]) ?></td>
+                                <td align="center"><?php echo ($result["DateRegis"]) ?></td>
+                                <td align="center"><?php echo ($result["Permission"]) ?></td>
+                                <td align="center">
+                                    <a href="api/edit.php?AdminID=<?php echo ($result["ID"]) ?>"> Edit </a>
+                                </td>
+                                <td align="center">
+                                    <a href="JavaScript:if(confirm('Confirm Delete?')==true)
+                    {window.location='api/delete.php?AdminID=<?php echo ($result["ID"]) ?>';}"> Delete </a>
+                                </td>
+                            </tr>
 
+
+                            <?php
+                        }
+                        ?>
+                    </table>
+                </center>
                 <?php
                 mysqli_close($conn);
                 ?>

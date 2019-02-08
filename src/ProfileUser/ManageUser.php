@@ -99,17 +99,10 @@
                             <li class="sidebar-item"><a href="../Manage_Admin/ManageAdmin.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="../Statistics_App/UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
-                            <li class="sidebar-item"><a href="../Statistics_Web/UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="../Problems/Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
-                        </ul>
-                    </li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Statistics_App/UserStatisticsApp.php" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu p-r-10"> สถิติการใช้งาน App </span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Permission/Permission.php" aria-expanded="false"><i class="mdi mdi-key"></i><span class="hide-menu p-r-10"> การขออนุญาติ </span> <span class="label label-danger  ">3</span> </a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Problems/Problems.php" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a></li>
+                </ul>
             </nav>
         </aside>
         <header class="topbar " data-navbarbg="skin5">
@@ -168,7 +161,6 @@
                                 <div class="dropdown-divider"></div>
                             </div>
                         </li>
-
                     </ul>
                 </div>
             </nav>
@@ -284,26 +276,8 @@
     <script src="../assets/dist/js/sidebarmenu.js"></script>
     <!-- เปิด-ปิด Menu sidebar -->
     <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <!-- รูปกราฟ วงกลม ใช้ร่วมกับ จาวาสคลิป-->
-    <script src="../assets/libs/Chart.js/dist/Chart.min.js"></script>
-    <!-- รูปกราฟ แท่ง ใช้ร่วมกับ จาวาสคลิป-->
-    <script src="../assets/libs/raphael/raphael.min.js"></script>
-    <script src="../assets/libs/morris.js/morris.min.js"></script>
-    <script src="../assets/libs/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <script src="../assets/libs/DateJS/build/date.js"></script>
-    <!-- รูปกราฟ %-->
-    <script src="../assets/libs/chart/matrix.interface.js"></script>
-    <script src="../assets/libs/chart/jquery.peity.min.js"></script>
-    <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="../assets/libs/chart/turning-series.js"></script>
     <!-- กำหนดเอง Scripts -->
     <script src="../assets/dist/js/custom.min.js"></script>
-
-    <!-- date -->
-    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.js"></script>
-    <script type="text/javascript" src="../assets/libs/jquerydatepicker/jquery-ui-sliderAccess.js"></script>
 
 </body>
 </html>

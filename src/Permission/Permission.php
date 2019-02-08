@@ -21,9 +21,20 @@
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
 </head>
+<?php
+$Search = null;
+if(isset($_POST["txtSearch"]))
+{
+    $Search = $_POST["txtSearch"];
+}
+
+include('../Database/connect.php');
+
+$sql = "SELECT * FROM adminmanage WHERE UserName LIKE '%".$Search."%' ";
+$query = mysqli_query($conn, $sql);
+?>
 
 <body class="bg-container">
-
 <!-- ============================================================== -->
 <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
 <!-- ============================================================== -->
@@ -44,17 +55,10 @@
                         <li class="sidebar-item"><a href="../Manage_Admin/ManageAdmin.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
                     </ul>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
-                    <ul aria-expanded="false" class="collapse  first-level">
-                        <li class="sidebar-item"><a href="../Statistics_App/UserStatisticsApp.php" class="sidebar-link"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu"> สถิติการใช้งาน App </span></a></li>
-                        <li class="sidebar-item"><a href="UserStatisticsWebAdmin.php" class="sidebar-link"><i class="mdi mdi-chart-pie"></i><span class="hide-menu"> สถิติการใข้งาน Web-Admin </span></a></li>
-                    </ul>
-                </li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
-                    <ul aria-expanded="false" class="collapse  first-level">
-                        <li class="sidebar-item"><a href="../Problems/Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
-                    </ul>
-                </li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Statistics_App/UserStatisticsApp.php" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu p-r-10"> สถิติการใช้งาน App </span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Permission/Permission.php" aria-expanded="false"><i class="mdi mdi-key"></i><span class="hide-menu p-r-10"> การขออนุญาติ </span> <span class="label label-danger  ">3</span> </a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Problems/Problems.php" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a></li>
+            </ul>
         </nav>
     </aside>
     <header class="topbar " data-navbarbg="skin5">
@@ -125,7 +129,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">สถิติการใข้งาน Web-Admin</h4>
+                    <h4 class="page-title">การขออนุญาติ</h4>
                 </div>
             </div>
         </div>
@@ -133,8 +137,64 @@
         <!-- ส่วนของเนื้อหา  -->
         <!-- ============================================================== -->
         <div class="container-fluid">
-
+            <center>
+                <form name="search" method="post">
+                    <table width="80%" border="0">
+                        <tr>
+                            <th> <div align="center" class="font-16"> UserName :
+                                    <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
+                                    <input type="submit" value="Search" />
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </form>
+                <div class="container-fluid m-t-10">
+                    <div class="col-md-12">
+                        <div class="row" style="width: 100%; margin-left: 4%">
+                            <?php
+                            while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                            {
+                                ?>
+                                <div class="cardID m-r-20 m-t-10 p-t-5" style="width: 17%;" >
+                                    <center>
+                                        <img src="<?php echo ($result["imgProfile"]) ?>" width="80%" height="100px" style="margin-top: 3%">
+                                        <div class="containerID">
+                                            <font class="font-20"><b><?php echo ($result["UserName"]) ?></b></font>
+                                            <div>
+                                                <font class="font-16">สถานะ :</font>
+                                                <font class="font-16"><?php echo ($result["Permission"]) ?></font>
+                                            </div>
+                                            <div class="row justify-content-between align-items-center m-b-5" >
+                                                <form name="edit" action="api/updated.php" method="post" enctype="multipart/form-data">
+                                                    <input type="hidden" name="Permission" value="allow" />
+                                                    <input type="hidden" name="UserID" value="<?php echo ($result["ID"]) ?>" />
+                                                    <button  class="font-12" style=" color: white; background: #068e81;">
+                                                        อนุญาติ
+                                                    </button>
+                                                </form>
+                                                <form name="edit" action="api/updated.php" method="post" enctype="multipart/form-data">
+                                                    <input type="hidden" name="Permission" value="disallow" />
+                                                    <input type="hidden" name="UserID" value="<?php echo ($result["ID"]) ?>" />
+                                                    <button  class="font-12" style=" color: white; background: #068e81;">
+                                                        ไม่อนุญาติ
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </center>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </center>
         </div>
+        <?php
+        mysqli_close($conn);
+        ?>
         <footer class="footer text-center">
             <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
             <div class="text-dark">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>

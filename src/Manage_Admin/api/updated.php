@@ -16,6 +16,7 @@
     $pAddress = $_POST["pAddress"];
     $pTelephone = $_POST["pTelephone"];
     $pStatus = $_POST["pStatus"];
+    $Permission = $_POST["Permission"];
     $pDateRegis = $_POST["pDateRegis"];
     $pImgProfile = $_FILES["pImgProfile"]["name"];
     $path = basename($pImgProfile);
@@ -30,6 +31,7 @@
 			Address = '$pAddress',
 			Telephone = '$pTelephone',
 			Status = '$pStatus',
+			Permission = '$Permission',
 			DateRegis	 = '$pDateRegis',
 			ImgProfile = '$pImgProfile'
 			
