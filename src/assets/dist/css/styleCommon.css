@@ -122,6 +122,9 @@ table.tile_info {
 .dark {
     color: #34495E
 }
+.hex {
+    color: #068e81;
+}
 
 .cardID {
     /* Add shadows to create the "card" effect */

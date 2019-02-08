@@ -16,18 +16,18 @@
     <link href="../../assets/dist/css/matrix-style.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-    <title> Edit BMI </title>
+	<title> Edit Admin </title>
 </head>
 <body class="bg-container">
     <?php
         include("../../Database/connect.php");
 
         $ID = null;
-        if(isset($_GET["BMIID"])){
-            $ID = $_GET["BMIID"];
+        if(isset($_GET["AdminID"])){
+            $ID = $_GET["AdminID"];
         }
 
-        $sql = "SELECT * FROM bmiuser WHERE BMIID = '".$ID."'";
+        $sql = "SELECT * FROM adminmanage WHERE ID = '".$ID."'";
         $query = mysqli_query($conn, $sql);
 
         $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
@@ -47,9 +47,9 @@
                             <li class="sidebar-item"><a href="../../Manage_User/ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
                             <li class="sidebar-item"><a href="../../Manage_DiaryUser/ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
                             <li class="sidebar-item"><a href="../../Manage_Food/ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
-                            <li class="sidebar-item"><a href="../ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
+                            <li class="sidebar-item"><a href="../../Manage_BMI/ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
                             <li class="sidebar-item"><a href="../../Manage_Trick/ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                            <li class="sidebar-item"><a href="../../Manage_Admin/ManageAdmin.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
+                            <li class="sidebar-item"><a href="../ManageAdmin.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
@@ -82,8 +82,8 @@
                         </b>
                         <!-- Logo text -->
                         <span class="logo-text">
-                                <div class="light-logo" style="font-size: 20px;" > Healthy Tracker </div>
-                            </span>
+                                    <div class="light-logo" style="font-size: 20px;" > Healthy Tracker </div>
+                                </span>
                     </a>
                     <!-- ============================================================== -->
                     <!-- สลับที่มองเห็นได้เฉพาะบนอุปกรณ์เคลื่อนที่เท่านั้น -->
@@ -144,27 +144,51 @@
                     <form name="edit" action="updated.php" method="post" enctype="multipart/form-data">
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> NameBMI :</b></td>
-                                <td width="80%"><input type="text" name="pNameBMI" value="<?php echo $result["NameBMI"]; ?>" style="width: 100%" /></td>
-                                <input type="hidden" name="BMIID" value="<?php echo $result["BMIID"]; ?>" />
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> UserName :</b></td>
+                                <td width="80%"><input type="text" name="pUserName" value="<?php echo $result["UserName"]; ?>" style="width: 100%"/></td>
+                                <input type="hidden" name="AdminID" value="<?php echo $result["ID"]; ?>"/>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> DetailBMI :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Email :</b></td>
+                                <td width="80%"><input type="text" name="pEmail" value="<?php echo $result["Email"]; ?>" style="width: 100%"/></td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Password :</b></td>
+                                <td width="80%"><input type="text" name="pPassword" value="<?php echo $result["Password"]; ?>" style="width: 100%"/></td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FirstName :</b></td>
+                                <td width="80%"><input type="text" name="pFirstName" value="<?php echo $result["FirstName"]; ?>" style="width: 100%"/></td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> LastName :</b></td>
+                                <td width="80%"><input type="text" name="pLastName" value="<?php echo $result["LastName"]; ?>" style="width: 100%"/></td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Address :</b></td>
                                 <td width="80%">
-                                    <textarea rows="10" style="width: 100%" name="pDetailBMI" ><?php echo $result["DetailBMI"]; ?></textarea>
+                                    <textarea rows="4" name="pAddress" style="width: 100%"><?php echo $result["Address"]; ?></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> SumBMI :</b></td>
-                                <td width="80%"><input type="text" name="pSumBMI" value="<?php echo $result["SumBMI"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Telephone :</b></td>
+                                <td width="80%"><input type="text" name="pTelephone" value="<?php echo $result["Telephone"]; ?>" style="width: 100%"/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> BMIUser :</b></td>
-                                <td width="80%"><input type="text" name="pBMIUser" value="<?php echo $result["BMIUser"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Status :</b></td>
+                                <td width="80%"><input type="text" name="pStatus" value="<?php echo $result["Status"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> UnitBMI :</b></td>
-                                <td width="80%"><input type="text" name="pUnitBMI" value="<?php echo $result["UnitBMI"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> DateRegis :</b></td>
+                                <td width="80%">
+                                    <input type="date" name="pDateRegis" value="<?php echo $result["DateRegis"]; ?>" min="2018-01-01" max="<?php echo $result["DateRegis"]; ?>" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ImgProfile :</b></td>
+                                <td width="80%">
+                                    <input type="file" name="pImgProfile" id="pImgProfile" value="<?php echo $result["ImgProfile"]; ?>" />
+                                </td>
                             </tr>
                         </table>
                         <button type="submit" name="Submit" class="font-18"
@@ -174,10 +198,10 @@
                         </button>
                     </form>
                 </center>
+                <?php
+                    mysqli_close($conn);
+                ?>
             </div>
-            <?php
-                mysqli_close($conn);
-            ?>
             <footer class="footer text-center">
                 <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
                 <div class="text-dark">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>

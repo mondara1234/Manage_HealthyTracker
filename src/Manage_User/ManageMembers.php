@@ -46,13 +46,13 @@
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../Homepage.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="../ProfileUser/UserInformation.php" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu"> การจัดการฐานข้อมูล </span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
+                        <ul aria-expanded="false" class="collapse first-level">
                             <li class="sidebar-item"><a href="ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
                             <li class="sidebar-item"><a href="../Manage_DiaryUser/ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
                             <li class="sidebar-item"><a href="../Manage_Food/ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
                             <li class="sidebar-item"><a href="../Manage_BMI/ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
                             <li class="sidebar-item"><a href="../Manage_Trick/ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                            <li class="sidebar-item"><a href="../Manage_Exercise/ManageExercise.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ท่าออกกำลังกาย </span></a></li>
+                            <li class="sidebar-item"><a href="../Manage_Admin/ManageAdmin.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu"> สถิติ </span></a>
@@ -64,8 +64,8 @@
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect " href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a>
                         <ul aria-expanded="false" class="collapse  first-level">
                             <li class="sidebar-item"><a href="../Problems/Problems.php" class="sidebar-link"><i class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403 </span></a></li>
-                            </li>
                         </ul>
+                    </li>
             </nav>
         </aside>
         <header class="topbar " data-navbarbg="skin5">
@@ -80,15 +80,14 @@
                     <!-- ============================================================== -->
                     <a class="navbar-brand" href="../Homepage.php">
                         <!-- Logo icon -->
-                        <b class="logo-icon p-l-10">
+                        <b class="logo-icon">
                             <img src="../assets/images/LogoHT.png" alt="homepage" height="50" width="50" class="light-logo" />
                         </b>
                         <!-- Logo text -->
                         <span class="logo-text">
-                            <div class="light-logo" style="font-size: 20px" > Healthy Tracker </div>
-                        </span>
+                                <div class="light-logo" style="font-size: 20px;" > Healthy Tracker </div>
+                            </span>
                     </a>
-
                     <!-- ============================================================== -->
                     <!-- สลับที่มองเห็นได้เฉพาะบนอุปกรณ์เคลื่อนที่เท่านั้น -->
                     <!-- ============================================================== -->
@@ -107,83 +106,13 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-right">
                         <!-- ============================================================== -->
-                        <!-- ส่วนของการแจ้งเตือน -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-bell font-24"></i>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-
-                        <!-- ============================================================== -->
-                        <!-- ส่วนของ Messages -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="font-24 mdi mdi-comment-processing"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown" aria-labelledby="2">
-                                <ul class="list-style-none">
-                                    <li>
-                                        <div class="">
-                                            <!-- Message -->
-                                            <a href="javascript:void(0)" class="link border-top">
-                                                <div class="d-flex no-block align-items-center p-10">
-                                                    <span class="btn btn-success btn-circle"><i class="ti-calendar"></i></span>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Event today</h5>
-                                                        <span class="mail-desc">Just a reminder that event</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <!-- Message -->
-                                            <a href="javascript:void(0)" class="link border-top">
-                                                <div class="d-flex no-block align-items-center p-10">
-                                                    <span class="btn btn-info btn-circle"><i class="ti-settings"></i></span>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Settings</h5>
-                                                        <span class="mail-desc">You can customize this template</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <!-- Message -->
-                                            <a href="javascript:void(0)" class="link border-top">
-                                                <div class="d-flex no-block align-items-center p-10">
-                                                    <span class="btn btn-primary btn-circle"><i class="ti-user"></i></span>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Pavan kumar</h5>
-                                                        <span class="mail-desc">Just see the my admin!</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <!-- Message -->
-                                            <a href="javascript:void(0)" class="link border-top">
-                                                <div class="d-flex no-block align-items-center p-10">
-                                                    <span class="btn btn-danger btn-circle"><i class="fa fa-link"></i></span>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Luanch Admin</h5>
-                                                        <span class="mail-desc">Just see the my new admin!</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <!-- ============================================================== -->
                         <!-- ส่วนของรูป user  -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"> Admin
-                                <span class=" fa fa-angle-down"></span>
+                                <img src="../assets/images/users/user-default.png" alt="user" class="rounded-circle" width="40">
+                                <span class="font-16 m-r-5 m-l-5">Admin</span>
+                                <span class=" fa fa-angle-down font-16"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> ข้อมูลส่วนตัว </a>
@@ -191,7 +120,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> การตั้งค่าบัญชี </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> ออกจากระบบ </a>
+                                <a class="dropdown-item" href="../login/login.html"><i class="fa fa-power-off m-r-5 m-l-5"></i> ออกจากระบบ </a>
                                 <div class="dropdown-divider"></div>
                             </div>
                         </li>
@@ -208,14 +137,6 @@
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
                         <h4 class="page-title">ฐานข้อมูล สมาชิก</h4>
-                        <div class="ml-auto text-right">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="../Homepage.php">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
-                                </ol>
-                            </nav>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -225,7 +146,7 @@
             <div class="container-fluid">
                 <center>
                     <form name="search" method="post">
-                        <table width="80%" border="1" bgcolor="#FFCC00">
+                        <table width="80%" border="0">
                             <tr>
                                 <th>
                                     <div align="center" class="font-16"> UserName :
@@ -237,8 +158,8 @@
                         </table>
                     </form>
                 </center>
-                <table width="100%" border="1" style="margin-top: 20px;" class="font-14" >
-                    <tr bgcolor="#FFCC00">
+                <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
+                    <tr bgcolor="#068e81" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> UserID </div>
                         </th>
@@ -282,10 +203,10 @@
                             <div align="center"> BMRUser </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> edit </div>
+                            <div align="center"> Edit </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> delete </div>
+                            <div align="center"> Delete </div>
                         </th>
                     </tr>
 
@@ -295,7 +216,9 @@
                         ?>
                         <tr>
                             <td align="center"><?php echo ($result["UserID"]) ?></td>
-                            <td align="center"><img src="<?php echo ($result["imgProfile"]) ?>" width="50" height="50" ></td>
+                            <td align="center">
+                                <img src="<?php echo ($result["imgProfile"]) ?>" width="50" height="50" style="margin: 3% 0px 3% 0px;" >
+                            </td>
                             <td align="center"><?php echo ($result["Email"]) ?></td>
                             <td align="center"><?php echo ($result["Password"]) ?></td>
                             <td align="center"><?php echo ($result["UserName"]) ?></td>

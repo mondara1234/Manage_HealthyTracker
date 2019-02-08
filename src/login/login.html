@@ -1,10 +1,22 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
+	<!-- กำหนดขนาด initial-scale=1.0 = เพื่อไม่ให้  Safari Zoom -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">  <!--  device-width = “ขนาด” ของ device นั้นๆ-->
+	<meta name="description" content="">  <!--  บอกรายละเอียดของเว็บเพจแบบคร่าวๆ-->
+	<meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
+
+	<!-- Custom CSS -->
+	<link href="../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+	<link href="../assets/dist/css/style.min.css" rel="stylesheet">
+	<link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 	<title>Login</title>
 </head>
 
-<script language ="javascript">
+<script language="javascript">
     function checkLogin(){
         if(document.login.txtUsername.value == "")
         {
@@ -15,28 +27,54 @@
     }
 </script>
 
-<body>
-	<center>
-		<form name="login" method="post" action="../Database/Check_login.php" >
-			 Login
-			<br><br>
-			<table width=" 100">
-				<tr>
-					<td> &nbsp;Username</td>
-					<td> <input name="txtUsername" type="text" id="txtUsername"> </td>
-				</tr>
-				<tr>
-					<td> &nbsp;Password</td>
-					<td> <input name="txtPassword" type="password" id="txtPassword"> </td>
-				</tr>
-			</table>
-				<a href="login.html">ลืมรหัสผ่าน !</a>
-			<br>
-			<br>
-			<input type="submit" name="Submit" value="Login" onClick="checkLogin">
-			<br>
-			<label>คุณมีบัญชีหรือยัง ? </label><a href="register.html">สมัครสมาชิก</a>
-		</form>
-	</center>
+<body style="background-image: url('../assets/images/background/bg_web.png'); background-size: 100% 100%;">
+	<form name="login" method="post" action="../Database/Check_login.php">
+		<p style="margin-left: 30%; margin-top: 2%">
+			<font  size="20" color="white">เข้าสู่ระบบ</font>
+		</p>
+		<div
+			 class="row justify-content-between"
+			 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%"
+		>
+			<div style="margin-left: 10%">
+				<div style="margin-top: 22%;">
+					<font Face="Monotype Corsiva" size="25" color="black">The</font>
+				</div>
+				<div style="margin-top: -25%; margin-left: 5%">
+					<font Face="Monotype Corsiva" size="25" color="black">Healthy</font>
+				</div>
+				<div style="margin-top: -25%; margin-left: 40%" class="hex">
+					<font Face="Monotype Corsiva" size="25" color="#068e81">Tracker</font>
+				</div>
+			</div>
+			<div>
+				<table cellpadding="10">
+					<tr>
+						<td align="right" class="font-18" style="color: black">Username :</td>
+						<td align="right"> <input name="txtUsername" type="text" id="txtUsername"> </td>
+					</tr>
+					<tr>
+						<td align="right" class="font-18" style="color: black">Password :</td>
+						<td align="right"> <input name="txtPassword" type="password" id="txtPassword"> </td>
+					</tr>
+					<tr align="right">
+						<td></td>
+						<td><a href="login.html" class="font-16" style="color: white">ลืมรหัสผ่าน !</a></td>
+					</tr>
+				</table>
+				<div style="margin-left: 40%; margin-top: 5%">
+					<button type="submit" name="Submit" onClick="checkLogin" class="font-18"
+							style="width: 60%; height: 40px; color: white; background: #068e81; border-color: white"
+					>
+						Login
+					</button>
+				</div>
+				<div style="margin-left: 10%; margin-top: 5%">
+					<label class="font-16" style="color: black">คุณมีบัญชีหรือยัง ? </label>
+					<a href="register.php" class="font-18" style="margin-left: 5%; color: white">สมัครสมาชิก</a>
+				</div>
+			</div>
+		</div>
+	</form>
 </body>
 </html>

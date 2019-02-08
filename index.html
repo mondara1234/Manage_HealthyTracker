@@ -1,16 +1,66 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
+    <!-- กำหนดขนาด initial-scale=1.0 = เพื่อไม่ให้  Safari Zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--  device-width = “ขนาด” ของ device นั้นๆ-->
+    <meta name="description" content="">  <!--  บอกรายละเอียดของเว็บเพจแบบคร่าวๆ-->
+    <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/images/LogoHT.png">
+
+    <!-- Custom CSS -->
+    <link href="src/assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="src/assets/dist/css/style.min.css" rel="stylesheet">
+    <link href="src/assets/dist/css/styleCommon.css" rel="stylesheet">
 	<title> Index </title>
 </head>
-<body>
-    <center>
-        <form name="login" action="src/login.html" method="post">
-            <input type="submit" value="login" style="background-color: #0F3; font-weight:bold;" />
-        </form>
-        <form name="register" action="src/register.html" method="post">
-            <input type="submit" value="register" style="background-color: #0F3; font-weight:bold;" />
-        </form>
-    </center>
+<body  style="background-image: url('src/assets/images/background/bg_web.png'); background-size: 100% 100%;">
+    <p style="margin-left: 30%; margin-top: 2%">
+        <font  size="20" color="white">
+            ระบบการจัดการข้อมูล
+            <font Face="Monotype Corsiva" size="20" color="white">
+                The Healthy Tracker
+            </font>
+        </font>
+    </p>
+    <div
+            class="row justify-content-between"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%"
+    >
+        <div style="margin-left: 18%">
+            <div style="margin-top: -12%;">
+                <font Face="Monotype Corsiva" size="25" color="black">The</font>
+            </div>
+            <div style="margin-top: -25%; margin-left: 5%">
+                <font Face="Monotype Corsiva" size="25" color="black">Healthy</font>
+            </div>
+            <div style="margin-top: -25%; margin-left: 40%" class="hex">
+                <font Face="Monotype Corsiva" size="25" color="#068e81">Tracker</font>
+            </div>
+        </div>
+        <div style="width: 40%; margin-right: -7%;">
+            <p>
+                <button type="submit" name="Submit" onclick="window.location.href='src/login/login.html'" class="font-24"
+                        style="width: 60%; height: 60px; color: white; background: #068e81; border-color: white"
+                >
+                    <a>
+                        <i class="mdi mdi-login" style="font-size: 30px"></i>
+                        <span> เข้าสู่ระบบ </span>
+                    </a>
+                </button>
+            </p>
+            <p>
+                <button type="submit" name="Submit" onclick="window.location.href='src/login/register.php'" class="font-24"
+                        style="width: 60%; height: 60px; color: white; background: #068e81; border-color: white"
+                >
+                    <a>
+                        <i class="fa fa-registered" style="font-size: 30px"></i>
+                        <span> ลงทะเบียน </span>
+                    </a>
+                </button>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
