@@ -1,12 +1,7 @@
-<html>
-<head>
-	<title> Updated </title>
-</head>
-<body>
 
 <?php
 	include("../../Database/connect.php");
-
+    $UserName = $_GET["UserName"];
 	$TrickID = $_POST["TrickID"];
 	$pTrickName = $_POST["pTrickName"];
 	$pTrickLike = $_POST["pTrickLike"];
@@ -33,16 +28,22 @@
 	$query = mysqli_query($conn, $sql);
 
 	if($query){
-		echo("อัปเดทสำเร็จ");
-	}else{
-		echo("ลองใหม่อีกครั้ง");
-	}
+        $message = "อัพเดทสำเร็จ";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='edit.php?UserName=$UserName';
+        </script>"
+        );
+    }else{
+        $message = "อัพเดทล้มเหลว";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='edit.php?UserName=$UserName';
+        </script>"
+        );
+    }
 
 	mysqli_close($conn);
 ?>
-
-<form name="Add" action="../ManageTips.php" method="post">
-	<input type="submit" value="Ok" />
-</form>
-</body>
-</html>

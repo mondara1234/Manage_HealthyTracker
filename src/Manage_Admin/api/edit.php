@@ -21,7 +21,6 @@
 <body class="bg-container">
     <?php
         include("../../Database/connect.php");
-
         $ID = null;
         if(isset($_GET["AdminID"])){
             $ID = $_GET["AdminID"];
@@ -203,7 +202,7 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php" method="post" enctype="multipart/form-data">
+                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> UserName :</b></td>
@@ -274,8 +273,8 @@
                 ?>
             </div>
             <footer class="footer text-center">
-                <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
-                <div class="text-dark">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>
+                <div class="text-dark font-14"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
+                <div class="text-dark font-14">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>
             </footer>
         </div>
     </div>

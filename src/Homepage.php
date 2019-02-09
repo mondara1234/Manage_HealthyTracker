@@ -17,10 +17,13 @@
         <link href="assets/dist/css/matrix-style.css" rel="stylesheet">
         <link href="assets/dist/css/style.min.css" rel="stylesheet">
         <link href="assets/dist/css/styleCommon.css" rel="stylesheet">
-
     </head>
     <?php
     include("Database/connect.php");
+    $UserName = $_GET["UserName"];
+    $sql = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
+    $query = mysqli_query($conn, $sql);
+    $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
     $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
     $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
@@ -178,8 +181,8 @@
                             <!-- ============================================================== -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="assets/images/users/user-default.png" alt="user" class="rounded-circle" width="40">
-                                    <span class="font-16 m-r-5 m-l-5"><?php echo($_GET["UserName"]); ?></span>
+                                    <img class="rounded-circle" src="<?php echo ($result["ImgProfile"]) ?>" alt="user" width="40" >
+                                    <span class="font-16 m-r-5 m-l-5"><?php echo ($result["UserName"]) ?></span>
                                     <span class=" fa fa-angle-down font-16"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right user-dd animated">
@@ -221,10 +224,10 @@
                                         <div>My Dashboard</div>
                                     </a>
                                 </li>
-                                <li class="bg_ls" style="width: 18%">
+                                <li class="bg_ls" style="width: 18%; height: 14%">
                                     <a href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="fa fa-user-circle"></i></h1>
-                                        <div>ข้อมูลผู้ใช้งาน</div>
+                                        <div style="margin-top: 10%">ข้อมูลผู้ใช้งาน</div>
                                     </a>
                                 </li>
                                 <li class="bg_lo" style="width: 18%">
@@ -465,8 +468,8 @@
                     </div>
                 </div>
                 <footer class="footer text-center">
-                    <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
-                    <div class="text-dark">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>
+                    <div class="text-dark font-14"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
+                    <div class="text-dark font-14">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>
                 </footer>
             </div>
 

@@ -1,9 +1,5 @@
-<html>
-<head>
-	<title> InsertAdmin </title>
-</head>
-<body>
 <?php
+include("connect.php");
 	$Username = $_POST["txtUsername"];
     $Email = $_POST["txtEmail"];
 	$Password = $_POST["txtPassword"];
@@ -12,36 +8,68 @@
     $Address = $_POST["txtAddress"];
     $Telephone = $_POST["txtTelephone"];
     $ImgProfile = $_FILES["txtImgProfile"]["name"];
+    $ImgDefault = $ImgProfile ? $ImgProfile : "https://pngimage.net/wp-content/uploads/2018/06/user-avatar-png-6.png";
     $DateRegis = $_POST["date"];
     $Status = 'admin';
     $Permission = 'pending';
-	
+    $path = basename($ImgProfile);
+    $upload = move_uploaded_file($_FILES['txtImgProfile']['tmp_name'], $path);
+
 	if(empty($Username) || empty($Email) || empty($Password)) {
-		echo ("<a href='register.php'> กรอกข้อมูลไม่ครบ </a>");
-		exit;
-	}
+        $message = "กรุณากรอกข้อมูลให้ครบ";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='../login/register.php';
+        </script>"
+        );
+	}else if(strlen($Password) < 6){
+        $message = "รหัสผ่านต้องมีจำนวนมากกว่า 5 ตัว";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='../login/register.php';
+        </script>"
+        );
+    }else{
+        $Sql_Query = "select * from adminmanage where Username = '$Username'";
 
-	$path = basename($ImgProfile);
-	$upload = move_uploaded_file($_FILES['txtImgProfile']['tmp_name'], $path);
+        $query = mysqli_query($conn, $Sql_Query);
 
-	include("connect.php");
-	
-	$sql = "INSERT INTO adminmanage (UserName, Email, Password, FirstName, LastName, Address, Telephone, Status, DateRegis, ImgProfile, Permission) 
-			VALUES ('$Username', '$Email', '$Password', '$First_name', '$Last_Name','$Address', '$Telephone', '$Status', '$DateRegis', '$ImgProfile', '$Permission')";
-	
-	$query = mysqli_query($conn, $sql);
-	
-	if($query){
-		echo("ลงทะเบียนเสร็จสิ้นรอการอนุมัติจากเจ้าของระบบนะครับ");
-	}else{
-		echo("ลงทะเบียนล้มเหลว");
-	}
+        $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+	    if($result){
+            $message = "ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว";
+            echo (
+            "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='../login/register.php';
+        </script>"
+            );
+        }else{
+            $sql = "INSERT INTO adminmanage (UserName, Email, Password, FirstName, LastName, Address, Telephone, Status, DateRegis, ImgProfile, Permission) 
+			VALUES ('$Username', '$Email', '$Password', '$First_name', '$Last_Name','$Address', '$Telephone', '$Status', '$DateRegis', '$ImgDefault', '$Permission')";
+
+            $query = mysqli_query($conn, $sql);
+
+            if($query){
+                $message = "ลงทะเบียนเสร็จสิ้นรอการอนุมัติจากเจ้าของระบบนะครับ";
+                echo (
+                "<script LANGUAGE='JavaScript'>
+                    window.alert('$message');
+                    window.location.href='../login/register.php';
+                </script>"
+                );
+            }else{
+                $message = "ลงทะเบียนล้มเหลว";
+                echo (
+                "<script LANGUAGE='JavaScript'>
+                    window.alert('$message');
+                    window.location.href='../login/register.php';
+                </script>"
+                );
+            }
+        }
+    }
 	
 	mysqli_close($conn);
 ?>
-<form name="BackHome" action="../../index.html" method="post">
-	<input type="submit" value="Homepage" />
-</form>
-	
-</body>
-</html>

@@ -203,7 +203,7 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php" method="post" enctype="multipart/form-data">
+                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> E-mail :</b></td>

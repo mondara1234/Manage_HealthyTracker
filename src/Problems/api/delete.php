@@ -1,10 +1,6 @@
-<html>
-<head>
-    <title>delete</title>
-</head>
-<body>
 <?php
 include('../../Database/connect.php');
+$UserName = $_GET["UserName"];
 $ID = null;
 if(isset($_GET["ProblemID"])){
     $ID = $_GET["ProblemID"];
@@ -12,13 +8,20 @@ if(isset($_GET["ProblemID"])){
 $sql = "DELETE FROM problemapp WHERE ProblemID = $ID";
 $query = mysqli_query($conn, $sql);
 if(mysqli_affected_rows($conn)){
-    echo ("yes");
+    $message = "ลบสำเร็จ";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+        window.alert('$message');
+        window.location.href='../Problems.php?UserName=$UserName';
+    </script>"
+    );
 }else{
-    echo ("not");
+    $message = "ลองใหม่อีกครั้ง";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+        window.alert('$message');
+        window.location.href='../Problems.php?UserName=$UserName';
+    </script>"
+    );
 }
 ?>
-<form action="../Problems.php" method="post">
-    <input type="submit" value="ok" />
-</form>
-</body>
-</html>

@@ -5,8 +5,13 @@
     $txtPassword = $_POST["txtPassword"];
 
     if(empty($txtUsername) || empty($txtPassword)){
-        echo ("<a href='./../login/login.html'> กรอกข้อมูลไม่ครบ </a>");
-        exit;
+        $message = "กรุณากรอกข้อมูลให้ครบ";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='./../login/login.html';
+        </script>"
+        );
     }
 
     $Sql_Query = "select * from adminmanage where Username = '$txtUsername' and Password = '$txtPassword' ";

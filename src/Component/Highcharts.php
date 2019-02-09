@@ -2,6 +2,12 @@
     <head>
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
+        <?php
+        include("../Database/connect.php");
+        $sqlAllSex = "SELECT COUNT(*) as totalMember FROM membermanage";
+        $queryAllSex= mysqli_query($conn, $sqlAllSex);
+        $resultAllSex = mysqli_fetch_array($queryAllSex, MYSQLI_ASSOC);
+        ?>
     </head>
     <body>
         <div id="container" style="width: 100%; height: 100%; margin: 0 auto"></div>

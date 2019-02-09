@@ -1,14 +1,8 @@
-<html>
-<head>
-	<title> Updated </title>
-</head>
-<body>
-
 <?php
 	include("../../Database/connect.php");
     $UserID = $_POST["UserID"];
 	$Permission = $_POST["Permission"];
-	$UserName = $_POST["UserName"];
+	$UserName = $_GET["UserName"];
 
 	$sql = "UPDATE adminmanage SET 
 			Permission = '$Permission'
@@ -36,6 +30,3 @@
 	}
 	mysqli_close($conn);
 ?>
-
-</body>
-</html>

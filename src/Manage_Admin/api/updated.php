@@ -1,12 +1,6 @@
-<html>
-<head>
-	<title> Updated </title>
-</head>
-<body>
-
 <?php
 	include("../../Database/connect.php");
-
+    $UserName = $_GET["UserName"];
 	$AdminID = $_POST["AdminID"];
 	$pUserName = $_POST["pUserName"];
 	$pEmail = $_POST["pEmail"];
@@ -40,16 +34,23 @@
 	$query = mysqli_query($conn, $sql);
 
 	if($query){
-		echo("อัปเดทสำเร็จ");
+        $message = "อัพเดทสำเร็จ";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='edit.php?UserName=$UserName';
+        </script>"
+        );
 	}else{
-		echo("ลองใหม่อีกครั้ง");
+        $message = "อัพเดทล้มเหลว";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='edit.php?UserName=$UserName';
+        </script>"
+        );
 	}
 
 	mysqli_close($conn);
 ?>
 
-<form name="Add" action="../../Manage_Admin/ManageAdmin.php" method="post">
-	<input type="submit" value="Ok" />
-</form>
-</body>
-</html>
