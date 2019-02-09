@@ -17,7 +17,7 @@ if(mysqli_affected_rows($conn)){
     echo ("not");
 }
 ?>
-<form action="../../Manage_Admin/ManageAdmin.php" method="post">
+<form action="../../Manage_Admin/ManageAdmin.php?" method="post">
     <input type="submit" value="ok" />
 </form>
 </body>

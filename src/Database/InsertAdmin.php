@@ -14,6 +14,7 @@
     $ImgProfile = $_FILES["txtImgProfile"]["name"];
     $DateRegis = $_POST["date"];
     $Status = 'admin';
+    $Permission = 'pending';
 	
 	if(empty($Username) || empty($Email) || empty($Password)) {
 		echo ("<a href='register.php'> กรอกข้อมูลไม่ครบ </a>");
@@ -25,8 +26,8 @@
 
 	include("connect.php");
 	
-	$sql = "INSERT INTO adminmanage (UserName, Email, Password, FirstName, LastName, Address, Telephone, Status, DateRegis, ImgProfile) 
-			VALUES ('$Username', '$Email', '$Password', '$First_name', '$Last_Name','$Address', '$Telephone', '$Status', '$DateRegis', '$ImgProfile')";
+	$sql = "INSERT INTO adminmanage (UserName, Email, Password, FirstName, LastName, Address, Telephone, Status, DateRegis, ImgProfile, Permission) 
+			VALUES ('$Username', '$Email', '$Password', '$First_name', '$Last_Name','$Address', '$Telephone', '$Status', '$DateRegis', '$ImgProfile', '$Permission')";
 	
 	$query = mysqli_query($conn, $sql);
 	

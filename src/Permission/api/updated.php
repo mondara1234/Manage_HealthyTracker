@@ -6,9 +6,9 @@
 
 <?php
 	include("../../Database/connect.php");
-
     $UserID = $_POST["UserID"];
 	$Permission = $_POST["Permission"];
+	$UserName = $_POST["UserName"];
 
 	$sql = "UPDATE adminmanage SET 
 			Permission = '$Permission'
@@ -22,7 +22,7 @@
         echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='../Permission.php';
+            window.location.href='../Permission.php?UserName=$UserName';
         </script>"
         );
 	}else{
@@ -30,7 +30,7 @@
         echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='../Permission.php';
+            window.location.href='../Permission.php?UserName=$UserName';
         </script>"
         );
 	}

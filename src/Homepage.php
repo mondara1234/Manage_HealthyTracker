@@ -18,31 +18,30 @@
         <link href="assets/dist/css/style.min.css" rel="stylesheet">
         <link href="assets/dist/css/styleCommon.css" rel="stylesheet">
 
-        <!-- กราฟวงกลม -->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-            google.charts.load("current", {packages:["corechart"]});
-            google.charts.setOnLoadCallback(drawChart);
-            function drawChart() {
-                let data = google.visualization.arrayToDataTable([
-                    ['Task', 'Hours per Day'],
-                    ['ทั้งหมด',     500],
-                    ['ชาย',      150],
-                    ['หญิง',    350]
-                ]);
-
-                let options = {
-                    title: '',
-                    is3D: true,
-                };
-
-                let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-                chart.draw(data, options);
-            }
-        </script>
-
     </head>
+    <?php
+    include("Database/connect.php");
 
+    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
+    $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
+    $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
+
+    $sqlAllProblem = "SELECT COUNT(*) as totalAllProblem FROM problemapp";
+    $queryAllProblem = mysqli_query($conn, $sqlAllProblem);
+    $resultAllProblem = mysqli_fetch_array($queryAllProblem, MYSQLI_ASSOC);
+
+    $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
+    $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+    $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
+    $sqlUsermanage = "SELECT COUNT(*) as totalUsermanage FROM membermanage";
+    $queryUsermanage = mysqli_query($conn, $sqlUsermanage);
+    $resultUsermanage = mysqli_fetch_array($queryUsermanage, MYSQLI_ASSOC);
+
+    $sqlUserNew = "SELECT COUNT(*) as totalUserNew FROM membermanage WHERE date(DateRegis)>=date_add(curdate(),interval -6 day) AND date(DateRegis)<=curdate()";
+    $queryUserNew = mysqli_query($conn, $sqlUserNew);
+    $resultUserNew = mysqli_fetch_array($queryUserNew, MYSQLI_ASSOC);
+    ?>
     <body class="bg-container">
         <!-- ============================================================== -->
         <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
@@ -52,21 +51,82 @@
             <aside class="left-sidebar " data-sidebarbg="skin5">
                 <nav class="sidebar-nav ">
                     <ul id="sidebarnav" class="p-t-30">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu"> การจัดการฐานข้อมูล </span></a>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span class="hide-menu">หน้าหลัก</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                                <i class="fa fa-user-secret"></i>
+                                <span class="hide-menu"> ข้อมูล User </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false">
+                                <i class="mdi mdi-pencil"></i>
+                                <span class="hide-menu"> การจัดการฐานข้อมูล </span>
+                            </a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="Manage_User/ManageMembers.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_DiaryUser/ManageDiary.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_Food/ManageFood.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_BMI/ManageBMI.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_Trick/ManageTips.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_Admin/ManageAdmin.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
+                                <li class="sidebar-item">
+                                    <a href="Manage_User/ManageMembers.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                        <i class="fa fa-user-plus"></i>
+                                        <span class="hide-menu"> ฐานข้อมูล สมาชิก </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="Manage_DiaryUser/ManageDiary.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                        <i class="mdi mdi-book-open-page-variant"></i>
+                                        <span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="Manage_Food/ManageFood.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                        <i class="mdi mdi-food"></i>
+                                        <span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="Manage_BMI/ManageBMI.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                        <i class="mdi mdi-multiplication-box"></i>
+                                        <span class="hide-menu"> ฐานข้อมูล BMI </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="Manage_Trick/ManageTips.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                        <i class="mdi mdi-calendar-check"></i>
+                                        <span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="Manage_Admin/ManageAdmin.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                        <i class="mdi mdi-run-fast"></i>
+                                        <span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu p-r-10"> สถิติการใช้งาน App </span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Permission/Permission.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-key"></i><span class="hide-menu p-r-10"> การขออนุญาติ </span> <span class="label label-danger  ">3</span> </a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a></li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                                <i class="mdi mdi-chart-bar"></i>
+                                <span class="hide-menu p-r-10"> สถิติการใช้งาน App </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Permission/Permission.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                                <i class="mdi mdi-key"></i>
+                                <span class="hide-menu p-r-10"> การขออนุญาติ </span>
+                                <span class="label label-danger"><?php echo($resultAdminmanage['totalAdminmanage']); ?></span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                                <i class="mdi mdi-alert"></i>
+                                <span class="hide-menu p-r-10"> ปัญหาที่พบ </span>
+                                <span class="label label-danger"><?php echo($resultProblemapp['totalProblemapp']); ?></span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -93,7 +153,9 @@
                         <!-- ============================================================== -->
                         <!-- สลับที่มองเห็นได้เฉพาะบนอุปกรณ์เคลื่อนที่เท่านั้น -->
                         <!-- ============================================================== -->
-                        <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                        <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="ti-more"></i>
+                        </a>
                     </div>
                     <!-- ============================================================== -->
                     <!-- กรอบทางช้าย -->
@@ -101,7 +163,11 @@
                     <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
 
                         <ul class="navbar-nav float-left mr-auto">
-                            <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar">
+                                    <i class="mdi mdi-menu font-24"></i>
+                                </a>
+                            </li>
                         </ul>
                         <!-- ============================================================== -->
                         <!-- กรอบทางขวา -->
@@ -176,7 +242,7 @@
                                 <li class="bg_lr" style="width: 18%">
                                     <a href="Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
-                                        <span class="label label-success">3</span>
+                                        <span class="label label-success"><?php echo($resultProblemapp['totalProblemapp']); ?></span>
                                         <div>ปัญหาที่พบ</div>
                                     </a>
                                 </li>
@@ -252,21 +318,21 @@
                                                     <div class="col-12">
                                                         <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
                                                             <i class="fa fa-user m-b-5 font-16"></i>
-                                                            <h5 class="m-b-0 m-t-5">2540</h5>
+                                                            <h5 class="m-b-0 m-t-5"><?php echo($resultUsermanage['totalUsermanage']); ?></h5>
                                                             <small class="font-light">จำนวนผู้ใช้ทั้งหมด</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">
                                                         <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
                                                             <i class="fa fa-plus m-b-5 font-16"></i>
-                                                            <h5 class="m-b-0 m-t-5">120</h5>
+                                                            <h5 class="m-b-0 m-t-5"><?php echo($resultUserNew['totalUserNew']); ?></h5>
                                                             <small class="font-light">ผู้ใช้ใหม่</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">
                                                         <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
                                                             <i class="mdi mdi-alert-outline m-b-5 font-16"></i>
-                                                            <h5 class="m-b-0 m-t-5">150</h5>
+                                                            <h5 class="m-b-0 m-t-5"><?php echo($resultAllProblem['totalAllProblem']); ?></h5>
                                                             <small class="font-light">จำนวนปัญหาทั้งหมด</small>
                                                         </div>
                                                     </div>
@@ -421,7 +487,29 @@
         <!-- เปิด-ปิด Menu sidebar -->
         <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
         <!-- รูปกราฟ วงกลม ใช้ร่วมกับ จาวาสคลิป-->
-        <script src="assets/libs/Chart.js/dist/Chart.min.js"></script>
+        <!-- กราฟวงกลม -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load("current", {packages:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                let data = google.visualization.arrayToDataTable([
+                    ['Task', 'Hours per Day'],
+                    ['ทั้งหมด',     500],
+                    ['ชาย',      150],
+                    ['หญิง',    350]
+                ]);
+
+                let options = {
+                    title: '',
+                    is3D: true,
+                };
+
+                let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+            }
+        </script>
+
         <!-- รูปกราฟ %-->
         <script src="assets/libs/chart/matrix.interface.js"></script>
         <script src="assets/libs/chart/jquery.peity.min.js"></script>
