@@ -3,28 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/InsertAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/InsertAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/ManageDiary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/ManageDiary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/ManageFood.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/ManageFood.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Permission/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permission/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Permission/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permission/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/Problems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/Problems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ProfileUser/UserInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfileUser/UserInformation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Statistics_App/UserStatisticsApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statistics_App/UserStatisticsApp.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,26 +32,17 @@
       <file leaf-file-name="Homepage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Homepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="42" column="69" lean-forward="true" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+            <state relative-caret-position="400">
+              <caret line="513" column="75" selection-start-line="513" selection-start-column="75" selection-end-line="513" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserStatisticsApp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Statistics_App/UserStatisticsApp.php">
+      <file leaf-file-name="UserInformation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProfileUser/UserInformation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1479">
-              <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeachTrickNew.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../My_SQL/Trick/SeachTrickNew.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="122" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="122" />
+            <state relative-caret-position="224">
+              <caret line="253" column="15" lean-forward="true" selection-start-line="253" selection-start-column="15" selection-end-line="255" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -149,7 +120,6 @@
         <option value="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" />
         <option value="$PROJECT_DIR$/src/Permission/Permission.php" />
         <option value="$PROJECT_DIR$/src/Problems/Problems.php" />
-        <option value="$PROJECT_DIR$/src/ProfileUser/UserInformation.php" />
         <option value="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" />
         <option value="$PROJECT_DIR$/src/Statistics_App/UserStatisticsApp.php" />
         <option value="D:/adminpage_report.php" />
@@ -160,6 +130,7 @@
         <option value="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Problems/api/edit.php" />
+        <option value="$PROJECT_DIR$/src/ProfileUser/UserInformation.php" />
         <option value="$PROJECT_DIR$/src/Homepage.php" />
       </list>
     </option>
@@ -389,12 +360,12 @@
       <workItem from="1549462656062" duration="15000" />
       <workItem from="1549537945990" duration="22031000" />
       <workItem from="1549621759712" duration="20922000" />
-      <workItem from="1549703187663" duration="8694000" />
+      <workItem from="1549703187663" duration="10512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97100000" />
+    <option name="totallyTimeSpent" value="98918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -679,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProfileUser/UserInformation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="58" column="67" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/adminpage_report.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13">
@@ -791,15 +755,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Statistics_App/UserStatisticsApp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1479">
+        <state relative-caret-position="-3474">
           <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProfileUser/UserInformation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="253" column="15" lean-forward="true" selection-start-line="253" selection-start-column="15" selection-end-line="255" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="42" column="69" lean-forward="true" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+        <state relative-caret-position="400">
+          <caret line="513" column="75" selection-start-line="513" selection-start-column="75" selection-end-line="513" selection-end-column="75" />
         </state>
       </provider>
     </entry>

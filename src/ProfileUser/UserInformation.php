@@ -184,7 +184,6 @@
                                     <div class="dropdown-divider"></div>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                 </nav>
