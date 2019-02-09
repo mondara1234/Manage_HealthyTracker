@@ -52,21 +52,21 @@
             <aside class="left-sidebar " data-sidebarbg="skin5">
                 <nav class="sidebar-nav ">
                     <ul id="sidebarnav" class="p-t-30">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Homepage.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">หน้าหลัก</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="fa fa-user-secret"></i><span class="hide-menu"> ข้อมูล User </span> </a></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu"> การจัดการฐานข้อมูล </span></a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="Manage_User/ManageMembers.php" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_DiaryUser/ManageDiary.php" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_Food/ManageFood.php" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_BMI/ManageBMI.php" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_Trick/ManageTips.php" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
-                                <li class="sidebar-item"><a href="Manage_Admin/ManageAdmin.php" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_User/ManageMembers.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="fa fa-user-plus"></i><span class="hide-menu"> ฐานข้อมูล สมาชิก </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_DiaryUser/ManageDiary.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_Food/ManageFood.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-food"></i><span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_BMI/ManageBMI.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> ฐานข้อมูล BMI </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_Trick/ManageTips.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span></a></li>
+                                <li class="sidebar-item"><a href="Manage_Admin/ManageAdmin.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span></a></li>
                             </ul>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Statistics_App/UserStatisticsApp.php" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu p-r-10"> สถิติการใช้งาน App </span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Permission/Permission.php" aria-expanded="false"><i class="mdi mdi-key"></i><span class="hide-menu p-r-10"> การขออนุญาติ </span> <span class="label label-danger  ">3</span> </a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Problems/Problems.php" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu p-r-10"> สถิติการใช้งาน App </span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Permission/Permission.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-key"></i><span class="hide-menu p-r-10"> การขออนุญาติ </span> <span class="label label-danger  ">3</span> </a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false"><i class="mdi mdi-alert"></i><span class="hide-menu p-r-10"> ปัญหาที่พบ </span> <span class="label label-danger  ">3</span> </a></li>
                     </ul>
                 </nav>
             </aside>
@@ -80,7 +80,7 @@
                         <!-- ============================================================== -->
                         <!-- ส่วนหัวข้อแถบเมนู -->
                         <!-- ============================================================== -->
-                        <a class="navbar-brand" href="Homepage.php">
+                        <a class="navbar-brand" href="Homepage.php?UserName=<?php echo($_GET["UserName"]); ?>">
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <img src="assets/images/LogoHT.png" alt="homepage" height="50" width="50" class="light-logo" />
@@ -113,7 +113,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src="assets/images/users/user-default.png" alt="user" class="rounded-circle" width="40">
-                                    <span class="font-16 m-r-5 m-l-5">Admin</span>
+                                    <span class="font-16 m-r-5 m-l-5"><?php echo($_GET["UserName"]); ?></span>
                                     <span class=" fa fa-angle-down font-16"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right user-dd animated">
@@ -150,31 +150,31 @@
                         <div class="quick-actions_homepage  m-b-10">
                             <ul class="quick-actions">
                                 <li class="bg_lb" style="width: 18%">
-                                    <a href="Homepage.php">
+                                    <a href="Homepage.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
                                         <div>My Dashboard</div>
                                     </a>
                                 </li>
                                 <li class="bg_ls" style="width: 18%">
-                                    <a href="ProfileUser/UserInformation.php">
+                                    <a href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="fa fa-user-circle"></i></h1>
                                         <div>ข้อมูลผู้ใช้งาน</div>
                                     </a>
                                 </li>
                                 <li class="bg_lo" style="width: 18%">
-                                    <a href="Manage_User/ManageMembers.php">
+                                    <a href="Manage_User/ManageMembers.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
                                         <div>การจัดการฐานข้อมูล</div>
                                     </a>
                                 </li>
                                 <li class="bg_lg" style="width: 18%">
-                                    <a href="Statistics_App/UserStatisticsApp.php">
+                                    <a href="Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
                                         <div>สถิติ</div>
                                     </a>
                                 </li>
                                 <li class="bg_lr" style="width: 18%">
-                                    <a href="Problems/Problems.php">
+                                    <a href="Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
                                         <span class="label label-success">3</span>
                                         <div>ปัญหาที่พบ</div>

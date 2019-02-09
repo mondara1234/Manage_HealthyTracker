@@ -25,7 +25,7 @@
         }else{
 
             if($result["Permission"] === 'allow'){
-                header("location:../Homepage.php?txtUsername=$txtUsername");
+                header("location:../Homepage.php?UserName=$txtUsername");
             }else{
                 $message = "คุณยังไม่ได้รับการอนุมัติการเข้าใช้จากเจ้าของระบบ";
                 echo (
