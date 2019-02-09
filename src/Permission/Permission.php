@@ -225,7 +225,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                                 ?>
                                 <div class="cardID m-r-20 m-t-10 p-t-5" style="width: 17%;" >
                                     <center>
-                                        <img src="<?php echo ($result["imgProfile"]) ?>" width="80%" height="100px" style="margin-top: 3%">
+                                        <img src="<?php echo ($result["imgProfile"]) ?>" width="90%" height="150px" style="margin-top: 3%">
                                         <div class="containerID">
                                             <font class="font-20"><b><?php echo ($result["UserName"]) ?></b></font>
                                             <div>
