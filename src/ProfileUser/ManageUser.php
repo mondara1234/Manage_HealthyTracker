@@ -22,50 +22,6 @@
 
     <link rel="stylesheet" media="all" type="text/css" href="../assets/libs/jquerydatepicker/jquery-ui.css" />
     <link rel="stylesheet" media="all" type="text/css" href="../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.css" />
-
-    <script type="text/javascript">
-        $(function(){
-
-            let startDateTextBox = $('#dateStart');
-            let endDateTextBox = $('#dateEnd');
-            startDateTextBox.datepicker({
-                dateFormat: 'dd-M-yy',
-                onClose: function(dateText, inst) {
-                    if (endDateTextBox.val() != '') {
-                        let testStartDate = startDateTextBox.datetimepicker('getDate');
-                        let testEndDate = endDateTextBox.datetimepicker('getDate');
-                        if (testStartDate > testEndDate)
-                            endDateTextBox.datetimepicker('setDate', testStartDate);
-                    }
-                    else {
-                        endDateTextBox.val(dateText);
-                    }
-                },
-                onSelect: function (selectedDateTime){
-                    endDateTextBox.datetimepicker('option', 'minDate', startDateTextBox.datetimepicker('getDate') );
-                }
-            });
-            endDateTextBox.datepicker({
-                dateFormat: 'dd-M-yy',
-                onClose: function(dateText, inst) {
-                    if (startDateTextBox.val() != '') {
-                        let testStartDate = startDateTextBox.datetimepicker('getDate');
-                        let testEndDate = endDateTextBox.datetimepicker('getDate');
-                        if (testStartDate > testEndDate)
-                            startDateTextBox.datetimepicker('setDate', testEndDate);
-                    }
-                    else {
-                        startDateTextBox.val(dateText);
-                    }
-                },
-                onSelect: function (selectedDateTime){
-                    startDateTextBox.datetimepicker('option', 'maxDate', endDateTextBox.datetimepicker('getDate') );
-                }
-            });
-
-        });
-
-    </script>
 </head>
 <body class="bg-container">
     <?php
@@ -73,14 +29,13 @@
     if(isset($_GET["NameUser"])){
         $UserName = $_GET["NameUser"];
     }
-
     include('../Database/connect.php');
 
-    $sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName' ";
+    $sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName'";
     $query = mysqli_query($conn, $sql);
 
-    $UserName = $_GET["UserName"];
-    $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
+    $UserNames = $_GET["UserName"];
+    $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserNames' ";
     $querymanage = mysqli_query($conn, $sqlmanage);
     $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
@@ -113,13 +68,16 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <div class="font-16">
-                    <center>
-                        Start Date : <input type="text" name="dateStart" id="dateStart" value="" />
-                        End Date : <input type="text" name="dateEnd" id="dateEnd" value="" />
-                    </center><br>
+                    <form method="post" name="formDate" action="api/SelectFood.php?UserName=<?php echo($_GET["UserName"]); ?>&NameUser=<?php echo ($_GET["NameUser"]);?>"  enctype="multipart/form-data" >
+                        <center>
+                            <div style="width: 60%">
+                                Start Date :<input id="dateStart" name="dateStart" type="date"/>
+                                End Date :<input id="dateEnd" name="dateEnd" type="date" />
+                                <button type="submit" name="submit" style="color: white; background: #068e81">ค้นหา</button>
+                            </div>
+                        </center>
 
-                    <form method="post" name="form1" OnSubmit="return chkConfirm();">
-                        <table width="100%" border="1" style="border: black double 5px;">
+                        <table width="100%" border="1" style="border: black double 5px; margin-top: 2%">
                             <tr bgcolor="#068e81" style="color: white; height: 40px; opacity:0.9;">
                                 <th>
                                     <div align="center"> DiaryID </div>
@@ -174,18 +132,25 @@
                                 <td align="center"> <div align="center"> ผลลัพธ์ </div></td>
                             </tr>
                         </table>
-                        <br>
-                        <p class="font-20 m-t-5">แจ้งการแนะนำ</p>
-                        <div style="width: 100%; display:inline-block; position:relative;">
-                            <textarea name="" id="txt" cols="20" rows="5" style="width: 100%; display:block;"></textarea>
-                            <button class="font-16" style="position:absolute; bottom:10px; right:10px; color: white; background: #068e81; ">แจ้งการแนะนำ</button>
-                        </div>
                     </form>
-                    <?php
-                    mysqli_close($conn);
-                    ?>
+                    <div class="col-md-12 card card-body m-t-10">
+                        <form name="MyForm" method="post" action="api/InsertMessage.php" target="iframe_target">
+                            <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+                            <p class="font-20 m-t-5">แจ้งการแนะนำ</p>
+                            <div style="margin-bottom: 1%;">
+                                <font>หัวข้อ :</font>
+                                <input type="text" name="AU_Title">
+                                <input type="hidden" name="AU_Date" id="AU_Date" value="<?php echo date('Y-m-d');?>"/>
+                                <input type="hidden" name="AU_UserName" id="AU_UserName" value="<?php echo ($_GET["NameUser"]);?>"/>
+                            </div>
+                            <div style="width: 100%; display:inline-block; position:relative;">
+                                <font>รายละเอียด :</font>
+                                <textarea name="" id="txt" cols="20" rows="5" style="width: 100%; display:block;"></textarea>
+                                <button class="font-16" style="position:absolute; bottom:10px; right:10px; color: white; background: #068e81; ">แจ้งการแนะนำ</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
             </div>
             <footer class="footer text-center">
                 <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
@@ -195,7 +160,8 @@
 
     </div>
 
-    <!-- ============================================================== -->
+    <!-- ========
+    ====================================================== -->
     <!-- Jquery ทั้งหมด  -->
     <!-- ============================================================== -->
     <!-- ต้องมี -->
