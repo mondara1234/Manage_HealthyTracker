@@ -134,9 +134,9 @@
                         </table>
                     </form>
                     <div class="col-md-12 card card-body m-t-10">
+                        <p class="font-20">แจ้งการแนะนำ</p>
                         <form name="MyForm" method="post" action="api/InsertMessage.php" target="iframe_target">
                             <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
-                            <p class="font-20 m-t-5">แจ้งการแนะนำ</p>
                             <div style="margin-bottom: 1%;">
                                 <font>หัวข้อ :</font>
                                 <input type="text" name="AU_Title">
