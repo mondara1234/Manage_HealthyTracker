@@ -22,46 +22,146 @@
 
     <!-- กราฟวงกลม -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                type: "POST",
+                url: "api/regisAll.php",
+                data: "data="+$("#dateUser").val(),
+                success: function(result) {
+                    google.charts.load("current", {packages:["corechart"]});
+                    google.charts.setOnLoadCallback(drawChart);
+                    function drawChart() {
+                        let data = google.visualization.arrayToDataTable([
+                            ['Task', 'Hours per Day'],
+                            ['ทั้งหมด', parseInt(result[0])],
+                            ['ชาย',   parseInt(result[1])],
+                            ['หญิง',   parseInt(result[2])]
+                        ]);
 
-        google.charts.load("current", {packages:["corechart"]});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            let data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['ทั้งหมด',     500],
-                ['ชาย',      150],
-                ['หญิง',    350]
-            ]);
+                        let options = {
+                            title: '',
+                            is3D: true
+                        };
 
-            let options = {
-                title: '',
-                is3D: true
-            };
+                        let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                        chart.draw(data, options);
+                    }
+                    console.log('result'+result); //e.g. 2015-11-13
+                    $('#dateSa').html('จำนวนผู้ใช้งาน ทั้งหมด');
+                    $('#totalAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
+                    $('#totalMale').html('ชาย '+parseInt(result[1])+' คน');
+                    $('#totalFeMale').html('หญิง '+parseInt(result[2])+' คน');
+                }
+            });
 
-            let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-            chart.draw(data, options);
-        }
+            document.getElementById("dateUser").addEventListener("change", function() {
+                console.log($("#dateUser").val()); //e.g. 2015-11-13
+                $.ajax({
+                    type: "POST",
+                    url: "api/regisAll.php",
+                    data: "data="+$("#dateUser").val(),
+                    success: function(result) {
+                        google.charts.load("current", {packages:["corechart"]});
+                        google.charts.setOnLoadCallback(drawChart);
+                        function drawChart() {
+                            let data = google.visualization.arrayToDataTable([
+                                ['Task', 'Hours per Day'],
+                                ['ทั้งหมด', parseInt(result[0])],
+                                ['ชาย',   parseInt(result[1])],
+                                ['หญิง',   parseInt(result[2])]
+                            ]);
+
+                            let options = {
+                                title: '',
+                                is3D: true
+                            };
+
+                            let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                            chart.draw(data, options);
+                        }
+                        console.log('result'+result); //e.g. 2015-11-13
+                        $('#dateSa').html('จำนวนผู้ใช้งาน วันที่  '+$("#dateUser").val());
+                        $('#totalAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
+                        $('#totalMale').html('ชาย '+parseInt(result[1])+' คน');
+                        $('#totalFeMale').html('หญิง '+parseInt(result[2])+' คน');
+                    }
+                });
+            });
+
+        });
     </script>
     <script type="text/javascript">
-        google.charts.load("current", {packages:["corechart"]});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            let data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['ทั้งหมด',     15],
-                ['ชาย',      5],
-                ['หญิง',    10]
-            ]);
+        $(document).ready(function(){
+            $.ajax({
+                type: "POST",
+                url: "api/ProblemAll.php",
+                data: "data="+$("#dateProbled").val(),
+                success: function(result) {
+                    google.charts.load("current", {packages:["corechart"]});
+                    google.charts.setOnLoadCallback(drawChart);
+                    function drawChart() {
+                        let data = google.visualization.arrayToDataTable([
+                            ['Task', 'Hours per Day'],
+                            ['ทั้งหมด', parseInt(result[0])],
+                            ['เซิร์ฟเวอร์มีปัญหา',   parseInt(result[1])],
+                            ['พบข้อบกพร่อง',   parseInt(result[2])],
+                            ['ระบบไม่เสถียร',   parseInt(result[3])]
+                        ]);
 
-            let options = {
-                title: '',
-                is3D: true
-            };
+                        let options = {
+                            title: '',
+                            is3D: true
+                        };
 
-            let chart = new google.visualization.PieChart(document.getElementById('piechart_3ds'));
-            chart.draw(data, options);
-        }
+                        let chart = new google.visualization.PieChart(document.getElementById('piechart_3dProblem'));
+                        chart.draw(data, options);
+                    }
+                    console.log('result'+result); //e.g. 2015-11-13
+                    $('#datePb').html('จำนวนผู้แจ้งปัญหา ทั้งหมด');
+                    $('#totalPbAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
+                    $('#totalPBMale').html('เซิร์ฟเวอร์มีปัญหา '+parseInt(result[1])+' คน');
+                    $('#totalPBFeMale').html('พบข้อบกพร่อง '+parseInt(result[2])+' คน');
+                }
+            });
+
+            document.getElementById("dateProbled").addEventListener("change", function() {
+                console.log($("#dateProbled").val()); //e.g. 2015-11-13
+                $.ajax({
+                    type: "POST",
+                    url: "api/ProblemAll.php",
+                    data: "data="+$("#dateProbled").val(),
+                    success: function(result) {
+                        google.charts.load("current", {packages:["corechart"]});
+                        google.charts.setOnLoadCallback(drawChart);
+                        function drawChart() {
+                            let data = google.visualization.arrayToDataTable([
+                                ['Task', 'Hours per Day'],
+                                ['ทั้งหมด', parseInt(result[0])],
+                                ['เซิร์ฟเวอร์มีปัญหา',   parseInt(result[1])],
+                                ['พบข้อบกพร่อง',   parseInt(result[2])],
+                                ['ระบบไม่เสถียร',   parseInt(result[3])]
+                            ]);
+
+                            let options = {
+                                title: '',
+                                is3D: true
+                            };
+
+                            let chart = new google.visualization.PieChart(document.getElementById('piechart_3dProblem'));
+                            chart.draw(data, options);
+                        }
+                        console.log('result'+result); //e.g. 2015-11-13
+                        $('#datePb').html('จำนวนผู้แจ้งปัญหา วันที่  '+$("#dateProbled").val());
+                        $('#totalPbAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
+                        $('#totalPbMale').html('เซิร์ฟเวอร์มีปัญหา '+parseInt(result[1])+' คน');
+                        $('#totalPbFeMale').html('พบข้อบกพร่อง '+parseInt(result[2])+' คน');
+                    }
+                });
+            });
+
+        });
     </script>
 </head>
 <?php
@@ -116,13 +216,13 @@
                         <div style="width: 45%; height: 100%">
                             <center>
                                 <div class="font-14">
-                                    เลือกวันที่ : <input type="date" name="bday" id="dateStart" value="2019-02-04">
+                                    เลือกวันที่ : <input type="date" name="dateUser" id="dateUser" >
                                 </div>
                             </center><br>
-                            <div class="font-16" align="center">จำนวนผู้ใช้งาน วันที่  2019-02-04</div>
-                            <div class="font-14" align="center">ชาย 80 คน  </div>
-                            <div class="font-14" align="center">หญิง 80 คน  </div>
-                            <div class="font-14" align="center">รวม 160 คน  </div>
+                            <div class="font-16" align="center" id="dateSa"></div>
+                            <div class="font-14" align="center" id="totalAll"></div>
+                            <div class="font-14" align="center" id="totalMale"></div>
+                            <div class="font-14" align="center" id="totalFeMale"></div>
                         </div>
                     </div>
                 <div class="row">
@@ -132,20 +232,20 @@
                                 <h5 style="width: 70%;">ผู้ใช้งานแจ้งปัญหา</h5>
                             </div>
                             <table>
-                                <div id="piechart_3ds" style="width: 100%; height:100%; padding-bottom: 50px" />
+                                <div id="piechart_3dProblem" style="width: 100%; height:100%; padding-bottom: 50px" />
                             </table>
                         </div>
                     </div>
                     <div style="width: 45%; height: 100%">
                         <center>
                             <div class="font-14">
-                                เลือกวันที่ : <input type="date" name="bday" id="dateProbled" value="2019-02-04">
+                                เลือกวันที่ : <input type="date" name="dateProbled" id="dateProbled">
                             </div>
                         </center><br>
-                        <div class="font-16" align="center">จำนวนผู้แจ้งปัญหา วันที่  2019-02-04</div>
-                        <div class="font-14" align="center">ชาย 5 คน  </div>
-                        <div class="font-14" align="center">หญิง 10 คน  </div>
-                        <div class="font-14" align="center">รวม 15 คน  </div>
+                        <div class="font-16" align="center" id="datePb"></div>
+                        <div class="font-14" align="center" id="totalPbAll"></div>
+                        <div class="font-14" align="center" id="totalPbMale"></div>
+                        <div class="font-14" align="center" id="totalPbFeMale"></div>
                     </div>
                 </div>
 
