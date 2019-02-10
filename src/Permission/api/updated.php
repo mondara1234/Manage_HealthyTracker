@@ -8,11 +8,17 @@
 			Permission = '$Permission'
 			
 			WHERE ID = $UserID ";
-
 	$query = mysqli_query($conn, $sql);
+	$PrimissionTh = '';
+
+    if($Permission === 'allow'){
+        $PrimissionTh = 'อนุญาติ';
+    }else if($Permission === 'disallow'){
+        $PrimissionTh = 'ไม่อนุญาติ';
+    }
 
 	if($query){
-        $message = "เปลี่ยนสถานะเป็น $Permission สำเร็จ";
+        $message = "เปลี่ยนสถานะเป็น $PrimissionTh สำเร็จ";
         echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');

@@ -3,10 +3,22 @@
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
         <?php
-        include("../Database/connect.php");
-        $sqlAllSex = "SELECT COUNT(*) as totalMember FROM membermanage";
-        $queryAllSex= mysqli_query($conn, $sqlAllSex);
-        $resultAllSex = mysqli_fetch_array($queryAllSex, MYSQLI_ASSOC);
+            include("../Database/connect.php");
+            $dateYeay = date('Y');
+
+            for ($i = 1; $i <= 12; $i++) {
+                $sqlSexMale[$i] = "SELECT COUNT(*) as totalMemberMale FROM membermanage WHERE Sex = 'male' AND DateRegis>='$dateYeay-0$i-01' 
+            AND DateRegis<='$dateYeay-0$i-31' ";
+                $querySexMale[$i]= mysqli_query($conn, $sqlSexMale[$i]);
+                $resultSexMale[$i] = mysqli_fetch_array($querySexMale[$i], MYSQLI_ASSOC);
+            }
+
+            for ($i = 1; $i <= 12; $i++) {
+                $sqlSexFemale[$i] = "SELECT COUNT(*) as totalMemberFemale FROM membermanage WHERE Sex = 'female' AND DateRegis>='$dateYeay-0$i-01' 
+            AND DateRegis<='$dateYeay-0$i-31' ";
+                $querySexFemale[$i]= mysqli_query($conn, $sqlSexFemale[$i]);
+                $resultSexFemale[$i] = mysqli_fetch_array($querySexFemale[$i], MYSQLI_ASSOC);
+            }
         ?>
     </head>
     <body>
@@ -66,10 +78,35 @@
                 };
                 let series= [{
                     name: 'ชาย',
-                    data: [5, 3, 4, 7, 2, 3, 4, 7, 2, 3, 4, 7]
+                    data: [
+                        <?php echo($resultSexMale[1]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[2]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[3]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[4]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[5]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[6]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[7]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[8]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[9]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[10]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[11]['totalMemberMale']); ?>,
+                        <?php echo($resultSexMale[12]['totalMemberMale']); ?>
+                    ]
                 }, {
                     name: 'หญิง',
-                    data: [2, 2, 3, 2, 1, 3, 4, 7, 2, 3, 4, 7]
+                    data: [<?php echo($resultSexFemale[1]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[2]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[3]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[4]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[5]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[6]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[7]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[8]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[9]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[10]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[11]['totalMemberFemale']); ?>,
+                        <?php echo($resultSexFemale[12]['totalMemberFemale']); ?>
+                    ]
                 }];
 
                 let json = {};

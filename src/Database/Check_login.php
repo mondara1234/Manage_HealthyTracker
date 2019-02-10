@@ -1,8 +1,12 @@
 <?php
     include('connect.php');
+    if(empty($_SESSION)) // if the session not yet started
+    session_start();
 
     $txtUsername = $_POST["txtUsername"];
     $txtPassword = $_POST["txtPassword"];
+
+    $_SESSION['username'] = $txtUsername;  // if already login
 
     if(empty($txtUsername) || empty($txtPassword)){
         $message = "กรุณากรอกข้อมูลให้ครบ";
@@ -14,11 +18,10 @@
         );
     }
 
-    $Sql_Query = "select * from adminmanage where Username = '$txtUsername' and Password = '$txtPassword' ";
-	
+    $Sql_Query = "select * from adminmanage where UserName = '$txtUsername' and Password = '$txtPassword' ";
 	$query = mysqli_query($conn, $Sql_Query);
-	
 	$result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+
         if (!$result){
             $message = "ชื่อผู้ใช้งาน หรือ รหัสผ่าน ไม่ถูกต้อง!";
             echo (
@@ -31,6 +34,7 @@
 
             if($result["Permission"] === 'allow'){
                 header("location:../Homepage.php?UserName=$txtUsername");
+                exit;
             }else{
                 $message = "คุณยังไม่ได้รับการอนุมัติการเข้าใช้จากเจ้าของระบบ";
                 echo (
