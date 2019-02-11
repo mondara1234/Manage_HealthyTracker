@@ -7,13 +7,19 @@ include("connect.php");
     $Last_Name = $_POST["txtLast_Name"];
     $Address = $_POST["txtAddress"];
     $Telephone = $_POST["txtTelephone"];
-    $ImgProfile = $_FILES["txtImgProfile"]["name"];
-    $ImgDefault = $ImgProfile ? $ImgProfile : "https://pngimage.net/wp-content/uploads/2018/06/user-avatar-png-6.png";
     $DateRegis = $_POST["date"];
     $Status = 'admin';
     $Permission = 'pending';
-    $path = basename($ImgProfile);
-    $upload = move_uploaded_file($_FILES['txtImgProfile']['tmp_name'], $path);
+
+    $old_img = 'https://pngimage.net/wp-content/uploads/2018/06/user-avatar-png-6.png';
+    $ImgProfile;
+    if ($_FILES["txtImgProfile"]["name"] !== ""){
+        $image = $_FILES["txtImgProfile"]["name"];
+        $imageData = base64_encode(file_get_contents($image));
+        $ImgProfile = 'data: '.mime_content_type($image).';base64,'.$imageData;
+    }else{
+        $ImgProfile = $old_img;
+    }
 
 	if(empty($Username) || empty($Email) || empty($Password)) {
         $message = "กรุณากรอกข้อมูลให้ครบ";
@@ -48,7 +54,7 @@ include("connect.php");
             );
         }else{
             $sql = "INSERT INTO adminmanage (UserName, Email, Password, FirstName, LastName, Address, Telephone, Status, DateRegis, ImgProfile, Permission) 
-			VALUES ('$Username', '$Email', '$Password', '$First_name', '$Last_Name','$Address', '$Telephone', '$Status', '$DateRegis', '$ImgDefault', '$Permission')";
+			VALUES ('$Username', '$Email', '$Password', '$First_name', '$Last_Name','$Address', '$Telephone', '$Status', '$DateRegis', '$ImgProfile', '$Permission')";
 
             $query = mysqli_query($conn, $sql);
 

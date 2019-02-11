@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/EditProfile/api/updated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditProfile/edit_Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database/InsertAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/InsertAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/api/37600685_1730849510317387_4911802372973395968_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/api/updated.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,16 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Component/footer.php">
+      <file leaf-file-name="InsertAdmin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Database/InsertAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="319">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updated.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Manage_Admin/api/updated.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -135,7 +118,6 @@
         <option value="$PROJECT_DIR$/src/Component/Header.php" />
         <option value="$PROJECT_DIR$/src/Component/HeaderEdit.php" />
         <option value="$PROJECT_DIR$/src/Component/HeaderHome.php" />
-        <option value="$PROJECT_DIR$/src/Database/InsertAdmin.php" />
         <option value="$PROJECT_DIR$/src/EditProfile/api/updated.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/api/updated.php" />
         <option value="$PROJECT_DIR$/src/EditProfile/edit_Profile.php" />
@@ -152,6 +134,7 @@
         <option value="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Problems/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Component/footer.php" />
+        <option value="$PROJECT_DIR$/src/Database/InsertAdmin.php" />
       </list>
     </option>
   </component>
@@ -187,6 +170,36 @@
             <path>
               <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
               <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Manage_Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Manage_Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,12 +262,12 @@
       <workItem from="1549703187663" duration="10512000" />
       <workItem from="1549731651378" duration="4866000" />
       <workItem from="1549782422408" duration="28476000" />
-      <workItem from="1549878119717" duration="14226000" />
+      <workItem from="1549878119717" duration="14774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153107000" />
+    <option name="totallyTimeSpent" value="153655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -314,7 +327,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/get.php" />
     <entry file="file://$PROJECT_DIR$/src/Database/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -530,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/InsertAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_User/api/updated.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -548,17 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EditProfile/edit_Profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="112" selection-end-column="112" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,23 +598,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Manage_Admin/api/updated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_Food/api/edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Manage_BMI/api/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
           <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
         </state>
       </provider>
@@ -683,6 +663,37 @@
             <element signature="n#style#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EditProfile/edit_Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="112" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Manage_BMI/api/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Manage_BMI/api/updated.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Manage_Admin/api/updated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/InsertAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
