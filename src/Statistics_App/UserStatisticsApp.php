@@ -107,7 +107,9 @@
                             ['ทั้งหมด', parseInt(result[0])],
                             ['เซิร์ฟเวอร์มีปัญหา',   parseInt(result[1])],
                             ['พบข้อบกพร่อง',   parseInt(result[2])],
-                            ['ระบบไม่เสถียร',   parseInt(result[3])]
+                            ['ระบบไม่เสถียร',   parseInt(result[3])],
+                            ['แนะนำ',   parseInt(result[4])],
+                            ['อื่นๆ',   parseInt(result[5])]
                         ]);
 
                         let options = {
@@ -118,16 +120,17 @@
                         let chart = new google.visualization.PieChart(document.getElementById('piechart_3dProblem'));
                         chart.draw(data, options);
                     }
-                    console.log('result'+result); //e.g. 2015-11-13
                     $('#datePb').html('จำนวนผู้แจ้งปัญหา ทั้งหมด');
                     $('#totalPbAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
-                    $('#totalPBMale').html('เซิร์ฟเวอร์มีปัญหา '+parseInt(result[1])+' คน');
-                    $('#totalPBFeMale').html('พบข้อบกพร่อง '+parseInt(result[2])+' คน');
+                    $('#totalServer').html('เซิร์ฟเวอร์มีปัญหา '+parseInt(result[1])+' คน');
+                    $('#totalBug').html('พบข้อบกพร่อง '+parseInt(result[2])+' คน');
+                    $('#totalSystem').html('ระบบไม่เสถียร '+parseInt(result[3])+' คน');
+                    $('#totalRecommend').html('แนะนำ '+parseInt(result[4])+' คน');
+                    $('#totalOther').html('อื่นๆ '+parseInt(result[5])+' คน');
                 }
             });
 
             document.getElementById("dateProbled").addEventListener("change", function() {
-                console.log($("#dateProbled").val()); //e.g. 2015-11-13
                 $.ajax({
                     type: "POST",
                     url: "api/ProblemAll.php",
@@ -141,7 +144,9 @@
                                 ['ทั้งหมด', parseInt(result[0])],
                                 ['เซิร์ฟเวอร์มีปัญหา',   parseInt(result[1])],
                                 ['พบข้อบกพร่อง',   parseInt(result[2])],
-                                ['ระบบไม่เสถียร',   parseInt(result[3])]
+                                ['ระบบไม่เสถียร',   parseInt(result[3])],
+                                ['แนะนำ',   parseInt(result[4])],
+                                ['อื่นๆ',   parseInt(result[5])]
                             ]);
 
                             let options = {
@@ -152,11 +157,13 @@
                             let chart = new google.visualization.PieChart(document.getElementById('piechart_3dProblem'));
                             chart.draw(data, options);
                         }
-                        console.log('result'+result); //e.g. 2015-11-13
-                        $('#datePb').html('จำนวนผู้แจ้งปัญหา วันที่  '+$("#dateProbled").val());
-                        $('#totalPbAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
-                        $('#totalPbMale').html('เซิร์ฟเวอร์มีปัญหา '+parseInt(result[1])+' คน');
-                        $('#totalPbFeMale').html('พบข้อบกพร่อง '+parseInt(result[2])+' คน');
+                        $('#datePb').html('จำนวนผู้แจ้งปัญหา '+$("#dateProbled").val());
+                        $('#totalPbAll').html('ทั้งหมด  '+parseInt(result[0])+'  คน');
+                        $('#totalServer').html('เซิร์ฟเวอร์มีปัญหา  '+parseInt(result[1])+'  คน');
+                        $('#totalBug').html('พบข้อบกพร่อง  '+parseInt(result[2])+'  คน');
+                        $('#totalSystem').html('ระบบไม่เสถียร  '+parseInt(result[3])+'  คน');
+                        $('#totalRecommend').html('แนะนำ  '+parseInt(result[4])+'  คน');
+                        $('#totalOther').html('อื่นๆ  '+parseInt(result[5])+'  คน');
                     }
                 });
             });
@@ -219,10 +226,10 @@
                                     เลือกวันที่ : <input type="date" name="dateUser" id="dateUser" >
                                 </div>
                             </center><br>
-                            <div class="font-16" align="center" id="dateSa"></div>
-                            <div class="font-14" align="center" id="totalAll"></div>
-                            <div class="font-14" align="center" id="totalMale"></div>
-                            <div class="font-14" align="center" id="totalFeMale"></div>
+                            <div class="font-18" id="dateSa" style="margin-left: 32%"></div>
+                            <div class="font-16" id="totalAll" style="margin-left: 48.2%"></div>
+                            <div class="font-16" id="totalMale" style="margin-left: 53%"></div>
+                            <div class="font-16" id="totalFeMale" style="margin-left: 52%"></div>
                         </div>
                     </div>
                 <div class="row">
@@ -242,10 +249,14 @@
                                 เลือกวันที่ : <input type="date" name="dateProbled" id="dateProbled">
                             </div>
                         </center><br>
-                        <div class="font-16" align="center" id="datePb"></div>
-                        <div class="font-14" align="center" id="totalPbAll"></div>
-                        <div class="font-14" align="center" id="totalPbMale"></div>
-                        <div class="font-14" align="center" id="totalPbFeMale"></div>
+                        <div class="font-18" id="datePb" style="margin-left: 32%"></div>
+                        <div class="font-16" id="totalPbAll" style="margin-left: 48.9%"></div>
+                        <div class="font-16" id="totalServer" style="margin-left: 35.4%"></div>
+                        <div class="font-16" id="totalBug" style="margin-left: 39.6%"></div>
+                        <div class="font-16" id="totalSystem" style="margin-left: 40.3%"></div>
+                        <div class="font-16" id="totalRecommend" style="margin-left: 50.4%"></div>
+                        <div class="font-16" id="totalOther" style="margin-left: 53.8%"></div>
+                        <div class="font-16" id="totalOther" style="margin-left: 54.2%"></div>
                     </div>
                 </div>
 
@@ -258,13 +269,9 @@
                     <iframe src="../Component/Highcharts.php" height="100%" width="100%" frameborder="0" scrolling="auto" align="right">
                     </iframe>
                 </div>
-
             </div>
-            <footer class="footer text-center">
-                <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
-                <div class="text-dark">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>
-            </footer>
         </div>
+        <?php require_once '../Component/footer.php';?>
     </div>
 
 <!-- ============================================================== -->

@@ -21,7 +21,9 @@
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
 </head>
-<?php
+
+<body class="bg-container">
+    <?php
     $Search = null;
     if(isset($_POST["txtSearch"]))
     {
@@ -30,7 +32,7 @@
 
     include('../Database/connect.php');
 
-    $sql = "SELECT * FROM foodmanage WHERE FoodName LIKE '%".$Search."%' ";
+    $sql = "SELECT * FROM alertuser WHERE AU_UserName LIKE '%".$Search."%' ";
     $query = mysqli_query($conn, $sql);
 
     $UserName = $_GET["UserName"];
@@ -45,8 +47,7 @@
     $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
     $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
     $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
-?>
-<body class="bg-container">
+    ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
     <!-- ============================================================== -->
@@ -59,7 +60,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ฐานข้อมูล รายการอาาหาร</h4>
+                        <h4 class="page-title">ฐานข้อมูล คำแนะนำ</h4>
                     </div>
                 </div>
             </div>
@@ -71,7 +72,8 @@
                     <form name="search" method="post">
                         <table width="80%" border="0">
                             <tr>
-                                <th> <div align="center" class="font-16"> FoodName :
+                                <th>
+                                    <div align="center" class="font-16"> UserName :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="Search" />
                                     </div>
@@ -83,22 +85,22 @@
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                     <tr bgcolor="#068e81" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodID </div>
+                            <div align="center"> AU_ID </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodName </div>
+                            <div align="center"> AU_UserName </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodIMG </div>
+                            <div align="center"> AU_Title </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodCalorie </div>
+                            <div align="center"> AU_Datile </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodType </div>
+                            <div align="center"> AU_Date </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodUnit </div>
+                            <div align="center"> AU_Status </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> Edit </div>
@@ -107,23 +109,24 @@
                             <div align="center"> Delete </div>
                         </th>
                     </tr>
+
                     <?php
-                    while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
                     {
                         ?>
                         <tr>
-                            <td align="center"><?php echo ($result["FoodID"]) ?>
-                            <td align="center"><?php echo ($result["FoodName"]) ?></td>
-                            <td align="center"><img src="<?php echo ($result["FoodIMG"]) ?>" width="50" height="50" style="margin: 3% 0px 3% 0px"></td>
-                            <td align="center"><?php echo ($result["FoodCalorie"]) ?></td>
-                            <td align="center"><?php echo ($result["FoodType"]) ?></td>
-                            <td align="center"><?php echo ($result["FoodUnit"]) ?></td>
+                            <td align="center"><?php echo ($result["AU_ID"]) ?></td>
+                            <td align="center"><?php echo ($result["AU_UserName"]) ?></td>
+                            <td align="center"><?php echo ($result["AU_Title"]) ?></td>
+                            <td align="center"><textarea rows="4" cols="50" style="margin-top: 2%" ><?php echo ($result["AU_Datile"]) ?></textarea></td>
+                            <td align="center"><?php echo ($result["AU_Date"]) ?></td>
+                            <td align="center"><?php echo ($result["AU_Status"]) ?></td>
                             <td align="center">
-                                <a href="api/edit.php?FoodID=<?php echo ($result["FoodID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
+                                <a href="api/edit.php?AU_ID=<?php echo ($result["AU_ID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>
                             <td align="center">
                                 <a href="JavaScript:if(confirm('Confirm Delete?')==true)
-                {window.location='api/delete.php?FoodID=<?php echo ($result["FoodID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"> Delete </a>
+                {window.location='api/delete.php?AU_ID=<?php echo ($result["AU_ID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"> Delete </a>
                             </td>
                         </tr>
 
@@ -131,7 +134,6 @@
                     }
                     ?>
                 </table>
-
                 <?php
                 mysqli_close($conn);
                 ?>

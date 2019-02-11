@@ -112,11 +112,8 @@
                     mysqli_close($conn);
                 ?>
             </div>
-            <footer class="footer text-center">
-                <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
-                <div class="text-dark">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>
-            </footer>
         </div>
+        <?php require_once '../../Component/footer.php';?>
     </div>
     <!-- ============================================================== -->
     <!-- Jquery ทั้งหมด  -->

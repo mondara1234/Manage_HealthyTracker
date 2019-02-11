@@ -139,19 +139,19 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                     </table>
                 </form>
                 <div class="col-md-12 card card-body m-t-10">
-                    p class="font-20">แจ้งการแนะนำ</p>
-                    <form name="MyForm" method="post" action="InsertMessage.php" target="iframe_target">
+                    <p class="font-20">แจ้งคำแนะนำ</p>
+                    <form name="MyForm" method="post" action="api/InsertMessage.php" target="iframe_target">
                         <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <div style="margin-bottom: 1%;">
-                            <font>หัวข้อ :</font>
-                            <input type="text" name="AU_Title">
+                            <font class="font-16">หัวข้อ :</font>
+                            <input type="text" name="AU_Title" class="font-16" style="width: 80%">
                             <input type="hidden" name="AU_Date" id="AU_Date" value="<?php echo date('Y-m-d');?>"/>
                             <input type="hidden" name="AU_UserName" id="AU_UserName" value="<?php echo ($_GET["NameUser"]);?>"/>
                         </div>
                         <div style="width: 100%; display:inline-block; position:relative;">
-                            <font>รายละเอียด :</font>
-                            <textarea name="" id="txt" cols="20" rows="5" style="width: 100%; display:block;"></textarea>
-                            <button class="font-16" style="position:absolute; bottom:10px; right:10px; color: white; background: #068e81; ">แจ้งการแนะนำ</button>
+                            <font class="font-16">รายละเอียด :</font>
+                            <textarea class="font-16" name="AU_Datile" id="txt" cols="20" rows="7" style="width: 100%; display:block;"></textarea>
+                            <button class="font-16" style="position:absolute; bottom:10px; right:20px; color: white; background: #068e81; ">แจ้งการแนะนำ</button>
                         </div>
                     </form>
                 </div>
@@ -160,12 +160,8 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 ?>
             </div>
         </div>
-        <footer class="footer text-center">
-            <div class="text-dark"> สงวนลิขสิทธิ์โดย  HealthyTracker-Admin.</div>
-            <div class="text-dark">  เพื่อให้ควบคุมการทำงานภายในแอฟพลิเคชันของคุณได้อย่างสะดวกรวดเร็ว จากทีมงานคุณภาพ ดาวน์โหลด Application ได้ที่ <a href="#" class="text-active">HrackerTracker</a> </div>
-        </footer>
     </div>
-
+    <?php require_once '../../Component/footer.php';?>
 </div>
 
 <!-- ========

@@ -51,6 +51,12 @@
                                 <span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a href="../../Manage_Recommend/ManageRecommend.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                <i class="mdi mdi-comment"></i>
+                                <span class="hide-menu"> ฐานข้อมูล คำแนะนำ </span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="sidebar-item">
@@ -113,6 +119,12 @@
                             <a href="../../Manage_Trick/ManageTips.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
                                 <i class="mdi mdi-calendar-check"></i>
                                 <span class="hide-menu"> ฐานข้อมูล เคล็ดลับ </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="../../Manage_Recommend/ManageRecommend.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                <i class="mdi mdi-comment"></i>
+                                <span class="hide-menu"> ฐานข้อมูล คำแนะนำ </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -200,10 +212,8 @@
                         <span class=" fa fa-angle-down font-16"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> ข้อมูลส่วนตัว </a>
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> ข้อความ </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> การตั้งค่าบัญชี </a>
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> ข้อมูลส่วนตัว </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../../login/login.html"><i class="fa fa-power-off m-r-5 m-l-5"></i> ออกจากระบบ </a>
                         <div class="dropdown-divider"></div>

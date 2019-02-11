@@ -16,24 +16,25 @@
     <link href="../../assets/dist/css/matrix-style.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-	<title> Edit Admin </title>
+    <title> Edit User </title>
 </head>
 <body class="bg-container">
     <?php
         include("../../Database/connect.php");
+
         $ID = null;
-        if(isset($_GET["AdminID"])){
-            $ID = $_GET["AdminID"];
+        if(isset($_GET["AU_ID"])){
+            $ID = $_GET["AU_ID"];
         }
+
+        $sql = "SELECT * FROM alertuser WHERE AU_ID = '".$ID."'";
+        $query = mysqli_query($conn, $sql);
+        $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
         $UserName = $_GET["UserName"];
         $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
-
-        $sql = "SELECT * FROM adminmanage WHERE ID = '".$ID."'";
-        $query = mysqli_query($conn, $sql);
-        $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
         $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
         $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
@@ -55,7 +56,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">การแก้ไขข้อมูล ผู้ดูแลระบบ</h4>
+                        <h4 class="page-title">การแก้ไขข้อมูล คำแนะนำ</h4>
                     </div>
                 </div>
             </div>
@@ -67,60 +68,29 @@
                     <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> UserName :</b></td>
-                                <td width="80%"><input type="text" name="pUserName" value="<?php echo $result["UserName"]; ?>" style="width: 100%"/></td>
-                                <input type="hidden" name="AdminID" value="<?php echo $result["ID"]; ?>"/>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_UserName :</b></td>
+                                <td width="80%"><input type="text" name="AU_UserName" value="<?php echo $result["AU_UserName"]; ?>" style="width: 100%" /></td>
+                                <input type="hidden" name="AU_ID" value="<?php echo $result["AU_ID"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Email :</b></td>
-                                <td width="80%"><input type="text" name="pEmail" value="<?php echo $result["Email"]; ?>" style="width: 100%"/></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Title :</b></td>
+                                <td width="80%"><input type="text" name="AU_Title" value="<?php echo $result["AU_Title"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Password :</b></td>
-                                <td width="80%"><input type="text" name="pPassword" value="<?php echo $result["Password"]; ?>" style="width: 100%"/></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FirstName :</b></td>
-                                <td width="80%"><input type="text" name="pFirstName" value="<?php echo $result["FirstName"]; ?>" style="width: 100%"/></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> LastName :</b></td>
-                                <td width="80%"><input type="text" name="pLastName" value="<?php echo $result["LastName"]; ?>" style="width: 100%"/></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Address :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Datile :</b></td>
                                 <td width="80%">
-                                    <textarea rows="4" name="pAddress" style="width: 100%"><?php echo $result["Address"]; ?></textarea>
+                                    <textarea rows="6" style="width: 100%" name="AU_Datile" ><?php echo $result["AU_Datile"]; ?></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Telephone :</b></td>
-                                <td width="80%"><input type="text" name="pTelephone" value="<?php echo $result["Telephone"]; ?>" style="width: 100%"/></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Status :</b></td>
-                                <td width="80%"><input type="text" name="pStatus" value="<?php echo $result["Status"]; ?>" style="width: 100%" /></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> DateRegis :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Date :</b></td>
                                 <td width="80%">
-                                    <select name="Permission" id="Permission">
-                                        <option value="allow" <?php if($result["Permission"]=="allow") echo 'selected="selected"'; ?>>allow</option>
-                                        <option value="disallow" <?php if($result["Permission"]=="disallow") echo 'selected="selected"'; ?>>disallow</option>
-                                    </select>
+                                    <input type="date" name="AU_Date" value="<?php echo $result["AU_Date"]; ?>" min="2018-01-01" max="<?php echo $result["AU_Date"]; ?>" />
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> DateRegis :</b></td>
-                                <td width="80%">
-                                    <input type="date" name="pDateRegis" value="<?php echo $result["DateRegis"]; ?>" min="2018-01-01" max="<?php echo $result["DateRegis"]; ?>" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ImgProfile :</b></td>
-                                <td width="80%">
-                                    <input type="file" name="pImgProfile" id="pImgProfile" value="<?php echo $result["ImgProfile"]; ?>" />
-                                </td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Status :</b></td>
+                                <td width="80%"><input type="text" name="AU_Status" value="<?php echo $result["AU_Status"]; ?>" style="width: 100%" readonly /></td>
                             </tr>
                         </table>
                         <button type="submit" name="Submit" class="font-18"
