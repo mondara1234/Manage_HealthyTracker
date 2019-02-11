@@ -57,7 +57,7 @@
       <find>assets</find>
       <find>width=&quot;100&quot;</find>
       <find>var</find>
-      <find>style=&quot;padding-left: 5px; padding-right: 5px&quot;</find>
+      <find />
       <find>ส่วนหัว</find>
       <find>row</find>
       <find>logo-text</find>
@@ -152,7 +152,7 @@
       <path value="$PROJECT_DIR$/src/assets/libs/flot/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
