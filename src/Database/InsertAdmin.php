@@ -23,8 +23,8 @@ include("connect.php");
             window.location.href='../login/register.php';
         </script>"
         );
-	}else if(strlen($Password) < 6){
-        $message = "รหัสผ่านต้องมีจำนวนมากกว่า 5 ตัว";
+	}elseif(strlen($Password) < 5){
+        $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
         echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
@@ -32,11 +32,12 @@ include("connect.php");
         </script>"
         );
     }else{
-        $Sql_Query = "select * from adminmanage where Username = '$Username'";
+        $Sql_Query = "select * from adminmanage where UserName = '$Username'";
 
         $query = mysqli_query($conn, $Sql_Query);
 
         $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+
 	    if($result){
             $message = "ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว";
             echo (

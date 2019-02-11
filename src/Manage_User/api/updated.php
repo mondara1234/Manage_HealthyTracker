@@ -14,9 +14,16 @@
     $pWeight = $_POST["pWeight"];
     $pHeight = $_POST["pHeight"];
     $pBMRUser = $_POST["pBMRUser"];
-	$pImgProfile = $_FILES["pImgProfile"]["name"];
-	$path = basename($pImgProfile);
-	$upload = move_uploaded_file($_FILES["pImgProfile"]["tmp_name"], $path);
+
+    $old_img = $_POST["ImgProfile"];
+    $pImgProfile;
+    if ($_FILES["pImgProfile"]["name"] !== ""){
+        $image = $_FILES["pImgProfile"]["name"];
+        $imageData = base64_encode(file_get_contents($image));
+        $pImgProfile = 'data: '.mime_content_type($image).';base64,'.$imageData;
+    }else{
+        $pImgProfile = $old_img;
+    }
 
 	$sql = "UPDATE MemberManage SET 
 			Email = '$pEmail',

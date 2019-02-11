@@ -213,7 +213,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right user-dd animated">
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> ข้อมูลส่วนตัว </a>
+                        <a class="dropdown-item" href="../../EditProfile/edit_Profile.php?UserName=<?php echo($_GET["UserName"]); ?>"><i class="ti-user m-r-5 m-l-5"></i> ข้อมูลส่วนตัว </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../../login/login.html"><i class="fa fa-power-off m-r-5 m-l-5"></i> ออกจากระบบ </a>
                         <div class="dropdown-divider"></div>

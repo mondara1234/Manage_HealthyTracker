@@ -56,7 +56,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">การแก้ไขข้อมูล ผู้ดูแลระบบ</h4>
+                        <h4 class="page-title">การแก้ไขข้อมูล เคล็ดลับ</h4>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,8 @@
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">TrickIMG :</b></td>
                                 <td width="80%">
-                                    <input type="file" name="pTrickIMG" id="pTrickIMG" value="<?php echo $result["TrickIMG"]; ?>" />
+                                    <input type="file" name="pTrickIMG" id="pTrickIMG"/>
+                                    <input type="hidden" name="TrickIMG" value="<?php echo $resultUser["TrickIMG"]; ?>">
                                 </td>
                             </tr>
                         </table>

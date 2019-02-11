@@ -9,9 +9,16 @@
     $pPeopleAdd = $_POST["pPeopleAdd"];
     $pDateAdded = $_POST["pDateAdded"];
     $psourceURL = $_POST["psourceURL"];
-    $pTrickIMG = $_FILES["pTrickIMG"]["name"];
-    $path = basename($pTrickIMG);
-    $upload = move_uploaded_file($_FILES["pTrickIMG"]["tmp_name"], $path);
+
+    $old_img = $_POST["TrickIMG"];
+    $pTrickIMG;
+    if ($_FILES["pTrickIMG"]["name"] !== ""){
+        $image = $_FILES["pTrickIMG"]["name"];
+        $imageData = base64_encode(file_get_contents($image));
+        $pTrickIMG = 'data: '.mime_content_type($image).';base64,'.$imageData;
+    }else{
+        $pTrickIMG = $old_img;
+    }
 
 	$sql = "UPDATE trickmanage SET 
 			TrickName = '$pTrickName',

@@ -56,7 +56,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">การแก้ไขข้อมูล ผู้ดูแลระบบ</h4>
+                        <h4 class="page-title">การแก้ไขข้อมูล สมุดอาหาร</h4>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,8 @@
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FoodIMG :</b></td>
                                 <td width="80%">
-                                    <input type="file" name="pFoodIMG" id="pFoodIMG" value="<?php echo $result["FoodIMG"]; ?>" />
+                                    <input type="file" name="pFoodIMG" id="pFoodIMG" />
+                                    <input type="hidden" name="FoodIMG" value="<?php echo $resultUser["FoodIMG"]; ?>">
                                 </td>
                             </tr>
                         </table>

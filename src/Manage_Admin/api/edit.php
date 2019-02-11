@@ -119,7 +119,8 @@
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ImgProfile :</b></td>
                                 <td width="80%">
-                                    <input type="file" name="pImgProfile" id="pImgProfile" value="<?php echo $result["ImgProfile"]; ?>" />
+                                    <input type="file" name="pImgProfile" id="pImgProfile"/>
+                                    <input type="hidden" name="ImgProfile" value="<?php echo $resultUser["ImgProfile"]; ?>">
                                 </td>
                             </tr>
                         </table>
