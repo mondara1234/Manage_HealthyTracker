@@ -25,7 +25,8 @@
     </style>
 </head>
 <body style="background-image: url('../assets/images/background/bg_web.png'); background-size: 100% 100%;">
-    <form name="add" method="post" action="../Database/InsertAdmin.php" enctype="multipart/form-data">
+    <form name="add" method="post" action="../Database/InsertAdmin.php" enctype="multipart/form-data" target="iframe_target">
+        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
         <p style="margin-left: 30%; margin-top: 2%">
             <font  size="20" color="white">ลงทะเบียน</font>
         </p>

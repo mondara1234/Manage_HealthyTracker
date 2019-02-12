@@ -83,6 +83,7 @@
                 </center>
                 <button type="submit" name="Submit" class="font-16"
                         style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                        onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                 >
                     เพิ่มข้อมูล
                 </button>

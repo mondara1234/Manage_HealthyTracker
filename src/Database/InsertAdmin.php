@@ -21,38 +21,41 @@ include("connect.php");
         $ImgProfile = $old_img;
     }
 
-	if(empty($Username) || empty($Email) || empty($Password)) {
-        $message = "กรุณากรอกข้อมูลให้ครบ";
-        echo (
-        "<script LANGUAGE='JavaScript'>
+if(empty($Username) ||
+    empty($Password) ||
+    empty($Email) ||
+    empty($First_name) ||
+    empty($Last_Name) ||
+    empty($Address) ||
+    empty($Telephone)) {
+    $message = "กรุณากรอกข้อมูลให้ครบ";
+    echo (
+    "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='../login/register.php';
         </script>"
-        );
-	}elseif(strlen($Password) < 5){
-        $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
-        echo (
-        "<script LANGUAGE='JavaScript'>
+    );
+}elseif(strlen($Password) < 5){
+    $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
+    echo (
+    "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='../login/register.php';
         </script>"
-        );
-    }else{
-        $Sql_Query = "select * from adminmanage where UserName = '$Username'";
+    );
+}else{
+    $Sql_Query = "select * from adminmanage where UserName = '$Username'";
 
-        $query = mysqli_query($conn, $Sql_Query);
+    $query = mysqli_query($conn, $Sql_Query);
 
-        $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+    $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
-	    if($result){
+    if($result){
             $message = "ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว";
             echo (
             "<script LANGUAGE='JavaScript'>
-            window.alert('$message');
-            window.location.href='../login/register.php';
-        </script>"
+                    window.alert('$message');
+                </script>"
             );
-        }else{
+    }else {
             $sql = "INSERT INTO adminmanage (UserName, Email, Password, FirstName, LastName, Address, Telephone, Status, DateRegis, ImgProfile, Permission) 
 			VALUES ('$Username', '$Email', '$Password', '$First_name', '$Last_Name','$Address', '$Telephone', '$Status', '$DateRegis', '$ImgProfile', '$Permission')";
 
