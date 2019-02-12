@@ -65,59 +65,72 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                    <form name="edit" action="updated.php" method="post" enctype="multipart/form-data" target="iframe_target">
+                        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> E-mail :</b></td>
-                                <td width="80%"><input type="text" name="pEmail" value="<?php echo $result["Email"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้งาน :</b></td>
+                                <td width="80%"><input type="text" name="pUsername" value="<?php echo $result["UserName"]; ?>" style="width: 100%" /></td>
+                                <input type="text" name="old_Username" value="<?php echo $result["UserName"]; ?>" style="width: 100%" />
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อีเมล :</b></td>
+                                <td width="80%"><input type="email" name="pEmail" value="<?php echo $result["Email"]; ?>" style="width: 100%" /></td>
                                 <input type="hidden" name="UserID" value="<?php echo $result["UserID"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Password :</b></td>
-                                <td width="80%"><input type="text" name="pPassword" value="<?php echo $result["Password"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
+                                <td width="80%"><input type="password" name="pPassword" value="<?php echo $result["Password"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Username :</b></td>
-                                <td width="80%"><input type="text" name="pUsername" value="<?php echo $result["UserName"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ภาษาระบบ :</b></td>
+                                <td width="80%">
+                                    <select name="pLanguage" id="pLanguage">
+                                        <option value="th" <?php if($result["Language"]=="th") echo 'selected="selected"'; ?>>ภาษาไทย</option>
+                                        <option value="en" <?php if($result["Language"]=="en") echo 'selected="selected"'; ?>>ภาษาอังกฤษ</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Status :</b></td>
-                                <td width="80%"><input type="text" name="pStatus" value="<?php echo $result["Status"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สถานะรหัสส่วนตัว :</b></td>
+                                <td width="80%">
+                                    <select name="pPersonalSelect" id="pPersonalSelect">
+                                        <option value="on" <?php if($result["PersonalSelect"]=="on") echo 'selected="selected"'; ?>>เปิด</option>
+                                        <option value="off" <?php if($result["PersonalSelect"]=="off") echo 'selected="selected"'; ?>>ปิด</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Language :</b></td>
-                                <td width="80%"><input type="text" name="pLanguage" value="<?php echo $result["Language"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รหัสส่วนตัว :</b></td>
+                                <td width="80%"><input type="number" name="pPersonalCode" value="<?php echo $result["PersonalCode"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> PersonalSelect :</b></td>
-                                <td width="80%"><input type="text" name="pPersonalSelect" value="<?php echo $result["PersonalSelect"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เพศ :</b></td>
+                                <td width="80%">
+                                    <select name="pSex" id="pSex">
+                                        <option value="male" <?php if($result["Sex"]=="male") echo 'selected="selected"'; ?>>ชาย</option>
+                                        <option value="female" <?php if($result["Sex"]=="female") echo 'selected="selected"'; ?>>หญิง</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> PersonalCode :</b></td>
-                                <td width="80%"><input type="text" name="pPersonalCode" value="<?php echo $result["PersonalCode"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อายุ :</b></td>
+                                <td width="80%"><input type="number" name="pAge" value="<?php echo $result["Age"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Sex :</b></td>
-                                <td width="80%"><input type="text" name="pSex" value="<?php echo $result["Sex"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">  ส่วนสูง :</b></td>
+                                <td width="80%"><input type="number" name="pWeight" value="<?php echo $result["Weight"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Age :</b></td>
-                                <td width="80%"><input type="text" name="pAge" value="<?php echo $result["Age"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> น้ำหนัก :</b></td>
+                                <td width="80%"><input type="number" name="pHeight" value="<?php echo $result["Height"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">  Weight :</b></td>
-                                <td width="80%"><input type="text" name="pWeight" value="<?php echo $result["Weight"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หลังงานที่ต้องการ :</b></td>
+                                <td width="80%"><input type="text" name="pBMRUser" value="<?php echo $result["BMRUser"]; ?>" style="width: 100%"  readonly/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> Height :</b></td>
-                                <td width="80%"><input type="text" name="pHeight" value="<?php echo $result["Height"]; ?>" style="width: 100%" /></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> BMRUser :</b></td>
-                                <td width="80%"><input type="text" name="pBMRUser" value="<?php echo $result["BMRUser"]; ?>" style="width: 100%" /></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ImgProfile :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพโปรไฟล์ :</b></td>
                                 <td width="80%">
                                     <input type="file" name="pImgProfile" id="pImgProfile" />
                                     <input type="hidden" name="ImgProfile" value="<?php echo $result["ImgProfile"]; ?>">

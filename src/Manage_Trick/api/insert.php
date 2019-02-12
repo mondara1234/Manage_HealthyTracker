@@ -47,7 +47,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">การเพิ่มข้อมูล ผู้ดูแลระบบ</h4>
+                    <h4 class="page-title">การเพิ่มข้อมูล เคล็ดลับ</h4>
                 </div>
             </div>
         </div>
@@ -56,54 +56,41 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
         <!-- ============================================================== -->
         <div class="container-fluid">
             <center>
-                <form name="edit" action="InsertAdmin.php" method="post" enctype="multipart/form-data" target="iframe_target">
+                <form name="edit" action="InsertTips.php" method="post" enctype="multipart/form-data" target="iframe_target">
                     <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
-                    <table width="70%" border="1" style="border: #068e81 double 5px;">
+                    <table width="73%" border="1" style="border: #068e81 double 5px;">
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
-                            <td width="80%"><input type="text" name="txtUsername" style="width: 100%"/></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">หัวข้อ :</b></td>
+                            <td width="80%"><input type="text" name="pTrickName" style="width: 100%" /></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อีเมล :</b></td>
-                            <td width="80%"><input type="email" name="txtEmail" style="width: 100%"/></td>
-                        </tr>
-                        <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
-                            <td width="80%"><input type="password" name="txtPassword" style="width: 100%"/></td>
-                        </tr>
-                        <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อจริง :</b></td>
-                            <td width="80%"><input type="text" name="txtFirst_name" style="width: 100%"/></td>
-                        </tr>
-                        <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> นามสกุล :</b></td>
-                            <td width="80%"><input type="text" name="txtLast_Name"style="width: 100%"/></td>
-                        </tr>
-                        <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ที่อยู่ :</b></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">รายละเอียด :</b></td>
                             <td width="80%">
-                                <textarea rows="4" name="txtAddress" style="width: 100%"></textarea>
+                                <textarea rows="4" style="width: 100%" name="pTrickDetail" ></textarea>
                             </td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เบอร์โทรศัพท์ :</b></td>
-                            <td width="80%"><input type="number" name="txtTelephone"  style="width: 100%"/></td>
-                            <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> จำนวนการกดถูกใจ :</b></td>
+                            <td width="80%"><input type="number" name="pTrickLike" style="width: 100%" /></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> การอนุญาติใช้งาน :</b></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">ผู้เพิ่ม :</b></td>
+                            <td width="80%"><input type="text" name="pPeopleAdd" style="width: 100%" value="<?php echo($_GET["UserName"]); ?>" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">วันที่เพิ่ม :</b></td>
                             <td width="80%">
-                                <select name="Permission" id="Permission">
-                                    <option value="allow" selected>allow</option>
-                                    <option value="disallow" >disallow</option>
-                                </select>
+                                <input type="date" name="pDateAdded" />
                             </td>
                         </tr>
                         <tr>
-                            <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปโปรไฟล์ :</b></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">ที่อยู่เคล็ดลับ :</b></td>
+                            <td width="80%"><input type="url" name="psourceURL" style="width: 100%" /></td>
+                        </tr>
+                        <tr>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">รูปภาพเคล็ดลับ :</b></td>
                             <td width="80%">
-                                <input type="file" name="pImgProfile" id="pImgProfile"/>
+                                <input type="file" name="pTrickIMG" id="pTrickIMG"/>
                             </td>
                         </tr>
                     </table>

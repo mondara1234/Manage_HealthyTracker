@@ -84,34 +84,35 @@
                 </center>
                 <button type="submit" name="Submit" class="font-16"
                         style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                        onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                 >
                     เพิ่มข้อมูล
                 </button>
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14" >
                     <tr bgcolor="#068e81" style="color: white; height: 40px;">
                         <th>
-                            <div align="center"> BMIID </div>
+                            <div align="center"> ลำดับ </div>
                         </th>
                         <th>
-                            <div align="center"> NameBMI </div>
+                            <div align="center"> หัวข้อ </div>
                         </th>
                         <th>
-                            <div align="center"> DetailBMI </div>
+                            <div align="center"> รายละเอียด </div>
                         </th>
                         <th>
-                            <div align="center"> SumBMI </div>
+                            <div align="center"> ค่าดัชนีมวลกาย </div>
                         </th>
                         <th>
-                            <div align="center"> BMIUser </div>
+                            <div align="center"> เกณฑ์ </div>
                         </th>
                         <th>
-                            <div align="center"> UnitBMI </div>
+                            <div align="center"> หน่วย </div>
                         </th>
                         <th>
-                            <div align="center" style="padding-left: 5px; padding-right: 5px"> Edit </div>
+                            <div align="center" style="padding-left: 5px; padding-right: 5px"> แก้ไข </div>
                         </th>
                         <th>
-                            <div align="center" style="padding-left: 5px; padding-right: 5px"> Delete </div>
+                            <div align="center" style="padding-left: 5px; padding-right: 5px"> ลบ </div>
                         </th>
                     </tr>
 

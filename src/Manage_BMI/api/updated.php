@@ -1,6 +1,5 @@
 <?php
 	include("../../Database/connect.php");
-    $UserName = $_GET["UserName"];
 	$BMIID = $_POST["BMIID"];
 	$pNameBMI = $_POST["pNameBMI"];
 	$pDetailBMI = $_POST["pDetailBMI"];
@@ -8,7 +7,26 @@
     $pBMIUser = $_POST["pBMIUser"];
     $pUnitBMI = $_POST["pUnitBMI"];
 
-	$sql = "UPDATE bmiuser SET 
+if(empty($pNameBMI) ||
+    empty($pDetailBMI) ||
+    empty($pSumBMI) ||
+    empty($pUnitBMI)) {
+    $message = "กรุณากรอกข้อมูลให้ครบ";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+    );
+}elseif($pBMIUser === 'select' ){
+    $message = "กรุณาเลือกเกณฑ์ของBMI";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+    );
+}else{
+
+    $sql = "UPDATE bmiuser SET 
 			NameBMI = '$pNameBMI',
 			DetailBMI = '$pDetailBMI',
 			SumBMI = '$pSumBMI',
@@ -17,25 +35,24 @@
 			
 			WHERE BMIID = $BMIID ";
 
-	$query = mysqli_query($conn, $sql);
+    $query = mysqli_query($conn, $sql);
 
-	if($query){
-        $message = "อัพเดทสำเร็จ";
+    if($query){
+        $message = "แก้ไขข้อมูลสำเร็จ";
         echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='edit.php?UserName=$UserName';
         </script>"
         );
     }else{
-        $message = "อัพเดทล้มเหลว";
+        $message = "แก้ไขข้อมูลล้มเหลว";
         echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='edit.php?UserName=$UserName';
         </script>"
         );
     }
+}
 
 	mysqli_close($conn);
 ?>

@@ -65,29 +65,38 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                    <form name="edit" action="updated.php" method="post" enctype="multipart/form-data" target="iframe_target">
+                        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> NameBMI :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หัวข้อ :</b></td>
                                 <td width="80%"><input type="text" name="pNameBMI" value="<?php echo $result["NameBMI"]; ?>" style="width: 100%" /></td>
                                 <input type="hidden" name="BMIID" value="<?php echo $result["BMIID"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> DetailBMI :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รายละเอยีด :</b></td>
                                 <td width="80%">
                                     <textarea rows="10" style="width: 100%" name="pDetailBMI" ><?php echo $result["DetailBMI"]; ?></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> SumBMI :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ค่าดัชนีมวลกาย :</b></td>
                                 <td width="80%"><input type="text" name="pSumBMI" value="<?php echo $result["SumBMI"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> BMIUser :</b></td>
-                                <td width="80%"><input type="text" name="pBMIUser" value="<?php echo $result["BMIUser"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เกณฑ์ :</b></td>
+                                <td width="80%">
+                                    <select name="pBMIUser" id="pBMIUser">
+                                        <option value="1" <?php if($result["BMIUser"]=="1") echo 'selected="selected"'; ?>>ผอม</option>
+                                        <option value="2" <?php if($result["BMIUser"]=="2") echo 'selected="selected"'; ?>>ปกติ</option>
+                                        <option value="3" <?php if($result["BMIUser"]=="3") echo 'selected="selected"'; ?>>ท้วม</option>
+                                        <option value="4" <?php if($result["BMIUser"]=="4") echo 'selected="selected"'; ?>>อ้วน</option>
+                                        <option value="5" <?php if($result["BMIUser"]=="5") echo 'selected="selected"'; ?>>อ้วนมาก</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> UnitBMI :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หน่วย :</b></td>
                                 <td width="80%"><input type="text" name="pUnitBMI" value="<?php echo $result["UnitBMI"]; ?>" style="width: 100%" /></td>
                             </tr>
                         </table>

@@ -72,7 +72,7 @@
                     <form name="search" method="post">
                         <table width="80%" border="0">
                             <tr>
-                                <th> <div align="center" class="font-16"> UserName :
+                                <th> <div align="center" class="font-16"> ชื่อผู้ดูแลระบบ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="Search" />
                                     </div>
@@ -91,46 +91,46 @@
                     <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                         <tr bgcolor="#068e81" style="color: white; height: 40px">
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ID </div>
+                                <div align="center"> ลำกับ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> UserName </div>
+                                <div align="center"> ชื่อผู้ดูแลระบบ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ImgProfile </div>
+                                <div align="center"> รูปโปร์ไฟล์ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Email </div>
+                                <div align="center"> อีเมล </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Password </div>
+                                <div align="center"> รหัสผ่าน </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> FirstName </div>
+                                <div align="center"> ชื่อจริง </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> LastName </div>
+                                <div align="center"> นามสกุล </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Address </div>
+                                <div align="center"> ที่อยู่ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Telephone </div>
+                                <div align="center"> เบอร์โทรศัทพ์ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Status </div>
+                                <div align="center"> สถานะผู้ใช้ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> DateRegis </div>
+                                <div align="center"> วันที่สมัคร </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Permission </div>
+                                <div align="center"> การอนุญาติใช้งาน </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Edit </div>
+                                <div align="center"> แก้ไข </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Delete </div>
+                                <div align="center"> ลบ </div>
                             </th>
                         </tr>
 

@@ -1,21 +1,20 @@
 <?php
-include("connect.php");
+include("../../Database/connect.php");
 	$Username = $_POST["txtUsername"];
     $Email = $_POST["txtEmail"];
 	$Password = $_POST["txtPassword"];
-    $Re_Password = $_POST["txtConfirmPassword"];
     $First_name = $_POST["txtFirst_name"];
     $Last_Name = $_POST["txtLast_Name"];
     $Address = $_POST["txtAddress"];
     $Telephone = $_POST["txtTelephone"];
     $DateRegis = $_POST["date"];
     $Status = 'admin';
-    $Permission = 'pending';
+    $Permission = $_POST["Permission"];
 
     $old_img = 'https://pngimage.net/wp-content/uploads/2018/06/user-avatar-png-6.png';
     $ImgProfile;
-    if ($_FILES["txtImgProfile"]["name"] !== ""){
-        $image = $_FILES["txtImgProfile"]["name"];
+    if ($_FILES["pImgProfile"]["name"] !== ""){
+        $image = $_FILES["pImgProfile"]["name"];
         $imageData = base64_encode(file_get_contents($image));
         $ImgProfile = 'data: '.mime_content_type($image).';base64,'.$imageData;
     }else{
@@ -36,18 +35,11 @@ if(empty($Username) ||
         </script>"
     );
 }elseif(strlen($Password) < 5){
-    $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
+    $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัวขึ้นไป";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
-    );
-}elseif($Password !== $Re_Password){
-    $message = "รหัสผ่านไม่ตรงกัน";
-    echo (
-    "<script LANGUAGE='JavaScript'>
-        window.alert('$message');
-    </script>"
     );
 }elseif(strlen($Username) < 3){
     $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
@@ -56,7 +48,7 @@ if(empty($Username) ||
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($Telephone) > 10){
+}elseif(strlen($pTelephone) > 10){
     $message = "เบอร์โทรศัพท์ต้องมีไม่เกิน 10 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
@@ -84,19 +76,17 @@ if(empty($Username) ||
             $query = mysqli_query($conn, $sql);
 
             if($query){
-                $message = "ลงทะเบียนเสร็จสิ้นรอการอนุมัติจากเจ้าของระบบนะครับ";
+                $message = "เพิ่มข้อมูลเสร็จสิ้น";
                 echo (
                 "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
-                    window.location.href='../login/register.php';
                 </script>"
                 );
             }else{
-                $message = "ลงทะเบียนล้มเหลว";
+                $message = "เพิ่มข้อมูลล้มเหลว";
                 echo (
                 "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
-                    window.location.href='../login/register.php';
                 </script>"
                 );
             }

@@ -65,38 +65,51 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data" target="iframe_target">
+                        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ProblemName :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ประเภท :</b></td>
+                                <td width="80%">
+                                    <select name="pProblemType" id="pProblemType">
+                                        <option value="เซิร์ฟเวอร์มีปัญหา" <?php if($result["ProblemType"]=="เซิร์ฟเวอร์มีปัญหา") echo 'selected="selected"'; ?>>เซิร์ฟเวอร์มีปัญหา</option>
+                                        <option value="พบข้อบกพร่อง" <?php if($result["ProblemType"]=="พบข้อบกพร่อง") echo 'selected="selected"'; ?>>พบข้อบกพร่อง</option>
+                                        <option value="ระบบไม่เสถียร" <?php if($result["ProblemType"]=="ระบบไม่เสถียร") echo 'selected="selected"'; ?>>ระบบไม่เสถียร</option>
+                                        <option value="แนะนำ" <?php if($result["ProblemType"]=="แนะนำ") echo 'selected="selected"'; ?>>แนะนำ</option>
+                                        <option value="อื่นๆ" <?php if($result["ProblemType"]=="อื่นๆ") echo 'selected="selected"'; ?>>อื่นๆ</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หัวข้อ :</b></td>
                                 <td width="80%"><input type="text" name="pProblemName" value="<?php echo $result["ProblemName"]; ?>" style="width: 100%" /></td>
                                 <input type="hidden" name="ProblemID" value="<?php echo $result["ProblemID"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ProblemDatail :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รายละเอียด :</b></td>
                                 <td width="80%">
                                     <textarea rows="4" style="width: 100%" name="pProblemDatail"  style="width: 100%"><?php echo $result["ProblemDatail"]; ?></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ProblemType :</b></td>
-                                <td width="80%"><input type="text" name="pProblemType" value="<?php echo $result["ProblemType"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ผู้เพิ่ม :</b></td>
+                                <td width="80%"><input type="text" name="pPeopleAdd" value="<?php echo $result["PeopleAdd"]; ?>" style="width: 100%" readonly/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> PeopleAdd :</b></td>
-                                <td width="80%"><input type="text" name="pPeopleAdd" value="<?php echo $result["PeopleAdd"]; ?>" style="width: 100%" /></td>
-                            </tr>
-                            <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> DateAdded :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่เพิ่ม :</b></td>
                                 <td width="80%">
                                     <input type="date" name="pDateAdded" value="<?php echo $result["DateAdded"]; ?>" min="2018-01-01" max="<?php echo $result["DateAdded"]; ?>" />
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ProblemIMG :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สถานะปัญหา :</b></td>
+                                <td width="80%"><input type="text" name="pStatus" value="<?php echo $result["Status"]; ?>" style="width: 100%" /></td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพปัญหา :</b></td>
                                 <td width="80%">
                                     <input type="file" name="pProblemIMG" id="pProblemIMG"/>
-                                    <input type="hidden" name="ProblemIMG" value="<?php echo $resultUser["ProblemIMG"]; ?>">
+                                    <input type="hidden" name="ProblemIMG" value="<?php echo $result["ProblemIMG"]; ?>">
                                 </td>
                             </tr>
                         </table>

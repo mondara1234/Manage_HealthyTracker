@@ -73,7 +73,7 @@
                         <table width="80%" border="0">
                             <tr>
                                 <th>
-                                    <div align="center" class="font-16"> UserName :
+                                    <div align="center" class="font-16"> ชื่อผู้ใช้ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="Search" />
                                     </div>
@@ -84,58 +84,56 @@
                 </center>
                 <button type="submit" name="Submit" class="font-16"
                         style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                        onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                 >
                     เพิ่มข้อมูล
                 </button>
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                     <tr bgcolor="#068e81" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> UserID </div>
+                            <div align="center"> ลำดับ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> imgProfile </div>
+                            <div align="center"> ชื่อผู้ใช้ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> E-mail </div>
+                            <div align="center"> รูปภาพโปรไฟล์ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Password </div>
+                            <div align="center"> อีเมล </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Username </div>
+                            <div align="center"> รหัสผ่าน </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Status </div>
+                            <div align="center"> ภาษาระบบ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Language </div>
+                            <div align="center"> สถานะรหัสส่วนตัว </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> PersonalSelect </div>
+                            <div align="center"> รหัสส่วนตัว </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> PersonalCode </div>
+                            <div align="center"> เพศ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Sex </div>
+                            <div align="center"> อายุ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Age </div>
+                            <div align="center"> น้ำหนัก </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Weight </div>
+                            <div align="center"> ส่วนสูง </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Height </div>
+                            <div align="center"> พลังงานที่ต้องการ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> BMRUser </div>
+                            <div align="center"> แก้ไข </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Edit </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Delete </div>
+                            <div align="center"> ลบ </div>
                         </th>
                     </tr>
 
@@ -145,13 +143,12 @@
                         ?>
                         <tr>
                             <td align="center"><?php echo ($result["UserID"]) ?></td>
+                            <td align="center"><?php echo ($result["UserName"]) ?></td>
                             <td align="center">
                                 <img src="<?php echo ($result["imgProfile"]) ?>" width="50" height="50" style="margin: 3% 0px 3% 0px;" >
                             </td>
                             <td align="center"><?php echo ($result["Email"]) ?></td>
                             <td align="center"><?php echo ($result["Password"]) ?></td>
-                            <td align="center"><?php echo ($result["UserName"]) ?></td>
-                            <td align="center"><?php echo ($result["Status"]) ?></td>
                             <td align="center"><?php echo ($result["Language"]) ?></td>
                             <td align="center"><?php echo ($result["PersonalSelect"]) ?></td>
                             <td align="center"><?php echo ($result["PersonalCode"]) ?></td>

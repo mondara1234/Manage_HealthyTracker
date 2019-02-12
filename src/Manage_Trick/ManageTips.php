@@ -72,7 +72,7 @@
                     <form name="search" method="post">
                         <table width="80%" border="0">
                             <tr>
-                                <th> <div align="center" class="font-16"> TrickName :
+                                <th> <div align="center" class="font-16"> หัวข้อเคล็ดลับ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="Search" />
                                     </div>
@@ -83,40 +83,41 @@
                 </center>
                 <button type="submit" name="Submit" class="font-16"
                         style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                        onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                 >
                     เพิ่มข้อมูล
                 </button>
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                     <tr bgcolor="#068e81" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> TrickID </div>
+                            <div align="center"> ลำดับ </div>
                         </th>
                         <th>
-                            <div align="center"> TrickName </div>
+                            <div align="center"> หัวข้อ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center" > TrickIMG </div>
+                            <div align="center" > รูปภาพเคล็ดลับ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> TrickDetail </div>
+                            <div align="center"> รายละเอียด </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> TrickLike </div>
+                            <div align="center"> จำนวนการกดถูกใจ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> PeopleAdd </div>
+                            <div align="center"> ผู้เพิ่ม </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> DateAdded </div>
+                            <div align="center"> วันที่เพิ่ม </div>
+                        </th>
+                        <th style="padding-left: 5px; padding-right: 5px;">
+                            <div align="center"> ที่อยู่เคล็ดลับ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> sourceURL </div>
+                            <div align="center" > แก้ไข </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center" > Edit </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Delete </div>
+                            <div align="center"> ลบ </div>
                         </th>
                     </tr>
 
@@ -128,11 +129,11 @@
                             <td align="center"><?php echo ($result["TrickID"]) ?>
                             <td align="center"><?php echo ($result["TrickName"]) ?></td>
                             <td align="center"><img src="<?php echo ($result["TrickIMG"]) ?>" width="50" height="50"  ></td>
-                            <td align="center"><textarea rows="4" cols="50" style="margin-top: 2%" ><?php echo ($result["TrickDetail"]) ?></textarea></td>
+                            <td align="center"><textarea rows="4" cols="30" style="margin-top: 2%" ><?php echo ($result["TrickDetail"]) ?></textarea></td>
                             <td align="center"><?php echo ($result["TrickLike"]) ?></td>
                             <td align="center"><?php echo ($result["PeopleAdd"]) ?></td>
                             <td align="center"><?php echo ($result["DateAdded"]) ?></td>
-                            <td align="center"><a href="<?php echo ($result["sourceURL"]) ?>" class="text-active"><?php echo ($result["sourceURL"]) ?></a></td>
+                            <td align="center" ><a href="<?php echo ($result["sourceURL"]) ?>" class="text-active"><?php echo ($result["sourceURL"]) ?></a></td>
                             <td align="center">
                                 <a href="api/edit.php?TrickID=<?php echo ($result["TrickID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>

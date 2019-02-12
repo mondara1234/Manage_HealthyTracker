@@ -71,7 +71,7 @@
                     <form name="search" method="post">
                         <table width="80%" border="0">
                             <tr>
-                                <th> <div align="center" class="font-16"> FoodName :
+                                <th> <div align="center" class="font-16"> ชื่ออาหาร :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="Search" />
                                     </div>
@@ -82,34 +82,35 @@
                 </center>
                 <button type="submit" name="Submit" class="font-16"
                         style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                        onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                 >
                     เพิ่มข้อมูล
                 </button>
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                     <tr bgcolor="#068e81" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodID </div>
+                            <div align="center"> ลำดับ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodName </div>
+                            <div align="center"> ชื่ออาหาร </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodIMG </div>
+                            <div align="center"> รูปภาพอาหาร </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodCalorie </div>
+                            <div align="center"> แคลอรี่ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodType </div>
+                            <div align="center"> ประเภท </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodUnit </div>
+                            <div align="center"> หน่วย </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Edit </div>
+                            <div align="center"> แก้ไข </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Delete </div>
+                            <div align="center"> ลบ </div>
                         </th>
                     </tr>
                     <?php

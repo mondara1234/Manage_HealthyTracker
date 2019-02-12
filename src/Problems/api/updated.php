@@ -1,12 +1,12 @@
 <?php
 	include("../../Database/connect.php");
-    $UserName = $_GET["UserName"];
+	$UserName =$_GET["UserName"];
 	$ProblemID = $_POST["ProblemID"];
 	$pProblemName = $_POST["pProblemName"];
 	$pProblemType = $_POST["pProblemType"];
-	$pTrickDetail = $_POST["pTrickDetail"];
-    $pPeopleAdd = $_POST["pPeopleAdd"];
+	$pProblemDatail = $_POST["pProblemDatail"];
     $pDateAdded = $_POST["pDateAdded"];
+    $pStatus = $_POST["pStatus"];
 
     $old_img = $_POST["ProblemIMG"];
     $pProblemIMG;
@@ -18,36 +18,46 @@
         $pProblemIMG = $old_img;
     }
 
-	$sql = "UPDATE trickmanage SET 
-			TrickName = '$pTrickName',
-			ProblemName = '$pProblemName',
-			ProblemType = '$pProblemType',
-			TrickDetail = '$pTrickDetail',
-			ProblemIMG	 = '$pProblemIMG',
-			PeopleAdd = '$pPeopleAdd',
-			DateAdded = '$pDateAdded'
-			
-			WHERE ProblemID = $ProblemID ";
-
-	$query = mysqli_query($conn, $sql);
-
-	if($query){
-        $message = "อัพเดทสำเร็จ";
+    if(empty($pProblemName) ||
+    empty($pProblemDatail) ||
+    empty($pDateAdded) ||
+    empty($pStatus)) {
+        $message = "กรุณากรอกข้อมูลให้ครบ";
         echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='edit.php?UserName=$UserName';
         </script>"
         );
-    }else{
-        $message = "อัพเดทล้มเหลว";
-        echo (
-        "<script LANGUAGE='JavaScript'>
-            window.alert('$message');
-            window.location.href='edit.php?UserName=$UserName';
-        </script>"
-        );
+    }else {
+        $sql = "UPDATE problemapp SET 
+                ProblemName = '$pProblemName',
+                ProblemType = '$pProblemType',
+                ProblemDatail = '$pProblemDatail',
+                ProblemIMG = '$pProblemIMG',
+                DateAdded = '$pDateAdded',
+                PeopleAdd = '$UserName',
+                Status = '$pStatus'
+                
+                WHERE ProblemID = $ProblemID ";
+
+        $query = mysqli_query($conn, $sql);
+
+            if ($query) {
+                $message = "แก้ไขข้อมูลสำเร็จ";
+                echo(
+                "<script LANGUAGE='JavaScript'>
+                    window.alert('$message');
+                </script>"
+                );
+            } else {
+                $message = "แก้ไขข้อมูลล้มเหลว";
+                echo(
+                "<script LANGUAGE='JavaScript'>
+                    window.alert('$message');
+                </script>"
+                );
+            }
+
     }
-
 	mysqli_close($conn);
 ?>

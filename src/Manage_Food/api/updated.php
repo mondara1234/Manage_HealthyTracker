@@ -1,6 +1,5 @@
 <?php
 	include("../../Database/connect.php");
-    $UserName = $_GET["UserName"];
     $FoodID = $_POST["FoodID"];
 	$pFoodName = $_POST["pFoodName"];
 	$pFoodCalorie = $_POST["pFoodCalorie"];
@@ -8,7 +7,7 @@
     $pFoodUnit = $_POST["pFoodUnit"];
 
     $old_img = $_POST["FoodIMG"];
-$pFoodIMG;
+    $pFoodIMG;
     if ($_FILES["pFoodIMG"]["name"] !== ""){
         $image = $_FILES["pFoodIMG"]["name"];
         $imageData = base64_encode(file_get_contents($image));
@@ -17,7 +16,17 @@ $pFoodIMG;
         $pFoodIMG = $old_img;
     }
 
-	$sql = "UPDATE foodmanage SET 
+if(empty($pFoodName) ||
+    empty($pFoodCalorie) ||
+    empty($pFoodUnit)) {
+    $message = "กรุณากรอกข้อมูลให้ครบ";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+    );
+}else {
+    $sql = "UPDATE foodmanage SET 
 			FoodName = '$pFoodName',
 			FoodCalorie = '$pFoodCalorie',
 			FoodType = '$pFoodType',
@@ -26,25 +35,23 @@ $pFoodIMG;
 			
 			WHERE FoodID = $FoodID ";
 
-	$query = mysqli_query($conn, $sql);
+    $query = mysqli_query($conn, $sql);
 
-	if($query){
-        $message = "อัพเดทสำเร็จ";
-        echo (
+    if ($query) {
+        $message = "แก้ไขข้อมูลสำเร็จ";
+        echo(
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='edit.php?UserName=$UserName';
         </script>"
         );
-    }else{
-        $message = "อัพเดทล้มเหลว";
-        echo (
+    } else {
+        $message = "แก้ไขข้อมูลล้มเหลว";
+        echo(
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
-            window.location.href='edit.php?UserName=$UserName';
         </script>"
         );
     }
-
+}
 	mysqli_close($conn);
 ?>

@@ -72,7 +72,7 @@
                         <form name="search" method="post">
                             <table width="80%" border="0">
                                 <tr>
-                                    <th> <div align="center" class="font-16"> TrickName :
+                                    <th> <div align="center" class="font-16"> หัวข้อ :
                                             <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                             <input type="submit" value="Search" />
                                         </div>
@@ -83,40 +83,41 @@
                     </center>
                     <button type="submit" name="Submit" class="font-16"
                             style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                            onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                     >
                         เพิ่มข้อมูล
                     </button>
                     <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                         <tr bgcolor="#068e81" style="color: white; height: 40px">
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ProblemID </div>
+                                <div align="center"> ลำดับ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ProblemName </div>
+                                <div align="center"> หัวข้อ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ProblemIMG </div>
+                                <div align="center"> รูปภาพปัญหา </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ProblemDatail </div>
+                                <div align="center"> รายละเอียด </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ProblemType </div>
+                                <div align="center"> ประเภท </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> PeopleAdd </div>
+                                <div align="center"> ผู้เพิ่ม </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> DateAdded </div>
+                                <div align="center"> วันที่เพิ่ม </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Status </div>
+                                <div align="center"> สถานะปัญหา </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Edit </div>
+                                <div align="center"> แก้ไข </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> Delete </div>
+                                <div align="center"> ลบ </div>
                             </th>
                         </tr>
                         <?php

@@ -65,42 +65,44 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
-                        <table width="70%" border="1" style="border: #068e81 double 5px;">
+                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data" target="iframe_target">
+                        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+                        <table width="73%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">TrickName :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">หัวข้อ :</b></td>
                                 <td width="80%"><input type="text" name="pTrickName" value="<?php echo $result["TrickName"]; ?>" style="width: 100%" /></td>
                                 <input type="hidden" name="TrickID" value="<?php echo $result["TrickID"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">TrickDetail :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">รายละเอียด :</b></td>
                                 <td width="80%">
                                     <textarea rows="4" style="width: 100%" name="pTrickDetail" ><?php echo $result["TrickDetail"]; ?></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> TrickLike :</b></td>
-                                <td width="80%"><input type="text" name="pTrickLike" value="<?php echo $result["TrickLike"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> จำนวนการกดถูกใจ :</b></td>
+                                <td width="80%"><input type="number" name="pTrickLike" value="<?php echo $result["TrickLike"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">PeopleAdd :</b></td>
-                                <td width="80%"><input type="text" name="pPeopleAdd" value="<?php echo $result["PeopleAdd"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">ผู้เพิ่ม :</b></td>
+                                <td width="80%"><input type="text" name="pPeopleAdd" value="<?php echo $result["PeopleAdd"]; ?>" style="width: 100%" readonly/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">DateAdded :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">วันที่เพิ่ม :</b></td>
                                 <td width="80%">
                                     <input type="date" name="pDateAdded" value="<?php echo $result["DateAdded"]; ?>" min="2018-01-01" max="<?php echo $result["DateAdded"]; ?>" />
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">sourceURL :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">ที่อยู่เคล็ดลับ :</b></td>
                                 <td width="80%"><input type="text" name="psourceURL" value="<?php echo $result["sourceURL"]; ?>" style="width: 100%" /></td>
+                                <input type="hidden" name="sourceURL" value="<?php echo $result["sourceURL"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">TrickIMG :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">รูปภาพเคล็ดลับ :</b></td>
+                                <input type="hidden" name="TrickIMG" value="<?php echo $result["TrickIMG"]; ?>">
                                 <td width="80%">
                                     <input type="file" name="pTrickIMG" id="pTrickIMG"/>
-                                    <input type="hidden" name="TrickIMG" value="<?php echo $resultUser["TrickIMG"]; ?>">
                                 </td>
                             </tr>
                         </table>

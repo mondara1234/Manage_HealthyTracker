@@ -65,31 +65,41 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                    <form name="edit" action="updated.php" method="post" enctype="multipart/form-data" target="iframe_target">
+                        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FoodName :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่ออาหาร :</b></td>
                                 <td width="80%"><input type="text" name="pFoodName" value="<?php echo $result["FoodName"]; ?>" style="width: 100%" /></td>
                                 <input type="hidden" name="FoodID" value="<?php echo $result["FoodID"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FoodCalorie :</b></td>
-                                <td width="80%"><input type="text" name="pFoodCalorie" value="<?php echo $result["FoodCalorie"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> แคลอรี่ :</b></td>
+                                <td width="80%"><input type="number" name="pFoodCalorie" value="<?php echo $result["FoodCalorie"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FoodType :</b></td>
-                                <td width="80%"><input type="text" name="pFoodType" value="<?php echo $result["FoodType"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ประเภท :</b></td>
+                                <td width="80%">
+                                    <select name="pFoodType" id="pFoodType">
+                                        <option value="อาหาร" <?php if($result["FoodType"]=="อาหาร") echo 'selected="selected"'; ?>>อาหาร</option>
+                                        <option value="เครื่องดื่ม" <?php if($result["FoodType"]=="เครื่องดื่ม") echo 'selected="selected"'; ?>>เครื่องดื่ม</option>
+                                        <option value="ผลไม้" <?php if($result["FoodType"]=="ผลไม้") echo 'selected="selected"'; ?>>ผลไม้</option>
+                                        <option value="ขนม" <?php if($result["FoodType"]=="ขนม") echo 'selected="selected"'; ?>>ขนม</option>
+                                        <option value="ของหวาน" <?php if($result["FoodType"]=="ของหวาน") echo 'selected="selected"'; ?>>ของหวาน</option>
+                                        <option value="ธัญพืช" <?php if($result["FoodType"]=="ธัญพืช") echo 'selected="selected"'; ?>>ธัญพืช</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FoodUnit :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หน่วย :</b></td>
                                 <td width="80%"><input type="text" name="pFoodUnit" value="<?php echo $result["FoodUnit"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> FoodIMG :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพอาหาร :</b></td>
                                 <td width="80%">
                                     <input type="file" name="pFoodIMG" id="pFoodIMG"/>
-                                    <input type="hidden" name="FoodIMG" value="<?php echo $resultUser["FoodIMG"]; ?>">
                                 </td>
+                                <input type="hidden" name="FoodIMG" value="<?php echo $result["FoodIMG"]; ?>">
                             </tr>
                         </table>
                         <button type="submit" name="Submit" class="font-18"

@@ -13,7 +13,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-secret"></i>
-                        <span class="hide-menu"> ข้อมูล User </span>
+                        <span class="hide-menu"> ข้อมูลผู้ใช้งาน </span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -43,7 +43,7 @@
                         <li class="sidebar-item">
                             <a href="Manage_BMI/ManageBMI.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
                                 <i class="mdi mdi-multiplication-box"></i>
-                                <span class="hide-menu"> ฐานข้อมูล BMI </span>
+                                <span class="hide-menu"> ฐานข้อมูล ดัชนีมวลกาย </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -83,7 +83,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-secret"></i>
-                        <span class="hide-menu"> ข้อมูล User </span>
+                        <span class="hide-menu"> ข้อมูลผู้ใช้งาน </span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -113,7 +113,7 @@
                         <li class="sidebar-item">
                             <a href="Manage_BMI/ManageBMI.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
                                 <i class="mdi mdi-multiplication-box"></i>
-                                <span class="hide-menu"> ฐานข้อมูล BMI </span>
+                                <span class="hide-menu"> ฐานข้อมูล ดัชนีมวลกาย </span>
                             </a>
                         </li>
                         <li class="sidebar-item">

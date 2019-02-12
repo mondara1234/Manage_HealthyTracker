@@ -59,7 +59,7 @@
                     <div class="page-breadcrumb">
                         <div class="row">
                             <div class="col-12 d-flex no-block align-items-center">
-                                <h4 class="page-title">ข้อมูล User</h4>
+                                <h4 class="page-title">ข้อมูลผู้ใช้งาน</h4>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                             <form name="search" method="post">
                                 <table width="80%" border="0">
                                     <tr>
-                                        <th> <div align="center" class="font-16"> UserName :
+                                        <th> <div align="center" class="font-16"> ชื่อผู้ใช้ :
                                                 <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                                 <input type="submit" value="Search" />
                                             </div>

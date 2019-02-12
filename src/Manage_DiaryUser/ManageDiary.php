@@ -72,7 +72,7 @@
                     <form name="search" method="post">
                         <table width="80%" border="0">
                             <tr>
-                                <th> <div align="center" class="font-16"> UserName :
+                                <th> <div align="center" class="font-16"> ชื่อผู้ใช้ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="Search" />
                                     </div>
@@ -83,40 +83,41 @@
                 </center>
                 <button type="submit" name="Submit" class="font-16"
                         style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                        onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                 >
                     เพิ่มข้อมูล
                 </button>
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                     <tr bgcolor="#068e81" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> DiaryID </div>
+                            <div align="center"> ลำกับ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> UserName </div>
+                            <div align="center"> ชื่อผู้ใช้ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodIMG </div>
+                            <div align="center"> ชื่ออาหาร </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodName </div>
+                            <div align="center"> รูปภาพอาหาร </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodNumber </div>
+                            <div align="center"> จำนวน </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodUnit </div>
+                            <div align="center"> หน่วย </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> FoodCalorie </div>
+                            <div align="center"> แคลอรี่ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> DiaryDate </div>
+                            <div align="center"> วันที่เพิ่ม </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Edit </div>
+                            <div align="center"> แก้ไข </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> Delete </div>
+                            <div align="center"> ลบ </div>
                         </th>
                     </tr>
 
@@ -127,8 +128,8 @@
                         <tr>
                             <td align="center"><?php echo ($result["DiaryID"]) ?>
                             <td align="center"><?php echo ($result["UserName"]) ?></td>
-                            <td align="center" style="height: 60px"><img src="<?php echo ($result["FoodIMG"]) ?>" width="50" height="50"  ></td>
                             <td align="center"><?php echo ($result["FoodName"]) ?></td>
+                            <td align="center" style="height: 60px"><img src="<?php echo ($result["FoodIMG"]) ?>" width="50" height="50"  ></td>
                             <td align="center"><?php echo ($result["FoodNumber"]) ?></td>
                             <td align="center"><?php echo ($result["FoodUnit"]) ?></td>
                             <td align="center"><?php echo ($result["FoodCalorie"]) ?></td>

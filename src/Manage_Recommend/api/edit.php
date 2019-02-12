@@ -65,31 +65,32 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <center>
-                    <form name="edit" action="updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                    <form name="edit" action="updated.php" method="post" enctype="multipart/form-data" target="iframe_target">
+                        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_UserName :</b></td>
-                                <td width="80%"><input type="text" name="AU_UserName" value="<?php echo $result["AU_UserName"]; ?>" style="width: 100%" /></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
+                                <td width="80%"><input type="text" name="AU_UserName" value="<?php echo $result["AU_UserName"]; ?>" style="width: 100%" readonly/></td>
                                 <input type="hidden" name="AU_ID" value="<?php echo $result["AU_ID"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Title :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หัวข้อ :</b></td>
                                 <td width="80%"><input type="text" name="AU_Title" value="<?php echo $result["AU_Title"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Datile :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รายละเอียด :</b></td>
                                 <td width="80%">
                                     <textarea rows="6" style="width: 100%" name="AU_Datile" ><?php echo $result["AU_Datile"]; ?></textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Date :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่เพิ่ม :</b></td>
                                 <td width="80%">
                                     <input type="date" name="AU_Date" value="<?php echo $result["AU_Date"]; ?>" min="2018-01-01" max="<?php echo $result["AU_Date"]; ?>" />
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> AU_Status :</b></td>
+                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สถานนะการอ่าน :</b></td>
                                 <td width="80%"><input type="text" name="AU_Status" value="<?php echo $result["AU_Status"]; ?>" style="width: 100%" readonly /></td>
                             </tr>
                         </table>
