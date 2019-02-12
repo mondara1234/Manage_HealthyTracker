@@ -21,102 +21,104 @@
         <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
     </head>
-    <?php
-    $Search = null;
-    if(isset($_POST["txtSearch"]))
-    {
-        $Search = $_POST["txtSearch"];
-    }
+    <body class="bg-container">
+        <?php
+        $Search = null;
+        if(isset($_POST["txtSearch"]))
+        {
+            $Search = $_POST["txtSearch"];
+        }
 
-    include('../Database/connect.php');
+        include('../Database/connect.php');
 
-    $sql = "SELECT * FROM MemberManage WHERE UserName LIKE '%".$Search."%' ";
-    $query = mysqli_query($conn, $sql);
+        $sql = "SELECT * FROM MemberManage WHERE UserName LIKE '%".$Search."%' ";
+        $query = mysqli_query($conn, $sql);
 
-    $UserName = $_GET["UserName"];
-    $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
-    $querymanage = mysqli_query($conn, $sqlmanage);
-    $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
+        $UserName = $_GET["UserName"];
+        $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
+        $querymanage = mysqli_query($conn, $sqlmanage);
+        $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
-    $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
-    $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
+        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
+        $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
+        $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
-    $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
-    $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
-    $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
-    ?>
-    <!-- ============================================================== -->
-    <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
-    <!-- ============================================================== -->
-    <div id="main-wrapper">
-        <?php require_once '../Component/Header.php';?>
-            <div class="page-wrapper">
-                <!-- ============================================================== -->
-                <!-- ส่วน Title-->
-                <!-- ============================================================== -->
-                <div class="page-breadcrumb">
-                    <div class="row">
-                        <div class="col-12 d-flex no-block align-items-center">
-                            <h4 class="page-title">ข้อมูล User</h4>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- ส่วนของเนื้อหา  -->
-                <!-- ============================================================== -->
-                <div class="container-fluid">
-                    <center>
-                        <form name="search" method="post">
-                            <table width="80%" border="0">
-                                <tr>
-                                    <th> <div align="center" class="font-16"> UserName :
-                                            <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                            <input type="submit" value="Search" />
-                                        </div>
-                                    </th>
-                                </tr>
-                            </table>
-                        </form>
-                        <div class="container-fluid m-t-10">
-                            <div class="col-md-12 card card-body">
-                                <div class="row " style="width: 100%; margin-left: 4%">
-                                    <?php
-                                    while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
-                                    {
-                                        ?>
-                                        <div class="cardID m-r-20 m-t-10 p-t-5" style="width: 17%;" >
-                                            <center>
-                                                <img src="<?php echo ($result["imgProfile"]) ?>" width="80%" height="100px" style="margin-top: 3%">
-                                                <div class="containerID">
-                                                    <h5><b><?php echo ($result["UserName"]) ?></b></h5>
-                                                    <div class="row justify-content-between align-items-center m-b-5" >
-                                                        <button  class="font-12" style=" color: white; background: #068e81;"
-                                                                 onclick="window.location.href='ManageUser.php?NameUser=<?php echo ($result["UserName"]);?>&UserName=<?php echo($_GET["UserName"]); ?>'"
-                                                        >
-                                                            ดูข้อมูล
-                                                        </button>
-                                                        <button  class="font-12" style=" color: white; background: #068e81;"
-                                                                 onclick="JavaScript:if(confirm('คุณต้องการลบข้อมูลของ User ทั้งหมด ใช่ไหม ?')==true)
-                                                                 {window.location='api/delete.php?UserID=<?php echo ($result["UserID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"
-                                                        >
-                                                            ลบข้อมูล
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </center>
-                                        </div>
-                                        <?php
-                                    }
-                                    ?>
-                                </div>
+        $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
+        $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+        $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+        ?>
+        <!-- ============================================================== -->
+        <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
+        <!-- ============================================================== -->
+        <div id="main-wrapper">
+            <?php require_once '../Component/Header.php';?>
+                <div class="page-wrapper">
+                    <!-- ============================================================== -->
+                    <!-- ส่วน Title-->
+                    <!-- ============================================================== -->
+                    <div class="page-breadcrumb">
+                        <div class="row">
+                            <div class="col-12 d-flex no-block align-items-center">
+                                <h4 class="page-title">ข้อมูล User</h4>
                             </div>
                         </div>
-                    </center>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- ส่วนของเนื้อหา  -->
+                    <!-- ============================================================== -->
+                    <div class="container-fluid">
+                        <center>
+                            <form name="search" method="post">
+                                <table width="80%" border="0">
+                                    <tr>
+                                        <th> <div align="center" class="font-16"> UserName :
+                                                <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
+                                                <input type="submit" value="Search" />
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </form>
+                            <div class="container-fluid m-t-10">
+                                <div class="col-md-12 card card-body">
+                                    <div class="row " style="width: 100%; margin-left: 4%">
+                                        <?php
+                                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                                        {
+                                            ?>
+                                            <div class="cardID m-r-20 m-t-10 p-t-5" style="width: 17%;" >
+                                                <center>
+                                                    <img src="<?php echo ($result["imgProfile"]) ?>" width="80%" height="100px" style="margin-top: 3%">
+                                                    <div class="containerID">
+                                                        <h5><b><?php echo ($result["UserName"]) ?></b></h5>
+                                                        <div class="row justify-content-between align-items-center m-b-5" >
+                                                            <button  class="font-12" style=" color: white; background: #068e81;"
+                                                                     onclick="window.location.href='ManageUser.php?NameUser=<?php echo ($result["UserName"]);?>&UserName=<?php echo($_GET["UserName"]); ?>'"
+                                                            >
+                                                                ดูข้อมูล
+                                                            </button>
+                                                            <button  class="font-12" style=" color: white; background: #068e81;"
+                                                                     onclick="JavaScript:if(confirm('คุณต้องการลบข้อมูลของ User ทั้งหมด ใช่ไหม ?')==true)
+                                                                     {window.location='api/delete.php?UserID=<?php echo ($result["UserID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"
+                                                            >
+                                                                ลบข้อมูล
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </center>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <?php
+                    mysqli_close($conn);
+                    ?>
                 </div>
-                <?php
-                mysqli_close($conn);
-                ?>
             </div>
             <?php require_once '../Component/footer.php';?>
         </div>
