@@ -75,7 +75,7 @@
                                         <div>My Dashboard</div>
                                     </a>
                                 </li>
-                                <li class="bg_ls" style="width: 18%; height: 14%">
+                                <li class="bg_ls" style="width: 18%;">
                                     <a href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="fa fa-user-circle"></i></h1>
                                         <div style="margin-top: 10%">ข้อมูลผู้ใช้งาน</div>

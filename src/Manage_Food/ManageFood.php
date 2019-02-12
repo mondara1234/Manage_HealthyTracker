@@ -80,6 +80,11 @@
                         </table>
                     </form>
                 </center>
+                <button type="submit" name="Submit" class="font-16"
+                        style="width: 10%; height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%"
+                >
+                    เพิ่มข้อมูล
+                </button>
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                     <tr bgcolor="#068e81" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">
