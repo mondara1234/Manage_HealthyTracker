@@ -94,7 +94,16 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         </tr>
                         <tr>
                             <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สถานะปัญหา :</b></td>
-                            <td width="80%"><input type="text" name="pStatus" style="width: 100%" /></td>
+                            <td width="80%">
+                                <select name="pStatus" id="pStatus">
+                                    <option value="select" >กรุณาเลือกสถานะของปัญหา</option>
+                                    <option value="รอดำเนินการ" >รอดำเนินการ</option>
+                                    <option value="กำลังตรวจสอบ" >กำลังตรวจสอบ</option>
+                                    <option value="แก้ไขเสร็จสิ้น" >แก้ไขเสร็จสิ้น</option>
+                                    <option value="ไม่สามารถแก้ไขได้" >ไม่สามารถแก้ไขได้</option>
+                                    <option value="อื่นๆ" >อื่นๆ</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพปัญหา :</b></td>

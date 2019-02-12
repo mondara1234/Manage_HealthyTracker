@@ -5,6 +5,7 @@ include("../../Database/connect.php");
     $pProblemDatail = $_POST["pProblemDatail"];
     $pDateAdded = $_POST["pDateAdded"];
     $pStatus = $_POST["pStatus"];
+    $pPeopleAdd = $_POST["pPeopleAdd"];
 
     $old_img = 'null';
     $pProblemIMG;
@@ -18,9 +19,7 @@ include("../../Database/connect.php");
 
     if(empty($pProblemName) ||
         empty($pProblemDatail) ||
-        empty($pDateAdded) ||
-        empty($pStatus) ||
-        empty($pPeopleAdd)) {
+        empty($pDateAdded)) {
         $message = "กรุณากรอกข้อมูลให้ครบ";
         echo (
         "<script LANGUAGE='JavaScript'>
@@ -30,6 +29,13 @@ include("../../Database/connect.php");
     }elseif($pProblemType === 'select' ){
         $message = "กรุณาเลือกประเภทของปัญหา";
         echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+        );
+    }elseif($pStatus === 'select' ) {
+        $message = "กรุณาเลือกสถานะของปัญหา";
+        echo(
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"

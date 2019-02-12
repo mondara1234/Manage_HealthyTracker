@@ -103,7 +103,15 @@
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สถานะปัญหา :</b></td>
-                                <td width="80%"><input type="text" name="pStatus" value="<?php echo $result["Status"]; ?>" style="width: 100%" /></td>
+                                <td width="80%">
+                                    <select name="pStatus" id="pStatus">
+                                        <option value="รอดำเนินการ" <?php if($result["Status"]=="รอดำเนินการ") echo 'selected="selected"'; ?>>รอดำเนินการ</option>
+                                        <option value="กำลังตรวจสอบ" <?php if($result["Status"]=="กำลังตรวจสอบ") echo 'selected="selected"'; ?>>กำลังตรวจสอบ</option>
+                                        <option value="แก้ไขเสร็จสิ้น" <?php if($result["Status"]=="แก้ไขเสร็จสิ้น") echo 'selected="selected"'; ?>>แก้ไขเสร็จสิ้น</option>
+                                        <option value="ไม่สามารถแก้ไขได้" <?php if($result["Status"]=="ไม่สามารถแก้ไขได้") echo 'selected="selected"'; ?>>ไม่สามารถแก้ไขได้</option>
+                                        <option value="อื่นๆ" <?php if($result["Status"]=="อื่นๆ") echo 'selected="selected"'; ?>>อื่นๆ</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพปัญหา :</b></td>

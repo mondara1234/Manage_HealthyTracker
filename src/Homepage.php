@@ -199,22 +199,39 @@
                             </div>
                         </div>
                     </div>
+                    <?php
+                    $sqlFood = "SELECT COUNT(*) as totalFood FROM foodmanage ";
+                    $queryFood = mysqli_query($conn, $sqlFood);
+                    $resultFood = mysqli_fetch_array($queryFood, MYSQLI_ASSOC);
+
+                    $sqlRecommend = "SELECT COUNT(*) as totalRecommend FROM alertuser ";
+                    $queryRecommend= mysqli_query($conn, $sqlRecommend);
+                    $resultRecommend = mysqli_fetch_array($queryRecommend, MYSQLI_ASSOC);
+
+                    $sqlDiary = "SELECT COUNT(*) as totalDiary FROM fooddiary ";
+                    $queryDiary = mysqli_query($conn, $sqlDiary);
+                    $resultDiary = mysqli_fetch_array($queryDiary, MYSQLI_ASSOC);
+
+                    $sqlTrick = "SELECT COUNT(*) as totalTrick FROM trickmanage ";
+                    $queryTrick = mysqli_query($conn, $sqlTrick);
+                    $resultTrick = mysqli_fetch_array($queryTrick, MYSQLI_ASSOC);
+
+                    ?>
                     <div class="row">
                         <div class="col-md-3">
                             <div class="card m-t-0">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="peity_line_good left text-center m-t-10">
-                  <span>
-                    <span style="display: none;">12,6,9,23,14,10,17</span>
-                    <canvas width="50" height="24"></canvas>
-                  </span>
-                                            <h6>+60%</h6>
+                                        <div class="peity_line_good left text-center m-t-15">
+                                          <span>
+                                            <span style="display: none;">12,6,9,23,14,10,17</span>
+                                            <canvas width="50" height="24"></canvas>
+                                          </span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 border-left text-center p-t-10">
-                                        <h3 class="mb-0 ">5672</h3>
-                                        <span class="text-muted">กำลังใช้งาน</span>
+                                        <h3 class="mb-0 "><?php echo($resultFood['totalFood']); ?></h3>
+                                        <span class="text-dark font-12">จำนวนรายการอาหาร</span>
                                     </div>
                                 </div>
                             </div>
@@ -223,13 +240,13 @@
                             <div class="card m-t-0">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="peity_bar_good left text-center m-t-10"><span>12,6,9,23,14,10,13</span>
-                                            <h6>+30%</h6>
+                                        <div class="peity_bar_good left text-center m-t-15">
+                                            <span>12,6,9,23,14,10,13</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 border-left text-center p-t-10">
-                                        <h3 class="mb-0 font-weight-bold">2560</h3>
-                                        <span class="text-muted">ผู้สมัคร</span>
+                                        <h3 class="mb-0 font-weight-bold"><?php echo($resultRecommend['totalRecommend']); ?></h3>
+                                        <span class="text-dark font-12">จำนวนคำแนะนำ</span>
                                     </div>
                                 </div>
                             </div>
@@ -238,14 +255,16 @@
                             <div class="card m-t-0">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="peity_bar_bad left text-center m-t-10"><span><span style="display: none;">3,5,6,16,8,10,6</span>
-                                                <canvas width="50" height="24"></canvas>
-                                                </span>
-                                            <h6>-40%</h6></div>
+                                        <div class="peity_bar_bad left text-center m-t-15">
+                                            <span>
+                                                <span style="display: none;">3,5,6,16,8,10,6</span>
+                                                <canvas width="50" height="50"></canvas>
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="col-md-6 border-left text-center p-t-10">
-                                        <h3 class="mb-0 font-weight-bold">4560</h3>
-                                        <span class="text-muted">แจ้งปัญหา</span>
+                                        <h3 class="mb-0 font-weight-bold"><?php echo($resultDiary['totalDiary']); ?></h3>
+                                        <span class="text-dark font-12">จำนวนสมุดอาหาร</span>
                                     </div>
                                 </div>
                             </div>
@@ -254,65 +273,105 @@
                             <div class="card m-t-0">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="peity_line_neutral left text-center m-t-10"><span><span style="display: none;">10,15,8,14,13,10,10</span>
-                                                <canvas width="50" height="24"></canvas>
-                                                </span>
-                                            <h6>10%</h6>
+                                        <div class="peity_line_neutral left text-center m-t-15">
+                                            <span>
+                                                <span style="display: none;">10,15,8,14,13,10,10</span>
+                                                <canvas width="50" height="50"></canvas>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 border-left text-center p-t-10">
-                                        <h3 class="mb-0 font-weight-bold">150</h3>
-                                        <span class="text-muted">อื่นๆ</span>
+                                        <h3 class="mb-0 font-weight-bold"><?php echo($resultTrick['totalTrick']); ?></h3>
+                                        <span class="text-dark font-12">จำนวนเคล็ดลับ</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <?php
+                    $sqlProblemServer = "SELECT COUNT(*) as totalProblemServer FROM problemapp WHERE ProblemType = 'เซิร์ฟเวอร์มีปัญหา' ";
+                    $queryProblemServer = mysqli_query($conn, $sqlProblemServer);
+                    $resultProblemServer = mysqli_fetch_array($queryProblemServer, MYSQLI_ASSOC);
+
+                    $sqlProblemBug = "SELECT COUNT(*) as totalProblemBug FROM problemapp WHERE ProblemType = 'พบข้อบกพร่อง' ";
+                    $queryProblemBug = mysqli_query($conn, $sqlProblemBug);
+                    $resultProblemBug = mysqli_fetch_array($queryProblemBug, MYSQLI_ASSOC);
+
+                    $sqlProblemSystem = "SELECT COUNT(*) as totalProblemSystem FROM problemapp WHERE ProblemType = 'ระบบไม่เสถียร' ";
+                    $queryProblemSystem = mysqli_query($conn, $sqlProblemSystem);
+                    $resultProblemSystem = mysqli_fetch_array($queryProblemSystem, MYSQLI_ASSOC);
+
+                    $sqlProblemAdvise = "SELECT COUNT(*) as totalProblemAdvise FROM problemapp WHERE ProblemType = 'แนะนำ' ";
+                    $queryProblemAdvise = mysqli_query($conn, $sqlProblemAdvise);
+                    $resultProblemAdvise = mysqli_fetch_array($queryProblemAdvise, MYSQLI_ASSOC);
+
+                    $sqlProblemOther = "SELECT COUNT(*) as totalProblemOther FROM problemapp WHERE ProblemType = 'อื่นๆ' ";
+                    $queryProblemOther = mysqli_query($conn, $sqlProblemOther);
+                    $resultProblemOther = mysqli_fetch_array($queryProblemOther, MYSQLI_ASSOC);
+
+                    $PercentServer = ($resultProblemServer['totalProblemServer'] / $resultAllProblem['totalAllProblem']) * 100;
+                    $PercentBug = ($resultProblemBug['totalProblemBug'] / $resultAllProblem['totalAllProblem']) * 100;
+                    $PercentSystem = ($resultProblemSystem['totalProblemSystem'] / $resultAllProblem['totalAllProblem']) * 100;
+                    $PercentAdvise = ($resultProblemAdvise['totalProblemAdvise'] / $resultAllProblem['totalAllProblem']) * 100;
+                    $PercentOther = ($resultProblemOther['totalProblemOther'] / $resultAllProblem['totalAllProblem']) * 100;
+
+                    ?>
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title m-b-0">ความคีบหน้าของปัญหาที่พบ</h4>
+                            <h4 class="card-title m-b-0">จำนวนปัญหา</h4>
                             <div class="m-t-20">
                                 <div class="d-flex no-block align-items-center">
-                                    <span>81% App</span>
+                                    <span><?php echo($PercentServer);?>% เซิร์ฟเวอร์มีปัญหา</span>
                                     <div class="ml-auto">
-                                        <span>125</span>
+                                        <span><?php echo($resultProblemServer['totalProblemServer']); ?></span>
                                     </div>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 81%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <?php echo($PercentServer); ?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="d-flex no-block align-items-center m-t-25">
-                                    <span>72% การใช้งาน</span>
+                                    <span><?php echo($PercentBug);?>% พบข้อบกพร่อง</span>
                                     <div class="ml-auto">
-                                        <span>120</span>
+                                        <span><?php echo($resultProblemBug['totalProblemBug']); ?></span>
                                     </div>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 72%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <?php echo($PercentBug);?>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="d-flex no-block align-items-center m-t-25">
-                                    <span>53% Server</span>
+                                    <span><?php echo($PercentSystem);?>% ระบบไม่เสถียร</span>
                                     <div class="ml-auto">
-                                        <span>785</span>
+                                        <span><?php echo($resultProblemSystem['totalProblemSystem']); ?></span>
                                     </div>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 53%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <?php echo($PercentSystem);?>%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="d-flex no-block align-items-center m-t-25">
-                                    <span>3% อื่นๆ</span>
+                                    <span><?php echo($PercentAdvise);?>% แนะนำ</span>
                                     <div class="ml-auto">
-                                        <span>8</span>
+                                        <span><?php echo($resultProblemAdvise['totalProblemAdvise']); ?></span>
                                     </div>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 3%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php echo($PercentAdvise);?>%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex no-block align-items-center m-t-25">
+                                    <span><?php echo($PercentOther);?>% อื่นๆ</span>
+                                    <div class="ml-auto">
+                                        <span><?php echo($resultProblemOther['totalProblemOther']); ?></span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <?php echo($PercentOther);?>%; background-color: red" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ></div>
                                 </div>
                             </div>
                         </div>

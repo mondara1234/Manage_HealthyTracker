@@ -128,7 +128,7 @@
                                 <td align="center"><?php echo ($result["ProblemID"]) ?>
                                 <td align="center"><?php echo ($result["ProblemName"]) ?></td>
                                 <td align="center"><img src="<?php echo ($result["ProblemIMG"]) ?>" width="80" height="80"  ></td>
-                                <td align="center"><textarea rows="4" cols="50" style="width: 100%; margin-top: 2%"><?php echo ($result["ProblemDatail"]) ?></textarea></td>
+                                <td align="center"><textarea rows="4" cols="50" style="width: 100%; margin-top: 2%" readonly><?php echo ($result["ProblemDatail"]) ?></textarea></td>
                                 <td align="center"><?php echo ($result["ProblemType"]) ?></td>
                                 <td align="center"><?php echo ($result["PeopleAdd"]) ?></td>
                                 <td align="center"><?php echo ($result["DateAdded"]) ?></td>
