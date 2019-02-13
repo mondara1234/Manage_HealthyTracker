@@ -16,17 +16,6 @@
 	<link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 </head>
 
-<script language="javascript">
-    function checkLogin(){
-        if(document.login.txtUsername.value == "")
-        {
-            alert("กรุณากรอกรายละเอียด!!");
-            document.login.txtUsername.focus();
-        }else
-            document.login.submit();
-    }
-</script>
-
 <body style="background-image: url('../assets/images/background/bg_web.png'); background-size: 100% 100%;">
 	<form name="login" method="post" action="../Database/Check_login.php">
 		<p style="margin-left: 30%; margin-top: 2%">

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/login/loginServer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Recommend/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Recommend/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Recommend/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Recommend/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/api/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +35,7 @@
       <file leaf-file-name="ManageMembers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Manage_User/ManageMembers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="2550">
               <caret line="150" column="64" selection-start-line="150" selection-start-column="64" selection-end-line="150" selection-end-column="64" />
             </state>
           </provider>
@@ -53,17 +44,63 @@
       <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Manage_User/api/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="1224">
               <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insert.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="insert.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Manage_User/api/insert.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="1033">
               <caret line="83" column="103" selection-start-line="83" selection-start-column="103" selection-end-line="83" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/login/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginServer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/login/loginServer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/login/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Manage_Food/api/updated.php" />
         <option value="$PROJECT_DIR$/src/Manage_Recommend/api/updated.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/api/updated.php" />
         <option value="$PROJECT_DIR$/src/Manage_Trick/api/InsertTips.php" />
@@ -127,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/Manage_Trick/api/updated.php" />
         <option value="$PROJECT_DIR$/src/Problems/api/InsertProblem.php" />
         <option value="$PROJECT_DIR$/src/Database/connect.php" />
-        <option value="$PROJECT_DIR$/src/login/login.html" />
         <option value="$PROJECT_DIR$/src/text.php" />
         <option value="$PROJECT_DIR$/src/test.php" />
         <option value="$PROJECT_DIR$/php.ini" />
@@ -161,6 +196,8 @@
         <option value="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/api/insert.php" />
+        <option value="$PROJECT_DIR$/src/login/login.html" />
+        <option value="$PROJECT_DIR$/src/login/loginServer.html" />
       </list>
     </option>
   </component>
@@ -193,7 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,6 +265,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,19 +275,19 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Problems\api" />
-      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_User\api" />
-      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_Trick\api" />
-      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_Recommend\api" />
-      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_Food\api" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src" />
       <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\ProfileUser\api" />
       <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_BMI" />
       <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_Exercise" />
       <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Statistics_Web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\login" />
+      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Problems\api" />
+      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_User\api" />
+      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_Trick\api" />
+      <recent name="E:\xampp\htdocs\Manage_HealthyTracker\src\Manage_Recommend\api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -290,18 +327,19 @@
       <workItem from="1550007624042" duration="8810000" />
       <workItem from="1550018224637" duration="2793000" />
       <workItem from="1550042865119" duration="3154000" />
-      <workItem from="1550048157792" duration="2068000" />
+      <workItem from="1550048157792" duration="2097000" />
+      <workItem from="1550050826868" duration="512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204040000" />
+    <option name="totallyTimeSpent" value="204581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49729" visible="true" weight="0.30873924" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49729" visible="true" weight="0.31303725" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -325,19 +363,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29154727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
       <window_info anchor="right" id="Database" order="3" side_tool="true" weight="0.3295129" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292683" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -355,13 +393,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Component/HeaderHome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="48" column="49" lean-forward="true" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_User/api/InsertUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -441,13 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -587,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problems/api/edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -608,9 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="77" column="125" selection-start-line="77" selection-start-column="125" selection-end-line="77" selection-end-column="125" />
-          <folding>
-            <element signature="n#style#0;n#b#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,22 +703,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_User/ManageMembers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="2550">
           <caret line="150" column="64" selection-start-line="150" selection-start-column="64" selection-end-line="150" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_User/api/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="1224">
           <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_User/api/insert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="1033">
           <caret line="83" column="103" selection-start-line="83" selection-start-column="103" selection-end-line="83" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/loginServer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
