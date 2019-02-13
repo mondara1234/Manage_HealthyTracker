@@ -141,21 +141,21 @@
                     {
                         ?>
                         <tr>
-                            <td align="center"><?php echo ($result["UserID"]) ?></td>
-                            <td align="center"><?php echo ($result["UserName"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["UserID"]) ?></td>
+                            <td align="center" style="width: 7%"><?php echo ($result["UserName"]) ?></td>
                             <td align="center">
-                                <img src="<?php echo ($result["imgProfile"]) ?>" width="50" height="50" style="margin: 3% 0px 3% 0px;" >
+                                <img src="<?php echo ($result["imgProfile"]) ?>" width="80" height="80" style="margin: 3% 0px 3% 0px;" >
                             </td>
                             <td align="center"><?php echo ($result["Email"]) ?></td>
                             <td align="center"><?php echo ($result["Password"]) ?></td>
-                            <td align="center"><?php echo ($result["Language"]) ?></td>
-                            <td align="center"><?php echo ($result["PersonalSelect"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["Language"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["PersonalSelect"]) ?></td>
                             <td align="center"><?php echo ($result["PersonalCode"]) ?></td>
                             <td align="center"><?php echo ($result["Sex"]) ?></td>
                             <td align="center"><?php echo ($result["Age"]) ?></td>
                             <td align="center"><?php echo ($result["Weight"]) ?></td>
                             <td align="center"><?php echo ($result["Height"]) ?></td>
-                            <td align="center"><?php echo ($result["BMRUser"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["BMRUser"]) ?></td>
                             <td align="center">
                                 <a href="api/edit.php?UserID=<?php echo ($result["UserID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>

@@ -84,12 +84,14 @@
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">ผู้เพิ่ม :</b></td>
-                                <td width="80%"><input type="text" name="pPeopleAdd" value="<?php echo $result["PeopleAdd"]; ?>" style="width: 100%" readonly/></td>
+                                <td width="80%"><input type="text" value="<?php echo $result["PeopleAdd"]; ?>" style="width: 100%" readonly/></td>
+                                <input type="hidden" name="pDateAdded" id="pDateAdded" value="<?php echo $_GET["UserName"];?>" />
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">วันที่เพิ่ม :</b></td>
                                 <td width="80%">
-                                    <input type="date" name="pDateAdded" value="<?php echo $result["DateAdded"]; ?>" min="2018-01-01" max="<?php echo $result["DateAdded"]; ?>" />
+                                    <input type="date" value="<?php echo $result["DateAdded"]; ?>" readonly/>
+                                    <input type="hidden" name="pDateAdded" id="pDateAdded" value="<?php echo date('Y-m-d');?>" />
                                 </td>
                             </tr>
                             <tr>

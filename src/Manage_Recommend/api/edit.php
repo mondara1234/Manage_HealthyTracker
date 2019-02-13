@@ -85,7 +85,8 @@
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่เพิ่ม :</b></td>
                                 <td width="80%">
-                                    <input type="date" name="AU_Date" value="<?php echo $result["AU_Date"]; ?>" min="2018-01-01" max="<?php echo $result["AU_Date"]; ?>" />
+                                    <input type="date" value="<?php echo $result["AU_Date"]; ?>" readonly />
+                                    <input type="hidden" name="AU_Date" id="AU_Date" value="<?php echo date('Y-m-d');?>" />
                                 </td>
                             </tr>
                             <tr>

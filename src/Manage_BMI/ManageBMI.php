@@ -120,12 +120,12 @@
                     {
                         ?>
                         <tr>
-                            <td align="center"><?php echo ($result["BMIID"]) ?>
-                            <td align="center"><?php echo ($result["NameBMI"]) ?></td>
-                            <td align="center"><textarea rows="4" cols="50" style="margin-top: 2%" ><?php echo ($result["DetailBMI"]) ?></textarea></td>
-                            <td align="center"><?php echo ($result["SumBMI"]) ?></td>
-                            <td align="center"><?php echo ($result["BMIUser"]) ?></td>
-                            <td align="center"><?php echo ($result["UnitBMI"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["BMIID"]) ?>
+                            <td align="center" style="width: 20%"><?php echo ($result["NameBMI"]) ?></td>
+                            <td align="center" style="width: 40%"><textarea rows="4" style="margin-top: 2%; width: 90%" ><?php echo ($result["DetailBMI"]) ?></textarea></td>
+                            <td align="center" style="width: 10%"><?php echo ($result["SumBMI"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["BMIUser"]) ?></td>
+                            <td align="center" style="width: 6%"><?php echo ($result["UnitBMI"]) ?></td>
                             <td align="center">
                                 <a href="api/edit.php?BMIID=<?php echo ($result["BMIID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>

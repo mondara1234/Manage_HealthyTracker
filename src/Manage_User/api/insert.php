@@ -81,7 +81,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                             </td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ณูปภาพโปรไฟล์ :</b></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพโปรไฟล์ :</b></td>
                             <td width="80%">
                                 <input type="file" name="pImgProfile" id="pImgProfile" />
                                 <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>

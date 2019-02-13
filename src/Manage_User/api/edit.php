@@ -70,7 +70,7 @@
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้งาน :</b></td>
                                 <td width="80%"><input type="text" name="pUsername" value="<?php echo $result["UserName"]; ?>" style="width: 100%" /></td>
-                                <input type="text" name="old_Username" value="<?php echo $result["UserName"]; ?>" style="width: 100%" />
+                                <input type="hidden" name="old_Username" value="<?php echo $result["UserName"]; ?>" style="width: 100%" />
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อีเมล :</b></td>

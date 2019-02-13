@@ -75,7 +75,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         <tr>
                             <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่เพิ่ม :</b></td>
                             <td width="80%">
-                                <input type="date" name="AU_Date" />
+                                <input type="text" name="AU_Date" id="AU_Date" value="<?php echo date('Y-m-d');?>" readonly/>
                             </td>
                         </tr>
                     </table>

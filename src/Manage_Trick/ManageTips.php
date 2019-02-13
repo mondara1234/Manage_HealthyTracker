@@ -101,7 +101,7 @@
                             <div align="center"> รายละเอียด </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> จำนวนการกดถูกใจ </div>
+                            <div align="center"> การกดถูกใจ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> ผู้เพิ่ม </div>
@@ -125,14 +125,16 @@
                     {
                         ?>
                         <tr>
-                            <td align="center"><?php echo ($result["TrickID"]) ?>
+                            <td align="center" style="width: 5%"><?php echo ($result["TrickID"]) ?>
                             <td align="center" style="width: 15%"><?php echo ($result["TrickName"]) ?></td>
-                            <td align="center"><img src="<?php echo ($result["TrickIMG"]) ?>" width="70" height="70"  ></td>
-                            <td align="center"><textarea rows="4" cols="30" style="margin-top: 2%" ><?php echo ($result["TrickDetail"]) ?></textarea></td>
-                            <td align="center"><?php echo ($result["TrickLike"]) ?></td>
+                            <td align="center" style="width: 10%"><img src="<?php echo ($result["TrickIMG"]) ?>" width="70" height="70"  ></td>
+                            <td align="center"><textarea rows="4" style="margin-top: 2%; width: 90%" ><?php echo ($result["TrickDetail"]) ?></textarea></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["TrickLike"]) ?></td>
                             <td align="center" style="width: 5%"><?php echo ($result["PeopleAdd"]) ?></td>
-                            <td align="center"><?php echo ($result["DateAdded"]) ?></td>
-                            <td align="center" ><a href="<?php echo ($result["sourceURL"]) ?>" class="text-active"><?php echo ($result["sourceURL"]) ?></a></td>
+                            <td align="center" style="width: 10%"><?php echo ($result["DateAdded"]) ?></td>
+                            <td align="center" style="width: 15%; word-break:break-all">
+                                <a href="<?php echo ($result["sourceURL"]) ?>" class="text-active" ><?php echo ($result["sourceURL"]) ?></a>
+                            </td>
                             <td align="center">
                                 <a href="api/edit.php?TrickID=<?php echo ($result["TrickID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>
