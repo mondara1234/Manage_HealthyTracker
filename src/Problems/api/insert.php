@@ -83,12 +83,12 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         </tr>
                         <tr>
                             <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ผู้เพิ่ม :</b></td>
-                            <td width="80%"><input type="text" name="pPeopleAdd"  style="width: 100%"  value="<?php echo($_GET["UserName"]); ?>" readonly/></td>
+                            <td width="80%"><input type="text" name="$pPeopleAdd"  style="width: 100%"  value="<?php echo($_GET["UserName"]); ?>" readonly/></td>
                         </tr>
                         <tr>
                             <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่เพิ่ม :</b></td>
                             <td width="80%">
-                                <input type="text" name="date" id="date" value="<?php echo date('Y-m-d');?>" readonly/>
+                                <input type="text" name="$pDateAdded" id="$pDateAdded" value="<?php echo date('Y-m-d');?>" readonly/>
                             </td>
                         </tr>
                         <tr>
