@@ -16,7 +16,6 @@
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet">
     <link href="../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="../assets/dist/css/matrix-style.css" rel="stylesheet">
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
@@ -120,7 +119,7 @@
                         <tr>
                             <td align="center"><?php echo ($result["FoodID"]) ?>
                             <td align="center"><?php echo ($result["FoodName"]) ?></td>
-                            <td align="center"><img src="<?php echo ($result["FoodIMG"]) ?>" width="50" height="50" style="margin: 3% 0px 3% 0px"></td>
+                            <td align="center"><img src="<?php echo ($result["FoodIMG"]) ?>" width="100" height="100" style="margin: 3% 0px 3% 0px"></td>
                             <td align="center"><?php echo ($result["FoodCalorie"]) ?></td>
                             <td align="center"><?php echo ($result["FoodType"]) ?></td>
                             <td align="center"><?php echo ($result["FoodUnit"]) ?></td>

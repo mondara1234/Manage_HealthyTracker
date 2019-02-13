@@ -321,7 +321,7 @@
                             <h4 class="card-title m-b-0">จำนวนปัญหา</h4>
                             <div class="m-t-20">
                                 <div class="d-flex no-block align-items-center">
-                                    <span><?php echo($PercentServer);?>% เซิร์ฟเวอร์มีปัญหา</span>
+                                    <span><?php echo(number_format($PercentServer,2,',',''));?>% เซิร์ฟเวอร์มีปัญหา</span>
                                     <div class="ml-auto">
                                         <span><?php echo($resultProblemServer['totalProblemServer']); ?></span>
                                     </div>
@@ -332,7 +332,7 @@
                             </div>
                             <div>
                                 <div class="d-flex no-block align-items-center m-t-25">
-                                    <span><?php echo($PercentBug);?>% พบข้อบกพร่อง</span>
+                                    <span><?php echo(number_format($PercentBug,2,',',''));?>% พบข้อบกพร่อง</span>
                                     <div class="ml-auto">
                                         <span><?php echo($resultProblemBug['totalProblemBug']); ?></span>
                                     </div>
@@ -343,7 +343,7 @@
                             </div>
                             <div>
                                 <div class="d-flex no-block align-items-center m-t-25">
-                                    <span><?php echo($PercentSystem);?>% ระบบไม่เสถียร</span>
+                                    <span><?php echo(number_format($PercentSystem,2,',',''));?>% ระบบไม่เสถียร</span>
                                     <div class="ml-auto">
                                         <span><?php echo($resultProblemSystem['totalProblemSystem']); ?></span>
                                     </div>
@@ -354,7 +354,7 @@
                             </div>
                             <div>
                                 <div class="d-flex no-block align-items-center m-t-25">
-                                    <span><?php echo($PercentAdvise);?>% แนะนำ</span>
+                                    <span><?php echo( number_format($PercentAdvise,2,',',''));?>% แนะนำ</span>
                                     <div class="ml-auto">
                                         <span><?php echo($resultProblemAdvise['totalProblemAdvise']); ?></span>
                                     </div>
@@ -365,7 +365,7 @@
                             </div>
                             <div>
                                 <div class="d-flex no-block align-items-center m-t-25">
-                                    <span><?php echo($PercentOther);?>% อื่นๆ</span>
+                                    <span><?php echo(number_format($PercentOther,2,',',''));?>% อื่นๆ</span>
                                     <div class="ml-auto">
                                         <span><?php echo($resultProblemOther['totalProblemOther']); ?></span>
                                     </div>

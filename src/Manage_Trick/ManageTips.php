@@ -16,7 +16,6 @@
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet">
     <link href="../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="../assets/dist/css/matrix-style.css" rel="stylesheet">
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
@@ -127,11 +126,11 @@
                         ?>
                         <tr>
                             <td align="center"><?php echo ($result["TrickID"]) ?>
-                            <td align="center"><?php echo ($result["TrickName"]) ?></td>
-                            <td align="center"><img src="<?php echo ($result["TrickIMG"]) ?>" width="50" height="50"  ></td>
+                            <td align="center" style="width: 15%"><?php echo ($result["TrickName"]) ?></td>
+                            <td align="center"><img src="<?php echo ($result["TrickIMG"]) ?>" width="70" height="70"  ></td>
                             <td align="center"><textarea rows="4" cols="30" style="margin-top: 2%" ><?php echo ($result["TrickDetail"]) ?></textarea></td>
                             <td align="center"><?php echo ($result["TrickLike"]) ?></td>
-                            <td align="center"><?php echo ($result["PeopleAdd"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["PeopleAdd"]) ?></td>
                             <td align="center"><?php echo ($result["DateAdded"]) ?></td>
                             <td align="center" ><a href="<?php echo ($result["sourceURL"]) ?>" class="text-active"><?php echo ($result["sourceURL"]) ?></a></td>
                             <td align="center">

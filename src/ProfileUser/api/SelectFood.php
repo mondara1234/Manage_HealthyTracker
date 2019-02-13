@@ -23,7 +23,18 @@
     <link rel="stylesheet" media="all" type="text/css" href="../../assets/libs/jquerydatepicker/jquery-ui.css" />
     <link rel="stylesheet" media="all" type="text/css" href="../../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.css" />
 </head>
+<script language="JavaScript" type="text/JavaScript">
+    function validateF(){
 
+        let theForm = document.formDate;
+        let StartDate  = theForm['dateStart'].value;
+        let StopDate  = theForm['dateEnd'].value;
+        if (StopDate < StartDate){
+            alert('วันที่เริ่มต้องน้อยกว่าวันที่สิ้นสุด');
+        }else{
+        }
+    }
+</script>
 <body class="bg-container">
 <?php
 $UserName = null;
@@ -78,7 +89,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         <div style="width: 60%">
                             Start Date :<input id="dateStart" name="dateStart" type="date" value="<?php echo ($dateS);?>"/>
                             End Date :<input id="dateEnd" name="dateEnd" type="date" value="<?php echo ($dateE);?>" />
-                            <button type="submit" name="submit" style="color: white; background: #068e81">ค้นหา</button>
+                            <button type="submit" name="submit" id="submit" onclick="validateF();" style="color: white; background: #068e81">ค้นหา</button>
                         </div>
                     </center>
 
@@ -106,8 +117,12 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         </tr>
 
                         <?php
+                        $x=1;
+                        $sum=0;
+                        $records = mysqli_num_rows($query);
                         while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
                         {
+                            $sum = $sum + $result["FoodCalorie"];
                             ?>
 
                             <tr>
@@ -125,16 +140,12 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                     </table>
                     <table width="100%" border="1" style="border: black double 5px; border-top: 0px">
                         <tr>
-                            <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยการกินต่อวัน </div> </td>
-                            <td align="center"> <div align="center"> ผลลัพธ์ </div></td>
+                            <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยทั้งหมด </div> </td>
+                            <td align="center"> <div align="center"> <?php echo ($sum) ?> </div></td>
                         </tr>
                         <tr>
-                            <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยการกินต่อสัปดาห์ </div> </td>
-                            <td align="center"> <div align="center"> ผลลัพธ์ </div></td>
-                        </tr>
-                        <tr>
-                            <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยการกินต่อเดือน </div> </td>
-                            <td align="center"> <div align="center"> ผลลัพธ์ </div></td>
+                            <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยทั้งหมด(%) </div> </td>
+                            <td align="center"> <div align="center">  <?php echo (($sum * $records) /100) ?> </div></td>
                         </tr>
                     </table>
                 </form>

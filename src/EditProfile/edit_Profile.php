@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
                         <h4 class="page-title">แก้ไขข้อมูลส่วนตัว</h4>
-                        <div class="ml-auto text-right">
+                        <div class="ml-auto text-right" >
                             <div class="font-18" align="center">
                                 <i class="fa fa-user " style="color: red"></i>
                                 <font>สถานะผู้ใช้งาน</font>
