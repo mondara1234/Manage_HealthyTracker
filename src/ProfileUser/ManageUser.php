@@ -16,7 +16,6 @@
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet">
     <link href="../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="../assets/dist/css/matrix-style.css" rel="stylesheet">
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
@@ -111,28 +110,28 @@
                                 </th>
 
                             </tr>
-
-                        <?php
-                        $x=1;
-                        $sum=0;
-                        $records = mysqli_num_rows($query);
-                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
-                        {
-                            $sum = $sum + $result["FoodCalorie"];
-                            ?>
-
-                            <tr>
-                                <td align="center"><?php echo ($result["DiaryID"]) ?></td>
-                                <td align="center"><?php echo ($result["FoodName"]) ?></td>
-                                <td align="center"><?php echo ($result["FoodNumber"]) ?></td>
-                                <td align="center"><?php echo ($result["FoodUnit"]) ?></td>
-                                <td align="center"><?php echo ($result["FoodCalorie"]) ?></td>
-                                <td align="center"><?php echo ($result["DiaryDate"]) ?></td>
-                            </tr>
-
                             <?php
-                        }
-                        ?>
+                            $x = 0;
+                            $sum = 0;
+                            $records = mysqli_num_rows($query);
+                            while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                            {
+                                $x = $x + 1;
+                                $sum = $sum + $result["FoodCalorie"];
+                                ?>
+
+                                <tr>
+                                    <td align="center"><?php echo ($x) ?></td>
+                                    <td align="center"><?php echo ($result["FoodName"]) ?></td>
+                                    <td align="center"><?php echo ($result["FoodNumber"]) ?></td>
+                                    <td align="center"><?php echo ($result["FoodUnit"]) ?></td>
+                                    <td align="center"><?php echo ($result["FoodCalorie"]) ?></td>
+                                    <td align="center"><?php echo ($result["DiaryDate"]) ?></td>
+                                </tr>
+
+                                <?php
+                            }
+                            ?>
                         </table>
                         <table width="100%" border="1" style="border: black double 5px; border-top: 0px">
                             <tr>
@@ -146,7 +145,7 @@
                         </table>
                     </form>
                     <div class="col-md-12 card card-body m-t-10">
-                        <p class="font-20">แจ้งคำแนะนำ</p>
+                        <p class="font-20">การแจ้งคำแนะนำ</p>
                         <form name="MyForm" method="post" action="api/InsertMessage.php" target="iframe_target">
                             <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                             <div style="margin-bottom: 1%;">

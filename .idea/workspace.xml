@@ -2,33 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditProfile/edit_Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditProfile/edit_Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/ManageDiary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/ManageDiary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/ManageFood.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/ManageFood.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Recommend/ManageRecommend.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Recommend/ManageRecommend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Recommend/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Recommend/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Recommend/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Recommend/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/Problems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/Problems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problems/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/api/insert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php" afterDir="false" />
     </list>
@@ -61,21 +34,8 @@
       <file leaf-file-name="ManageUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProfileUser/ManageUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="146" column="27" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="146" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Homepage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Homepage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="329" column="167" selection-start-line="329" selection-start-column="167" selection-end-line="329" selection-end-column="167" />
+            <state relative-caret-position="289">
+              <caret line="17" column="100" selection-start-line="17" selection-start-column="100" selection-end-line="17" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -83,12 +43,8 @@
       <file leaf-file-name="SelectFood.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="150" column="23" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -320,12 +276,12 @@
       <workItem from="1549977861216" duration="26255000" />
       <workItem from="1550007624042" duration="8810000" />
       <workItem from="1550018224637" duration="2793000" />
-      <workItem from="1550042865119" duration="2182000" />
+      <workItem from="1550042865119" duration="2555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201000000" />
+    <option name="totallyTimeSpent" value="201373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -717,23 +673,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProfileUser/ManageUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="146" column="27" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="146" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="100" selection-start-line="17" selection-start-column="100" selection-end-line="17" selection-end-column="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="150" column="23" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
         </state>
       </provider>
     </entry>
