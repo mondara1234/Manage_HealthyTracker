@@ -18,8 +18,7 @@ include("../../Database/connect.php");
     }
 
     if(empty($pProblemName) ||
-        empty($pProblemDatail) ||
-        empty($pDateAdded)) {
+        empty($pProblemDatail)) {
         $message = "กรุณากรอกข้อมูลให้ครบ";
         echo (
         "<script LANGUAGE='JavaScript'>
