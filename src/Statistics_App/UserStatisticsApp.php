@@ -41,7 +41,8 @@
 
                         let options = {
                             title: '',
-                            is3D: true
+                            is3D: true,
+                            fontSize: 14
                         };
 
                         let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -73,7 +74,8 @@
 
                             let options = {
                                 title: '',
-                                is3D: true
+                                is3D: true,
+                                fontSize: 14
                             };
 
                             let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -118,7 +120,8 @@
                                 '#ddb911',
                                 '#dd0b9f',
                                 '#a914dd',
-                            ]
+                            ],
+                            fontSize: 14
                         };
 
                         let chart = new google.visualization.PieChart(document.getElementById('piechart_3dProblem'));
@@ -154,7 +157,8 @@
 
                             let options = {
                                 title: '',
-                                is3D: true
+                                is3D: true,
+                                fontSize: 14
                             };
 
                             let chart = new google.visualization.PieChart(document.getElementById('piechart_3dProblem'));

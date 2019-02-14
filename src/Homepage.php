@@ -118,21 +118,6 @@
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
                                                         <h5 style="width: 40%; margin-top: 3%">ผู้ใช้งาน App</h5>
-                                                        <ul class="nav navbar-right justify-content-end panel_toolbox">
-                                                            <li><a class="collapse-link"><i class="fa fa-chevron-up p-icon-r5"></i></a>
-                                                            </li>
-                                                            <li class="dropdown p-icon-r5">
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                                <ul class="dropdown-menu " role="menu">
-                                                                    <li><a href="#">Settings 1</a>
-                                                                    </li>
-                                                                    <li><a href="#">Settings 2</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li><a class="close-link"><i class="fa fa-times p-icon-r5"></i></a>
-                                                            </li>
-                                                        </ul>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                     <div class="x_content">
@@ -147,19 +132,6 @@
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
                                                         <h5 class="align-items-center" style="width: 69%; margin-top: 3%;"> ความถี่การสมัครสมาชิก</h5>
-                                                        <ul class="nav navbar-right justify-content-end panel_toolbox">
-                                                            <li class="dropdown p-icon-r5">
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                                <ul class="dropdown-menu" role="menu">
-                                                                    <li><a href="#">Settings 1</a>
-                                                                    </li>
-                                                                    <li><a href="#">Settings 2</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li><a class="close-link"><i class="fa fa-times p-icon-r5"></i></a>
-                                                            </li>
-                                                        </ul>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                     <iframe src="Component/Highcharts.php" height="80%" width="100%" frameborder="0" scrolling="auto" align="right">
@@ -421,6 +393,7 @@
                 let options = {
                     title: '',
                     is3D: true,
+                    fontSize: 14
                 };
 
                 let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
