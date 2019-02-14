@@ -47,17 +47,7 @@
                         }
                     }
                 };
-                let legend = {
-                    align: 'right',
-                    x: -30,
-                    verticalAlign: 'top',
-                    y: 25,
-                    floating: true,
-                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-                    borderColor: '#CCC',
-                    borderWidth: 1,
-                    shadow: false
-                };
+
                 let tooltip = {
                     formatter: function () {
                         return '<b>' + this.x + '</b><br/>' +
@@ -107,7 +97,6 @@
                 json.title = title;
                 json.xAxis = xAxis;
                 json.yAxis = yAxis;
-                json.legend = legend;
                 json.tooltip = tooltip;
                 json.plotOptions = plotOptions;
                 json.credits = credits;

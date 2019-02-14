@@ -147,8 +147,8 @@
                     <div style="margin-top: 5%">
                         <center>
                             <div style="width: 60%">
-                                Start Date :<input id="dateStart" name="dateStart" type="date"/>
-                                End Date :<input id="dateEnd" name="dateEnd" type="date" />
+                                วันจันทร์ที่ :<input id="dateM" name="dateM" type="date"/>
+                                - วันอาทิตย์ที่ :<input id="dateS" name="dateS" type="date" />
                                 <button type="submit" name="submit" id="submit" onclick="validateF();" style="color: white; background: #068e81">ค้นหา</button>
                             </div>
                         </center>
