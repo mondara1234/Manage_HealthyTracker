@@ -39,7 +39,7 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
+        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
         $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
         $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -116,11 +116,13 @@
                     </tr>
 
                     <?php
+                    $x = 0;
                     while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
                     {
+                        $x = $x + 1;
                         ?>
                         <tr>
-                            <td align="center" style="width: 5%"><?php echo ($result["BMIID"]) ?>
+                            <td align="center" style="width: 15%"><?php echo ($x) ?></td>
                             <td align="center" style="width: 20%"><?php echo ($result["NameBMI"]) ?></td>
                             <td align="center" style="width: 40%"><textarea rows="4" style="margin-top: 2%; width: 90%" ><?php echo ($result["DetailBMI"]) ?></textarea></td>
                             <td align="center" style="width: 10%"><?php echo ($result["SumBMI"]) ?></td>

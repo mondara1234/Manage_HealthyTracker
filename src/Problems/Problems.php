@@ -39,7 +39,7 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
+        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
         $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
         $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -120,14 +120,16 @@
                             </th>
                         </tr>
                         <?php
+                        $x = 0;
                         while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
                         {
+                            $x = $x + 1;
                             ?>
                             <tr>
-                                <td align="center"><?php echo ($result["ProblemID"]) ?>
+                                <td align="center"><?php echo ($x) ?></td>
                                 <td align="center"><?php echo ($result["ProblemName"]) ?></td>
                                 <td align="center"><img src="<?php echo ($result["ProblemIMG"]) ?>" width="80" height="80"  ></td>
-                                <td align="center"><textarea rows="4" cols="50" style="width: 100%; margin-top: 2%" readonly><?php echo ($result["ProblemDatail"]) ?></textarea></td>
+                                <td align="center"><textarea rows="4" style="width: 100%; margin-top: 2%" readonly><?php echo ($result["ProblemDatail"]) ?></textarea></td>
                                 <td align="center"><?php echo ($result["ProblemType"]) ?></td>
                                 <td align="center"><?php echo ($result["PeopleAdd"]) ?></td>
                                 <td align="center"><?php echo ($result["DateAdded"]) ?></td>
