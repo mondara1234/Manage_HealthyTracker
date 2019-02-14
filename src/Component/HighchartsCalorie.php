@@ -29,15 +29,15 @@
                     type: 'column'
                 };
                 let title = {
-                    text: 'ข้อมูลการสมัครใช้งานระบบประจำ '+<?php echo date('Y');?>
+                    text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที่ 04/02/2019 - 10/02/2019'
                 };
                 let xAxis = {
-                    categories: ['ม.ค', 'ก.พ', 'มี.ค', 'เม.ย', 'พ.ค', 'มื.ย', 'ก.ค', 'ส.ค', 'ก.ย', 'ต.ค', 'พ.ย', 'ธ.ค']
+                    categories: ['วันจันทร์', 'วันอังคาร', 'วันพุธ', 'วันพฤหัสบดี', 'วันศุกร์', 'วันเสาร์', 'วันอาทิตย์']
                 };
                 let yAxis ={
                     min: 0,
                     title: {
-                        text: 'จำนวนผู้สมัคร'
+                        text: 'จำนวนแคลอรี่'
                     },
                     stackLabels: {
                         enabled: true,
@@ -77,38 +77,29 @@
                     enabled: false
                 };
                 let series= [{
-                    name: 'ชาย',
+                    name: 'ขาด',
                     data: [
-                        <?php echo($resultSexMale[1]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[2]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[3]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[4]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[5]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[6]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[7]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[8]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[9]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[10]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[11]['totalMemberMale']); ?>,
-                        <?php echo($resultSexMale[12]['totalMemberMale']); ?>
+                        100,
+                        0,
+                        80,
+                        250,
+                        0,
+                        0,
+                        150
                     ],
-                    color: '#0b4fd6'
+                    color: '#068e81'
                 }, {
-                    name: 'หญิง',
-                    data: [<?php echo($resultSexFemale[1]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[2]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[3]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[4]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[5]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[6]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[7]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[8]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[9]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[10]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[11]['totalMemberFemale']); ?>,
-                        <?php echo($resultSexFemale[12]['totalMemberFemale']); ?>
+                    name: 'เกิน',
+                    data: [
+                        0,
+                        120,
+                        0,
+                        0,
+                        150,
+                        235,
+                        0
                     ],
-                    color: '#c43806'
+                    color: '#991715'
                 }];
 
                 let json = {};

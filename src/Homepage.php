@@ -417,7 +417,6 @@
             function drawChart() {
                 let data = google.visualization.arrayToDataTable([
                     ['Task', 'Hours per Day'],
-                    ['ทั้งหมด',     <?php echo($resultAllSex['totalAllSex']); ?>],
                     ['ชาย',      <?php echo($resultMaleSex['totalMaleSex']); ?>],
                     ['หญิง',    <?php echo($resultFeMaleSex['totalFeMaleSex']); ?>]
                 ]);

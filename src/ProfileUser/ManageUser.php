@@ -144,6 +144,17 @@
                             </tr>
                         </table>
                     </form>
+                    <div style="margin-top: 5%">
+                        <center>
+                            <div style="width: 60%">
+                                Start Date :<input id="dateStart" name="dateStart" type="date"/>
+                                End Date :<input id="dateEnd" name="dateEnd" type="date" />
+                                <button type="submit" name="submit" id="submit" onclick="validateF();" style="color: white; background: #068e81">ค้นหา</button>
+                            </div>
+                        </center>
+                        <iframe src="../Component/HighchartsCalorie.php" height="400px" width="100%" frameborder="0" scrolling="auto" align="right">
+                        </iframe>
+                    </div>
                     <div class="col-md-12 card card-body m-t-10">
                         <p class="font-20">การแจ้งคำแนะนำ</p>
                         <form name="MyForm" method="post" action="api/InsertMessage.php" target="iframe_target">

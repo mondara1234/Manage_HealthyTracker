@@ -59,7 +59,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">การขออนุญาติ</h4>
+                        <h4 class="page-title">การขออนุญาต</h4>
                     </div>
                 </div>
             </div>
@@ -96,11 +96,11 @@
                                                     <font class="font-14">
                                                         <?php
                                                             if($result["Permission"] === 'allow'){
-                                                                echo ('อนุญาติ');
+                                                                echo ('อนุญาต');
                                                             }else if($result["Permission"] === 'disallow'){
-                                                                echo ('ไม่อนุญาติ');
+                                                                echo ('ไม่อนุญาต');
                                                             }else{
-                                                                echo ('รออนุญาติ');
+                                                                echo ('รออนุญาต');
                                                             }
                                                         ?>
                                                     </font>
@@ -110,14 +110,14 @@
                                                         <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>"/>
                                                         <input type="hidden" name="UserName" value="<?php echo($_GET["UserName"]); ?>" />
                                                         <button  class="font-12" style=" color: white; background: #068e81;">
-                                                            อนุญาติ
+                                                            อนุญาต
                                                         </button>
                                                     </form>
                                                     <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
                                                         <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>" />
                                                         <input type="hidden" name="UserName" value="<?php echo($_GET["UserName"]); ?>" />
                                                         <button  class="font-12" style=" color: white; background: #068e81;">
-                                                            ไม่อนุญาติ
+                                                            ไม่อนุญาต
                                                         </button>
                                                     </form>
                                                 </div>
