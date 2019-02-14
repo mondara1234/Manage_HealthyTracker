@@ -145,7 +145,7 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Permission/Permission.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-key"></i>
-                        <span class="hide-menu p-r-10"> การขออนุญาติ </span>
+                        <span class="hide-menu p-r-10"> การขออนุญาต </span>
                         <span class="label label-danger"><?php echo($resultAdminmanage['totalAdminmanage']); ?></span>
                     </a>
                 </li>

@@ -399,9 +399,6 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
             <?php
-            $sqlAllSex = "SELECT COUNT(*) as totalAllSex FROM membermanage";
-            $queryAllSex= mysqli_query($conn, $sqlAllSex);
-            $resultAllSex = mysqli_fetch_array($queryAllSex, MYSQLI_ASSOC);
 
             $sqlMaleSex = "SELECT COUNT(*) as totalMaleSex FROM membermanage WHERE Sex = 'male'";
             $queryMaleSex = mysqli_query($conn, $sqlMaleSex);
@@ -417,7 +414,6 @@
             function drawChart() {
                 let data = google.visualization.arrayToDataTable([
                     ['Task', 'Hours per Day'],
-                    ['ทั้งหมด',     <?php echo($resultAllSex['totalAllSex']); ?>],
                     ['ชาย',      <?php echo($resultMaleSex['totalMaleSex']); ?>],
                     ['หญิง',    <?php echo($resultFeMaleSex['totalFeMaleSex']); ?>]
                 ]);

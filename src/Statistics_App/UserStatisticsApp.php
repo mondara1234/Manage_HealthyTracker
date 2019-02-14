@@ -35,7 +35,6 @@
                     function drawChart() {
                         let data = google.visualization.arrayToDataTable([
                             ['Task', 'Hours per Day'],
-                            ['ทั้งหมด', parseInt(result[0])],
                             ['ชาย',   parseInt(result[1])],
                             ['หญิง',   parseInt(result[2])]
                         ]);
@@ -68,7 +67,6 @@
                         function drawChart() {
                             let data = google.visualization.arrayToDataTable([
                                 ['Task', 'Hours per Day'],
-                                ['ทั้งหมด', parseInt(result[0])],
                                 ['ชาย',   parseInt(result[1])],
                                 ['หญิง',   parseInt(result[2])]
                             ]);
@@ -104,7 +102,6 @@
                     function drawChart() {
                         let data = google.visualization.arrayToDataTable([
                             ['Task', 'Hours per Day'],
-                            ['ทั้งหมด', parseInt(result[0])],
                             ['เซิร์ฟเวอร์มีปัญหา',   parseInt(result[1])],
                             ['พบข้อบกพร่อง',   parseInt(result[2])],
                             ['ระบบไม่เสถียร',   parseInt(result[3])],
@@ -141,7 +138,6 @@
                         function drawChart() {
                             let data = google.visualization.arrayToDataTable([
                                 ['Task', 'Hours per Day'],
-                                ['ทั้งหมด', parseInt(result[0])],
                                 ['เซิร์ฟเวอร์มีปัญหา',   parseInt(result[1])],
                                 ['พบข้อบกพร่อง',   parseInt(result[2])],
                                 ['ระบบไม่เสถียร',   parseInt(result[3])],
