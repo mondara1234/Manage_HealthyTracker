@@ -111,7 +111,14 @@
 
                         let options = {
                             title: '',
-                            is3D: true
+                            is3D: true,
+                            colors: [
+                                '#dd0032',
+                                '#dd6c13',
+                                '#ddb911',
+                                '#dd0b9f',
+                                '#a914dd',
+                            ]
                         };
 
                         let chart = new google.visualization.PieChart(document.getElementById('piechart_3dProblem'));
