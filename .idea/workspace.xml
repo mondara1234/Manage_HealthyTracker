@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_DiaryUser/ManageDiary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_DiaryUser/ManageDiary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Food/ManageFood.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Food/ManageFood.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Recommend/ManageRecommend.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Recommend/ManageRecommend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Trick/ManageTips.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Permission/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permission/Permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Problems/Problems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problems/Problems.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,14 +69,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Permission.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Permission.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Permission/Permission.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="90">
               <caret line="108" column="108" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="108" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#center#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Problems.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Problems/Problems.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -195,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/ProfileUser/UserInformation.php" />
         <option value="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" />
         <option value="$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php" />
-        <option value="$PROJECT_DIR$/src/Problems/Problems.php" />
         <option value="$PROJECT_DIR$/src/Problems/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Problems/api/insert.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" />
@@ -220,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/Manage_Recommend/ManageRecommend.php" />
         <option value="$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php" />
         <option value="$PROJECT_DIR$/src/Permission/Permission.php" />
+        <option value="$PROJECT_DIR$/src/Problems/Problems.php" />
       </list>
     </option>
   </component>
@@ -332,6 +333,12 @@
               <item name="Permission" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Manage_HealthyTracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_HealthyTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Problems" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -405,16 +412,15 @@
       <workItem from="1550068864110" duration="681000" />
       <workItem from="1550144628109" duration="4436000" />
       <workItem from="1550165304982" duration="339000" />
-      <workItem from="1550219069117" duration="813000" />
+      <workItem from="1550219069117" duration="1526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216288000" />
+    <option name="totallyTimeSpent" value="217001000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1374" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49729" visible="true" weight="0.3419062" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -626,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problems/Problems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="41" column="78" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problems/api/InsertProblem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-374">
@@ -826,11 +825,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Permission/Permission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="90">
           <caret line="108" column="108" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="108" />
           <folding>
             <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#center#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problems/Problems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
         </state>
       </provider>
     </entry>
