@@ -59,7 +59,7 @@
                 <div class="page-breadcrumb">
                     <div class="row">
                         <div class="col-12 d-flex no-block align-items-center">
-                            <h4 class="page-title">ปัญหาที่ผู้ใช้พบ</h4>
+                            <h4 class="page-title">ปัญหาที่พบ</h4>
                         </div>
                     </div>
                 </div>
