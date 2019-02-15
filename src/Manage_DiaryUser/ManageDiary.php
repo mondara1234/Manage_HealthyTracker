@@ -127,7 +127,7 @@
                         $x = $x + 1;
                         ?>
                         <tr>
-                            <td align="center" style="width: 15%"><?php echo ($x) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center"><?php echo ($result["UserName"]) ?></td>
                             <td align="center"><?php echo ($result["FoodName"]) ?></td>
                             <td align="center" style="height: 60px"><img src="<?php echo ($result["FoodIMG"]) ?>" width="100" height="100"  style="margin: 3% 0px 3% 0px"></td>

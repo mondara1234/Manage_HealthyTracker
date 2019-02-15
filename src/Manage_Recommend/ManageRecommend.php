@@ -122,7 +122,7 @@
                         $x = $x + 1;
                         ?>
                         <tr>
-                            <td align="center" style="width: 15%"><?php echo ($x) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center"><?php echo ($result["AU_UserName"]) ?></td>
                             <td align="center"><?php echo ($result["AU_Title"]) ?></td>
                             <td align="center"><textarea rows="4" cols="50" style="margin-top: 2%" ><?php echo ($result["AU_Datile"]) ?></textarea></td>

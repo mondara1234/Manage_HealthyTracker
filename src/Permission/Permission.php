@@ -108,14 +108,14 @@
                                                 <div class="row justify-content-between align-items-center m-b-5" >
                                                     <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data" >
                                                         <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>"/>
-                                                        <input type="hidden" name="UserName" value="<?php echo($_GET["UserName"]); ?>" />
+                                                        <input type="hidden" name="Permission" value="allow" />
                                                         <button  class="font-12" style=" color: white; background: #068e81;">
                                                             อนุญาต
                                                         </button>
                                                     </form>
                                                     <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
                                                         <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>" />
-                                                        <input type="hidden" name="UserName" value="<?php echo($_GET["UserName"]); ?>" />
+                                                        <input type="hidden" name="Permission" value="disallow" />
                                                         <button  class="font-12" style=" color: white; background: #068e81;">
                                                             ไม่อนุญาต
                                                         </button>

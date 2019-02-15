@@ -127,7 +127,7 @@
                         $x = $x + 1;
                         ?>
                         <tr>
-                            <td align="center" style="width: 15%"><?php echo ($x) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center" style="width: 15%"><?php echo ($result["TrickName"]) ?></td>
                             <td align="center" style="width: 10%"><img src="<?php echo ($result["TrickIMG"]) ?>" width="70" height="70"  ></td>
                             <td align="center"><textarea rows="4" style="margin-top: 2%; width: 90%" ><?php echo ($result["TrickDetail"]) ?></textarea></td>

@@ -59,7 +59,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ฐานข้อมูล BMI</h4>
+                        <h4 class="page-title">ฐานข้อมูล ดัชนีมวลกาย</h4>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                         $x = $x + 1;
                         ?>
                         <tr>
-                            <td align="center" style="width: 15%"><?php echo ($x) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center" style="width: 20%"><?php echo ($result["NameBMI"]) ?></td>
                             <td align="center" style="width: 40%"><textarea rows="4" style="margin-top: 2%; width: 90%" ><?php echo ($result["DetailBMI"]) ?></textarea></td>
                             <td align="center" style="width: 10%"><?php echo ($result["SumBMI"]) ?></td>

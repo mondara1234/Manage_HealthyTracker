@@ -140,7 +140,7 @@
                             $x = $x + 1;
                             ?>
                             <tr>
-                                <td align="center" style="width: 15%"><?php echo ($x) ?></td>
+                                <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                                 <td align="center"><?php echo ($result["UserName"]) ?></td>
                                 <td align="center"><img src="<?php echo ($result["ImgProfile"]) ?>" width="50" height="50"  ></td>
                                 <td align="center"><?php echo ($result["Email"]) ?></td>
