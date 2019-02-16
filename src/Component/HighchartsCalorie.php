@@ -2,26 +2,24 @@
     <head>
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
-        <?php
-            include("../Database/connect.php");
-            $dateYeay = date('Y');
-
-            for ($i = 1; $i <= 12; $i++) {
-                $sqlSexMale[$i] = "SELECT COUNT(*) as totalMemberMale FROM membermanage WHERE Sex = 'male' AND DateRegis>='$dateYeay-0$i-01' 
-            AND DateRegis<='$dateYeay-0$i-31' ";
-                $querySexMale[$i]= mysqli_query($conn, $sqlSexMale[$i]);
-                $resultSexMale[$i] = mysqli_fetch_array($querySexMale[$i], MYSQLI_ASSOC);
-            }
-
-            for ($i = 1; $i <= 12; $i++) {
-                $sqlSexFemale[$i] = "SELECT COUNT(*) as totalMemberFemale FROM membermanage WHERE Sex = 'female' AND DateRegis>='$dateYeay-0$i-01' 
-            AND DateRegis<='$dateYeay-0$i-31' ";
-                $querySexFemale[$i]= mysqli_query($conn, $sqlSexFemale[$i]);
-                $resultSexFemale[$i] = mysqli_fetch_array($querySexFemale[$i], MYSQLI_ASSOC);
-            }
-        ?>
     </head>
     <body>
+    <?php
+    include("../Database/connect.php");
+    //$DateM = $_POST['DateM'] ? $_POST['DateM'] : '04-02-2019';
+    //$DateS = $_POST['DateS'] ? $_POST['DateS'] : '10-02-2019';
+    $DateM ='2019-02-04';
+    $DateS ='2019-02-13';
+
+    $sqlEenergy = "SELECT * FROM energy_users_per_day WHERE Date>='$DateM' 
+        AND Date<='$DateS'";
+    $queryEenergy = mysqli_query($conn, $sqlEenergy);
+
+    $sqlEenergyING = "SELECT * FROM energy_users_per_day WHERE Date>='$DateM' 
+        AND Date<='$DateS'";
+    $queryEenergyING = mysqli_query($conn, $sqlEenergyING);
+
+    ?>
         <div id="container" style="width: 100%; height: 100%; margin: 0 auto"></div>
         <script language="JavaScript">
             $(document).ready(function() {
@@ -69,25 +67,44 @@
                 let series= [{
                     name: 'ขาด',
                     data: [
-                        100,
-                        0,
-                        80,
-                        250,
-                        0,
-                        0,
-                        150
+                        <?php
+                        $mon = 0;
+                        while($resultEenergy = mysqli_fetch_array($queryEenergy, MYSQLI_ASSOC))
+                        {
+                            if($resultEenergy["Unit"] === 'ขาด'){
+                         ?>
+                            parseInt(<?php echo ($resultEenergy["Eenergy"])?>),
+                         <?php
+                            }else{
+                         ?>
+                            parseInt(<?php echo $mon ?>),
+                         <?php
+                            }
+                         ?>
+                        <?php
+                        }
+                        ?>
                     ],
                     color: '#068e81'
                 }, {
                     name: 'เกิน',
                     data: [
-                        0,
-                        120,
-                        0,
-                        0,
-                        150,
-                        235,
-                        0
+                        <?php
+                            while($resultEenergyING = mysqli_fetch_array($queryEenergyING, MYSQLI_ASSOC))
+                        {
+                            if($resultEenergyING["Unit"] === 'เกิน'){
+                        ?>
+                            parseInt(<?php echo ($resultEenergyING["Eenergy"])?>),
+                        <?php
+                            }else{
+                        ?>
+                            parseInt(<?php echo $mon ?>),
+                        <?php
+                            }
+                        ?>
+                        <?php
+                        }
+                        ?>
                     ],
                     color: '#991715'
                 }];
