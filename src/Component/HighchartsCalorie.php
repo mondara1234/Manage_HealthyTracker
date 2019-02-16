@@ -8,15 +8,20 @@
     include("../Database/connect.php");
     //$DateM = $_POST['DateM'] ? $_POST['DateM'] : '04-02-2019';
     //$DateS = $_POST['DateS'] ? $_POST['DateS'] : '10-02-2019';
-    $DateM ='2019-02-04';
-    $DateS ='2019-02-13';
+    $username ='Admin';
+    $DateM ='2019-02-10';
+    $DateS ='2019-02-16';
 
-    $sqlEenergy = "SELECT * FROM energy_users_per_day WHERE Date>='$DateM' 
-        AND Date<='$DateS'";
+    $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$username' AND DateDiary>='$DateM' 
+        AND DateDiary<='$DateS' order by DateDiary asc";
+    $query = mysqli_query($conn, $sql);
+
+    $sqlEenergy = "SELECT * FROM energy_users_per_day WHERE UserName = '$username' AND DateDiary>='$DateM' 
+        AND DateDiary<='$DateS' order by DateDiary asc";
     $queryEenergy = mysqli_query($conn, $sqlEenergy);
 
-    $sqlEenergyING = "SELECT * FROM energy_users_per_day WHERE Date>='$DateM' 
-        AND Date<='$DateS'";
+    $sqlEenergyING = "SELECT * FROM energy_users_per_day WHERE UserName = '$username' AND DateDiary>='$DateM' 
+        AND DateDiary<='$DateS' order by DateDiary asc";
     $queryEenergyING = mysqli_query($conn, $sqlEenergyING);
 
     ?>
@@ -27,10 +32,19 @@
                     type: 'column'
                 };
                 let title = {
-                    text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที่ 04/02/2019 - 10/02/2019'
+                    text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที่ <?php echo date('d/m/Y',strtotime($DateM))?> - <?php echo date('d/m/Y',strtotime($DateS))?>'
                 };
                 let xAxis = {
-                    categories: ['วันจันทร์', 'วันอังคาร', 'วันพุธ', 'วันพฤหัสบดี', 'วันศุกร์', 'วันเสาร์', 'วันอาทิตย์']
+                    categories: [
+                        <?php
+                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
+                        {
+                        ?>
+                         <?php echo json_encode(date('d/m/Y',strtotime($result["DateDiary"]))) ?>,
+                    <?php
+                        }
+                        ?>
+                    ]
                 };
                 let yAxis ={
                     min: 0,
@@ -80,8 +94,6 @@
                             parseInt(<?php echo $mon ?>),
                          <?php
                             }
-                         ?>
-                        <?php
                         }
                         ?>
                     ],
@@ -101,8 +113,6 @@
                             parseInt(<?php echo $mon ?>),
                         <?php
                             }
-                        ?>
-                        <?php
                         }
                         ?>
                     ],
