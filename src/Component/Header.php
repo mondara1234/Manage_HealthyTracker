@@ -34,8 +34,14 @@
                             </a>
                         </li>
                         <li class="sidebar-item font-14">
+                            <a href="../Manage_Energy_Users/Manage_Energy_users.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                <i class="mdi mdi-engine-outline"></i>
+                                <span class="hide-menu"> ฐานข้อมูล ส่วนต่างพลังงานผู้ใช้ </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item font-14">
                             <a href="../Manage_Food/ManageFood.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
-                                <i class="mdi mdi-food"></i>
+                                <i class="fa fa-mercury"></i>
                                 <span class="hide-menu"> ฐานข้อมูล รายการอาหาร </span>
                             </a>
                         </li>
@@ -101,6 +107,12 @@
                             <a href="../Manage_DiaryUser/ManageDiary.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
                                 <i class="mdi mdi-book-open-page-variant"></i>
                                 <span class="hide-menu"> ฐานข้อมูล ไดอารี่อาหาร </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item font-14">
+                            <a href="../Manage_Energy_Users/Manage_Energy_users.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                <i class="mdi mdi-engine-outline"></i>
+                                <span class="hide-menu"> ฐานข้อมูล ส่วนต่างพลังงานผู้ใช้ </span>
                             </a>
                         </li>
                         <li class="sidebar-item font-14">
