@@ -24,13 +24,17 @@
         $pImgProfile = $old_img;
     }
 
-if(empty($UserName) ||
-empty($Password) ||
-empty($Email) ||
-empty($FirstName) ||
-empty($LastName) ||
-empty($Address) ||
-empty($Telephone)) {
+if(empty($pEmail) ||
+    empty($pPassword) ||
+    empty($pUsername) ||
+    empty($pStatus) ||
+    empty($pLanguage) ||
+    empty($pPersonalSelect) ||
+    empty($pPersonalCode)||
+    empty($pSex) ||
+    empty($pAge) ||
+    empty($pWeight)||
+    empty($pHeight)) {
     $message = "กรุณากรอกข้อมูลให้ครบ";
     echo (
     "<script LANGUAGE='JavaScript'>

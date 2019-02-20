@@ -36,14 +36,7 @@
                 };
                 let xAxis = {
                     categories: [
-                        <?php
-                        while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
-                        {
-                        ?>
-                         <?php echo json_encode(date('d/m/Y',strtotime($result["DateDiary"]))) ?>,
-                    <?php
-                        }
-                        ?>
+                        'จ','อ','พ','พฤ','ศ','ส','อา'
                     ]
                 };
                 let yAxis ={
@@ -83,41 +76,58 @@
                     data: [
                         <?php
                         $mon = 0;
-                        while($resultEenergy = mysqli_fetch_array($queryEenergy, MYSQLI_ASSOC))
-                        {
-                            if($resultEenergy["Unit"] === 'ขาด'){
-                         ?>
-                            parseInt(<?php echo ($resultEenergy["Eenergy"])?>),
-                         <?php
-                            }else{
-                         ?>
-                            parseInt(<?php echo $mon ?>),
-                         <?php
+                         while($resultEenergyING = mysqli_fetch_array($queryEenergyING, MYSQLI_ASSOC)){
+                            for($i = 1; $i <= 7; $i++ )
+                            {
+                                if(json_encode(date('d/m/Y',strtotime($DateM,'interval '+$i+' day'))) == json_encode(date('d/m/Y',strtotime($resultEenergyING["DateDiary"])))){
+                                    if($resultEenergyING["Unit"] === 'ขาด'){
+                                    ?>
+                                        parseInt(<?php echo($resultEenergyING["Eenergy"])?>),
+                                    <?php
+                                    }else{
+                                    ?>
+                                        parseInt(<?php echo $mon ?>),
+                                    <?php
+                                    }
+                                }else{
+                                ?>
+                                    parseInt(<?php echo $mon ?>),
+                            <?php
+                                }
                             }
                         }
                         ?>
                     ],
                     color: '#068e81'
-                }, {
-                    name: 'เกิน',
-                    data: [
-                        <?php
-                            while($resultEenergyING = mysqli_fetch_array($queryEenergyING, MYSQLI_ASSOC))
-                        {
-                            if($resultEenergyING["Unit"] === 'เกิน'){
-                        ?>
-                            parseInt(<?php echo ($resultEenergyING["Eenergy"])?>),
-                        <?php
-                            }else{
-                        ?>
-                            parseInt(<?php echo $mon ?>),
-                        <?php
-                            }
-                        }
-                        ?>
-                    ],
-                    color: '#991715'
-                }];
+                },
+                //    {
+                //    name: 'เกิน',
+                //    data: [
+                //        <?php
+                //        for($i = 1; $i <= 4; $i++ )
+                //        {
+                //        while($resultEenergy = mysqli_fetch_array($queryEenergy, MYSQLI_ASSOC)){
+                //        if($resultEenergy["Unit"] === 'เกิน'){
+                //        ?>
+                //        parseInt(<?php //echo($resultEenergy["Eenergy"])?>//),
+                //        <?php
+                //        }else{
+                //        ?>
+                //        parseInt(<?php //echo $mon ?>//),
+                //        <?php
+                //        }
+                //        ?>
+                <!--        --><?php
+                //        }
+                //        ?>
+                //        parseInt(<?php //echo $mon ?>//),
+                //        <?php
+                //        }
+                //        ?>
+                //    ],
+                //    color: '#991715'
+                //}
+                ];
 
                 let json = {};
                 json.chart = chart;

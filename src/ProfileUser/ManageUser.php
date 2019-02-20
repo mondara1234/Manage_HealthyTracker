@@ -19,10 +19,7 @@
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
-    <link rel="stylesheet" media="all" type="text/css" href="../assets/libs/jquerydatepicker/jquery-ui.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
     <style type="text/css">
         #startDate,
         #endDate,{
@@ -180,10 +177,12 @@
                 </div>
             </div>
         </div>
+        <?php
+        mysqli_close($conn);
+        ?>
         <?php require_once '../Component/footer.php';?>
     </div>
-    <!-- ========
-    ====================================================== -->
+    <!-- ============================================================== -->
     <!-- Jquery ทั้งหมด  -->
     <!-- ============================================================== -->
     <!-- ต้องมี -->
@@ -240,7 +239,8 @@
 
         });
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
     <script type="text/javascript">

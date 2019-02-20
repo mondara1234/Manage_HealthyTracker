@@ -386,8 +386,8 @@
             function drawChart() {
                 let data = google.visualization.arrayToDataTable([
                     ['Task', 'Hours per Day'],
-                    ['ชาย',      <?php echo($resultMaleSex['totalMaleSex']); ?>],
-                    ['หญิง',    <?php echo($resultFeMaleSex['totalFeMaleSex']); ?>]
+                    ['ชาย',  <?php echo($resultMaleSex['totalMaleSex']); ?>],
+                    ['หญิง', <?php echo($resultFeMaleSex['totalFeMaleSex']); ?>]
                 ]);
 
                 let options = {

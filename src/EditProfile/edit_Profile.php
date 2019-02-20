@@ -77,7 +77,7 @@
                             </div>
                             <div class="m-t-10" style="margin-left: -27%">
                                 <font class="font-18">Password :</font>
-                                <input type="text" name="Password" value="<?php echo $resultUser["Password"]; ?>">
+                                <input type="password" name="Password" value="<?php echo $resultUser["Password"]; ?>">
                                 <font class="font-14" style="color: red">(อย่างน้อย 6 ตัวขึ้นไป)</font>
                             </div>
                             <div class="m-t-10" style="margin-left: -42%">

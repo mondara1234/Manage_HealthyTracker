@@ -86,7 +86,7 @@
                     <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>
                 </table>
                 <div  style="margin-left: 40%; margin-top: 5%">
-                    <button type="submit" name="Submit" onClick="checkLogin" class="font-18"
+                    <button type="submit" name="Submit" class="font-18"
                             style="width: 60%; height: 40px; color: white; background: #068e81; border-color: white"
                     >
                         ลงทะเบียน
