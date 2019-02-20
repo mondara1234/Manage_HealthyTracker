@@ -55,40 +55,30 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
         <!-- ============================================================== -->
         <div class="container-fluid">
             <center>
-                <form name="edit" action="InsertFood.php" method="post" enctype="multipart/form-data" target="iframe_target">
+                <form name="edit" action="InsertEnergy_users.php" method="post" enctype="multipart/form-data" target="iframe_target">
                     <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                     <table width="70%" border="1" style="border: #068e81 double 5px;">
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่ออาหาร :</b></td>
-                            <td width="80%"><input type="text" name="pFoodName" style="width: 100%" /></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
+                            <td width="80%"><input type="text" name="UserName" style="width: 100%" /></td>
                         </tr>
                         <tr>
                             <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> แคลอรี่ :</b></td>
-                            <td width="80%"><input type="number" name="pFoodCalorie" style="width: 100%" /></td>
+                            <td width="80%"><input type="number" name="Energy" style="width: 100%" /></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ประเภท :</b></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หน่วยพลังงาน :</b></td>
                             <td width="80%">
-                                <select name="pFoodType" id="pFoodType">
-                                    <option value="select" selected>กรุณาเลือกประเภทอาหาร</option>
-                                    <option value="อาหาร" >อาหาร</option>
-                                    <option value="เครื่องดื่ม" >เครื่องดื่ม</option>
-                                    <option value="ผลไม้" >ผลไม้</option>
-                                    <option value="ขนม" >ขนม</option>
-                                    <option value="ของหวาน" >ของหวาน</option>
-                                    <option value="ธัญพืช" >ธัญพืช</option>
+                                <select name="UnitType" id="pUnitType">
+                                    <option value="select" selected>กรุณาเลือกหน่วยพลังงาน</option>
+                                    <option value="ขาด" >ขาด</option>
+                                    <option value="เกิน" >เกิน</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หน่วย :</b></td>
-                            <td width="80%"><input type="text" name="pFoodUnit" style="width: 100%" /></td>
-                        </tr>
-                        <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพอาหาร :</b></td>
-                            <td width="80%">
-                                <input type="file" name="pFoodIMG" id="pFoodIMG"/>
-                            </td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่เพิ่ม :</b></td>
+                            <td width="80%"><input type="date" name="DateDiary" style="width: 100%" /></td>
                         </tr>
                     </table>
                     <button type="submit" name="Submit" class="font-18"

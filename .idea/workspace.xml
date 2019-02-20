@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/Manage_Energy_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/api/InsertFood.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/api/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/api/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/api/insert.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/api/updated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderHome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manage_Energy_Users/api/InsertFood.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/api/InsertEnergy_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manage_Energy_Users/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Energy_Users/api/insert.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,14 +35,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Manage_Energy_users.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Manage_Energy_users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Manage_Energy_Users/Manage_Energy_users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="85" column="31" lean-forward="true" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+            <state relative-caret-position="493">
+              <caret line="104" column="74" lean-forward="true" selection-start-line="104" selection-start-column="74" selection-end-line="104" selection-end-column="74" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Manage_Energy_Users/api/insert.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertEnergy_users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Manage_Energy_Users/api/InsertEnergy_users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="33" column="44" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -101,8 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/php.ini" />
-        <option value="$PROJECT_DIR$/src/assets/libs/flot/examples/axes-time-zones/tz/europe" />
         <option value="$PROJECT_DIR$/src/EditProfile/api/updated.php" />
         <option value="$PROJECT_DIR$/src/login/login.html" />
         <option value="$PROJECT_DIR$/src/login/loginServer.html" />
@@ -152,6 +165,8 @@
         <option value="$PROJECT_DIR$/src/Component/HeaderHome.php" />
         <option value="$PROJECT_DIR$/src/Component/HeaderEdit.php" />
         <option value="$PROJECT_DIR$/src/Component/Header.php" />
+        <option value="$PROJECT_DIR$/src/Manage_Energy_Users/api/InsertEnergy_users.php" />
+        <option value="$PROJECT_DIR$/src/Manage_Energy_Users/api/insert.php" />
       </list>
     </option>
   </component>
@@ -331,12 +346,12 @@
       <workItem from="1550465216696" duration="127000" />
       <workItem from="1550489389878" duration="3204000" />
       <workItem from="1550583193879" duration="4291000" />
-      <workItem from="1550674270543" duration="2683000" />
+      <workItem from="1550674270543" duration="3853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274784000" />
+    <option name="totallyTimeSpent" value="275954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-18" y="0" width="1456" height="876" extended-state="0" />
@@ -396,20 +411,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Manage_Admin/api/insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_BMI/ManageBMI.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -735,12 +736,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Manage_Energy_Users/api/InsertEnergy_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_Energy_Users/Manage_Energy_users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="85" column="31" lean-forward="true" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+        <state relative-caret-position="493">
+          <caret line="104" column="74" lean-forward="true" selection-start-line="104" selection-start-column="74" selection-end-line="104" selection-end-column="74" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Manage_Energy_Users/api/insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
