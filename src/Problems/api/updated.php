@@ -11,9 +11,10 @@
     $old_img = $_POST["ProblemIMG"];
     $pProblemIMG;
     if ($_FILES["pProblemIMG"]["name"] !== ""){
-        $image = $_FILES["pProblemIMG"]["name"];
-        $imageData = base64_encode(file_get_contents($image));
-        $pProblemIMG = 'data: '.mime_content_type($image).';base64,'.$imageData;
+        $filename = $conn->real_escape_string($_FILES['pProblemIMG']['name']);
+        $filedata= $conn->real_escape_string(base64_encode(file_get_contents($_FILES['pProblemIMG']['tmp_name'])));
+        $filetype = $conn->real_escape_string($_FILES['pProblemIMG']['type']);
+        $pProblemIMG = 'data:'.$filetype.';base64,'.$filedata;
     }else{
         $pProblemIMG = $old_img;
     }

@@ -5,7 +5,6 @@
 	$pEmail = $_POST["pEmail"];
 	$pPassword = $_POST["pPassword"];
 	$pUsername = $_POST["pUsername"];
-    $pStatus = $_POST["pStatus"];
     $pLanguage = $_POST["pLanguage"];
     $pPersonalSelect = $_POST["pPersonalSelect"];
     $pPersonalCode = $_POST["pPersonalCode"];
@@ -17,9 +16,10 @@
     $old_img = $_POST["ImgProfile"];
     $pImgProfile;
     if ($_FILES["pImgProfile"]["name"] !== ""){
-        $image = $_FILES["pImgProfile"]["name"];
-        $imageData = base64_encode(file_get_contents($image));
-        $pImgProfile = 'data: '.mime_content_type($image).';base64,'.$imageData;
+        $filename = $conn->real_escape_string($_FILES['pImgProfile']['name']);
+        $filedata= $conn->real_escape_string(base64_encode(file_get_contents($_FILES['pImgProfile']['tmp_name'])));
+        $filetype = $conn->real_escape_string($_FILES['pImgProfile']['type']);
+        $pImgProfile = 'data:'.$filetype.';base64,'.$filedata;
     }else{
         $pImgProfile = $old_img;
     }
@@ -27,11 +27,6 @@
 if(empty($pEmail) ||
     empty($pPassword) ||
     empty($pUsername) ||
-    empty($pStatus) ||
-    empty($pLanguage) ||
-    empty($pPersonalSelect) ||
-    empty($pPersonalCode)||
-    empty($pSex) ||
     empty($pAge) ||
     empty($pWeight)||
     empty($pHeight)) {
@@ -41,14 +36,14 @@ if(empty($pEmail) ||
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($Password) < 5){
+}elseif(strlen($pPassword) !== 6){
     $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($UserName) < 3){
+}elseif(strlen($pUsername) < 3){
     $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
     echo (
     "<script LANGUAGE='JavaScript'>
@@ -56,7 +51,7 @@ if(empty($pEmail) ||
         </script>"
     );
 }else{
-$Sql_Query = "select * from membermanage where UserName = '$UserName'";
+$Sql_Query = "select * from membermanage where UserName = '$pUsername'";
 
 $query = mysqli_query($conn, $Sql_Query);
 
@@ -64,12 +59,11 @@ $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
 if($result){
     if($result["UserName"] === $old_Username){
-        $sql = "UPDATE MemberManage SET 
+        $sql = "UPDATE membermanage SET 
                 Email = '$pEmail',
                 Password = '$pPassword',
                 UserName = '$pUsername',
                 imgProfile = '$pImgProfile',
-                Status = '$pStatus',
                 Language = '$pLanguage',
                 PersonalSelect = '$pPersonalSelect',
                 PersonalCode = '$pPersonalCode',
@@ -108,12 +102,11 @@ if($result){
         );
     }
 }else {
-        $sql = "UPDATE MemberManage SET 
+        $sql = "UPDATE membermanage SET 
                 Email = '$pEmail',
                 Password = '$pPassword',
                 Username = '$pUsername',
                 imgProfile = '$pImgProfile',
-                Status = '$pStatus',
                 Language = '$pLanguage',
                 PersonalSelect = '$pPersonalSelect',
                 PersonalCode = '$pPersonalCode',

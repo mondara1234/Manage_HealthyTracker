@@ -7,10 +7,10 @@ include("../../Database/connect.php");
     $FoodCalorie = $_POST["pFoodCalorie"];
     $DiaryDate = $_POST["pDiaryDate"];
 
-    $image = $_FILES["pFoodIMG"]["name"];
-    $imageData = base64_encode(file_get_contents($image));
-    $FoodIMG = 'data: '.mime_content_type($image).';base64,'.$imageData;
-
+    $filename = $conn->real_escape_string($_FILES['pFoodIMG']['name']);
+    $filedata= $conn->real_escape_string(base64_encode(file_get_contents($_FILES['pFoodIMG']['tmp_name'])));
+    $filetype = $conn->real_escape_string($_FILES['pFoodIMG']['type']);
+    $FoodIMG = 'data:'.$filetype.';base64,'.$filedata;
 
 if(empty($Username) ||
     empty($FoodName) ||

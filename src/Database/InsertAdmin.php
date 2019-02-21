@@ -15,9 +15,10 @@ include("connect.php");
     $old_img = 'https://pngimage.net/wp-content/uploads/2018/06/user-avatar-png-6.png';
     $ImgProfile;
     if ($_FILES["txtImgProfile"]["name"] !== ""){
-        $image = $_FILES["txtImgProfile"]["name"];
-        $imageData = base64_encode(file_get_contents($image));
-        $ImgProfile = 'data: '.mime_content_type($image).';base64,'.$imageData;
+        $filename = $conn->real_escape_string($_FILES['txtImgProfile']['name']);
+        $filedata= $conn->real_escape_string(base64_encode(file_get_contents($_FILES['txtImgProfile']['tmp_name'])));
+        $filetype = $conn->real_escape_string($_FILES['txtImgProfile']['type']);
+        $ImgProfile = 'data:'.$filetype.';base64,'.$filedata;
     }else{
         $ImgProfile = $old_img;
     }

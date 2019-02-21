@@ -5,9 +5,10 @@ include("../../Database/connect.php");
     $pFoodType = $_POST["pFoodType"];
     $pFoodUnit = $_POST["pFoodUnit"];
 
-    $image = $_FILES["pFoodIMG"]["name"];
-    $imageData = base64_encode(file_get_contents($image));
-    $pFoodIMG = 'data: '.mime_content_type($image).';base64,'.$imageData;
+    $filename = $conn->real_escape_string($_FILES['pFoodIMG']['name']);
+    $filedata= $conn->real_escape_string(base64_encode(file_get_contents($_FILES['pFoodIMG']['tmp_name'])));
+    $filetype = $conn->real_escape_string($_FILES['pFoodIMG']['type']);
+    $pFoodIMG = 'data:'.$filetype.';base64,'.$filedata;
 
 if(empty($pFoodName) ||
     empty($pFoodCalorie) ||

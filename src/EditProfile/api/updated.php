@@ -13,9 +13,10 @@ $Telephone = $_POST["Telephone"];
 $old_img = $_POST["ImgProfile"];
 $ImgProfile;
 if ($_FILES["pImgProfile"]["name"] !== ""){
-    $image = $_FILES["pImgProfile"]["name"];
-    $imageData = base64_encode(file_get_contents($image));
-    $ImgProfile = 'data: '.mime_content_type($image).';base64,'.$imageData;
+    $filename = $conn->real_escape_string($_FILES['pImgProfile']['name']);
+    $filedata= $conn->real_escape_string(base64_encode(file_get_contents($_FILES['pImgProfile']['tmp_name'])));
+    $filetype = $conn->real_escape_string($_FILES['pImgProfile']['type']);
+    $ImgProfile = 'data:'.$filetype.';base64,'.$filedata;
 }else{
     $ImgProfile = $old_img;
 }

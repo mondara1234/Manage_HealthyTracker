@@ -13,9 +13,10 @@
     $old_img = $_POST["TrickIMG"];
     $pTrickIMG;
     if ($_FILES["pTrickIMG"]["name"] !== ""){
-        $image = $_FILES["pTrickIMG"]["name"];
-        $imageData = base64_encode(file_get_contents($image));
-        $pTrickIMG = 'data: '.mime_content_type($image).';base64,'.$imageData;
+        $filename = $conn->real_escape_string($_FILES['pTrickIMG']['name']);
+        $filedata= $conn->real_escape_string(base64_encode(file_get_contents($_FILES['pTrickIMG']['tmp_name'])));
+        $filetype = $conn->real_escape_string($_FILES['pTrickIMG']['type']);
+        $pTrickIMG = 'data:'.$filetype.';base64,'.$filedata;
     }else{
         $pTrickIMG = $old_img;
     }
