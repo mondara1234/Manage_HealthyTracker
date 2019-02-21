@@ -10,7 +10,7 @@
     <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
-    <title>Admin - Healthy Tracker</title>
+    <title>ฐานข้อมูล เคล็ดลับ</title>
 
     <!-- Custom CSS -->
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">

@@ -17,7 +17,7 @@
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
-    <title>Admin - Healthy Tracker</title>
+    <title>ฐานข้อมูล ผู้ดูแลระบบ</title>
 
 </head>
 

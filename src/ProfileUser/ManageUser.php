@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+<?php
+$UserName = null;
+if(isset($_GET["NameUser"])){
+    $UserName = $_GET["NameUser"];
+}
+include('../Database/connect.php');
 
+$sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName'";
+$query = mysqli_query($conn, $sql);
+
+$UserNames = $_GET["UserName"];
+$sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserNames' ";
+$querymanage = mysqli_query($conn, $sqlmanage);
+$resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
+
+$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+$queryProblemapp = mysqli_query($conn, $sqlProblemapp);
+$resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
+
+$sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
+$queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+$resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
@@ -10,7 +32,7 @@
     <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
-    <title>Admin - Healthy Tracker</title>
+    <title>ข้อมูลอาหารของ : <?php echo ($UserName) ?></title>
 
     <!-- Custom CSS -->
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,29 +54,7 @@
     </style>
 </head>
 <body class="bg-container">
-    <?php
-    $UserName = null;
-    if(isset($_GET["NameUser"])){
-        $UserName = $_GET["NameUser"];
-    }
-    include('../Database/connect.php');
 
-    $sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName'";
-    $query = mysqli_query($conn, $sql);
-
-    $UserNames = $_GET["UserName"];
-    $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserNames' ";
-    $querymanage = mysqli_query($conn, $sqlmanage);
-    $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
-
-    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
-    $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
-    $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
-
-    $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
-    $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
-    $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
-    ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
     <!-- ============================================================== -->

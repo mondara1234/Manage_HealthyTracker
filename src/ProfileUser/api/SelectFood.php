@@ -1,39 +1,5 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
-    <!-- กำหนดขนาด initial-scale=1.0 = เพื่อไม่ให้  Safari Zoom -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--  device-width = “ขนาด” ของ device นั้นๆ-->
-    <meta name="description" content="">  <!--  บอกรายละเอียดของเว็บเพจแบบคร่าวๆ-->
-    <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/LogoHT.png">
-    <title>Admin - Healthy Tracker</title>
-
-    <!-- Custom CSS -->
-    <link href="../../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
-    <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
-    <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-
-    <link rel="stylesheet" media="all" type="text/css" href="../../assets/libs/jquerydatepicker/jquery-ui.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="../../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
-    <style type="text/css">
-        #startDate,
-        #endDate,{
-            text-align:center;
-            width: 30%;
-        }
-        .bootstrap-datetimepicker-widget tr:hover {
-            background-color: #808080;
-        }
-    </style>
-</head>
-<body class="bg-container">
 <?php
 $UserName = null;
 if(isset($_GET["NameUser"])){
@@ -61,6 +27,40 @@ $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
 $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
 ?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
+    <!-- กำหนดขนาด initial-scale=1.0 = เพื่อไม่ให้  Safari Zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--  device-width = “ขนาด” ของ device นั้นๆ-->
+    <meta name="description" content="">  <!--  บอกรายละเอียดของเว็บเพจแบบคร่าวๆ-->
+    <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/LogoHT.png">
+    <title>ข้อมูลอาหารของ : <?php echo ($UserName) ?></title>
+
+    <!-- Custom CSS -->
+    <link href="../../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet">
+    <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
+    <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
+
+    <link rel="stylesheet" media="all" type="text/css" href="../../assets/libs/jquerydatepicker/jquery-ui.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="../../assets/libs/jquerydatepicker/jquery-ui-timepicker-addon.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+    <style type="text/css">
+        #startDate,
+        #endDate,{
+            text-align:center;
+            width: 30%;
+        }
+        .bootstrap-datetimepicker-widget tr:hover {
+            background-color: #808080;
+        }
+    </style>
+</head>
+<body class="bg-container">
+
 <!-- ============================================================== -->
 <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
 <!-- ============================================================== -->

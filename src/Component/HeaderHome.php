@@ -13,7 +13,7 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-secret"></i>
-                        <span class="hide-menu"> ข้อมูลผู้ใช้งาน </span>
+                        <span class="hide-menu"> ข้อมูลสมาชิก </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
@@ -69,13 +69,13 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-chart-bar"></i>
-                        <span class="hide-menu p-r-10"> สถิติการใช้งาน App </span>
+                        <span class="hide-menu p-r-10"> สถิติการใช้งานระบบ </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-alert"></i>
-                        <span class="hide-menu p-r-10"> ปัญหาที่พบ </span>
+                        <span class="hide-menu p-r-10"> การแจ้งปัญหา </span>
                         <span class="label label-danger"><?php echo($resultProblemapp['totalProblemapp']); ?></span>
                     </a>
                 </li>
@@ -89,7 +89,7 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect" href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-secret"></i>
-                        <span class="hide-menu"> ข้อมูลผู้ใช้งาน </span>
+                        <span class="hide-menu"> ข้อมูลสมาชิก </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
@@ -151,7 +151,7 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-chart-bar"></i>
-                        <span class="hide-menu p-r-10"> สถิติการใช้งาน App </span>
+                        <span class="hide-menu p-r-10"> สถิติการใช้งานระบบ </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
@@ -164,7 +164,7 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-alert"></i>
-                        <span class="hide-menu p-r-10"> ปัญหาที่พบ </span>
+                        <span class="hide-menu p-r-10"> การแจ้งปัญหา </span>
                         <span class="label label-danger"><?php echo($resultProblemapp['totalProblemapp']); ?></span>
                     </a>
                 </li>

@@ -15,7 +15,7 @@
     <link href="../../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-    <title> Edit Food </title>
+    <title>การแก้ไขข้อมูล รายการอาหาร</title>
 </head>
 <body class="bg-container">
     <?php
@@ -104,7 +104,7 @@
                         <button type="submit" name="Submit" class="font-18"
                                 style="width: 20%; height: 40px; color: white; background: #068e81; border-color: white; margin-top: 2%"
                         >
-                            ยืนยันการแก้ไข
+                            บันทึกการเปลี่ยนแปลง
                         </button>
                     </form>
                 </center>

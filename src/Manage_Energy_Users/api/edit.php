@@ -15,7 +15,7 @@
     <link href="../../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-    <title> Edit Food </title>
+    <title> การแก้ไขข้อมูล ส่วนต่างพลังงานผู้ใช้ </title>
 </head>
 <body class="bg-container">
     <?php
@@ -55,7 +55,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">การแก้ไขข้อมูล ส่วนต่างของพลังงานที่ต้องการต่อวัน</h4>
+                        <h4 class="page-title">การแก้ไขข้อมูล ส่วนต่างพลังงานผู้ใช้</h4>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                         <button type="submit" name="Submit" class="font-18"
                                 style="width: 20%; height: 40px; color: white; background: #068e81; border-color: white; margin-top: 2%"
                         >
-                            ยืนยันการแก้ไข
+                            บันทึกการเปลี่ยนแปลง
                         </button>
                     </form>
                 </center>

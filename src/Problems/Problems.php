@@ -10,7 +10,7 @@
         <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
         <!-- Favicon icon -->
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
-        <title>Admin - Healthy Tracker</title>
+        <title>การแจ้งปัญหา</title>
 
         <!-- Custom CSS -->
         <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
                 <div class="page-breadcrumb">
                     <div class="row">
                         <div class="col-12 d-flex no-block align-items-center">
-                            <h4 class="page-title">ปัญหาที่พบ</h4>
+                            <h4 class="page-title">การแจ้งปัญหา</h4>
                         </div>
                     </div>
                 </div>

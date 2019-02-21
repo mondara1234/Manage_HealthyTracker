@@ -15,7 +15,7 @@
     <link href="../../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-    <title> Edit Admin </title>
+    <title> การเพิ่มข้อมูล ส่วนต่างพลังงานผู้ใช้ </title>
 </head>
 <body class="bg-container">
 <?php
@@ -46,7 +46,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">การเพิ่มข้อมูล รายการอาหาร</h4>
+                    <h4 class="page-title">การเพิ่มข้อมูล ส่วนต่างพลังงานผู้ใช้</h4>
                 </div>
             </div>
         </div>

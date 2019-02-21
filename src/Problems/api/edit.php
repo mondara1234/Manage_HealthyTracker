@@ -15,7 +15,7 @@
     <link href="../../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-    <title> Edit Problems </title>
+    <title> การแก้ไขข้อมูล การแจ้งปัญหา</title>
 </head>
 <body class="bg-container">
     <?php
@@ -124,7 +124,7 @@
                         <button type="submit" name="Submit" class="font-18"
                                 style="width: 20%; height: 40px; color: white; background: #068e81; border-color: white; margin-top: 2%"
                         >
-                            ยืนยันการแก้ไข
+                            บันทึกการเปลี่ยนแปลง
                         </button>
                     </form>
                 </center>
@@ -141,7 +141,7 @@
                         <div style="width: 100%; display:inline-block; position:relative;">
                             <font class="font-16">รายละเอียด :</font>
                             <textarea class="font-16" name="AU_Datile" id="txt" cols="20" rows="7" style="width: 100%; display:block;"></textarea>
-                            <button class="font-16" style="position:absolute; bottom:10px; right:20px; color: white; background: #068e81; ">แจ้งการแนะนำ</button>
+                            <button class="font-16" style="position:absolute; bottom:10px; right:20px; color: white; background: #068e81; ">แจ้งความคืบหน้าของปัญหา</button>
                         </div>
                     </form>
                 </div>

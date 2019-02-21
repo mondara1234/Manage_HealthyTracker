@@ -10,7 +10,7 @@
     <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
-    <title>Admin - Healthy Tracker</title>
+    <title>สถิติการใช้งานระบบ</title>
 
     <!-- Custom CSS -->
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -207,7 +207,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">สถิติการใช้งาน App </h4>
+                        <h4 class="page-title">สถิติการใช้งานระบบ</h4>
                     </div>
                 </div>
             </div>
@@ -220,7 +220,7 @@
                         <div style="width: 55%">
                             <div class="x_panel tile fixed_height_320 overflow_hidden">
                                 <div class="x_title row">
-                                    <h5 style="width: 70%;">ผู้ใช้งาน App</h5>
+                                    <h5 style="width: 70%;">ผู้ใช้งานระบบ</h5>
                                 </div>
                                 <table>
                                     <div id="piechart_3d" style="width: 100%; height:100%; padding-bottom: 50px" />
