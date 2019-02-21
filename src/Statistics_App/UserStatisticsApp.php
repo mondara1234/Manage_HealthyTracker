@@ -243,7 +243,7 @@
                     <div style="width: 55%">
                         <div class="x_panel tile fixed_height_320 overflow_hidden">
                             <div class="x_title row">
-                                <h5 style="width: 70%;">ผู้ใช้งานแจ้งปัญหา</h5>
+                                <h5 style="width: 70%;">การแจ้งปัญหา</h5>
                             </div>
                             <table>
                                 <div id="piechart_3dProblem" style="width: 100%; height:100%; padding-bottom: 50px" />
