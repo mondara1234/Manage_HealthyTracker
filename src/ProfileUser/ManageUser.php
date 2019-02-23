@@ -143,9 +143,9 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         </table>
                     </form>
                     <div style="margin-top: 5%">
-                        <form  name="MyForm" method="post" action="../Component/HighchartsCalorie.php" target="iframe_target">
+                        <form  name="MyForm" method="post" action="../Component/HighchartsCalorie.php">
                             <center>
-                                <div style="width: 100%">
+                                <div style="width: 100%; margin-bottom: 2%">
                                     <input class="week-picker" id="weekpicker" placeholder="กรุณาเลือกวันที่" style="width: 20%" autocomplete="off">
                                     <input type="hidden" name="DateM" id="DateM" >
                                     <input type="hidden" name="DateS" id="DateS">

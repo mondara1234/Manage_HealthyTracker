@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75e6c5f4-2d6a-4b23-9b0b-c58726e259c6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Component/HighchartsCalorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HighchartsCalorie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +34,11 @@
       <file leaf-file-name="HighchartsCalorie.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component/HighchartsCalorie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="143" column="17" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="143" selection-end-column="17" />
+            <state>
+              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,11 +46,12 @@
       <file leaf-file-name="ManageUser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ProfileUser/ManageUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="148" column="147" selection-start-line="148" selection-start-column="147" selection-end-line="148" selection-end-column="147" />
+            <state relative-caret-position="68">
+              <caret line="145" column="102" selection-start-line="145" selection-start-column="102" selection-end-line="145" selection-end-column="102" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#2;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -57,8 +62,8 @@
       <file leaf-file-name="UserStatisticsApp.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Statistics_App/UserStatisticsApp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="150" column="72" selection-start-line="150" selection-start-column="66" selection-end-line="150" selection-end-column="72" />
+            <state relative-caret-position="475">
+              <caret line="59" column="68" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -66,8 +71,8 @@
       <file leaf-file-name="SelectFood.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="198" column="24" lean-forward="true" selection-start-line="198" selection-start-column="24" selection-end-line="198" selection-end-column="24" />
+            <state relative-caret-position="425">
+              <caret line="160" column="147" lean-forward="true" selection-start-line="160" selection-start-column="19" selection-end-line="160" selection-end-column="147" />
             </state>
           </provider>
         </entry>
@@ -156,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/Problems/api/updated.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Manage_User/api/updated.php" />
-        <option value="$PROJECT_DIR$/src/Component/HighchartsCalorie.php" />
         <option value="$PROJECT_DIR$/src/Database/connect.php" />
         <option value="$PROJECT_DIR$/src/Responsible/api/delete.php" />
         <option value="$PROJECT_DIR$/src/Responsible/Show_UserNot_Responsible.php" />
@@ -171,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/test.hphp" />
         <option value="$PROJECT_DIR$/src/test.php" />
         <option value="$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php" />
+        <option value="$PROJECT_DIR$/src/Component/HighchartsCalorie.php" />
         <option value="$PROJECT_DIR$/src/ProfileUser/ManageUser.php" />
       </list>
     </option>
@@ -332,12 +337,12 @@
       <workItem from="1550674270543" duration="3924000" />
       <workItem from="1550759726240" duration="5472000" />
       <workItem from="1550895336126" duration="3722000" />
-      <workItem from="1550929608124" duration="22871000" />
+      <workItem from="1550929608124" duration="24013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317765000" />
+    <option name="totallyTimeSpent" value="318907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -684,32 +689,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProfileUser/api/SelectFood.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="198" column="24" lean-forward="true" selection-start-line="198" selection-start-column="24" selection-end-line="198" selection-end-column="24" />
+        <state relative-caret-position="425">
+          <caret line="160" column="147" lean-forward="true" selection-start-line="160" selection-start-column="19" selection-end-line="160" selection-end-column="147" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component/HighchartsCalorie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="143" column="17" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="143" selection-end-column="17" />
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Statistics_App/UserStatisticsApp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="150" column="72" selection-start-line="150" selection-start-column="66" selection-end-line="150" selection-end-column="72" />
+        <state relative-caret-position="475">
+          <caret line="59" column="68" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProfileUser/ManageUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="148" column="147" selection-start-line="148" selection-start-column="147" selection-end-line="148" selection-end-column="147" />
+        <state relative-caret-position="68">
+          <caret line="145" column="102" selection-start-line="145" selection-start-column="102" selection-end-line="145" selection-end-column="102" />
           <folding>
             <element signature="n#style#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#2;n#div#0;n#center#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#center#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
