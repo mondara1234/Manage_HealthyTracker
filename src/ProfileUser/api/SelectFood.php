@@ -64,7 +64,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 <!-- ============================================================== -->
 <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
 <!-- ============================================================== -->
-<iframe id="iframe_targets" name="iframe_targets" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+<iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
 <div id="main-wrapper">
     <?php require_once '../../Component/HeaderEdit.php';?>
     <div class="page-wrapper">
@@ -164,7 +164,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 <div class="col-md-12 card card-body m-t-10">
                     <p class="font-20">การแจ้งคำแนะนำ</p>
                     <form name="MyForm" method="post" action="InsertMessage.php" target="iframe_target">
-                        <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <div style="margin-bottom: 1%;">
                             <font class="font-16">หัวข้อ :</font>
                             <input type="text" name="AU_Title" class="font-16" style="width: 80%">
@@ -203,9 +202,11 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
 <!-- กำหนดเอง Scripts -->
 <script src="../../assets/dist/js/custom.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <!--<script src="js/jquery-1.8.3.min.js"></script>    -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
 <script type="text/javascript">
     $(function(){
 
@@ -244,9 +245,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
     });
 </script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-<link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
+
 <script type="text/javascript">
     $(function() {
         let DateM;
@@ -304,7 +303,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 selectCurrentWeek();
             }
         });
-
         setDates('.week-picker');
 
         let $calendarTR = $('.ui-weekpicker .ui-datepicker-calendar tr');

@@ -41,6 +41,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="../assets/libs/datetimepicker/jquery.datetimepicker.css">
     <style type="text/css">
         #startDate,
         #endDate,{
@@ -195,9 +196,11 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <!-- กำหนดเอง Scripts -->
     <script src="../assets/dist/js/custom.min.js"></script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <!--<script src="js/jquery-1.8.3.min.js"></script>    -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
     <script type="text/javascript">
         $(function(){
 
@@ -237,9 +240,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
         });
     </script>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
     <script type="text/javascript">
         $(function() {
             let DateM;
