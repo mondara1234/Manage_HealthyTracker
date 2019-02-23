@@ -8,9 +8,9 @@
     include("../Database/connect.php");
     //$DateM = $_POST['DateM'] ? $_POST['DateM'] : '04-02-2019';
     //$DateS = $_POST['DateS'] ? $_POST['DateS'] : '10-02-2019';
-    $username ='Admin';
+    $username ='M';
     $DateM ='2019-02-10';
-    $DateS ='2019-02-16';
+    $DateS ='2019-02-23';
 
     $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$username' AND DateDiary>='$DateM' 
         AND DateDiary<='$DateS' order by DateDiary asc";
