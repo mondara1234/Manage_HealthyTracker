@@ -105,9 +105,6 @@
                             <div align="center"> รหัสผ่าน </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
-                            <div align="center"> ภาษาระบบ </div>
-                        </th>
-                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> สถานะรหัสส่วนตัว </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
@@ -129,6 +126,9 @@
                             <div align="center"> พลังงานที่ต้องการ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
+                            <div align="center"> ผู้ดูแล </div>
+                        </th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> แก้ไข </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
@@ -148,7 +148,6 @@
                             </td>
                             <td align="center"><?php echo ($result["Email"]) ?></td>
                             <td align="center"><?php echo ($result["Password"]) ?></td>
-                            <td align="center" style="width: 5%"><?php echo ($result["Language"]) ?></td>
                             <td align="center" style="width: 5%"><?php echo ($result["PersonalSelect"]) ?></td>
                             <td align="center"><?php echo ($result["PersonalCode"]) ?></td>
                             <td align="center"><?php echo ($result["Sex"]) ?></td>
@@ -156,6 +155,7 @@
                             <td align="center"><?php echo ($result["Weight"]) ?></td>
                             <td align="center"><?php echo ($result["Height"]) ?></td>
                             <td align="center" style="width: 5%"><?php echo ($result["BMRUser"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["Responsible"]) ?></td>
                             <td align="center">
                                 <a href="api/edit.php?UserID=<?php echo ($result["UserID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>

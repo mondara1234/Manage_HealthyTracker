@@ -1,36 +1,6 @@
 <!DOCTYPE html>
-<?php
-$UserName = $_GET["UserName"];
-$UserAdmin = null;
-$Search = null;
-if(isset($_GET["UserAdmin"]))
-{
-    $UserAdmin = $_GET["UserAdmin"];
-}
-if(isset($_POST["txtSearch"]))
-{
-    $Search = $_POST["txtSearch"];
-}
-
-include('../Database/connect.php');
-$AdminResponsible = $UserAdmin ? $UserAdmin : $UserName;
-
-$sql = "SELECT * FROM membermanage WHERE Responsible = '$AdminResponsible' AND UserName LIKE '%".$Search."%' ";
-$query = mysqli_query($conn, $sql);
-
-$sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
-$querymanage = mysqli_query($conn, $sqlmanage);
-$resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
-
-$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
-$queryProblemapp = mysqli_query($conn, $sqlProblemapp);
-$resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
-
-$sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
-$queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
-$resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
-?>
 <html dir="ltr" lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
@@ -40,7 +10,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
         <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
         <!-- Favicon icon -->
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
-        <title>สมาชิกในการดูแลของ : <?php echo($AdminResponsible); ?></title>
+        <title>สมาชิกที่ยังไม่มีการดูแล</title>
 
         <!-- Custom CSS -->
         <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,6 +22,31 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
     </head>
     <body class="bg-container">
+        <?php
+        $UserName = $_GET["UserName"];
+        $Search = null;
+        if(isset($_POST["txtSearch"]))
+        {
+            $Search = $_POST["txtSearch"];
+        }
+
+        include('../Database/connect.php');
+
+        $sql = "SELECT * FROM membermanage WHERE Responsible = '' AND UserName LIKE '%".$Search."%' ";
+        $query = mysqli_query($conn, $sql);
+
+        $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
+        $querymanage = mysqli_query($conn, $sqlmanage);
+        $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
+
+        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+        $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
+        $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
+
+        $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
+        $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+        $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+        ?>
         <!-- ============================================================== -->
         <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
         <!-- ============================================================== -->
@@ -64,7 +59,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                     <div class="page-breadcrumb">
                         <div class="row">
                             <div class="col-12 d-flex no-block align-items-center">
-                                <h4 class="page-title">สมาชิกในการดูแลของ : <?php echo($AdminResponsible); ?> </h4>
+                                <h4 class="page-title">สมาชิกที่ยังไม่มีการดูแล </h4>
                             </div>
                         </div>
                     </div>
@@ -85,12 +80,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                                 </table>
                             </form>
                         </center>
-                        <button type="submit" name="Submit" class="font-16"
-                                style="height: 30px; color: white; background: #068e81; border-color: white; margin-top: 2%; margin-left: 2%"
-                                onclick="window.location.href='Show_UserNot_Responsible.php?UserName=<?php echo($_GET["UserName"]); ?>'"
-                        >
-                            เพิ่มสมาชิกในการดูแล
-                        </button>
                         <center>
                             <div class="container-fluid m-t-10">
                                 <div class="col-md-12 card card-body">
@@ -99,22 +88,29 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                                         while($result = mysqli_fetch_array($query, MYSQLI_ASSOC))
                                         {
                                             ?>
-                                            <div class="cardID m-r-20 m-t-10 p-t-5" style="width: 17%;" >
+                                            <div class="cardID m-r-20 m-t-10 p-t-5 " style="width: 20%;" >
                                                 <center>
                                                     <img src="<?php echo ($result["imgProfile"]) ?>" width="80%" height="100px" style="margin-top: 3%">
                                                     <div class="containerID">
-                                                        <h5><b><?php echo ($result["UserName"]) ?></b></h5>
-                                                        <div class="row justify-content-between align-items-center m-b-5" >
-                                                            <button  class="font-12" style=" color: white; background: #068e81;"
+                                                        <div class="row m-t-5">
+                                                            <font class="font-16" style="margin-left: 3%"><b> ชื่อผู้ใช้งาน : </b></font>
+                                                            <font class="font-16 m-l-5"><?php echo ($result["UserName"]) ?></font>
+                                                        </div>
+                                                        <div class="row m-t-5">
+                                                            <font class="font-16" style="margin-left: 15%"><b> สถานนะ : </b></font>
+                                                            <font class="font-16 m-l-5 "><?php echo ($result["Responsible"]=== '' ? 'ไม่มีผู้ดูแล' : $result["Responsible"]) ?></font>
+                                                        </div>
+                                                        <div class="row justify-content-between align-items-center m-b-5 m-t-5" >
+                                                            <button  class="font-14" style=" color: white; background: #068e81;"
+                                                                     onclick="JavaScript:if(confirm('คุณต้องการดูแลผู้ใช้งานคนนี้ ใช่ไหม ?')==true)
+                                                                             {window.location='api/Update.php?UserID=<?php echo ($result["UserID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"
+                                                            >
+                                                                เพิ่มการดูแล
+                                                            </button>
+                                                            <button  class="font-14" style=" color: white; background: #068e81;"
                                                                      onclick="window.location.href='../ProfileUser/ManageUser.php?NameUser=<?php echo ($result["UserName"]);?>&UserName=<?php echo($_GET["UserName"]); ?>'"
                                                             >
                                                                 ดูข้อมูล
-                                                            </button>
-                                                            <button  class="font-12" style=" color: white; background: #068e81;"
-                                                                     onclick="JavaScript:if(confirm('คุณต้องการยกเลิกการดูแลผู้ใช้งานคนนี้ ใช่ไหม ?')==true)
-                                                                     {window.location='api/delete.php?UserID=<?php echo ($result["UserID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"
-                                                            >
-                                                                ยกเลิกการดูแล
                                                             </button>
                                                         </div>
                                                     </div>

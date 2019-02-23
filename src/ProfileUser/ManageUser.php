@@ -41,7 +41,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
-
     <style type="text/css">
         #startDate,
         #endDate,{
@@ -58,7 +57,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
     <!-- ============================================================== -->
-    <iframe id="iframe_targets" name="iframe_targets" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+    <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
     <div id="main-wrapper">
         <?php require_once '../Component/Header.php';?>
         <div class="page-wrapper">
@@ -144,7 +143,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                     </form>
                     <div style="margin-top: 5%">
                         <form  name="MyForm" method="post" action="../Component/HighchartsCalorie.php" target="iframe_target">
-                            <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                             <center>
                                 <div style="width: 100%">
                                     <input class="week-picker" id="weekpicker" placeholder="กรุณาเลือกวันที่" style="width: 20%">
@@ -160,7 +158,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                     <div class="col-md-12 card card-body m-t-10">
                         <p class="font-20">การแจ้งคำแนะนำ</p>
                         <form name="MyForm" method="post" action="api/InsertMessage.php" target="iframe_target">
-                            <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                             <div style="margin-bottom: 1%;">
                                 <font class="font-16">หัวข้อ :</font>
                                 <input type="text" name="AU_Title" class="font-16" style="width: 80%">

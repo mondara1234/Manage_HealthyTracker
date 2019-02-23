@@ -2,16 +2,15 @@
 include("../../Database/connect.php");
 $UserID = $_GET["UserID"];
 $UserName = $_GET["UserName"];
-$Responsible = '';
 
 $sql = "UPDATE membermanage SET 
-			Responsible = '$Responsible'
+			Responsible = '$UserName'
 			
 			WHERE UserID = '$UserID' ";
 $query = mysqli_query($conn, $sql);
 
 if($query){
-    $message = "ยกเลิกการดูแลเสร็จสิ้น";
+    $message = "เลือกการดูแลเสร็จสิ้น";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
