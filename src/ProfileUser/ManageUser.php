@@ -40,7 +40,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <link href="../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="../assets/libs/datetimepicker/jquery.datetimepicker.css">
     <style type="text/css">
         #startDate,
@@ -152,8 +152,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                                     <button type="submit" name="submit" id="submit" style="color: white; background: #068e81">ค้นหา</button>
                                 </div>
                             </center>
-                            <iframe src="../Component/HighchartsCalorie.php" height="400px" width="100%" frameborder="0" scrolling="auto" align="right">
-                            </iframe>
+                            <div id="container" style="width: 100%; height: 300px; margin: 0 auto"></div>
                         </form>
                     </div>
                     <div class="col-md-12 card card-body m-t-10">
@@ -175,9 +174,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 </div>
             </div>
         </div>
-        <?php
-        mysqli_close($conn);
-        ?>
         <?php require_once '../Component/footer.php';?>
     </div>
     <!-- ============================================================== -->
@@ -200,7 +196,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <!--<script src="js/jquery-1.8.3.min.js"></script>    -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
+    <script src="http://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript">
         $(function(){
 
@@ -308,5 +304,103 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
             });
         });
     </script>
+
+    <?php
+    //$DateM = $_POST['DateM'] ? $_POST['DateM'] : '04-02-2019';
+    //$DateS = $_POST['DateS'] ? $_POST['DateS'] : '10-02-2019';
+    $dt = date("Y-m-d");
+    $DateM = date( "Y-m-d", strtotime( "$dt -7 day" ) );
+    $DateS = $dt;
+
+    $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND DateDiary>='$DateM' 
+        AND DateDiary<='$DateS' order by DateDiary asc";
+    $query = mysqli_query($conn, $sql);
+
+    $sqlEenergy = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND DateDiary>='$DateM' 
+        AND DateDiary<='$DateS' order by DateDiary asc";
+    $queryEenergy = mysqli_query($conn, $sqlEenergy);
+
+    $sqlEenergyING = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND DateDiary>='$DateM' 
+        AND DateDiary<='$DateS' order by DateDiary asc";
+    $queryEenergyING = mysqli_query($conn, $sqlEenergyING);
+
+    ?>
+    <script language="JavaScript">
+        $(document).ready(function() {
+            let chart = {
+                type: 'column'
+            };
+            let title = {
+                text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที่ <?php echo date('d/m/Y',strtotime($DateM))?> - <?php echo date('d/m/Y',strtotime($DateS))?>'
+            };
+            let xAxis = {
+                categories: [
+                    'จ','อ','พ','พฤ','ศ','ส','อา'
+                ]
+            };
+            let yAxis ={
+                min: 0,
+                title: {
+                    text: 'จำนวนแคลอรี่'
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    }
+                }
+            };
+
+            let tooltip = {
+                formatter: function () {
+                    return '<b>' + this.x + '</b><br/>' +
+                        this.series.name + ': ' + this.y + '<br/>' +
+                        'Total: ' + this.point.stackTotal;
+                }
+            };
+            let plotOptions = {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            };
+            let credits = {
+                enabled: false
+            };
+            let series= [{
+                name: 'ขาด',
+                data: [
+                    20,20,30,50,0,30,0
+                ],
+                color: '#068e81'
+            },
+                {
+                    name: 'เกิน',
+                    data: [
+                        20,20,30,50,0,30,0
+                    ],
+                    color: '#991715'
+                }
+            ];
+
+            let json = {};
+            json.chart = chart;
+            json.title = title;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;
+            json.tooltip = tooltip;
+            json.plotOptions = plotOptions;
+            json.credits = credits;
+            json.series = series;
+            $('#container').highcharts(json);
+
+        });
+    </script>
+    <?php
+    mysqli_close($conn);
+    ?>
 </body>
 </html>
