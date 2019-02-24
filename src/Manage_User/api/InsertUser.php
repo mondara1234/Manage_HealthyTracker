@@ -3,7 +3,6 @@ include("../../Database/connect.php");
 	$pUsername = $_POST["pUsername"];
     $pEmail = $_POST["pEmail"];
 	$pPassword = $_POST["pPassword"];
-    $pLanguage = $_POST["pLanguage"];
     $date = $_POST["date"];
     $PersonalSelect = "off";
 
@@ -27,13 +26,6 @@ if(empty($pUsername) ||
         window.alert('$message');
     </script>"
     );
-}elseif($pLanguage === 'select' ){
-    $message = "กรุณาเลือกภาษาเริ่มต้นด้วยครับ";
-    echo (
-    "<script LANGUAGE='JavaScript'>
-        window.alert('$message');
-    </script>"
-    );
 }else{
     $Sql_Query = "select * from membermanage where UserName = '$pUsername'";
 
@@ -50,8 +42,8 @@ if(empty($pUsername) ||
         </script>"
         );
     }else {
-            $sql = "INSERT INTO membermanage (UserName, Email, Password, Language, DateRegis, PersonalSelect) 
-                    VALUES ('$pUsername', '$pEmail', '$pPassword', '$pLanguage', '$date',$PersonalSelect)";
+            $sql = "INSERT INTO membermanage (UserName, Email, Password, DateRegis, PersonalSelect, imgProfile) 
+                    VALUES ('$pUsername', '$pEmail', '$pPassword', '$date','$PersonalSelect','$ImgProfile')";
 
             $query = mysqli_query($conn, $sql);
 
@@ -59,15 +51,15 @@ if(empty($pUsername) ||
                 $message = "เพิ่มข้อมูลเสร็จสิ้น";
                 echo (
                 "<script LANGUAGE='JavaScript'>
-                            window.alert('$message');
-                        </script>"
+                    window.alert('$message');
+                </script>"
                 );
             }else{
                 $message = "เพิ่มข้อมูลล้มเหลว";
                 echo (
                 "<script LANGUAGE='JavaScript'>
-                            window.alert('$message');
-                        </script>"
+                    window.alert('$message');
+                </script>"
                 );
             }
         }

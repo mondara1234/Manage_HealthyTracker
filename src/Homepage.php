@@ -109,7 +109,7 @@
                                 <div class="card-body">
                                     <div class="align-items-center">
                                         <div >
-                                            <h4 class="card-title">การวิเคราะห์ผู้ใช้งาน App</h4>
+                                            <h4 class="card-title">การวิเคราะห์ผู้ใช้งาน ระบบ</h4>
                                             <h5 class="card-subtitle">ภาพรวมของเดือนล่าสุด</h5>
                                         </div>
                                         <div class="row">
@@ -117,7 +117,7 @@
                                             <div style="width: 31%">
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
-                                                        <h5 style="width: 40%; margin-top: 3%">ผู้ใช้งาน App</h5>
+                                                        <h5 style="width: 40%; margin-top: 3%">ผู้ใช้งาน ระบบ</h5>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                     <div class="x_content">
@@ -142,24 +142,24 @@
                                             <div class="col-lg-2">
                                                 <div class="row align-items-center">
                                                     <div class="col-12">
-                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
+                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 82px;">
                                                             <i class="fa fa-user m-b-5 font-16"></i>
-                                                            <h5 class="m-b-0 m-t-5"><?php echo($resultUsermanage['totalUsermanage']); ?></h5>
-                                                            <small class="font-light">จำนวนผู้ใช้ทั้งหมด</small>
+                                                            <h5 class="m-b-0" style="margin-top: 1%; margin-bottom: 2%"><?php echo($resultUsermanage['totalUsermanage']); ?></h5>
+                                                            <small class="font-light font-14">จำนวนผู้ใช้ทั้งหมด</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">
-                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
+                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 82px;">
                                                             <i class="fa fa-plus m-b-5 font-16"></i>
-                                                            <h5 class="m-b-0 m-t-5"><?php echo($resultUserNew['totalUserNew']); ?></h5>
-                                                            <small class="font-light">ผู้ใช้ใหม่</small>
+                                                            <h5 class="m-b-0" style="margin-top: 1%; margin-bottom: 2%"><?php echo($resultUserNew['totalUserNew']); ?></h5>
+                                                            <small class="font-light font-14">ผู้ใช้ใหม่</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">
-                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 80px;">
+                                                        <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 82px;">
                                                             <i class="mdi mdi-alert-outline m-b-5 font-16"></i>
-                                                            <h5 class="m-b-0 m-t-5"><?php echo($resultAllProblem['totalAllProblem']); ?></h5>
-                                                            <small class="font-light">จำนวนปัญหาทั้งหมด</small>
+                                                            <h5 class="m-b-0" style="margin-top: 1%; margin-bottom: 2%"><?php echo($resultAllProblem['totalAllProblem']); ?></h5>
+                                                            <small class="font-light font-14">จำนวนปัญหาทั้งหมด</small>
                                                         </div>
                                                     </div>
                                                 </div>

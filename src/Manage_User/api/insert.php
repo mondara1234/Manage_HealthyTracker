@@ -71,16 +71,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                             <td width="80%"><input type="password" name="pPassword"  style="width: 100%" /></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ภาษาระบบ :</b></td>
-                            <td width="80%">
-                                <select name="pLanguage" id="pLanguage">
-                                    <option value="select" selected>กรุณาเลือกภาษาเริ่มต้น</option>
-                                    <option value="th" >ภาษาไทย</option>
-                                    <option value="en" >ภาษาอังกฤษ</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
                             <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพโปรไฟล์ :</b></td>
                             <td width="80%">
                                 <input type="file" name="pImgProfile" id="pImgProfile" />

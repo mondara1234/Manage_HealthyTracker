@@ -45,7 +45,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="../assets/libs/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="../../assets/libs/datetimepicker/jquery.datetimepicker.css">
     <style type="text/css">
         #startDate,
         #endDate,{
@@ -62,6 +62,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 <!-- ============================================================== -->
 <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
 <!-- ============================================================== -->
+<iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
 <div id="main-wrapper">
     <?php require_once '../../Component/HeaderEdit.php';?>
     <div class="page-wrapper">
@@ -83,8 +84,8 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 <form method="post" name="formDate" action="SelectFood.php?UserName=<?php echo($_GET["UserName"]); ?>&NameUser=<?php echo ($_GET["NameUser"]);?>" >
                     <center>
                         <div style="width: 60%">
-                            Start Date :<input id="startDate" name="startDate" type="text" value="<?php echo ($dateS);?>"/>
-                            End Date :<input id="endDate" name="endDate" type="text" value="<?php echo ($dateE);?>" />
+                            วันที่เริ่ม : <input id="startDate" name="startDate" type="text" autocomplete="off"/>
+                            วันที่สิ้นสุด : <input id="endDate" name="endDate" type="text" autocomplete="off"/>
                             <input type="submit" name="submit" id="submit" value="ค้นหา" style="color: white; background: #068e81" />
                         </div>
                     </center>
@@ -146,7 +147,6 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         </tr>
                     </table>
                 </form>
-                <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                 <div style="margin-top: 5%">
                     <center>
                         <div style="width: 100%; margin-bottom: 2%">
@@ -196,8 +196,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
 <!-- กำหนดเอง Scripts -->
 <script src="../../assets/dist/js/custom.min.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<!--<script src="js/jquery-1.8.3.min.js"></script>    -->
+
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <!--<script src="js/jquery-1.8.3.min.js"></script>    -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>

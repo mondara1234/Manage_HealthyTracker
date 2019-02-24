@@ -79,8 +79,8 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                     <form method="post" name="formDate" action="api/SelectFood.php?UserName=<?php echo($_GET["UserName"]); ?>&NameUser=<?php echo ($_GET["NameUser"]);?>"  enctype="multipart/form-data" >
                         <center>
                             <div style="width: 60%">
-                                Start Date :<input id="startDate" name="startDate" type="text" autocomplete="off"/>
-                                End Date :<input id="endDate" name="endDate" type="text" autocomplete="off"/>
+                                วันที่เริ่ม : <input id="startDate" name="startDate" type="text" autocomplete="off"/>
+                                วันที่สิ้นสุด : <input id="endDate" name="endDate" type="text" autocomplete="off"/>
                                 <input type="submit" name="submit" id="submit" value="ค้นหา" style="color: white; background: #068e81" />
                             </div>
                         </center>

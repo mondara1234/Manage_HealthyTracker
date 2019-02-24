@@ -31,29 +31,44 @@ if(empty($pFoodName) ||
         </script>"
     );
 }else {
-    $sql = "UPDATE fooddiary SET 
-			UserName = '$pUserName',
-			FoodName = '$pFoodName',
-			FoodCalorie = '$pFoodCalorie',
-			FoodNumber = '$pFoodNumber',
-			DiaryDate = '$pDiaryDate',
-			FoodUnit = '$pFoodUnit',
-			FoodIMG = '$pFoodIMG'
-			
-			WHERE DiaryID = $DiaryID ";
+    $Sql_Query = "select * from fooddiary where FoodName = '$pFoodName'";
 
-    $query = mysqli_query($conn, $sql);
+    $query = mysqli_query($conn, $Sql_Query);
 
-    if ($query) {
-        $message = "แก้ไขข้อมูลสำเร็จ";
-        echo(
-        "<script LANGUAGE='JavaScript'>
-            window.alert('$message');
-        </script>"
-        );
-    } else {
-        $message = "แก้ไขข้อมูลล้มเหลว";
-        echo(
+    $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+
+    if($result) {
+        $sql = "UPDATE fooddiary SET 
+                UserName = '$pUserName',
+                FoodName = '$pFoodName',
+                FoodCalorie = '$pFoodCalorie',
+                FoodNumber = '$pFoodNumber',
+                DiaryDate = '$pDiaryDate',
+                FoodUnit = '$pFoodUnit',
+                FoodIMG = '$pFoodIMG'
+                
+                WHERE DiaryID = $DiaryID ";
+
+        $query = mysqli_query($conn, $sql);
+
+        if ($query) {
+            $message = "แก้ไขข้อมูลสำเร็จ";
+            echo(
+            "<script LANGUAGE='JavaScript'>
+                window.alert('$message');
+            </script>"
+            );
+        } else {
+            $message = "แก้ไขข้อมูลล้มเหลว";
+            echo(
+            "<script LANGUAGE='JavaScript'>
+                window.alert('$message');
+            </script>"
+            );
+        }
+    }else{
+        $message = "ไม่มีชื่อรายการอาหารนี้ในระบบ";
+        echo (
         "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"

@@ -39,6 +39,13 @@ if(empty($Username) ||
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
     if($result){
+        $Sql_Query = "select * from fooddiary where FoodName = '$FoodName'";
+
+        $query = mysqli_query($conn, $Sql_Query);
+
+        $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+
+        if($result) {
         $sql = "INSERT INTO fooddiary (UserName, FoodName, FoodIMG, FoodCalorie, DiaryDate, FoodUnit, FoodNumber) 
 			VALUES ('$Username', '$FoodName', '$FoodIMG', '$FoodCalorie', '$DiaryDate','$FoodUnit', '$FoodNumber')";
 
@@ -57,6 +64,14 @@ if(empty($Username) ||
             "<script LANGUAGE='JavaScript'>
                 window.alert('$message');
             </script>"
+            );
+        }
+        }else{
+            $message = "ไม่มีชื่อรายการอาหารนี้ในระบบ";
+            echo (
+            "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
             );
         }
     }else {

@@ -43,7 +43,7 @@ if(empty($pEmail) ||
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($pUsername) < 3){
+}elseif(strlen($pUsername) < 4){
     $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
     echo (
     "<script LANGUAGE='JavaScript'>

@@ -130,7 +130,7 @@
                             <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center"><?php echo ($result["UserName"]) ?></td>
                             <td align="center"><?php echo ($result["FoodName"]) ?></td>
-                            <td align="center" style="height: 60px"><img src="<?php echo ($result["FoodIMG"]) ?>" width="100" height="100"  style="margin: 3% 0px 3% 0px"></td>
+                            <td align="center" style="height: 100px; width: 20%; padding: 0.2%"><img src="<?php echo ($result["FoodIMG"]) ?>" width="99%" height="98%"  style="margin: 3% 0px 3% 0px"></td>
                             <td align="center"><?php echo ($result["FoodNumber"]) ?></td>
                             <td align="center"><?php echo ($result["FoodUnit"]) ?></td>
                             <td align="center"><?php echo ($result["FoodCalorie"]) ?></td>
