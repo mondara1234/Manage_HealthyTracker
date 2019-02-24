@@ -15,7 +15,7 @@ if(empty($UserName) ||
     </script>"
     );
 }elseif($UnitType === 'select' ){
-    $message = "กรุณาเลือกรูปภาพ";
+    $message = "กรุณาเลือกหน่วยพลังงาน";
     echo (
     "<script LANGUAGE='JavaScript'>
         window.alert('$message');

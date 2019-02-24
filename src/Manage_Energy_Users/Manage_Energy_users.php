@@ -115,7 +115,7 @@
                     {
                         $x = $x + 1;
                         ?>
-                        <tr>
+                        <tr  class="font-16">
                             <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center"><?php echo ($result["UserName"]) ?></td>
                             <td align="center"><?php echo ($result["Energy"]) ?></td>

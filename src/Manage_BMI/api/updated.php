@@ -17,13 +17,6 @@ if(empty($pNameBMI) ||
             window.alert('$message');
         </script>"
     );
-}elseif($pBMIUser === 'select' ){
-    $message = "กรุณาเลือกเกณฑ์ของBMI";
-    echo (
-    "<script LANGUAGE='JavaScript'>
-            window.alert('$message');
-        </script>"
-    );
 }else{
 
     $sql = "UPDATE bmiuser SET 

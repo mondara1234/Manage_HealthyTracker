@@ -17,7 +17,7 @@ if(empty($NameBMI) ||
         </script>"
     );
 }elseif($BMIUser === 'select' ){
-    $message = "กรุณาเลือกเกณฑ์ของBMI";
+    $message = "กรุณาเลือกเกณฑ์ของค่าดัชนีมวลกาย";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');

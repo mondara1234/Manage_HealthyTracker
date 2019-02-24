@@ -18,7 +18,7 @@ if(isset($_POST["DateS"]))
     $DateS = $_POST["DateS"];
 }
 
-$sqlING = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND DateDiary>='$DateM' 
+$sqlING = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND Unit = 'เกิน' AND DateDiary>='$DateM' 
         AND DateDiary<='$DateS' order by DateDiary asc";
 $queryING = mysqli_query($conn, $sqlING);
 
@@ -33,8 +33,7 @@ while($resultING = mysqli_fetch_array($queryING, MYSQLI_ASSOC)) {
 for ($i = 0; $i <= 6; $i++) {
     $dataStart = date( "Y-m-d", strtotime( "$DateM +$i day" ));
     $array_search_DateDiary = array_keys(array_combine(array_keys($resultArray), array_column($resultArray, 'DateDiary')),$dataStart);
-    $array_search_Unit = array_keys(array_combine(array_keys($resultArray), array_column($resultArray, 'Unit')),'เกิน');
-    if($array_search_DateDiary!=FALSE && $array_search_Unit !=FALSE ){
+    if($array_search_DateDiary!=FALSE ){
         $str = implode(',',$array_search_DateDiary);
         $result_Energy = $resultArray["$str"]["Energy"];
         $number_Energy = intval($result_Energy);

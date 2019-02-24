@@ -308,11 +308,11 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
             $DateM = date( "Y-m-d", strtotime( "$dt -7 day" ) );
             $DateS = $dt;
 
-            $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND DateDiary>='$DateM' 
+            $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND Unit = 'ขาด' AND DateDiary>='$DateM' 
         AND DateDiary<='$DateS' order by DateDiary asc";
             $query = mysqli_query($conn, $sql);
 
-            $sqlING = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND DateDiary>='$DateM' 
+            $sqlING = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND Unit = 'เกิน' AND DateDiary>='$DateM' 
         AND DateDiary<='$DateS' order by DateDiary asc";
             $queryING = mysqli_query($conn, $sqlING);
             ?>
@@ -320,7 +320,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 type: 'column'
             };
             let title = {
-                text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที่ <?php echo date('d/m/Y',strtotime($DateM))?> - <?php echo date('d/m/Y',strtotime($DateS))?>'
+                text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที่  <?php echo date('Y-m-d',strtotime($DateM))?> - <?php echo date('Y-m-d',strtotime($DateS))?>'
             };
             let xAxis = {
                 categories: [
@@ -363,21 +363,20 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 name: 'ขาด',
                 data: [
                     <?php
-                    $dataStart = '';
-                    $resultArray = array();
+                    $dataStartDevoid = '';
+                    $resultArrayDevoid = array();
                     while($result = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
-                        array_push($resultArray, $result);
+                        array_push($resultArrayDevoid, $result);
                     }
 
                     for ($i = 0; $i <= 6; $i++) {
-                        $dataStart = date( "Y-m-d", strtotime( "$DateM +$i day" ));
-                        $array_search_DateDiary = array_keys(array_combine(array_keys($resultArray), array_column($resultArray, 'DateDiary')),$dataStart);
-                        $array_search_Unit = array_keys(array_combine(array_keys($resultArray), array_column($resultArray, 'Unit')),'ขาด');
-                        if($array_search_DateDiary!=FALSE && $array_search_Unit !=FALSE ){
-                            $str=implode(',',$array_search_DateDiary);
-                            $result_Energy = json_encode($resultArray["$str"]["Energy"]);
+                        $dataStartDevoid = date( "Y-m-d", strtotime( "$DateM +$i day" ));
+                        $array_search_DateDiaryDevoid = array_keys(array_combine(array_keys($resultArrayDevoid), array_column($resultArrayDevoid, 'DateDiary')),$dataStartDevoid);
+                        if($array_search_DateDiaryDevoid!=FALSE ){
+                            $strDevoid=implode(',',$array_search_DateDiaryDevoid);
+                            $result_EnergyDevoid = json_encode($resultArrayDevoid["$strDevoid"]["Energy"]);
                          ?>
-                            parseInt(<?php echo($result_Energy)?>),
+                            parseInt(<?php echo($result_EnergyDevoid)?>),
                         <?php
                         } else {
                         ?>
@@ -402,8 +401,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         for ($i = 0; $i <= 6; $i++) {
                             $dataStart = date( "Y-m-d", strtotime( "$DateM +$i day" ));
                             $array_search_DateDiary = array_keys(array_combine(array_keys($resultArray), array_column($resultArray, 'DateDiary')),$dataStart);
-                            $array_search_Unit = array_keys(array_combine(array_keys($resultArray), array_column($resultArray, 'Unit')),'เกิน');
-                            if($array_search_DateDiary!=FALSE && $array_search_Unit !=FALSE ){
+                            if($array_search_DateDiary!=FALSE  ){
                                 $str=implode(',',$array_search_DateDiary);
                                 $result_Energy = json_encode($resultArray["$str"]["Energy"]);
                             ?>

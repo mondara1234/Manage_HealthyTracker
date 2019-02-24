@@ -80,7 +80,7 @@
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ค่าดัชนีมวลกาย :</b></td>
-                                <td width="80%"><input type="text" name="pSumBMI" value="<?php echo $result["SumBMI"]; ?>" style="width: 100%" /></td>
+                                <td width="80%"><input type="number" name="pSumBMI" value="<?php echo $result["SumBMI"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เกณฑ์ :</b></td>

@@ -69,7 +69,7 @@
                         <table width="70%" border="1" style="border: #068e81 double 5px;">
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้งาน :</b></td>
-                                <td width="80%"><input type="text" name="UserName" value="<?php echo $result["UserName"]; ?>" style="width: 100%" /></td>
+                                <td width="80%"><input type="text" name="UserName" value="<?php echo $result["UserName"]; ?>" style="width: 100%" readonly /></td>
                                 <input type="hidden" name="ID" value="<?php echo $result["ID"]; ?>" />
                             </tr>
                             <tr>

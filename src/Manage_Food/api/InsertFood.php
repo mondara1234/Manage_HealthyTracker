@@ -20,7 +20,7 @@ if(empty($pFoodName) ||
     </script>"
     );
 }elseif($pFoodType === 'select' ){
-    $message = "กรุณาเลือกรูปภาพ";
+    $message = "กรุณาเลือกประเภทอาหาร";
     echo (
     "<script LANGUAGE='JavaScript'>
         window.alert('$message');
