@@ -28,30 +28,29 @@ if(empty($Username) ||
     empty($Email) ||
     empty($First_name) ||
     empty($Last_Name) ||
-    empty($Address) ||
-    empty($Telephone)) {
+    empty($Address)) {
     $message = "กรุณากรอกข้อมูลให้ครบ";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($Password) < 5){
+}elseif(strlen($Password) < 6){
     $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัวขึ้นไป";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($Username) < 3){
+}elseif(strlen($Username) < 4){
     $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($pTelephone) > 10){
-    $message = "เบอร์โทรศัพท์ต้องมีไม่เกิน 10 ตัว";
+}elseif(strlen($Telephone) !== 10){
+    $message = "เบอร์โทรศัพท์ต้องมี 10 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
@@ -59,9 +58,7 @@ if(empty($Username) ||
     );
 }else{
     $Sql_Query = "select * from adminmanage where UserName = '$Username'";
-
     $query = mysqli_query($conn, $Sql_Query);
-
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
     if($result){

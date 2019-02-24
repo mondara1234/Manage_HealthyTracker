@@ -119,7 +119,7 @@
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่สมัคร :</b></td>
                                 <td width="80%">
-                                    <input type="date" name="pDateRegis" value="<?php echo $result["DateRegis"]; ?>" min="2018-01-01" max="<?php echo $result["DateRegis"]; ?>" />
+                                    <input type="date" name="pDateRegis" value="<?php echo $result["DateRegis"]; ?>" readonly />
                                 </td>
                             </tr>
                             <tr>

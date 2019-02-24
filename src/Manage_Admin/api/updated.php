@@ -37,22 +37,22 @@ if(empty($UserName) ||
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($pPassword) < 5){
+}elseif(strlen($pPassword) < 6){
     $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($UserName) < 3){
+}elseif(strlen($UserName) < 4){
     $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($pTelephone) > 10){
-    $message = "เบอร์โทรศัพท์ต้องมีไม่เกิน 10 ตัว";
+}elseif(strlen($pTelephone) !== 10){
+    $message = "เบอร์โทรศัพท์ต้องมี 10 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
@@ -84,8 +84,8 @@ if(empty($UserName) ||
                 $message = "แก้ไขข้อมูลสำเร็จ";
                 echo (
                 "<script LANGUAGE='JavaScript'>
-                        window.alert('$message');
-                    </script>"
+                    window.alert('$message');
+                </script>"
                 );
             }else{
                 $message = "แก้ไขข้อมูลล้มเหลว";

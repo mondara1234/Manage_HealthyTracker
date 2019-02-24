@@ -141,7 +141,7 @@
                             ?>
                             <tr>
                                 <td align="center" style="width: 5%"><?php echo ($x) ?></td>
-                                <td align="center"><?php echo ($result["UserName"]) ?></td>
+                                <td align="center" style="width: 8%"><?php echo ($result["UserName"]) ?></td>
                                 <td align="center" style="width: 8%; height: 80px; padding: 0.2%"><img src="<?php echo ($result["ImgProfile"]) ?>" width="100%" height="100%"  ></td>
                                 <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["Email"]) ?></td>
                                 <td align="center" style="width: 6%; padding: 0.2%"><?php echo ($result["Password"]) ?></td>
