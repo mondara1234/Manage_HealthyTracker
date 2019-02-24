@@ -11,12 +11,12 @@ include("../../Database/connect.php");
     $query = mysqli_query($conn, $sql);
 
     if($query){
-        $message = "แจ้งการแนะนำเส็ดสิ้น";
+        $message = "แจ้งความคืบหน้าของปัญหาเสร็จสิ้น";
         echo "<script language=\"JavaScript\">";
         echo "alert('$message');";
         echo "</script>";
     }else {
-        $message = "การแจ้งสถานะล้มเหลว";
+        $message = "แจ้งความคืบหน้าของปัญหาล้มเหลว";
         echo "<script language=\"JavaScript\">";
         echo "alert('$message');";
         echo "</script>";

@@ -11,7 +11,7 @@ include("../../Database/connect.php");
     $query = mysqli_query($conn, $sql);
 
     if($query){
-        $message = "แจ้งการแนะนำเส็ดสิ้น";
+        $message = "แจ้งการแนะนำเสร็จสิ้น";
         echo "<script language=\"JavaScript\">";
         echo "alert('$message');";
         echo "</script>";

@@ -130,7 +130,7 @@
                 </center>
                 <div class="col-md-12 card card-body m-t-10">
                     <p class="font-20" style="margin-bottom: 2%">แจ้งความคืบหน้าของปัญหา</p>
-                    <form name="MyForm" method="post" action="api/InsertMessage.php" target="iframe_target">
+                    <form name="MyForm" method="post" action="InsertMessage.php" target="iframe_target">
                         <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <div style="margin-bottom: 1%;">
                             <font class="font-16">หัวข้อ :</font>
