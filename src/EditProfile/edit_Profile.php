@@ -66,8 +66,7 @@
             <!-- ส่วนของเนื้อหา  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-                <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data" target="iframe_target">
-                    <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+                <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
                     <div class="row justify-content-between">
                         <div class="font-16" align="center" style="width: 60%; margin-left: 5%">
                             <div style="margin-left: -48%">
@@ -82,7 +81,7 @@
                             </div>
                             <div class="m-t-10" style="margin-left: -42%">
                                 <font class="font-18">Email :</font>
-                                <input type="text" name="Email" value="<?php echo $resultUser["Email"]; ?>">
+                                <input type="email" name="Email" value="<?php echo $resultUser["Email"]; ?>">
                             </div>
                             <div class="m-t-10">
                                 <font class="font-18">ชื่อจริง :</font>
@@ -101,14 +100,14 @@
                             </div>
                             <div class="m-t-10" style="margin-left: -51%">
                                 <font class="font-18">เบอร์โทรศัพท์ :</font>
-                                <input type="text" name="Telephone" value="<?php echo $resultUser["Telephone"]; ?>">
+                                <input type="number" name="Telephone" value="<?php echo $resultUser["Telephone"]; ?>">
                             </div>
                         </div>
                         <div align="center" class="font-14" style="width: 40%; margin-top: -2%; margin-left: -15%">
                             <div>
-                                <img src="<?php echo ($resultUser["ImgProfile"]) ?>" width="100" height="100" style="margin: 3% 0px 3% 0px;" >
+                                <img id="img" src="<?php echo ($resultUser["ImgProfile"]) ?>" width="100" height="100" style="margin: 3% 0px 3% 0px;" >
                             </div>
-                            <input type="file" name="pImgProfile" style="margin-left: 20%" />
+                            <input type="file" name="pImgProfile" style="margin-left: 20%" id="pImgProfile" onchange="onFileSelected(event)" />
                             <input type="hidden" name="ImgProfile" value="<?php echo $resultUser["ImgProfile"]; ?>">
                         </div>
                     </div>
@@ -126,10 +125,6 @@
                         </button>
                     </div>
                 </form>
-
-                <?php
-                mysqli_close($conn);
-                ?>
             </div>
         </div>
         <?php require_once '../Component/footer.php';?>
@@ -150,6 +145,24 @@
     <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
     <!-- กำหนดเอง Scripts -->
     <script src="../assets/dist/js/custom.min.js"></script>
+    <script type="text/javascript">
+        function onFileSelected(event) {
+            let selectedFile = event.target.files[0];
+            let reader = new FileReader();
 
+            let imgtag = document.getElementById("img");
+            imgtag.title = selectedFile.name;
+
+            reader.onload = function(event) {
+                imgtag.src = event.target.result;
+            };
+
+            reader.readAsDataURL(selectedFile);
+        }
+    </script>
+
+    <?php
+    mysqli_close($conn);
+    ?>
 </body>
 </html>

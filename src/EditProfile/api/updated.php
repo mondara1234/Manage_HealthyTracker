@@ -1,6 +1,6 @@
 <?php
 include("../../Database/connect.php");
-$UserNames = $_GET["UserName"];
+$UserNameold = $_GET["UserName"];
 $UserName = $_POST["UserNameAD"];
 $UserID = $_POST["UserID"];
 $Password = $_POST["Password"];
@@ -32,20 +32,31 @@ if(empty($UserName) ||
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
+            window.location.href='../edit_Profile.php?UserName=$UserNameold';
         </script>"
     );
-}elseif(strlen($Password) < 5){
+}elseif(strlen($Password) < 6){
     $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
+            window.location.href='../edit_Profile.php?UserName=$UserNameold';
         </script>"
     );
-}elseif(strlen($UserName) < 3){
+}elseif(strlen($UserName) < 4){
     $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
     echo (
     "<script LANGUAGE='JavaScript'>
             window.alert('$message');
+            window.location.href='../edit_Profile.php?UserName=$UserNameold';
+        </script>"
+    );
+}elseif(strlen($Telephone) !== 10){
+    $message = "เบอร์โทรต้องมี 10 หลัก";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+            window.location.href='../edit_Profile.php?UserName=$UserNameold';
         </script>"
     );
 }else{
@@ -56,7 +67,7 @@ if(empty($UserName) ||
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
     if($result){
-        if($result["UserName"] === $UserNames){
+        if($result["UserName"] === $UserNameold){
             $sql = "UPDATE adminmanage SET 
                         UserName = '$UserName',
                         Password = '$Password',
@@ -75,6 +86,7 @@ if(empty($UserName) ||
                 echo (
                 "<script LANGUAGE='JavaScript'>
                         window.alert('$message');
+                        window.location.href='../edit_Profile.php?UserName=$UserName';
                     </script>"
                 );
             }else{
@@ -82,6 +94,7 @@ if(empty($UserName) ||
                 echo (
                 "<script LANGUAGE='JavaScript'>
                         window.alert('$message');
+                        window.location.href='../edit_Profile.php?UserName=$UserNameold';
                     </script>"
                 );
             }
@@ -90,6 +103,7 @@ if(empty($UserName) ||
             echo (
             "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
+                    window.location.href='../edit_Profile.php?UserName=$UserNameold';
                 </script>"
             );
         }
@@ -112,6 +126,7 @@ if(empty($UserName) ||
             echo (
             "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
+                    window.location.href='../edit_Profile.php?UserName=$UserName';
                 </script>"
             );
         }else{
@@ -119,6 +134,7 @@ if(empty($UserName) ||
             echo (
             "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
+                    window.location.href='../edit_Profile.php?UserName=$UserNameold';
                 </script>"
             );
         }
