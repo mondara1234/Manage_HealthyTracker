@@ -142,20 +142,20 @@
                             <tr>
                                 <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                                 <td align="center"><?php echo ($result["UserName"]) ?></td>
-                                <td align="center"><img src="<?php echo ($result["ImgProfile"]) ?>" width="50" height="50"  ></td>
-                                <td align="center"><?php echo ($result["Email"]) ?></td>
-                                <td align="center"><?php echo ($result["Password"]) ?></td>
-                                <td align="center"><?php echo ($result["FirstName"]) ?></td>
-                                <td align="center"><?php echo ($result["LastName"]) ?></td>
+                                <td align="center" style="width: 8%; height: 80px; padding: 0.2%"><img src="<?php echo ($result["ImgProfile"]) ?>" width="100%" height="100%"  ></td>
+                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["Email"]) ?></td>
+                                <td align="center" style="width: 6%; padding: 0.2%"><?php echo ($result["Password"]) ?></td>
+                                <td align="center" style="width: 8%; padding: 0.2%"><?php echo ($result["FirstName"]) ?></td>
+                                <td align="center" style="width: 8%; padding: 0.2%"><?php echo ($result["LastName"]) ?></td>
                                 <td align="center"><textarea rows="4" style="width: 100%" ><?php echo ($result["Address"]) ?></textarea></td>
-                                <td align="center"><?php echo ($result["Telephone"]) ?></td>
-                                <td align="center"><?php echo ($result["Status"]) ?></td>
-                                <td align="center"><?php echo ($result["DateRegis"]) ?></td>
-                                <td align="center"><?php echo ($result["Permission"]) ?></td>
-                                <td align="center">
+                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["Telephone"]) ?></td>
+                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["Status"]) ?></td>
+                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["DateRegis"]) ?></td>
+                                <td align="center" style=" padding: 0.2%"><?php echo ($result["Permission"]) ?></td>
+                                <td align="center" style="width: 4%; padding: 0.2%">
                                     <a href="api/edit.php?AdminID=<?php echo ($result["ID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                                 </td>
-                                <td align="center">
+                                <td align="center" style="padding: 0.2%">
                                     <a href="JavaScript:if(confirm('Confirm Delete?')==true)
                     {window.location='api/delete.php?AdminID=<?php echo ($result["ID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"> Delete </a>
                                 </td>

@@ -129,12 +129,12 @@
                         <tr>
                             <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center" style="width: 15%"><?php echo ($result["TrickName"]) ?></td>
-                            <td align="center" style="width: 10%"><img src="<?php echo ($result["TrickIMG"]) ?>" width="70" height="70"  ></td>
-                            <td align="center"><textarea rows="4" style="margin-top: 2%; width: 90%" ><?php echo ($result["TrickDetail"]) ?></textarea></td>
+                            <td align="center" style="width: 10%; height: 120px; padding: 0.2%"><img src="<?php echo ($result["TrickIMG"]) ?>" width="100%" height="100%"  ></td>
+                            <td align="center"><textarea rows="4" style="margin-top: 2%; width: 100%" readonly><?php echo ($result["TrickDetail"]) ?></textarea></td>
                             <td align="center" style="width: 5%"><?php echo ($result["TrickLike"]) ?></td>
                             <td align="center" style="width: 5%"><?php echo ($result["PeopleAdd"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["DateAdded"]) ?></td>
-                            <td align="center" style="width: 15%; word-break:break-all">
+                            <td align="center" style="width: 15%; word-break:break-all;">
                                 <a href="<?php echo ($result["sourceURL"]) ?>" class="text-active" ><?php echo ($result["sourceURL"]) ?></a>
                             </td>
                             <td align="center">

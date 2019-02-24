@@ -96,7 +96,7 @@
                             </tr>
                             <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;">ที่อยู่เคล็ดลับ :</b></td>
-                                <td width="80%"><input type="text" name="psourceURL" value="<?php echo $result["sourceURL"]; ?>" style="width: 100%" /></td>
+                                <td width="80%"><input type="url" name="psourceURL" value="<?php echo $result["sourceURL"]; ?>" style="width: 100%" /></td>
                                 <input type="hidden" name="sourceURL" value="<?php echo $result["sourceURL"]; ?>" />
                             </tr>
                             <tr>

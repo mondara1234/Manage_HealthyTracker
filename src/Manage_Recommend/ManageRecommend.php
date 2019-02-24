@@ -123,11 +123,11 @@
                         ?>
                         <tr>
                             <td align="center" style="width: 5%"><?php echo ($x) ?></td>
-                            <td align="center"><?php echo ($result["AU_UserName"]) ?></td>
-                            <td align="center"><?php echo ($result["AU_Title"]) ?></td>
-                            <td align="center"><textarea rows="4" cols="50" style="margin-top: 2%" ><?php echo ($result["AU_Datile"]) ?></textarea></td>
-                            <td align="center"><?php echo ($result["AU_Date"]) ?></td>
-                            <td align="center"><?php echo ($result["AU_Status"]) ?></td>
+                            <td align="center" style="width: 10%"><?php echo ($result["AU_UserName"]) ?></td>
+                            <td align="center" style="width: 20%"><?php echo ($result["AU_Title"]) ?></td>
+                            <td align="center"><textarea rows="4" style="margin-top: 2%; width: 100%" readonly ><?php echo ($result["AU_Datile"]) ?></textarea></td>
+                            <td align="center" style="width: 10%"><?php echo ($result["AU_Date"]) ?></td>
+                            <td align="center" style="width: 10%"><?php echo ($result["AU_Status"]) ?></td>
                             <td align="center">
                                 <a href="api/edit.php?AU_ID=<?php echo ($result["AU_ID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>

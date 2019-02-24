@@ -25,7 +25,7 @@ if(empty($TrickName) ||
     </script>"
     );
 }elseif($_FILES["pTrickIMG"]["name"] == ''){
-    $message = "กรุณาเลือกรูปภาพ";
+    $message = "กรุณาเลือกรูปภาพเคล็ดลับ";
     echo (
     "<script LANGUAGE='JavaScript'>
         window.alert('$message');

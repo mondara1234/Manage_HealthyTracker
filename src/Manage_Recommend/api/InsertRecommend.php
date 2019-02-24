@@ -49,8 +49,8 @@ if(empty($AU_UserName) ||
         $message = "ไม่มีชื่อผู้ใช้นี้อยู่ในระบบ";
         echo (
         "<script LANGUAGE='JavaScript'>
-                    window.alert('$message');
-                </script>"
+            window.alert('$message');
+        </script>"
         );
         }
     }
