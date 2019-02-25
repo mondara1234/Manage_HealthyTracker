@@ -1,12 +1,8 @@
 <?php
     include('connect.php');
-    if(empty($_SESSION)) // if the session not yet started
-    session_start();
 
     $txtUsername = $_POST["txtUsername"];
     $txtPassword = $_POST["txtPassword"];
-
-    $_SESSION['username'] = $txtUsername;  // if already login
 
     if(empty($txtUsername) || empty($txtPassword)){
         $message = "กรุณากรอกข้อมูลให้ครบ";
@@ -48,5 +44,4 @@
         }
 
     mysqli_close($conn);
-
 ?>
