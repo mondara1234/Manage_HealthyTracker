@@ -5,7 +5,6 @@
 	$pEmail = $_POST["pEmail"];
 	$pPassword = $_POST["pPassword"];
 	$pUsername = $_POST["pUsername"];
-    $pLanguage = $_POST["pLanguage"];
     $pPersonalSelect = $_POST["pPersonalSelect"];
     $pPersonalCode = $_POST["pPersonalCode"];
     $pSex = $_POST["pSex"];
@@ -64,7 +63,6 @@ if($result){
                 Password = '$pPassword',
                 UserName = '$pUsername',
                 imgProfile = '$pImgProfile',
-                Language = '$pLanguage',
                 PersonalSelect = '$pPersonalSelect',
                 PersonalCode = '$pPersonalCode',
                 Sex = '$pSex',
@@ -107,7 +105,6 @@ if($result){
                 Password = '$pPassword',
                 Username = '$pUsername',
                 imgProfile = '$pImgProfile',
-                Language = '$pLanguage',
                 PersonalSelect = '$pPersonalSelect',
                 PersonalCode = '$pPersonalCode',
                 Sex = '$pSex',

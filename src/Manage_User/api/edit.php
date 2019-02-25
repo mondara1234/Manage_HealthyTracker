@@ -82,15 +82,6 @@
                                 <td width="80%"><input type="password" name="pPassword" value="<?php echo $result["Password"]; ?>" style="width: 100%" /></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ภาษาระบบ :</b></td>
-                                <td width="80%">
-                                    <select name="pLanguage" id="pLanguage">
-                                        <option value="th" <?php if($result["Language"]=="th") echo 'selected="selected"'; ?>>ภาษาไทย</option>
-                                        <option value="en" <?php if($result["Language"]=="en") echo 'selected="selected"'; ?>>ภาษาอังกฤษ</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สถานะรหัสส่วนตัว :</b></td>
                                 <td width="80%">
                                     <select name="pPersonalSelect" id="pPersonalSelect">
