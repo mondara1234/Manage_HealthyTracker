@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <?php
+include('../Database/connect.php');
 $UserName = null;
 if(isset($_GET["NameUser"])){
     $UserName = $_GET["NameUser"];
 }
-include('../Database/connect.php');
 
 $sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName'";
 $query = mysqli_query($conn, $sql);
@@ -193,7 +193,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <!--<script src="js/jquery-1.8.3.min.js"></script>    -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript">
         $(function(){
 
