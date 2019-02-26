@@ -1,4 +1,4 @@
-
+<meta charset="utf-8">
 <?php
 	include("../../Database/connect.php");
     $UserName =$_GET["UserName"];

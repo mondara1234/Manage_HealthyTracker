@@ -1,4 +1,5 @@
 <html>
+<meta charset="utf-8">
     <head>
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>

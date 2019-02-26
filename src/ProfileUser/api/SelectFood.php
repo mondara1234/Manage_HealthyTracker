@@ -139,11 +139,11 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                     <table width="100%" border="1" style="border: black double 5px; border-top: 0px">
                         <tr>
                             <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยทั้งหมด </div> </td>
-                            <td align="center"> <div align="center"> <?php echo ($sum) ?> </div></td>
+                            <td align="center"> <div align="center"> <b style="color: red; font-size: 18px"><?php echo ($sum) ?></b> </div></td>
                         </tr>
                         <tr>
                             <td align="center" width="20%"><div align="center"> ค่าเฉลี่ยทั้งหมด(%) </div> </td>
-                            <td align="center"> <div align="center">  <?php echo (($sum * $records) /100) ?> </div></td>
+                            <td align="center"> <div align="center"> <b style="color: red; font-size: 18px"> <?php echo (($sum * $records) /100) ?></b> </div></td>
                         </tr>
                     </table>
                 </form>
@@ -156,23 +156,27 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                             <button type="submit" name="btnEnergy" id="btnEnergy" style="color: white; background: #068e81">ค้นหา</button>
                         </div>
                     </center>
-                    <div id="container" style="width: 100%; height: 300px; margin: 0 auto"></div>
+                    <div style="background: #068e81; padding: 0.002% 1% 0.002% 0.7%; height: 320px ">
+                        <div id="container" style="width: 100%; height: 300px; margin: 0 auto;  margin-top: 1%"></div>
+                    </div>
                 </div>
-                <div class="col-md-12 card card-body m-t-10">
-                    <p class="font-20">การแจ้งคำแนะนำ</p>
-                    <form name="MyForm" method="post" action="InsertMessage.php" target="iframe_target">
-                        <div style="margin-bottom: 1%;">
-                            <font class="font-16">หัวข้อ :</font>
-                            <input type="text" name="AU_Title" class="font-16" style="width: 80%">
-                            <input type="hidden" name="AU_Date" id="AU_Date" value="<?php echo date('Y-m-d');?>"/>
-                            <input type="hidden" name="AU_UserName" id="AU_UserName" value="<?php echo ($_GET["NameUser"]);?>"/>
-                        </div>
-                        <div style="width: 100%; display:inline-block; position:relative;">
-                            <font class="font-16">รายละเอียด :</font>
-                            <textarea class="font-16" name="AU_Datile" id="txt" cols="20" rows="7" style="width: 100%; display:block;"></textarea>
-                            <button class="font-16" style="position:absolute; bottom:10px; right:20px; color: white; background: #068e81; ">แจ้งการแนะนำ</button>
-                        </div>
-                    </form>
+                <div style="background: #068e81; padding: 0.002% 0.7% 0.002% 0.7%; margin-top: 1%; ">
+                    <div class="card card-body" style="margin-top: 1%; margin-bottom: 1%">
+                        <p class="font-20">การแจ้งคำแนะนำ</p>
+                        <form name="MyForm" method="post" action="InsertMessage.php" target="iframe_target">
+                            <div style="margin-bottom: 1%;">
+                                <font class="font-16">หัวข้อ :</font>
+                                <input type="text" name="AU_Title" class="font-16" style="width: 80%">
+                                <input type="hidden" name="AU_Date" id="AU_Date" value="<?php echo date('Y-m-d');?>"/>
+                                <input type="hidden" name="AU_UserName" id="AU_UserName" value="<?php echo ($_GET["NameUser"]);?>"/>
+                            </div>
+                            <div style="width: 100%; display:inline-block; position:relative;">
+                                <font class="font-16">รายละเอียด :</font>
+                                <textarea class="font-16" name="AU_Datile" id="txt" cols="20" rows="7" style="width: 100%; display:block;"></textarea>
+                                <button class="font-16" style="position:absolute; bottom:10px; right:20px; color: white; background: #068e81; ">แจ้งการแนะนำ</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

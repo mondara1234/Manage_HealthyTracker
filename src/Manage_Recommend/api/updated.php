@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <?php
 	include("../../Database/connect.php");
 	$AU_ID = $_POST["AU_ID"];

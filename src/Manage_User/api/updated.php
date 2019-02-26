@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <?php
 	include("../../Database/connect.php");
     $old_Username = $_POST["old_Username"];

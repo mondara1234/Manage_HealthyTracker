@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <?php
     include('connect.php');
     if(empty($_SESSION)) // if the session not yet started
