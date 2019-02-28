@@ -2,12 +2,12 @@
 <html dir="ltr" lang="en">
 <?php
 include('../Database/connect.php');
-$UserName = $_GET["UserName"];
+$NameUser = $_GET["NameUser"];
+$UserNames = $_GET["UserName"];
 
-$sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName'";
+$sql = "SELECT * FROM fooddiary WHERE UserName = '$NameUser'";
 $query = mysqli_query($conn, $sql);
 
-$UserNames = $_GET["UserName"];
 $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserNames' ";
 $querymanage = mysqli_query($conn, $sqlmanage);
 $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
@@ -29,7 +29,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/LogoHT.png">
-    <title>ข้อมูลอาหารของ : <?php echo ($UserName) ?></title>
+    <title>ข้อมูลอาหารของ : <?php echo ($NameUser) ?></title>
 
     <!-- Custom CSS -->
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -64,7 +64,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title"><div>ข้อมูลอาหารของ : <?php echo ($UserName) ?></div></h4>
+                        <h4 class="page-title"><div>ข้อมูลอาหารของ : <?php echo ($NameUser) ?></div></h4>
                     </div>
                 </div>
             </div>
@@ -308,11 +308,11 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
             $DateM = date( "Y-m-d", strtotime( "$dt -7 day" ) );
             $DateS = $dt;
 
-            $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND Unit = 'ขาด' AND DateDiary>='$DateM' 
+            $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$NameUser' AND Unit = 'ขาด' AND DateDiary>='$DateM' 
         AND DateDiary<='$DateS' order by DateDiary asc";
             $query = mysqli_query($conn, $sql);
 
-            $sqlING = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND Unit = 'เกิน' AND DateDiary>='$DateM' 
+            $sqlING = "SELECT * FROM energy_users_per_day WHERE UserName = '$NameUser' AND Unit = 'เกิน' AND DateDiary>='$DateM' 
         AND DateDiary<='$DateS' order by DateDiary asc";
             $queryING = mysqli_query($conn, $sqlING);
             ?>
@@ -434,7 +434,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
             {
                 let DateM = document.getElementById("DateM").value;
                 let DateS = document.getElementById("DateS").value;
-                let name = '<?php echo($UserName)?>';
+                let name = '<?php echo($NameUser)?>';
                 const arrayIng = $.parseJSON(
                     $.ajax({
                         url: 'api/EnergyING.php', //หน้า php ที่ต้องการรับค่า

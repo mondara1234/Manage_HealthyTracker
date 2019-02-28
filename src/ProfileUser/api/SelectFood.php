@@ -9,6 +9,7 @@ include('../../Database/connect.php');
 
 $dateS = $_POST["startDate"];
 $dateE = $_POST["endDate"];
+
 $sql = "SELECT * FROM fooddiary WHERE UserName = '$UserName' AND DiaryDate>='$dateS' 
         AND DiaryDate<='$dateE' ";
 $query = mysqli_query($conn, $sql);

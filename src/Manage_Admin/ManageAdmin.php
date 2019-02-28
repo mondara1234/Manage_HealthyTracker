@@ -90,7 +90,7 @@
                     <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                         <tr bgcolor="#068e81" style="color: white; height: 40px">
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ลำกับ </div>
+                                <div align="center"> ลำดับ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
                                 <div align="center"> ชื่อผู้ดูแลระบบ </div>
@@ -105,10 +105,7 @@
                                 <div align="center"> รหัสผ่าน </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> ชื่อจริง </div>
-                            </th>
-                            <th style="padding-left: 5px; padding-right: 5px">
-                                <div align="center"> นามสกุล </div>
+                                <div align="center"> ชื่อ-นามสกุล </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
                                 <div align="center"> ที่อยู่ </div>
@@ -141,16 +138,15 @@
                             ?>
                             <tr>
                                 <td align="center" style="width: 5%"><?php echo ($x) ?></td>
-                                <td align="center" style="width: 8%"><?php echo ($result["UserName"]) ?></td>
-                                <td align="center" style="width: 8%; height: 80px; padding: 0.2%"><img src="<?php echo ($result["ImgProfile"]) ?>" width="100%" height="100%"  ></td>
-                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["Email"]) ?></td>
-                                <td align="center" style="width: 6%; padding: 0.2%"><?php echo ($result["Password"]) ?></td>
-                                <td align="center" style="width: 8%; padding: 0.2%"><?php echo ($result["FirstName"]) ?></td>
-                                <td align="center" style="width: 8%; padding: 0.2%"><?php echo ($result["LastName"]) ?></td>
-                                <td align="center"><textarea rows="4" style="width: 100%" ><?php echo ($result["Address"]) ?></textarea></td>
-                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["Telephone"]) ?></td>
-                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["Status"]) ?></td>
-                                <td align="center" style="width: 5%; padding: 0.2%"><?php echo ($result["DateRegis"]) ?></td>
+                                <td align="center" style="width: 3%"><?php echo ($result["UserName"]) ?></td>
+                                <td align="center" style="width: 40%; height: 80px;"><img src="<?php echo ($result["ImgProfile"]) ?>" width="100%" height="100%"  ></td>
+                                <td align="center" style="width: 4%; "><?php echo ($result["Email"]) ?></td>
+                                <td align="center" ><?php echo ($result["Password"]) ?></td>
+                                <td align="center" style="width: 8%; "><?php echo ($result["FirstName"]) ?> <?php echo ($result["LastName"]) ?> </td>
+                                <td align="center" style="width: 60%; "><textarea rows="4" style="width: 100%" readonly><?php echo ($result["Address"]) ?></textarea></td>
+                                <td align="center" style="width: 5%; "><?php echo ($result["Telephone"]) ?></td>
+                                <td align="center" style="width: 5%; "><?php echo ($result["Status"]) ?></td>
+                                <td align="center" style="width: 5%; "><?php echo ($result["DateRegis"]) ?></td>
                                 <td align="center" style=" padding: 0.2%"><?php echo ($result["Permission"]) ?></td>
                                 <td align="center" style="width: 4%; padding: 0.2%">
                                     <a href="api/edit.php?AdminID=<?php echo ($result["ID"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
