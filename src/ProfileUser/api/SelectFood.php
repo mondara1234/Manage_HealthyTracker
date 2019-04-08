@@ -19,7 +19,7 @@ $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserNames' ";
 $querymanage = mysqli_query($conn, $sqlmanage);
 $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
 $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
 $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -106,12 +106,11 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                                 <div align="center"> หน่วย </div>
                             </th>
                             <th>
-                                <div align="center"> แคลอรี่ </div>
+                                <div align="center"> จำนวนแคลอรี่ </div>
                             </th>
                             <th>
-                                <div align="center"> วันที่เพื่ม </div>
+                                <div align="center"> วันที่เพิ่ม </div>
                             </th>
-
                         </tr>
 
                         <?php
@@ -318,7 +317,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     $(document).ready(function() {
         <?php
         $dt = date("Y-m-d");
-        $DateM = date( "Y-m-d", strtotime( "$dt -7 day" ) );
+        $DateM = date( "Y-m-d", strtotime( "$dt -6 day" ) );
         $DateS = $dt;
 
             $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$UserName' AND Unit = 'ขาด' AND DateDiary>='$DateM' 

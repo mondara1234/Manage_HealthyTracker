@@ -28,7 +28,21 @@ if(empty($pFoodName) ||
         </script>"
     );
 }else {
-    $sql = "UPDATE foodmanage SET 
+    $Sql_Query = "select * from foodmanage where FoodName = '$pFoodName'";
+
+    $query = mysqli_query($conn, $Sql_Query);
+
+    $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+
+    if($result){
+        $message = "มีรายการนี้ในระบบแล้วครับ";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+                window.alert('$message');
+            </script>"
+        );
+    }else {
+        $sql = "UPDATE foodmanage SET 
 			FoodName = '$pFoodName',
 			FoodCalorie = '$pFoodCalorie',
 			FoodType = '$pFoodType',
@@ -37,22 +51,23 @@ if(empty($pFoodName) ||
 			
 			WHERE FoodID = $FoodID ";
 
-    $query = mysqli_query($conn, $sql);
+        $query = mysqli_query($conn, $sql);
 
-    if ($query) {
-        $message = "แก้ไขข้อมูลสำเร็จ";
-        echo(
-        "<script LANGUAGE='JavaScript'>
+        if ($query) {
+            $message = "แก้ไขข้อมูลสำเร็จ";
+            echo(
+            "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
-        );
-    } else {
-        $message = "แก้ไขข้อมูลล้มเหลว";
-        echo(
-        "<script LANGUAGE='JavaScript'>
+            );
+        } else {
+            $message = "แก้ไขข้อมูลล้มเหลว";
+            echo(
+            "<script LANGUAGE='JavaScript'>
             window.alert('$message');
         </script>"
-        );
+            );
+        }
     }
 }
 	mysqli_close($conn);

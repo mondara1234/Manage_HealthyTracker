@@ -9,9 +9,7 @@
     $pUnitBMI = $_POST["pUnitBMI"];
 
 if(empty($pNameBMI) ||
-    empty($pDetailBMI) ||
-    empty($pSumBMI) ||
-    empty($pUnitBMI)) {
+    empty($pDetailBMI)) {
     $message = "กรุณากรอกข้อมูลให้ครบ";
     echo (
     "<script LANGUAGE='JavaScript'>
@@ -19,7 +17,20 @@ if(empty($pNameBMI) ||
         </script>"
     );
 }else{
+$Sql_Query = "select * from bmiuser where NameBMI = '$pNameBMI'";
 
+$query = mysqli_query($conn, $Sql_Query);
+
+$result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+
+if($result){
+    $message = "มีหัวข้อนี้แล้วครับ";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+                    window.alert('$message');
+                </script>"
+    );
+}else {
     $sql = "UPDATE bmiuser SET 
 			NameBMI = '$pNameBMI',
 			DetailBMI = '$pDetailBMI',
@@ -46,6 +57,7 @@ if(empty($pNameBMI) ||
         </script>"
         );
     }
+}
 }
 
 	mysqli_close($conn);

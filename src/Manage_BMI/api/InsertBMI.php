@@ -8,9 +8,7 @@ include("../../Database/connect.php");
     $UnitBMI = $_POST["txtUnitBMI"];
 
 if(empty($NameBMI) ||
-    empty($DetailBMI) ||
-    empty($SumBMI) ||
-    empty($UnitBMI)) {
+    empty($DetailBMI)) {
     $message = "กรุณากรอกข้อมูลให้ครบ";
     echo (
     "<script LANGUAGE='JavaScript'>

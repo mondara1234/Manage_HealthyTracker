@@ -12,7 +12,7 @@ $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserNames' ";
 $querymanage = mysqli_query($conn, $sqlmanage);
 $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
 $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
 $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -73,7 +73,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <div class="font-16">
-                    <form method="post" name="formDate" action="api/SelectFood.php?UserName=<?php echo($_GET["UserName"]); ?>&NameUser=<?php echo ($_GET["NameUser"]);?>"  enctype="multipart/form-data" >
+                    <form method="post" name="formDate" action="api/SelectFood.php?UserName=<?php echo($_GET["UserName"]); ?>//&NameUser=<?php echo ($_GET["NameUser"]);?>"  enctype="multipart/form-data" >
                         <center>
                             <div style="width: 60%">
                                 วันที่เริ่ม : <input id="startDate" name="startDate" type="text" autocomplete="off"/>
@@ -85,22 +85,22 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                         <table width="100%" border="1" style="border: black double 5px; margin-top: 2%">
                             <tr bgcolor="#068e81" style="color: white; height: 40px; opacity:0.9;">
                                 <th>
-                                    <div align="center"> DiaryID </div>
+                                    <div align="center"> ลำดับ </div>
                                 </th>
                                 <th>
-                                    <div align="center"> FoodName </div>
+                                    <div align="center"> ชื่ออาหาร </div>
                                 </th>
                                 <th>
-                                    <div align="center"> FoodNumber </div>
+                                    <div align="center"> จำนวน </div>
                                 </th>
                                 <th>
-                                    <div align="center"> FoodUnit </div>
+                                    <div align="center"> หน่วย </div>
                                 </th>
                                 <th>
-                                    <div align="center"> FoodCalorie </div>
+                                    <div align="center"> จำนวนแคลอรี่ </div>
                                 </th>
                                 <th>
-                                    <div align="center"> DiaryDate </div>
+                                    <div align="center"> วันที่เพิ่ม </div>
                                 </th>
 
                             </tr>
@@ -305,7 +305,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
         $(document).ready(function() {
             <?php
             $dt = date("Y-m-d");
-            $DateM = date( "Y-m-d", strtotime( "$dt -7 day" ) );
+            $DateM = date( "Y-m-d", strtotime( "$dt -6 day" ) );
             $DateS = $dt;
 
             $sql = "SELECT * FROM energy_users_per_day WHERE UserName = '$NameUser' AND Unit = 'ขาด' AND DateDiary>='$DateM' 
@@ -435,104 +435,108 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                 let DateM = document.getElementById("DateM").value;
                 let DateS = document.getElementById("DateS").value;
                 let name = '<?php echo($NameUser)?>';
-                const arrayIng = $.parseJSON(
-                    $.ajax({
-                        url: 'api/EnergyING.php', //หน้า php ที่ต้องการรับค่า
-                        data: {DateM:DateM, DateS:DateS, UserName: name}, // ชื่อตัวแปร : value
-                        type: "post",
-                        dataType: 'json',
-                        async: false
-                    }).responseText);
-                const arrayDevoid = $.parseJSON(
-                    $.ajax({
-                        url: 'api/EnergyDevoid.php', //หน้า php ที่ต้องการรับค่า
-                        data: {DateM:DateM, DateS:DateS, UserName: name}, // ชื่อตัวแปร : value
-                        type: "post",
-                        dataType: 'json',
-                        async: false
-                    }).responseText);
+                 if(DateM === '' || DateS === ''){
+                     alert('กรุณาระบุวันที่ที่ต้องการค้นหาส่วนต่างของพลังงาน');
+                 }else{
+                     const arrayIng = $.parseJSON(
+                         $.ajax({
+                             url: 'api/EnergyING.php', //หน้า php ที่ต้องการรับค่า
+                             data: {DateM:DateM, DateS:DateS, UserName: name}, // ชื่อตัวแปร : value
+                             type: "post",
+                             dataType: 'json',
+                             async: false
+                         }).responseText);
+                     const arrayDevoid = $.parseJSON(
+                         $.ajax({
+                             url: 'api/EnergyDevoid.php', //หน้า php ที่ต้องการรับค่า
+                             data: {DateM:DateM, DateS:DateS, UserName: name}, // ชื่อตัวแปร : value
+                             type: "post",
+                             dataType: 'json',
+                             async: false
+                         }).responseText);
 
-                let chart = {
-                    type: 'column'
-                };
-                let title = {
-                    text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที'+DateM+'  -  '+DateS
-                };
-                let xAxis = {
-                    categories: [
-                        'จ','อ','พ','พฤ','ศ','ส','อา'
-                    ]
-                };
-                let yAxis ={
-                    min: 0,
-                    title: {
-                        text: 'จำนวนแคลอรี่'
-                    },
-                    stackLabels: {
-                        enabled: true,
-                        style: {
-                            fontWeight: 'bold',
-                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-                        }
-                    }
-                };
+                     let chart = {
+                         type: 'column'
+                     };
+                     let title = {
+                         text: 'ข้อมูลส่วนต่างแคลอรี่ ของวันที'+DateM+'  -  '+DateS
+                     };
+                     let xAxis = {
+                         categories: [
+                             'จ','อ','พ','พฤ','ศ','ส','อา'
+                         ]
+                     };
+                     let yAxis ={
+                         min: 0,
+                         title: {
+                             text: 'จำนวนแคลอรี่'
+                         },
+                         stackLabels: {
+                             enabled: true,
+                             style: {
+                                 fontWeight: 'bold',
+                                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                             }
+                         }
+                     };
 
-                let tooltip = {
-                    formatter: function () {
-                        return '<b>' + this.x + '</b><br/>' +
-                            this.series.name + ': ' + this.y + '<br/>' +
-                            'Total: ' + this.point.stackTotal;
-                    }
-                };
-                let plotOptions = {
-                    column: {
-                        stacking: 'normal',
-                        dataLabels: {
-                            enabled: false
-                        }
-                    }
-                };
-                let credits = {
-                    enabled: false
-                };
-                let series = [{
-                    name: 'ขาด',
-                    data: [
-                        arrayDevoid[0],
-                        arrayDevoid[1],
-                        arrayDevoid[2],
-                        arrayDevoid[3],
-                        arrayDevoid[4],
-                        arrayDevoid[5],
-                        arrayDevoid[6],
-                    ],
-                    color: '#068e81'
-                },
-                    {
-                        name: 'เกิน',
-                        data: [
-                            arrayIng[0],
-                            arrayIng[1],
-                            arrayIng[2],
-                            arrayIng[3],
-                            arrayIng[4],
-                            arrayIng[5],
-                            arrayIng[6],
-                        ],
-                        color: '#991715'
-                    }
-                ];
+                     let tooltip = {
+                         formatter: function () {
+                             return '<b>' + this.x + '</b><br/>' +
+                                 this.series.name + ': ' + this.y + '<br/>' +
+                                 'Total: ' + this.point.stackTotal;
+                         }
+                     };
+                     let plotOptions = {
+                         column: {
+                             stacking: 'normal',
+                             dataLabels: {
+                                 enabled: false
+                             }
+                         }
+                     };
+                     let credits = {
+                         enabled: false
+                     };
+                     let series = [{
+                         name: 'ขาด',
+                         data: [
+                             arrayDevoid[0],
+                             arrayDevoid[1],
+                             arrayDevoid[2],
+                             arrayDevoid[3],
+                             arrayDevoid[4],
+                             arrayDevoid[5],
+                             arrayDevoid[6],
+                         ],
+                         color: '#068e81'
+                     },
+                         {
+                             name: 'เกิน',
+                             data: [
+                                 arrayIng[0],
+                                 arrayIng[1],
+                                 arrayIng[2],
+                                 arrayIng[3],
+                                 arrayIng[4],
+                                 arrayIng[5],
+                                 arrayIng[6],
+                             ],
+                             color: '#991715'
+                         }
+                     ];
 
-                let json = {};
-                json.chart = chart;
-                json.title = title;
-                json.xAxis = xAxis;
-                json.yAxis = yAxis;
-                json.tooltip = tooltip;
-                json.plotOptions = plotOptions;
-                json.credits = credits;
-                json.series = series;
-                $('#highcharts').highcharts(json);
+                     let json = {};
+                     json.chart = chart;
+                     json.title = title;
+                     json.xAxis = xAxis;
+                     json.yAxis = yAxis;
+                     json.tooltip = tooltip;
+                     json.plotOptions = plotOptions;
+                     json.credits = credits;
+                     json.series = series;
+                     $('#highcharts').highcharts(json);
+                 }
 
             }
         });

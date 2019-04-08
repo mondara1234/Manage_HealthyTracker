@@ -37,7 +37,7 @@
     $querymanage = mysqli_query($conn, $sqlmanage);
     $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp ";
+$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
     $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
     $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -58,7 +58,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ฐานข้อมูล รายการอาาหาร</h4>
+                        <h4 class="page-title">ฐานข้อมูล รายการอาหาร</h4>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                             <tr>
                                 <th> <div align="center" class="font-16"> ชื่ออาหาร :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                        <input type="submit" value="Search" />
+                                        <input type="submit" value="ค้นหา" />
                                     </div>
                                 </th>
                             </tr>

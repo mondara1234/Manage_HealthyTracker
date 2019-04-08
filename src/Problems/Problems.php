@@ -39,7 +39,7 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
         $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
         $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -71,9 +71,9 @@
                         <form name="search" method="post">
                             <table width="80%" border="0">
                                 <tr>
-                                    <th> <div align="center" class="font-16"> หัวข้อ :
+                                    <th> <div align="center" class="font-16"> ชื่อผู้เพิ่ม :
                                             <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                            <input type="submit" value="Search" />
+                                            <input type="submit" value="ค้นหา" />
                                         </div>
                                     </th>
                                 </tr>

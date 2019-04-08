@@ -13,7 +13,7 @@ include("connect.php");
     $Status = 'admin';
     $Permission = 'pending';
 
-    $old_img = 'https://pngimage.net/wp-content/uploads/2018/06/user-avatar-png-6.png';
+    $old_img = 'https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1';
     $ImgProfile;
     if ($_FILES["txtImgProfile"]["name"] !== ""){
         $filename = $conn->real_escape_string($_FILES['txtImgProfile']['name']);
@@ -36,7 +36,14 @@ if(empty($Username) ||
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($Password) < 6){
+}elseif(strlen($Username) < 4){
+    $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+    );
+}elseif(strlen($Password) < 6 || strlen($Re_Password) < 6 ){
     $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
@@ -49,13 +56,6 @@ if(empty($Username) ||
     "<script LANGUAGE='JavaScript'>
         window.alert('$message');
     </script>"
-    );
-}elseif(strlen($Username) < 4){
-    $message = "ชื่อผู้ใช้ต้องมีอย่างน้อย 4 ตัวขึ้นไป";
-    echo (
-    "<script LANGUAGE='JavaScript'>
-            window.alert('$message');
-        </script>"
     );
 }elseif(strlen($Telephone) !== 10){
     $message = "เบอร์โทรศัพท์ต้องมี 10 ตัว";

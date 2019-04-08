@@ -7,6 +7,15 @@ include("../../Database/connect.php");
     $Title = $_POST["AU_Title"];
     $Status = 'false';
 
+if(empty($Title) ||
+    empty($Datile)) {
+    $message = "กรุณากรอกข้อมูลให้ครบ";
+    echo(
+    "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+    );
+}else{
     $sql = "INSERT INTO alertuser (AU_UserName, AU_Datile, AU_Date, AU_Title, AU_Status) 
     VALUES ('$UserName', '$Datile', '$Date', '$Title', '$Status')";
     $query = mysqli_query($conn, $sql);
@@ -22,5 +31,6 @@ include("../../Database/connect.php");
         echo "alert('$message');";
         echo "</script>";
     }
+}
 	mysqli_close($conn);
 ?>

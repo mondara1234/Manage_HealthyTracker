@@ -52,6 +52,13 @@ if(empty($UserName) ||
             window.location.href='../edit_Profile.php?UserName=$UserNameold';
         </script>"
     );
+}elseif(strlen($Password) < 6 ){
+    $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
+    echo (
+    "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+    );
 }elseif(strlen($Telephone) !== 10){
     $message = "เบอร์โทรต้องมี 10 หลัก";
     echo (

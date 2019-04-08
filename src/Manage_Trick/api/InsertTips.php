@@ -33,13 +33,21 @@ if(empty($TrickName) ||
     </script>"
     );
 }else{
-    $Sql_Query = "select * from adminmanage where UserName = '$PeopleAdd'";
+    $Sql_Query = "select * from trickmanage where sourceURL = '$sourceURL'";
 
     $query = mysqli_query($conn, $Sql_Query);
 
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
     if($result){
+        $message = "มีURLนี้ในระบบแล้ว";
+        echo (
+        "<script LANGUAGE='JavaScript'>
+            window.alert('$message');
+        </script>"
+        );
+    }else {
+
         $sql = "INSERT INTO trickmanage (TrickName, TrickIMG, TrickDetail, TrickLike, PeopleAdd, DateAdded, sourceURL) 
 			VALUES ('$TrickName', '$pTrickIMG', '$TrickDetail', '$TrickLike', '$PeopleAdd', '$DateAdded', '$sourceURL')";
 
@@ -61,14 +69,7 @@ if(empty($TrickName) ||
             );
         }
 
-    }else {
-        $message = "ไม่มีชื่อผู้ดูแลระบบในระบบ";
-        echo (
-        "<script LANGUAGE='JavaScript'>
-            window.alert('$message');
-        </script>"
-        );
-        }
+    }
     }
 	
 	mysqli_close($conn);

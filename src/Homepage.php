@@ -25,7 +25,7 @@
     $query = mysqli_query($conn, $sql);
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
-    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
     $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
     $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -78,7 +78,7 @@
                                 <li class="bg_ls" style="width: 18%;">
                                     <a href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                         <h1 class="font-light text-white"><i class="fa fa-user-circle"></i></h1>
-                                        <div style="margin-top: 10%">ข้อมูลผู้ใช้งาน</div>
+                                        <div style="margin-top: 10%">ข้อมูลสมาชิก</div>
                                     </a>
                                 </li>
                                 <li class="bg_lo" style="width: 18%">
@@ -109,7 +109,7 @@
                                 <div class="card-body">
                                     <div class="align-items-center">
                                         <div >
-                                            <h4 class="card-title">การวิเคราะห์ผู้ใช้งาน ระบบ</h4>
+                                            <h4 class="card-title">การวิเคราะห์สมาชิกภายในระบบ</h4>
                                             <h5 class="card-subtitle">ภาพรวมของเดือนล่าสุด</h5>
                                         </div>
                                         <div class="row">
@@ -117,7 +117,7 @@
                                             <div style="width: 31%">
                                                 <div class="x_panel tile fixed_height_320 overflow_hidden">
                                                     <div class="x_title row">
-                                                        <h5 style="width: 40%; margin-top: 3%">ผู้ใช้งาน ระบบ</h5>
+                                                        <h5 style="width: 80%; margin-top: 3%">สมาชิกทั้งหมดภายในระบบ</h5>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                     <div class="x_content">
@@ -145,14 +145,14 @@
                                                         <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 82px;">
                                                             <i class="fa fa-user m-b-5 font-16"></i>
                                                             <h5 class="m-b-0" style="margin-top: 1%; margin-bottom: 2%"><?php echo($resultUsermanage['totalUsermanage']); ?></h5>
-                                                            <small class="font-light font-14">จำนวนผู้ใช้ทั้งหมด</small>
+                                                            <small class="font-light font-14">จำนวนสมาชิกทั้งหมด</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">
                                                         <div class="bg-dark p-10 text-white text-center" style="width:100%; height: 82px;">
                                                             <i class="fa fa-plus m-b-5 font-16"></i>
                                                             <h5 class="m-b-0" style="margin-top: 1%; margin-bottom: 2%"><?php echo($resultUserNew['totalUserNew']); ?></h5>
-                                                            <small class="font-light font-14">ผู้ใช้ใหม่</small>
+                                                            <small class="font-light font-14">สมาชิกใหม่</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 m-t-15">

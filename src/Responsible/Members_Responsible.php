@@ -22,7 +22,7 @@ $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
 $querymanage = mysqli_query($conn, $sqlmanage);
 $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+$sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
 $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
 $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -78,7 +78,7 @@ $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
                                     <tr>
                                         <th> <div align="center" class="font-16"> ชื่อผู้ใช้ :
                                                 <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                                <input type="submit" value="Search" />
+                                                <input type="submit" value="ค้นหา" />
                                             </div>
                                         </th>
                                     </tr>

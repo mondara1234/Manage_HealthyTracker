@@ -38,7 +38,7 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
         $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
         $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -62,7 +62,7 @@
                     <div class="page-breadcrumb">
                         <div class="row">
                             <div class="col-12 d-flex no-block align-items-center">
-                                <h4 class="page-title">ข้อมูลการดูแลสำหรับผู้ใช้งาน</h4>
+                                <h4 class="page-title">ข้อมูลการดูแลสำหรับสมาชิก</h4>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                     <tr>
                                         <th> <div align="center" class="font-16"> ชื่อผู้ใช้งาน :
                                                 <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                                <input type="submit" value="Search" />
+                                                <input type="submit" value="ค้นหา" />
                                             </div>
                                         </th>
                                     </tr>
@@ -92,7 +92,7 @@
                                 style="width: 10%; height: 30px;color: #068e81;background: white;border-color: white; margin-top: 2%"
                                 onclick="window.location.href='Show_Responsible_User.php?UserName=<?php echo($_GET["UserName"]); ?>'"
                         >
-                            ผู้ใข้งาน
+                            สมาชิก
                         </button>
                         <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-16">
                             <tr bgcolor="#068e81" style="color: white; height: 40px">

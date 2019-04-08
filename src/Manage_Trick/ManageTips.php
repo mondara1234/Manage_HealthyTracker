@@ -39,7 +39,7 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp ";
+        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
         $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
         $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -73,7 +73,7 @@
                             <tr>
                                 <th> <div align="center" class="font-16"> หัวข้อเคล็ดลับ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                        <input type="submit" value="Search" />
+                                        <input type="submit" value="ค้นหา" />
                                     </div>
                                 </th>
                             </tr>
@@ -130,7 +130,7 @@
                             <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center" style="width: 15%"><?php echo ($result["TrickName"]) ?></td>
                             <td align="center" style="width: 10%; height: 120px; padding: 0.2%"><img src="<?php echo ($result["TrickIMG"]) ?>" width="100%" height="100%"  ></td>
-                            <td align="center"><textarea rows="4" style="margin-top: 2%; width: 100%" readonly><?php echo ($result["TrickDetail"]) ?></textarea></td>
+                            <td align="center"><textarea rows="4"  style="margin-top: 2%; width: 100%" readonly><?php echo ($result["TrickDetail"]) ?></textarea></td>
                             <td align="center" style="width: 5%"><?php echo ($result["TrickLike"]) ?></td>
                             <td align="center" style="width: 5%"><?php echo ($result["PeopleAdd"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["DateAdded"]) ?></td>

@@ -69,7 +69,7 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Responsible/Members_Responsible.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-md"></i>
-                        <span class="hide-menu p-r-10"> การดูแลผู้ใช้งาน </span>
+                        <span class="hide-menu p-r-10"> การดูแลสมาชิก </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
@@ -157,7 +157,7 @@
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Responsible/Show_Responsible_User.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-md"></i>
-                        <span class="hide-menu p-r-10"> การดูแลผู้ใช้งาน </span>
+                        <span class="hide-menu p-r-10"> การดูแลสมาชิก </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">

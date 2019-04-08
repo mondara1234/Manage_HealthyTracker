@@ -31,7 +31,7 @@
     $querymanage = mysqli_query($conn, $sqlmanage);
     $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
+    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
     $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
     $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -57,7 +57,7 @@
                                 <i class="fa fa-user " style="color: red"></i>
                                 <font>สถานะผู้ใช้งาน</font>
                             </div>
-                            <div class="font-16" align="center" style="color: red"><b><?php echo $resultUser["Status"]; ?></b></div>
+                            <div class="font-16" align="center" style="color: red"><b><?php echo $resultUser["Status"]=== 'superadmin' ? 'เจ้าของระบบ' : 'ผู้ดูแลระบบ'; ?></b></div>
                         </div>
                     </div>
                 </div>
@@ -66,12 +66,13 @@
             <!-- ส่วนของเนื้อหา  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-                <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data" target="iframe_target">
+                    <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                     <div class="row justify-content-between">
                         <div class="font-16" align="center" style="width: 60%; margin-left: 5%">
                             <div style="margin-left: -48%">
                                 <font class="font-18">UserName :</font>
-                                <input type="text" name="UserNameAD" value="<?php echo $resultUser["UserName"]; ?>">
+                                <input type="text" name="UserNameAD" value="<?php echo $resultUser["UserName"]; ?>" readonly>
                                 <input type="hidden" name="UserID" value="<?php echo $resultUser["ID"]; ?>">
                             </div>
                             <div class="m-t-10" style="margin-left: -27%">

@@ -36,7 +36,7 @@ if(empty($pEmail) ||
             window.alert('$message');
         </script>"
     );
-}elseif(strlen($pPassword) !== 6){
+}elseif(strlen($pPassword) < 6){
     $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>

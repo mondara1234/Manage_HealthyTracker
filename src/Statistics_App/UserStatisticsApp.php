@@ -48,8 +48,7 @@
                         let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
                         chart.draw(data, options);
                     }
-                    console.log('result'+result); //e.g. 2015-11-13
-                    $('#dateSa').html('จำนวนผู้ใช้งาน ทั้งหมด');
+                    $('#dateSa').html('จำนวนสมาชิก ทั้งหมด');
                     $('#totalAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
                     $('#totalMale').html('ชาย '+parseInt(result[1])+' คน');
                     $('#totalFeMale').html('หญิง '+parseInt(result[2])+' คน');
@@ -57,7 +56,6 @@
             });
 
             document.getElementById("dateUser").addEventListener("change", function() {
-                console.log($("#dateUser").val()); //e.g. 2015-11-13
                 $.ajax({
                     type: "POST",
                     url: "api/regisAll.php",
@@ -81,8 +79,7 @@
                             let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
                             chart.draw(data, options);
                         }
-                        console.log('result'+result); //e.g. 2015-11-13
-                        $('#dateSa').html('จำนวนผู้ใช้งาน วันที่  '+$("#dateUser").val());
+                        $('#dateSa').html('จำนวนสมาชิก วันที่  '+$("#dateUser").val());
                         $('#totalAll').html('ทั้งหมด '+parseInt(result[0])+' คน');
                         $('#totalMale').html('ชาย '+parseInt(result[1])+' คน');
                         $('#totalFeMale').html('หญิง '+parseInt(result[2])+' คน');
@@ -171,6 +168,7 @@
                         $('#totalSystem').html('ระบบไม่เสถียร  '+parseInt(result[3])+'  คน');
                         $('#totalRecommend').html('แนะนำ  '+parseInt(result[4])+'  คน');
                         $('#totalOther').html('อื่นๆ  '+parseInt(result[5])+'  คน');
+
                     }
                 });
             });
@@ -186,7 +184,7 @@
     $querymanage = mysqli_query($conn, $sqlmanage);
     $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp WHERE Status = '' ";
+    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
     $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
     $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -220,7 +218,7 @@
                         <div style="width: 55%">
                             <div class="x_panel tile fixed_height_320 overflow_hidden">
                                 <div class="x_title row">
-                                    <h5 style="width: 70%;">ผู้ใช้งานระบบ</h5>
+                                    <h5 style="width: 70%;">สมาชิกระบบ</h5>
                                 </div>
                                 <table>
                                     <div id="piechart_3d" style="width: 100%; height:100%; padding-bottom: 50px" />
@@ -230,7 +228,7 @@
                         <div style="width: 45%; height: 100%">
                             <center>
                                 <div class="font-14">
-                                    เลือกวันที่ : <input type="date" name="dateUser" id="dateUser" >
+                                    เลือกวันที่ลงทะเบียน : <input type="date" name="dateUser" id="dateUser" >
                                 </div>
                             </center><br>
                             <div class="font-18" id="dateSa" style="margin-left: 32%"></div>
@@ -253,7 +251,7 @@
                     <div style="width: 45%; height: 100%">
                         <center>
                             <div class="font-14">
-                                เลือกวันที่ : <input type="date" name="dateProbled" id="dateProbled">
+                                เลือกวันที่ปัญหา : <input type="date" name="dateProbled" id="dateProbled" >
                             </div>
                         </center><br>
                         <div class="font-18" id="datePb" style="margin-left: 32%"></div>

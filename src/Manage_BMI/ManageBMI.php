@@ -39,7 +39,7 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp";
+    $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
         $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
         $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
 
@@ -67,14 +67,14 @@
             <!-- ส่วนของเนื้อหา  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-                <div class="text-danger font-20"> *** เกณฑ์  ผอม = 1,  ปกติ = 2, ท้อม = 3, อ้วน = 4, อ้วนมาก = 5 </div>
+                <div class="text-danger font-20"> *** เกณฑ์  ผอม = 1,  ปกติ = 2, ท้วม = 3, อ้วน = 4, อ้วนมาก = 5 </div>
                 <center>
                     <form name="search" method="post">
                         <table width="80%" border="0">
                             <tr>
                                 <th> <div align="center" class="font-16"> เกณฑ์ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
-                                        <input type="submit" value="Search" />
+                                        <input type="submit" value="ค้นหา" />
                                     </div>
                                 </th>
                             </tr>
@@ -124,7 +124,7 @@
                         <tr>
                             <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                             <td align="center" style="width: 20%"><?php echo ($result["NameBMI"]) ?></td>
-                            <td align="center" style="width: 40%"><textarea rows="4" style="margin-top: 2%; width: 90%" readonly><?php echo ($result["DetailBMI"]) ?></textarea></td>
+                            <td align="center" style="width: 40%"><textarea rows="4" style="margin: 1%; width: 98%" readonly><?php echo ($result["DetailBMI"]) ?></textarea></td>
                             <td align="center" style="width: 10%"><?php echo ($result["SumBMI"]) ?></td>
                             <td align="center" style="width: 5%"><?php echo ($result["BMIUser"]) ?></td>
                             <td align="center" style="width: 6%"><?php echo ($result["UnitBMI"]) ?></td>

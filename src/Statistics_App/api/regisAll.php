@@ -8,6 +8,7 @@ if(isset($_POST["data"]))
 {
     $date = $_POST["data"];
 }
+
 $sqlAllSex = "SELECT COUNT(*) as totalAllSex FROM membermanage WHERE DateRegis LIKE '%".$date."%' ";
 $queryAllSex= mysqli_query($conn, $sqlAllSex);
 $resultAllSex = mysqli_fetch_array($queryAllSex, MYSQLI_ASSOC);
